@@ -10,6 +10,17 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LogLevel.cpp" />
+    <ClCompile Include="LogManager.cpp" />
+    <ClCompile Include="LogMessage.cpp" />
+    <ClCompile Include="Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LogLevel.h" />
+    <ClInclude Include="LogManager.h" />
+    <ClInclude Include="LogMessage.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9062BD3B-9D91-46A8-BC63-50C92D13F0C7}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -75,8 +86,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
