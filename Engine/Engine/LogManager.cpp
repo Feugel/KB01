@@ -10,12 +10,14 @@ void LogManager::Log(std::string message)
 {
 	logMessage = new LogMessage(message);
 	AppendToLog(logMessage);
+	delete logMessage;
 }
 
 void LogManager::Log(LogLevel level, std::string message)
 {
 	logMessage = new LogMessage(message, level);;
 	AppendToLog(logMessage);
+	delete logMessage;
 }
 
 LogManager* LogManager::Instance()
@@ -50,5 +52,4 @@ LogManager::LogManager(std::string fileName)
 void LogManager::AppendToLog(LogMessage* message)
 {
 	logFile << message->moment << " " << LogLevelNames[message->level] << " " << message->message << std::endl;
-	delete message;
 }
