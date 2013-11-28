@@ -1,7 +1,7 @@
 #ifndef LOGMESSAGE_H
 #define LOGMESSAGE_H
 #include <string>
-#include <ctime>
+#include "time.h"
 #include <iostream>
 #include "Loglevel.h"
 

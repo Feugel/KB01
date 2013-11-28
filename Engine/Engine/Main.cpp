@@ -11,12 +11,13 @@ private:
 
 int main()
 {
-	LogManager* logger = new LogManager();
+	LogManager* logger = LogManager::Instance();
 	logger->Log("Test: 1 Million Logs");
-	/*for(int i = 0; i < 1000000; i++)
+	for(int i = 0; i < 1000000; i++)
 	{
-		logger->Log(LogLevel::INFO, "TEST LOG HAHA");
-	}*/
+		LogManager::Instance()->Log(LogLevel::WARNING, "TEST");
+		//logger->Log(LogLevel::INFO, "TEST LOG HAHA");
+	}
 
 	return 0;
 }
