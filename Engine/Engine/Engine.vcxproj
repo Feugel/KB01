@@ -11,14 +11,26 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="EntityCamera.cpp" />
+    <ClCompile Include="EntityModel.cpp" />
     <ClCompile Include="LogManager.cpp" />
     <ClCompile Include="LogMessage.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SkyBox.cpp" />
+    <ClCompile Include="Terrain.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="EntityCamera.h" />
+    <ClInclude Include="EntityModel.h" />
     <ClInclude Include="LogLevel.h" />
     <ClInclude Include="LogManager.h" />
     <ClInclude Include="LogMessage.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SkyBox.h" />
+    <ClInclude Include="Terrain.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9062BD3B-9D91-46A8-BC63-50C92D13F0C7}</ProjectGuid>
