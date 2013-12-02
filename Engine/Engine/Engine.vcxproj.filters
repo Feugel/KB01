@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Resource Files\Logger">
+      <UniqueIdentifier>{a336c4b2-58aa-4c0c-9303-3bfb4794e6c2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -27,13 +30,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LogLevel.h">
-      <Filter>Header Files</Filter>
+      <Filter>Resource Files\Logger</Filter>
     </ClInclude>
     <ClInclude Include="LogManager.h">
-      <Filter>Header Files</Filter>
+      <Filter>Resource Files\Logger</Filter>
     </ClInclude>
     <ClInclude Include="LogMessage.h">
-      <Filter>Header Files</Filter>
+      <Filter>Resource Files\Logger</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
