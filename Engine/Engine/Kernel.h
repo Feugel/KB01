@@ -1,3 +1,5 @@
+#ifndef KERNEL_H
+#define KERNEL_H
 #include "ResourceManager.h"
 #include "WindowManager.h"
 #include "SceneManager.h"
@@ -12,3 +14,4 @@ private:
 	WindowManager* winMan;
 	SceneManager* sceneMan;
 };
+#endif
