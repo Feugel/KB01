@@ -28,15 +28,19 @@
     <ClInclude Include="Entity.h" />
     <ClInclude Include="EntityCamera.h" />
     <ClInclude Include="EntityModel.h" />
+    <ClInclude Include="Kernel.h" />
     <ClInclude Include="LogLevel.h" />
     <ClInclude Include="LogManager.h" />
     <ClInclude Include="LogMessage.h" />
     <ClInclude Include="ResourceHeightmap.h" />
+    <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="ResourceModel.h" />
     <ClInclude Include="ResourceTexture.h" />
     <ClInclude Include="Scene.h" />
+    <ClInclude Include="SceneManager.h" />
     <ClInclude Include="SkyBox.h" />
     <ClInclude Include="Terrain.h" />
+    <ClInclude Include="WindowManager.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9062BD3B-9D91-46A8-BC63-50C92D13F0C7}</ProjectGuid>

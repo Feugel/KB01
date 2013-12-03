@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Resource Files\Logger">
-      <UniqueIdentifier>{a336c4b2-58aa-4c0c-9303-3bfb4794e6c2}</UniqueIdentifier>
-	</Filter>
     <Filter Include="Header Files\Scene">
       <UniqueIdentifier>{a72a4226-01f1-495a-b912-4dc2b42abf70}</UniqueIdentifier>
     </Filter>
@@ -28,17 +25,20 @@
     <Filter Include="Source Files\Resource">
       <UniqueIdentifier>{ec972513-0079-4003-8127-2b165cd36384}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Logger">
+      <UniqueIdentifier>{a336c4b2-58aa-4c0c-9303-3bfb4794e6c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Window">
+      <UniqueIdentifier>{9440ae24-8ec7-4fc2-8ab7-939f7294c197}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Kernel">
+      <UniqueIdentifier>{63013d83-ca13-43f5-bb5d-bd24923f4bc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Logger">
+      <UniqueIdentifier>{0207c847-60e0-442d-9d4f-263718bb6b0f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LogMessage.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LogManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="EntityModel.cpp">
       <Filter>Source Files\Scene</Filter>
     </ClCompile>
@@ -66,6 +66,15 @@
     <ClCompile Include="ResourceTexture.cpp">
       <Filter>Source Files\Resource</Filter>
     </ClCompile>
+    <ClCompile Include="LogManager.cpp">
+      <Filter>Source Files\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="LogMessage.cpp">
+      <Filter>Source Files\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Entity.h">
@@ -87,13 +96,13 @@
       <Filter>Header Files\Scene</Filter>
     </ClInclude>
     <ClInclude Include="LogLevel.h">
-      <Filter>Resource Files\Logger</Filter>
+      <Filter>Header Files\Logger</Filter>
     </ClInclude>
     <ClInclude Include="LogManager.h">
-      <Filter>Resource Files\Logger</Filter>
+      <Filter>Header Files\Logger</Filter>
     </ClInclude>
     <ClInclude Include="LogMessage.h">
-      <Filter>Resource Files\Logger</Filter>
+      <Filter>Header Files\Logger</Filter>
     </ClInclude>
     <ClInclude Include="ResourceHeightmap.h">
       <Filter>Header Files\Resource</Filter>
@@ -103,6 +112,18 @@
     </ClInclude>
     <ClInclude Include="ResourceTexture.h">
       <Filter>Header Files\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowManager.h">
+      <Filter>Header Files\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>Header Files\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>Header Files\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel.h">
+      <Filter>Header Files\Kernel</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
