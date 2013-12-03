@@ -40,6 +40,9 @@
     <Filter Include="Source Files\Window">
       <UniqueIdentifier>{70ad0f97-78ba-4262-a190-4e109c91e1cd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Kernel">
+      <UniqueIdentifier>{81574f65-14a2-4cbe-b9ed-106b52215e3c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EntityModel.cpp">
@@ -75,10 +78,16 @@
     <ClCompile Include="LogMessage.cpp">
       <Filter>Source Files\Logger</Filter>
     </ClCompile>
-    <ClCompile Include="Main.cpp">
+    <ClCompile Include="Window.cpp">
+      <Filter>Source Files\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Window.cpp">
+    <ClCompile Include="Kernel.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowManager.cpp">
       <Filter>Source Files\Window</Filter>
     </ClCompile>
   </ItemGroup>
@@ -131,11 +140,11 @@
     <ClInclude Include="Kernel.h">
       <Filter>Header Files\Kernel</Filter>
     </ClInclude>
-    <ClInclude Include="Main.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Window.h">
       <Filter>Header Files\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

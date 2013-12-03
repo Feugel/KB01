@@ -14,9 +14,10 @@
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="EntityCamera.cpp" />
     <ClCompile Include="EntityModel.cpp" />
+    <ClCompile Include="Kernel.cpp" />
     <ClCompile Include="LogManager.cpp" />
     <ClCompile Include="LogMessage.cpp" />
-    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="ResourceHeightmap.cpp" />
     <ClCompile Include="ResourceModel.cpp" />
     <ClCompile Include="ResourceTexture.cpp" />
@@ -24,6 +25,7 @@
     <ClCompile Include="SkyBox.cpp" />
     <ClCompile Include="Terrain.cpp" />
     <ClCompile Include="Window.cpp" />
+    <ClCompile Include="WindowManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Entity.h" />
@@ -33,7 +35,7 @@
     <ClInclude Include="LogLevel.h" />
     <ClInclude Include="LogManager.h" />
     <ClInclude Include="LogMessage.h" />
-    <ClInclude Include="Main.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="ResourceHeightmap.h" />
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="ResourceModel.h" />
