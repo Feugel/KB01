@@ -3,6 +3,7 @@
 
 class ResourceManager
 {
+public:
 	ResourceManager(void);
 	virtual ~ResourceManager(void);
 	void Cleanup();

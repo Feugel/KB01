@@ -4,6 +4,7 @@
 
 class SceneManager
 {
+public:
 	SceneManager(void);
 	virtual ~SceneManager(void);
 	void Cleanup();

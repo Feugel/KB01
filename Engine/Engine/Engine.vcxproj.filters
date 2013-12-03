@@ -37,6 +37,9 @@
     <Filter Include="Source Files\Logger">
       <UniqueIdentifier>{0207c847-60e0-442d-9d4f-263718bb6b0f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Window">
+      <UniqueIdentifier>{70ad0f97-78ba-4262-a190-4e109c91e1cd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EntityModel.cpp">
@@ -74,6 +77,9 @@
     </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Source Files\Window</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -124,6 +130,12 @@
     </ClInclude>
     <ClInclude Include="Kernel.h">
       <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>Header Files\Window</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
