@@ -8,7 +8,7 @@ enum LogLevel
 {
 	INFO,
 	WARNING,
-	ERROR,
+	ERR,
 	FATAL,
 	DEBUG,
 	SIZE_OF_ENUM

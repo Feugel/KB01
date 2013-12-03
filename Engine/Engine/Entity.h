@@ -7,7 +7,7 @@ class Entity
 public:
 	Entity(void);
 	virtual ~Entity(void);
-	virtual void Cleanup();
+	void Cleanup();
 };
 
 #endif
