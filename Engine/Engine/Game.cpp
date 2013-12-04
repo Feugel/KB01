@@ -17,10 +17,6 @@ int Game::Main()
 	if(kernel->GetWindowManager()->CreateWnd())
 	{
 		logger->Log("Window created");
-		while(kernel->GetWindowManager()->GetNumWindows() != 0)
-		{
-			
-		}
 	}
 	else
 	{

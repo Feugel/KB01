@@ -2,6 +2,7 @@
 #define WINDOWMANAGER_H
 
 #include "Window.h"
+#include <vector>
 
 class WindowManager
 {
@@ -11,12 +12,12 @@ public:
 	void Cleanup();
 	bool CreateWnd();
 	bool ReleaseWindow();
-	int GetNumWindows();
+	std::vector<Window*> GetWindows();
+	static LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
 private:
 	void PushWindow(Window* wnd);
-	void PopWindow(Window* wnd);
-	Window* window; // Should be some kind of array or list
-	int numWindows;
+	void PopWindow();
+	std::vector<Window*> windows;
 };
 
 #endif
