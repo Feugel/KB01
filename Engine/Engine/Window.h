@@ -19,7 +19,7 @@ private:
 	//Renderer renderer;
 	HWND hWnd;
 	HINSTANCE hInst;
-	WNDCLASSEX Wnd;
+	WNDCLASS Wnd;
 	WindowManager* manager;
 };
 

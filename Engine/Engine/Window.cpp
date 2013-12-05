@@ -32,11 +32,11 @@ void Window::Create(HINSTANCE hInstance, int width, int height, char* title, boo
     Wnd.lpszClassName = L"Window";
 	Wnd.lpfnWndProc = WindowManager::WindowProcedure;      /* This function is called by windows */
     Wnd.style = CS_DBLCLKS;                 /* Catch double-clicks */
-    Wnd.cbSize = sizeof (WNDCLASSEX);
+    //Wnd.cbSize = sizeof (WNDCLASSEX);
 
     /* Use default icon and mouse-pointer */
     Wnd.hIcon = LoadIcon (NULL, IDI_APPLICATION);
-    Wnd.hIconSm = LoadIcon (NULL, IDI_APPLICATION);
+    //Wnd.hIconSm = LoadIcon (NULL, IDI_APPLICATION);
     Wnd.hCursor = LoadCursor (NULL, IDC_ARROW);
     Wnd.lpszMenuName = NULL;                 /* No menu */
     Wnd.cbClsExtra = 0;                      /* No extra bytes after the window class */
@@ -44,7 +44,7 @@ void Window::Create(HINSTANCE hInstance, int width, int height, char* title, boo
     /* Use Windows's default color as the background of the window */
     Wnd.hbrBackground = (HBRUSH) COLOR_BACKGROUND;
 	LogManager::Instance()->Log("Registering Window Class");
-	if( RegisterClassEx(&Wnd))
+	if( RegisterClass(&Wnd))
     {
 		LogManager::Instance()->Log("Creating Window Handle");
         hWnd = CreateWindowExA(0,	//Default Window ExStyle

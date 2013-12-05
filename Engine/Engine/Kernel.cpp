@@ -3,14 +3,7 @@
 Kernel::Kernel()
 {
 	Initialise();
-
-	////Quick Thought: make all Managers inherit from base class 'Manager', so we can keep a set of them around and make them implement basic methods like Update / Render?
-	////Game Loop:
-	//do {
-	//	this->Update(); // Calls all manager's 'Update' functions
-	//	this->Render(); // Calls necessary manager's 'Render' functions
-	//} while(!this->isFinished);
-	//
+	////Quick Thought: make all Managers inherit from a base class 'Manager', so we can keep a set of them around (Map<identifier, Manager> ?)and make them implement basic methods like Update / Render?
 }
 
 Kernel::~Kernel()
@@ -52,4 +45,30 @@ WindowManager* Kernel::GetWindowManager()
 SceneManager* Kernel::GetSceneManager()
 {
 	return sceneMan;
+}
+
+void Kernel::Start()
+{
+	LogManager::Instance()->Log("Starting Kernel");
+	isFinished = false;
+	do {
+		LogManager::Instance()->Log("Running Kernel::Update");
+		this->Update(); // make calls to all manager's 'Update' functions
+		LogManager::Instance()->Log("Kernel::Update done");
+		//LogManager::Instance()->Log("Running Kernel::Render");
+		//this->Render(); // make calls to necessary manager's 'Render' functions
+		//LogManager::Instance()->Log("Kernel::Render done");
+	}
+	while(!this->isFinished);
+}
+
+void Kernel::Stop()
+{
+	LogManager::Instance()->Log("Stopping Kernel");
+	isFinished = true;
+}
+
+void Kernel::Update()
+{
+
 }

@@ -12,6 +12,9 @@ public:
 	Kernel(void);
 	virtual ~Kernel(void);
 	void Initialise(void);
+	void Start(void);
+	void Stop(void);
+	void Update();
 	WindowManager* GetWindowManager(void);
 	ResourceManager* GetResourceManager(void);
 	SceneManager* GetSceneManager(void);
@@ -20,5 +23,6 @@ private:
 	ResourceManager* resMan;
 	WindowManager* winMan;
 	SceneManager* sceneMan;
+	bool isFinished;
 };
 #endif
