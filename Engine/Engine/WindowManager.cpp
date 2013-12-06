@@ -2,7 +2,7 @@
 
 WindowManager::WindowManager()
 {
-
+	windows.clear(); // make sure we get clean memory
 }
 
 WindowManager::~WindowManager()
@@ -18,15 +18,32 @@ void WindowManager::Cleanup()
 	}
 }
 
-bool WindowManager::CreateWnd()
+
+bool WindowManager::RegisterWindow(Window* window)
 {
-	PushWindow(new Window(NULL, this));
-	return true;
+	if(std::find(windows.begin(), windows.end(), window) == windows.end())
+	{
+		PushWindow(window);
+		window->DisplayWindow(false);
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
 
-bool WindowManager::ReleaseWindow()
+bool WindowManager::ReleaseWindow(Window* window)
 {
-	PopWindow();
+	if(std::find(windows.begin(), windows.end(), window) == windows.end())
+	{
+		PopWindow(window);
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 	return true;
 }
 
@@ -35,9 +52,10 @@ void WindowManager::PushWindow(Window* wnd)
 	windows.push_back(wnd);
 }
 
-void WindowManager::PopWindow()
+void WindowManager::PopWindow(Window* window)
 {
-	windows.pop_back();
+	auto item = std::find(windows.begin(), windows.end(), window);
+	windows.erase(item, item);
 }
 
 std::vector<Window*> WindowManager::GetWindows()
@@ -48,12 +66,12 @@ std::vector<Window*> WindowManager::GetWindows()
 LRESULT CALLBACK WindowManager::WindowProcedure(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
 	switch(msg)
-    {
-        case WM_CLOSE:
-            {
+	{
+		case WM_CLOSE:
+			{
 				DestroyWindow(hwnd);
-            } break;
-    }
+			} break;
+	}
 
-    return DefWindowProc(hwnd, msg, wParam, lParam);
+	return DefWindowProc(hwnd, msg, wParam, lParam);
 }

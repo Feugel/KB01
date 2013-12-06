@@ -14,6 +14,9 @@ Kernel::~Kernel()
 void Kernel::Initialise()
 {
 	LogManager::Instance()->Log("Initializing Kernel");
+	ZeroMemory(&winMan, sizeof(*winMan));
+	//ZeroMemory(&resMan, sizeof(*resMan));
+	//ZeroMemory(&sceneMan, sizeof(*sceneMan));
 	winMan = new WindowManager();
 	/*resMan = new ResourceManager();
 	sceneMan = new SceneManager();*/
@@ -49,7 +52,7 @@ SceneManager* Kernel::GetSceneManager()
 
 void Kernel::Start()
 {
-	LogManager::Instance()->Log("Starting Kernel");
+	LogManager::Instance()->Log("Starting Kernel functions");
 	isFinished = false;
 	do {
 		LogManager::Instance()->Log("Running Kernel::Update");

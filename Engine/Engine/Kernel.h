@@ -5,6 +5,7 @@
 #include "WindowManager.h"
 #include "SceneManager.h"
 #include "LogManager.h"
+//#include "InputManager.h"
 
 class Kernel
 {
@@ -14,12 +15,12 @@ public:
 	void Initialise(void);
 	void Start(void);
 	void Stop(void);
-	void Update();
+	void Update(void);
 	WindowManager* GetWindowManager(void);
 	ResourceManager* GetResourceManager(void);
 	SceneManager* GetSceneManager(void);
-private:
 	void Cleanup(void);
+private:
 	ResourceManager* resMan;
 	WindowManager* winMan;
 	SceneManager* sceneMan;

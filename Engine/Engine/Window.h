@@ -3,19 +3,21 @@
 
 #include "LogManager.h"
 #include <windows.h>
-#include <windowsx.h>
+
 class WindowManager;
 
 class Window
 {
 public:
-	Window(HINSTANCE hIns, WindowManager* manager);
-	Window(HINSTANCE hInstance, WindowManager* manager, int width, int height, char* title, bool fullscreen);
+	Window(HINSTANCE hInstance, WindowManager* manager);
+	Window(HINSTANCE hInstance, WindowManager* manager, int width, int height, wchar_t* title);
 	HWND GetWindowHandle();
+	void DisplayWindow(bool fullscreen);
 	virtual ~Window();
 	void Cleanup();
 private:
-	void Create(HINSTANCE hInstance, int width, int height, char* title, bool fullscreen);
+	void Create(int width, int height, wchar_t* title);
+	void Initialise(void);
 	//Renderer renderer;
 	HWND hWnd;
 	HINSTANCE hInst;

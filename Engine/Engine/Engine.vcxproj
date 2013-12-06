@@ -24,6 +24,7 @@
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SkyBox.cpp" />
     <ClCompile Include="Terrain.cpp" />
+    <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Window.cpp" />
     <ClCompile Include="WindowManager.cpp" />
   </ItemGroup>
@@ -44,6 +45,7 @@
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="SkyBox.h" />
     <ClInclude Include="Terrain.h" />
+    <ClInclude Include="Timer.h" />
     <ClInclude Include="Window.h" />
     <ClInclude Include="WindowManager.h" />
   </ItemGroup>
