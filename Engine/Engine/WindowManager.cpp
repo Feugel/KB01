@@ -47,6 +47,21 @@ bool WindowManager::ReleaseWindow(Window* window)
 	return true;
 }
 
+bool WindowManager::ReleaseWindow(HWND hwnd)
+{
+	auto iterator = std::find_if(windows.begin(), windows.end(), [&hwnd](Window* window){ return window->GetWindowHandle() == hwnd; });
+	if(iterator != windows.end())
+	{
+		PopWindow(*iterator);
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+	return true;
+}
+
 void WindowManager::PushWindow(Window* wnd)
 {
 	windows.push_back(wnd);
@@ -55,7 +70,7 @@ void WindowManager::PushWindow(Window* wnd)
 void WindowManager::PopWindow(Window* window)
 {
 	auto item = std::find(windows.begin(), windows.end(), window);
-	windows.erase(item, item);
+	windows.erase(item, item+1);
 }
 
 std::vector<Window*> WindowManager::GetWindows()

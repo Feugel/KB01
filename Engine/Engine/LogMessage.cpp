@@ -10,6 +10,17 @@ LogMessage::LogMessage(std::string message)
 	this->message = message;
 }
 
+LogMessage::LogMessage(unsigned int message)
+{
+	char buffer[80];
+	time_t now = time(0);
+	strftime(buffer, sizeof(buffer), "%d/%m/%Y %H:%M:%S", localtime(&now));
+	this->moment = buffer;
+	this->level = LogLevel::INFO;
+	this->message = std::to_string(message);
+}
+
+
 LogMessage::LogMessage(std::string message, LogLevel level)
 {
 	char buffer[80];
@@ -18,4 +29,14 @@ LogMessage::LogMessage(std::string message, LogLevel level)
 	this->moment = buffer;
 	this->level = level;
 	this->message = message;
+}
+
+LogMessage::LogMessage(unsigned int message, LogLevel level)
+{
+	char buffer[80];
+	time_t now = time(0);
+	strftime(buffer, sizeof(buffer), "%d/%m/%Y %H:%M:%S", localtime(&now));
+	this->moment = buffer;
+	this->level = level;
+	this->message = std::to_string(message);
 }

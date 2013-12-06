@@ -1,31 +1,25 @@
 #ifndef LOGMESSAGE_H
 #define LOGMESSAGE_H
-#include <string>
 #include "time.h"
 #include <iostream>
+#include <sstream>
 #include "Loglevel.h"
 
 struct LogMessage
 {
-	///<summary>
-	///Constructor providing a message, uses the INFO LogLevel as message severity
-	///</summary>
+	//Constructor providing a message, uses the INFO LogLevel as message severity
 	LogMessage(std::string message);
-	///<summary>
-	///Constructor for logging a message with a given severity
-	///</summary>
+	//Constructor for logging a message composed from an unsigned int
+	LogMessage(unsigned int message);
+	//Constructor for logging a message with a given severity
 	LogMessage(std::string message, LogLevel level);
-	///<summary>
-	///Message Severity
-	///</summary>
+	//Constructor for logging a message with a given severity
+	LogMessage(unsigned int message, LogLevel level);
+	//Message Severity
 	LogLevel level;
-	///<summary>
-	///Message
-	///</summary>
+	//Message
 	std::string message;
-	///<summary>
-	///Moment when the message was logged using second precision
-	///</summary>
+	//Moment when the message was logged using second precision
 	std::string moment;
 };
 

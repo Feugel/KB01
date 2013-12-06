@@ -1,4 +1,5 @@
 #include "Kernel.h"
+#include <sstream>
 
 Kernel::Kernel()
 {
@@ -54,15 +55,31 @@ void Kernel::Start()
 {
 	LogManager::Instance()->Log("Starting Kernel functions");
 	isFinished = false;
-	do {
-		LogManager::Instance()->Log("Running Kernel::Update");
+	MSG msg;
+	LogManager::Instance()->Log("Starting Game Loop");
+	do
+	{
+		if(PeekMessage(&msg, NULL, NULL, NULL, PM_REMOVE) > 0)
+		{
+			LogManager::Instance()->Log(msg.message);
+			if(161 == msg.message) // for some reason WM_CLOSE does not work here
+			{
+				this->GetWindowManager()->ReleaseWindow(msg.hwnd);
+			}
+			/* Translate virtual-key messages into character messages */
+			TranslateMessage(&msg);
+			/* Send message to WindowProcedure */
+			DispatchMessage(&msg);
+		}
+		LogManager::Instance()->Log(GetWindowManager()->GetWindows().size());
+		//LogManager::Instance()->Log("Running Kernel::Update");
 		this->Update(); // make calls to all manager's 'Update' functions
-		LogManager::Instance()->Log("Kernel::Update done");
+		//LogManager::Instance()->Log("Kernel::Update done");
 		//LogManager::Instance()->Log("Running Kernel::Render");
 		//this->Render(); // make calls to necessary manager's 'Render' functions
 		//LogManager::Instance()->Log("Kernel::Render done");
 	}
-	while(!this->isFinished);
+	while(WM_QUIT != msg.message && !this->isFinished);
 }
 
 void Kernel::Stop()

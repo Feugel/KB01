@@ -37,17 +37,6 @@ int Game::Main()
 	{
 		logger -> Log(LogLevel::WARNING, "Could not create Window!");
 	}
-
-	MSG msg;
-	/* Run the message loop. It will run until GetMessage() returns 0 */
-	LogManager::Instance()->Log("Starting Message Loop");
-	while(GetMessage(&msg, 0, 0, 0))
-	{
-		/* Translate virtual-key messages into character messages */
-		TranslateMessage(&msg);
-		/* Send message to WindowProcedure */
-		DispatchMessage(&msg);
-	}
-
+	kernel->Start();
 	return 0;
 }
