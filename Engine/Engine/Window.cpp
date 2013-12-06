@@ -15,7 +15,6 @@ Window::Window(HINSTANCE hInstance, WindowManager* manager, int width, int heigh
 	this->manager = manager;
 	this->Initialise();
 	this->Create(width, height, title);
-	
 }
 
 Window::~Window(void)
@@ -66,11 +65,11 @@ void Window::Initialise()
 	Wnd.lpszClassName = L"Window";
 	Wnd.lpfnWndProc = WindowManager::WindowProcedure;      /* This function is called by windows */
 	Wnd.style = CS_DBLCLKS;                 /* Catch double-clicks */
-	//Wnd.cbSize = sizeof (WNDCLASSEX);		// reserve space for window class
+	Wnd.cbSize = sizeof (WNDCLASSEX);		// reserve space for window class
 
 	/* Use default icon and mouse-pointer */
 	Wnd.hIcon = LoadIcon (NULL, IDI_APPLICATION);
-	//Wnd.hIconSm = LoadIcon (NULL, IDI_APPLICATION);	// set window icon
+	Wnd.hIconSm = LoadIcon (NULL, IDI_APPLICATION);	// set window icon
 	Wnd.hCursor = LoadCursor (NULL, IDC_ARROW);
 	Wnd.lpszMenuName = NULL;                 /* No menu */
 	Wnd.cbClsExtra = 0;                      /* No extra bytes after the window class */
@@ -79,7 +78,7 @@ void Window::Initialise()
 	Wnd.hbrBackground = (HBRUSH) COLOR_BACKGROUND;
 
 	
-	RegisterClass(&Wnd);
+	RegisterClassEx(&Wnd);
 }
 
 void Window::DisplayWindow(bool fullscreen)
