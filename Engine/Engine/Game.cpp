@@ -15,7 +15,7 @@ int Game::Main()
 	kernel = new Kernel();
 
 	Window* window = new Window(NULL, kernel->GetWindowManager());
-	// does not reach the next line...
+	// Window registration test
 	if(kernel->GetWindowManager()->RegisterWindow(window))
 	{
 		logger->Log("Window created");

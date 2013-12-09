@@ -2,9 +2,10 @@
 
 LogMessage::LogMessage(std::string message)
 {
-	char buffer[80];
-	time_t now = time(0);
-	strftime(buffer, sizeof(buffer), "%d/%m/%Y %H:%M:%S", localtime(&now));
+	SYSTEMTIME sysTime;
+	GetSystemTime(&sysTime);
+	char buffer[40];
+	sprintf(buffer, "%02d/%02d/%04d %02d:%02d:%02d.%04d", sysTime.wDay,sysTime.wMonth, sysTime.wYear, sysTime.wHour, sysTime.wMinute, sysTime.wSecond, sysTime.wMilliseconds);
 	this->moment = buffer;
 	this->level = LogLevel::INFO;
 	this->message = message;
@@ -12,9 +13,10 @@ LogMessage::LogMessage(std::string message)
 
 LogMessage::LogMessage(unsigned int message)
 {
-	char buffer[80];
-	time_t now = time(0);
-	strftime(buffer, sizeof(buffer), "%d/%m/%Y %H:%M:%S", localtime(&now));
+	SYSTEMTIME sysTime;
+	GetSystemTime(&sysTime);
+	char buffer[40];
+	sprintf(buffer, "%02d/%02d/%04d %02d:%02d:%02d.%04d", sysTime.wDay,sysTime.wMonth, sysTime.wYear, sysTime.wHour, sysTime.wMinute, sysTime.wSecond, sysTime.wMilliseconds);
 	this->moment = buffer;
 	this->level = LogLevel::INFO;
 	this->message = std::to_string(message);
@@ -23,9 +25,10 @@ LogMessage::LogMessage(unsigned int message)
 
 LogMessage::LogMessage(std::string message, LogLevel level)
 {
-	char buffer[80];
-	time_t now = time(0);
-	strftime(buffer, sizeof(buffer), "%d/%m/%Y %H:%M:%S", localtime(&now));
+	SYSTEMTIME sysTime;
+	GetSystemTime(&sysTime);
+	char buffer[40];
+	sprintf(buffer, "%02d/%02d/%04d %02d:%02d:%02d.%04d", sysTime.wDay,sysTime.wMonth, sysTime.wYear, sysTime.wHour, sysTime.wMinute, sysTime.wSecond, sysTime.wMilliseconds);
 	this->moment = buffer;
 	this->level = level;
 	this->message = message;
@@ -33,9 +36,10 @@ LogMessage::LogMessage(std::string message, LogLevel level)
 
 LogMessage::LogMessage(unsigned int message, LogLevel level)
 {
-	char buffer[80];
-	time_t now = time(0);
-	strftime(buffer, sizeof(buffer), "%d/%m/%Y %H:%M:%S", localtime(&now));
+	SYSTEMTIME sysTime;
+	GetSystemTime(&sysTime);
+	char buffer[40];
+	sprintf(buffer, "%02d/%02d/%04d %02d:%02d:%02d.%04d", sysTime.wDay,sysTime.wMonth, sysTime.wYear, sysTime.wHour, sysTime.wMinute, sysTime.wSecond, sysTime.wMilliseconds);
 	this->moment = buffer;
 	this->level = level;
 	this->message = std::to_string(message);

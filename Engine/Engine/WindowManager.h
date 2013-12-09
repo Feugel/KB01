@@ -24,6 +24,8 @@ public:
 	bool ReleaseWindow(HWND hwnd);
 	//Returns the vector containing the windows.
 	std::vector<Window*> GetWindows();
+	//Render on all windows
+	void RenderAll(void);
 	//Window Procedure used by all Windows.
 	//On quit it releases the window.
 	static LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);

@@ -3,6 +3,7 @@
 
 #include "LogManager.h"
 #include <windows.h>
+//#include "Renderer.h"
 
 class WindowManager;
 
@@ -18,6 +19,8 @@ public:
 	HWND GetWindowHandle();
 	//Makes the window visible on screen.
 	void DisplayWindow(bool fullscreen);
+	//Get the Renderer
+	//Renderer GetRenderer(void);
 	//Destructor
 	//Calls Cleanup()
 	virtual ~Window();

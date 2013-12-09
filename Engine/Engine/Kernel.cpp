@@ -59,6 +59,7 @@ void Kernel::Start()
 	LogManager::Instance()->Log("Starting Game Loop");
 	do
 	{
+		// Windows message loop; catches ALL MESSAGES right now. Should probably only catch WM_CLOSE, WM_DESTROY and WM_QUIT?
 		if(PeekMessage(&msg, NULL, NULL, NULL, PM_REMOVE) > 0)
 		{
 			LogManager::Instance()->Log(msg.message);
