@@ -32,6 +32,16 @@ HWND Window::GetWindowHandle()
 	return hWnd;
 }
 
+//Renderer* Window::GetRenderer()
+//{
+//	return renderer;
+//}
+//
+//void Window::SetRenderer(Renderer* renderer)
+//{
+//	this->renderer = renderer;
+//}
+
 void Window::Create(int width, int height, wchar_t* title)
 {
 	LogManager::Instance()->Log("Creating Window Handle");

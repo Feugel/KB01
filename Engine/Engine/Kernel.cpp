@@ -16,11 +16,11 @@ void Kernel::Initialise()
 {
 	LogManager::Instance()->Log("Initializing Kernel");
 	ZeroMemory(&winMan, sizeof(*winMan));
-	//ZeroMemory(&resMan, sizeof(*resMan));
+	ZeroMemory(&resMan, sizeof(*resMan));
 	//ZeroMemory(&sceneMan, sizeof(*sceneMan));
 	winMan = new WindowManager();
-	/*resMan = new ResourceManager();
-	sceneMan = new SceneManager();*/
+	resMan = new ResourceManager();
+	/*sceneMan = new SceneManager();*/
 	LogManager::Instance()->Log("Kernel Initialized");
 }
 

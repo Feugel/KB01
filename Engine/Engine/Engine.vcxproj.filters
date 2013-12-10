@@ -43,6 +43,12 @@
     <Filter Include="Source Files\Kernel">
       <UniqueIdentifier>{81574f65-14a2-4cbe-b9ed-106b52215e3c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\ResourceLoader">
+      <UniqueIdentifier>{50b4c3c5-e89c-46a5-97af-f8ea2f699e42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ResourceLoader">
+      <UniqueIdentifier>{896d8cd9-53d8-476f-8c52-e0d5ea84bdd4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EntityModel.cpp">
@@ -95,6 +101,24 @@
     </ClCompile>
     <ClCompile Include="ResourceManager.cpp">
       <Filter>Source Files\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceTextureLoader.cpp">
+      <Filter>Source Files\ResourceLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceDXTextureLoader.cpp">
+      <Filter>Source Files\ResourceLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceModelLoader.cpp">
+      <Filter>Source Files\ResourceLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceDXModelLoader.cpp">
+      <Filter>Source Files\ResourceLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceHeightmapLoader.cpp">
+      <Filter>Source Files\ResourceLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceDXHeightmapLoader.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +178,24 @@
     </ClInclude>
     <ClInclude Include="Timer.h">
       <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceTextureLoader.h">
+      <Filter>Header Files\ResourceLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceDXTextureLoader.h">
+      <Filter>Header Files\ResourceLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceModelLoader.h">
+      <Filter>Header Files\ResourceLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceDXModelLoader.h">
+      <Filter>Header Files\ResourceLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceHeightmapLoader.h">
+      <Filter>Header Files\ResourceLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceDXHeightmapLoader.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

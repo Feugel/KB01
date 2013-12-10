@@ -1,4 +1,5 @@
 #include "Renderer.h"
+#include "WindowManager.h"
 
 //-----------------------------------------------------------------------------
 // File: Matrices.cpp
@@ -280,7 +281,7 @@ INT WINAPI wWinMain( HINSTANCE hInst, HINSTANCE, LPWSTR, INT )
     // Register the window class
     WNDCLASSEX wc =
     {
-        sizeof( WNDCLASSEX ), CS_CLASSDC, MsgProc, 0L, 0L,
+		sizeof( WNDCLASSEX ), CS_CLASSDC, WindowManager::WindowProcedure, 0L, 0L,
         GetModuleHandle( NULL ), NULL, NULL, NULL, NULL,
         L"D3D Tutorial", NULL
     };

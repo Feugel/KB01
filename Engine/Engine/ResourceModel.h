@@ -1,6 +1,7 @@
 #ifndef RESOURCEMODEL_H
 #define RESOURCEMODEL_H
 
+#include <d3dx9.h>
 
 class ResourceModel
 {

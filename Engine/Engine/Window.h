@@ -3,9 +3,9 @@
 
 #include "LogManager.h"
 #include <windows.h>
-//#include "Renderer.h"
+#include "Renderer.h"
 
-class WindowManager;
+class WindowManager; // make sure we can reference the manager from here; maybe change this to a friend class?
 
 class Window
 {
@@ -16,30 +16,32 @@ public:
 	//Constructor specifying width and height including custom title.
 	Window(HINSTANCE hInstance, WindowManager* manager, int width, int height, wchar_t* title);
 	//Gets the handle to this window.
-	HWND GetWindowHandle();
+	virtual HWND GetWindowHandle();
 	//Makes the window visible on screen.
-	void DisplayWindow(bool fullscreen);
-	//Get the Renderer
-	//Renderer GetRenderer(void);
+	virtual void DisplayWindow(bool fullscreen);
+	////Get the Renderer
+	//virtual Renderer* GetRenderer(void);
+	////Set the renderer
+	//virtual void SetRenderer(Renderer* renderer);
 	//Destructor
-	//Calls Cleanup()
+	//Calls Cleanup(), then deletes the objects
 	virtual ~Window();
 	//Cleans up the mess this Window created.
-	void Cleanup();
+	virtual void Cleanup();
 private:
 	//Creates the window and registers the window class
-	void Create(int width, int height, wchar_t* title);
+	virtual void Create(int width, int height, wchar_t* title);
 	//Initialises the Window class
-	void Initialise(void);
-	//Renderer renderer;
-
-	//
+	virtual void Initialise(void);
+	//Renderer
+	//Renderer* renderer;
+	//Window Handle
 	HWND hWnd;
-	//
+	//Window Instance Handle
 	HINSTANCE hInst;
-	//
+	//Window
 	WNDCLASSEX Wnd;
-	//
+	//WindowManager
 	WindowManager* manager;
 };
 
