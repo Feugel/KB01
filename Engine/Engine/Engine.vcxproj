@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DXRenderer.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="EntityCamera.cpp" />
     <ClCompile Include="EntityModel.cpp" />
@@ -18,6 +19,7 @@
     <ClCompile Include="LogManager.cpp" />
     <ClCompile Include="LogMessage.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="ResourceDXHeightmapLoader.cpp" />
     <ClCompile Include="ResourceDXModelLoader.cpp" />
     <ClCompile Include="ResourceDXTextureLoader.cpp" />
@@ -36,6 +38,7 @@
     <ClCompile Include="WindowManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DXRenderer.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="EntityCamera.h" />
     <ClInclude Include="EntityModel.h" />
@@ -44,6 +47,7 @@
     <ClInclude Include="LogManager.h" />
     <ClInclude Include="LogMessage.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Renderer.h" />
     <ClInclude Include="ResourceDXHeightmapLoader.h" />
     <ClInclude Include="ResourceDXModelLoader.h" />
     <ClInclude Include="ResourceDXTextureLoader.h" />

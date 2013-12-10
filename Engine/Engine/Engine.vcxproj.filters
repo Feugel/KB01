@@ -49,6 +49,12 @@
     <Filter Include="Source Files\ResourceLoader">
       <UniqueIdentifier>{896d8cd9-53d8-476f-8c52-e0d5ea84bdd4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Renderer">
+      <UniqueIdentifier>{e3af4fb8-3682-4f23-b3b8-82e00a155394}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Renderer">
+      <UniqueIdentifier>{4d5d77c4-4d6f-4185-bcac-2545511843a5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EntityModel.cpp">
@@ -119,6 +125,12 @@
     </ClCompile>
     <ClCompile Include="ResourceDXHeightmapLoader.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DXRenderer.cpp">
+      <Filter>Source Files\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Source Files\Renderer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -196,6 +208,12 @@
     </ClInclude>
     <ClInclude Include="ResourceDXHeightmapLoader.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Header Files\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="DXRenderer.h">
+      <Filter>Header Files\Renderer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
