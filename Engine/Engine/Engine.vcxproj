@@ -19,7 +19,6 @@
     <ClCompile Include="LogManager.cpp" />
     <ClCompile Include="LogMessage.cpp" />
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="ResourceDXHeightmapLoader.cpp" />
     <ClCompile Include="ResourceDXModelLoader.cpp" />
     <ClCompile Include="ResourceDXTextureLoader.cpp" />
@@ -63,6 +62,7 @@
     <ClInclude Include="SkyBox.h" />
     <ClInclude Include="Terrain.h" />
     <ClInclude Include="Timer.h" />
+    <ClInclude Include="Vertex.h" />
     <ClInclude Include="Window.h" />
     <ClInclude Include="WindowManager.h" />
   </ItemGroup>

@@ -1,9 +1,10 @@
 #ifndef RESOURCEDXHEIGHTMAPLOADER_H
 #define RESOURCEDXHEIGHTMAPLOADER_H
 
+#include "LogManager.h"
 #include "ResourceHeightmapLoader.h"
-#include <stdio.h>
-#include <iostream>
+#include <fstream>
+#include "Vertex.h"
 
 typedef unsigned char BYTE;
 
@@ -13,6 +14,7 @@ class ResourceDXHeightmapLoader :
 public:
 	ResourceDXHeightmapLoader(void);
 	virtual ~ResourceDXHeightmapLoader(void);
+	void Cleanup();
 	ResourceHeightmap* LoadFile(LPCWSTR fileName);
 };
 

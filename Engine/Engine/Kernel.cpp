@@ -72,7 +72,7 @@ void Kernel::Start()
 			/* Send message to WindowProcedure */
 			DispatchMessage(&msg);
 		}
-		LogManager::Instance()->Log(GetWindowManager()->GetWindows().size());
+		//LogManager::Instance()->Log(GetWindowManager()->GetWindows().size());
 		//LogManager::Instance()->Log("Running Kernel::Update");
 		this->Update(); // make calls to all manager's 'Update' functions
 		//LogManager::Instance()->Log("Kernel::Update done");

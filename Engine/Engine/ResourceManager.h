@@ -5,6 +5,7 @@
 #include "ResourceModel.h"
 #include "ResourceHeightmap.h"
 #include "ResourceTextureLoader.h"
+#include "ResourceHeightmapLoader.h"
 
 class ResourceManager
 {
@@ -17,6 +18,7 @@ public:
 	ResourceHeightmap* LoadHeightmap(LPCWSTR fileName);
 private:
 	ResourceTextureLoader* textureLoader;
+	ResourceHeightmapLoader* heightmapLoader;
 };
 
 #endif
