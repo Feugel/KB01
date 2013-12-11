@@ -78,6 +78,7 @@ void Kernel::Start()
 		//LogManager::Instance()->Log("Kernel::Update done");
 		//LogManager::Instance()->Log("Running Kernel::Render");
 		//this->Render(); // make calls to necessary manager's 'Render' functions
+		
 		//LogManager::Instance()->Log("Kernel::Render done");
 	}
 	while(WM_QUIT != msg.message && !this->isFinished);

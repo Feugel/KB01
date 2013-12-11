@@ -111,3 +111,14 @@ void Window::DisplayWindow(bool fullscreen)
 		LogManager::Instance()->Log(LogLevel::WARNING, "Window Handle not initialized when calling DisplayWindow!");
 	}
 }
+
+Renderer* Window::GetRenderer(void)
+{
+	return renderer;
+}
+	
+void Window::SetRenderer(Renderer* renderer)
+{
+	renderer->Init(GetWindowHandle());
+	Window::renderer = renderer;
+}

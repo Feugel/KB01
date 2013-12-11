@@ -1,4 +1,6 @@
 #include "Game.h"
+#include "Renderer.h"
+#include "DXRenderer.h"
 
 int main()
 {
@@ -16,9 +18,19 @@ int Game::Main()
 
 	Window* window = new Window(NULL, kernel->GetWindowManager());
 	// Window registration test
+	Renderer* renderer = new DXRenderer();
+	window->SetRenderer(renderer);
+	
+
 	if(kernel->GetWindowManager()->RegisterWindow(window))
 	{
 		logger->Log("Window created");
+		
+		while (1==1)
+		{
+			window->GetRenderer()->Render();
+		}
+
 		if(kernel->GetWindowManager()->RegisterWindow(window))
 		{
 			logger->Log(LogLevel::WARNING, "Registered same window twice!");

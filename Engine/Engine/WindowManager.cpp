@@ -79,10 +79,7 @@ std::vector<Window*> WindowManager::GetWindows()
 
 void WindowManager::RenderAll()
 {
-	for(int i = windows.size(); i > 0; --i)
-	{
-		//windows[i]->GetRenderer();//->RenderStart();
-	}
+	
 }
 
 LRESULT CALLBACK WindowManager::WindowProcedure(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)

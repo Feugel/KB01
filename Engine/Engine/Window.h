@@ -20,9 +20,9 @@ public:
 	//Makes the window visible on screen.
 	virtual void DisplayWindow(bool fullscreen);
 	////Get the Renderer
-	//virtual Renderer* GetRenderer(void);
+	Renderer* GetRenderer(void);
 	////Set the renderer
-	//virtual void SetRenderer(Renderer* renderer);
+	void SetRenderer(Renderer* renderer);
 	//Destructor
 	//Calls Cleanup(), then deletes the objects
 	virtual ~Window();
@@ -34,7 +34,7 @@ private:
 	//Initialises the Window class
 	virtual void Initialise(void);
 	//Renderer
-	//Renderer* renderer;
+	Renderer* renderer;
 	//Window Handle
 	HWND hWnd;
 	//Window Instance Handle
