@@ -22,14 +22,14 @@ void LogManager::Log(unsigned int message)
 
 void LogManager::Log(LogLevel level, std::string message)
 {
-	logMessage = new LogMessage(message, level);;
+	logMessage = new LogMessage(level, message);;
 	AppendToLog(logMessage);
 	delete logMessage;
 }
 
 void LogManager::Log(LogLevel level, unsigned int message)
 {
-	logMessage = new LogMessage(message, level);;
+	logMessage = new LogMessage(level, message);;
 	AppendToLog(logMessage);
 	delete logMessage;
 }

@@ -23,7 +23,7 @@ LogMessage::LogMessage(unsigned int message)
 }
 
 
-LogMessage::LogMessage(std::string message, LogLevel level)
+LogMessage::LogMessage(LogLevel level, std::string message)
 {
 	SYSTEMTIME sysTime;
 	GetSystemTime(&sysTime);
@@ -34,7 +34,7 @@ LogMessage::LogMessage(std::string message, LogLevel level)
 	this->message = message;
 }
 
-LogMessage::LogMessage(unsigned int message, LogLevel level)
+LogMessage::LogMessage(LogLevel level, unsigned int message)
 {
 	SYSTEMTIME sysTime;
 	GetSystemTime(&sysTime);

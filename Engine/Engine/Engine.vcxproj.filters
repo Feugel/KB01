@@ -123,14 +123,11 @@
     <ClCompile Include="ResourceHeightmapLoader.cpp">
       <Filter>Source Files\ResourceLoader</Filter>
     </ClCompile>
-    <ClCompile Include="ResourceDXHeightmapLoader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DXRenderer.cpp">
       <Filter>Source Files\Renderer</Filter>
     </ClCompile>
-    <ClCompile Include="Renderer.cpp">
-      <Filter>Source Files\Renderer</Filter>
+    <ClCompile Include="ResourceDXHeightmapLoader.cpp">
+      <Filter>Source Files\ResourceLoader</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -206,14 +203,17 @@
     <ClInclude Include="ResourceHeightmapLoader.h">
       <Filter>Header Files\ResourceLoader</Filter>
     </ClInclude>
-    <ClInclude Include="ResourceDXHeightmapLoader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Renderer.h">
       <Filter>Header Files\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="DXRenderer.h">
       <Filter>Header Files\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceDXHeightmapLoader.h">
+      <Filter>Header Files\ResourceLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="Vertex.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

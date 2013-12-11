@@ -39,7 +39,7 @@ int Game::Main()
 	}
 
 	//kernel->GetResourceManager()->LoadTexture(L"");
-	//kernel->GetResourceManager()->LoadHeightmap(L"");
+	kernel->GetResourceManager()->LoadHeightmap(L"heightmap.bmp");
 	//kernel->GetResourceManager()->LoadModel(L"");
 
 	kernel->Start();
