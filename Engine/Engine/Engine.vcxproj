@@ -19,6 +19,7 @@
     <ClCompile Include="LogManager.cpp" />
     <ClCompile Include="LogMessage.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="ResourceDXHeightmapLoader.cpp" />
     <ClCompile Include="ResourceDXModelLoader.cpp" />
     <ClCompile Include="ResourceDXTextureLoader.cpp" />

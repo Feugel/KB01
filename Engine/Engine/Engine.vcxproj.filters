@@ -129,6 +129,9 @@
     <ClCompile Include="ResourceDXHeightmapLoader.cpp">
       <Filter>Source Files\ResourceLoader</Filter>
     </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Source Files\Renderer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Entity.h">

@@ -1,0 +1,9 @@
+11/12/2013 16:17:55.0512 INFO    Starting up
+11/12/2013 16:17:55.0512 INFO    Creating Kernel
+11/12/2013 16:17:55.0512 INFO    Initializing Kernel
+11/12/2013 16:17:55.0512 INFO    Kernel Initialized
+11/12/2013 16:17:55.0512 INFO    Creating Window
+11/12/2013 16:17:55.0512 INFO    Creating Window Handle
+11/12/2013 16:17:55.0522 INFO    Handle created
+11/12/2013 16:17:55.0718 INFO    Making screen visible
+11/12/2013 16:17:55.0909 INFO    Window created
