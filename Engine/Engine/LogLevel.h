@@ -1,9 +1,7 @@
 #ifndef LOGLEVEL_H
 #define LOGLEVEL_H
 
-///<summary>
-///LogLevel provides a way to log message severity
-///</summary>
+//LogLevel provides a way to log message severity
 enum LogLevel
 {
 	INFO,
@@ -13,9 +11,7 @@ enum LogLevel
 	DEBUG,
 	SIZE_OF_ENUM
 };
-///<summary>
-///Provides a way to log the string representation to file
-///String lengths should be equal
-///</summary>
+//Provides a way to log the string representation to file
+//String lengths should be equal
 static const char* LogLevelNames[SIZE_OF_ENUM] = { "INFO   ", "WARNING", "ERROR  ", "FATAL  ", "DEBUG  " };
 #endif

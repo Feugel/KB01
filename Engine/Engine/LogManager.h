@@ -5,10 +5,8 @@
 #include <fstream>
 #include "LogMessage.h"
 
-///<summary>
-///LogManager class provides basic logging capabilities.
-///It does not keep the log in memory, it writes it directly to file.
-///</summary>
+//LogManager class provides basic logging capabilities.
+//It does not keep the log in memory, it writes it directly to file.
 class LogManager
 {
 public:
@@ -21,14 +19,18 @@ public:
 	//If no instance exists, create a new one with the given filename as log file.
 	static LogManager* Instance(std::string fileName);
 	//Log a message to file with the default INFO LogLevel
-	void Log(std::string message);
-	////Log a message composed from an unsigned int to file with the default INFO LogLevel
-	void Log(unsigned int message);
-	//Log a message to file with the given LogLevel
-	void Log(LogLevel level, std::string message);
-	//Log a message to file with the given LogLevel
-	void Log(LogLevel level, unsigned int message);
-	//Clean up all resources
+	//Template allows multiple types for the parameter (char, int) to automatically fill in.
+	//Using stringstream ensures we get the actual value and not the character defined by that ASCII or UNICODE value.
+	//Might be nice to overhaul for variadic templates (VC12(VS2013) functionality), which allows 'unlimited' parameters
+	template<typename T>
+	void Log(T message);
+	//Log a message with a log level
+	//Template allows multiple types for the parameter (char, int, etc.) to automatically fill in.
+	//Using stringstream ensures we get the actual value and not the character defined by that ASCII or UNICODE value.
+	//Might be nice to overhaul for variadic templates (VC12(VS2013) functionality), which allows 'unlimited' parameters
+	template<typename LogLevel, typename T>
+	void Log(LogLevel level, T message);
+	////Clean up all resources
 	void Cleanup();
 private:
 	//Constructor using log.txt as the log file.
@@ -37,9 +39,12 @@ private:
 	LogManager(std::string fileName);
 	//Write a string directly to the log file.
 	void AppendToLog(LogMessage* message);
+	std::stringstream messageStream;
 	static LogManager* logManager;
 	LogMessage* logMessage;
 	std::ofstream logFile;
 };
+
+
 
 #endif

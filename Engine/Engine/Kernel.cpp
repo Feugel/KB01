@@ -1,10 +1,8 @@
 #include "Kernel.h"
-#include <sstream>
 
 Kernel::Kernel()
 {
 	Initialise();
-	////Quick Thought: make all Managers inherit from a base class 'Manager', so we can keep a set of them around (Map<identifier, Manager> ?)and make them implement basic methods like Update / Render?
 }
 
 Kernel::~Kernel()

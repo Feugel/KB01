@@ -19,9 +19,9 @@ public:
 	virtual HWND GetWindowHandle();
 	//Makes the window visible on screen.
 	virtual void DisplayWindow(bool fullscreen);
-	////Get the Renderer
+	//Get the Renderer
 	Renderer* GetRenderer(void);
-	////Set the renderer
+	//Set the renderer
 	void SetRenderer(Renderer* renderer);
 	//Destructor
 	//Calls Cleanup(), then deletes the objects

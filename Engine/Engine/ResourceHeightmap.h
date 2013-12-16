@@ -11,8 +11,8 @@ public:
 	ResourceHeightmap(void);
 	virtual ~ResourceHeightmap(void);
 	void Cleanup();
-	std::vector<Vertex*> GetHeightmapData(); // To be determined: return data type (vector of struct { float x, float y, float z };?)
-	void SetHeightmapData(std::vector<Vertex*> vertices); // Same data type as above.
+	std::vector<Vertex*> GetHeightmapData(); // return data type: vector of struct { float x, float y, float z, float tu, float tv };
+	void SetHeightmapData(std::vector<Vertex*> vertices);
 private:
 	std::vector<Vertex*> vertices;
 };

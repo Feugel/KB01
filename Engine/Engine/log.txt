@@ -7,3 +7,12 @@
 11/12/2013 16:17:55.0522 INFO    Handle created
 11/12/2013 16:17:55.0718 INFO    Making screen visible
 11/12/2013 16:17:55.0909 INFO    Window created
+16/12/2013 13:21:43.0327 INFO    Starting up
+16/12/2013 13:21:43.0327 INFO    Creating Kernel
+16/12/2013 13:21:43.0327 INFO    Initializing Kernel
+16/12/2013 13:21:43.0327 INFO    Kernel Initialized
+16/12/2013 13:21:43.0327 INFO    Creating Window
+16/12/2013 13:21:43.0327 INFO    Creating Window Handle
+16/12/2013 13:21:43.0327 INFO    Handle created
+16/12/2013 13:21:43.0342 INFO    Making screen visible
+16/12/2013 13:21:43.0358 INFO    Window created

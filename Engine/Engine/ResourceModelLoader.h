@@ -1,5 +1,5 @@
 #ifndef RESOURCEMODELLOADER_H
-#define RESOURCEMODELLOADER
+#define RESOURCEMODELLOADER_H
 
 #include "ResourceModel.h"
 

@@ -10,10 +10,8 @@ int main()
 
 int Game::Main()
 {
-	logger = LogManager::Instance();
-	logger->Log("Starting up");
-	
-	logger->Log("Creating Kernel");
+	LogManager::Instance()->Log("Starting up");
+	LogManager::Instance()->Log("Creating Kernel");
 	kernel = new Kernel();
 
 	Window* window = new Window(NULL, kernel->GetWindowManager());
@@ -24,7 +22,7 @@ int Game::Main()
 
 	if(kernel->GetWindowManager()->RegisterWindow(window))
 	{
-		logger->Log("Window created");
+		LogManager::Instance()->Log("Window created");
 		
 		while (1==1)
 		{
@@ -33,21 +31,21 @@ int Game::Main()
 
 		if(kernel->GetWindowManager()->RegisterWindow(window))
 		{
-			logger->Log(LogLevel::WARNING, "Registered same window twice!");
+			LogManager::Instance()->Log(LogLevel::WARNING, "Registered same window twice!");
 		}
 		else
 		{
-			logger->Log(LogLevel::WARNING, "Window is already registered!");
+			LogManager::Instance()->Log(LogLevel::WARNING, "Window is already registered!");
 			Window* window2 = new Window(NULL, kernel->GetWindowManager());
 			if(kernel->GetWindowManager()->RegisterWindow(window2))
 			{
-				logger->Log(LogLevel::INFO, "Registered new window successfully!");
+				LogManager::Instance()->Log(LogLevel::INFO, "Registered new window successfully!");
 			}
 		}
 	}
 	else
 	{
-		logger -> Log(LogLevel::WARNING, "Could not create Window!");
+		LogManager::Instance()->Log(LogLevel::WARNING, "Could not create Window!");
 	}
 
 	//kernel->GetResourceManager()->LoadTexture(L"");

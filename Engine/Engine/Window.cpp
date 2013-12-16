@@ -24,23 +24,12 @@ Window::~Window(void)
 
 void Window::Cleanup()
 {
-	
 }
 
 HWND Window::GetWindowHandle()
 {
 	return hWnd;
 }
-
-//Renderer* Window::GetRenderer()
-//{
-//	return renderer;
-//}
-//
-//void Window::SetRenderer(Renderer* renderer)
-//{
-//	this->renderer = renderer;
-//}
 
 void Window::Create(int width, int height, wchar_t* title)
 {
@@ -116,9 +105,9 @@ Renderer* Window::GetRenderer(void)
 {
 	return renderer;
 }
-	
+
 void Window::SetRenderer(Renderer* renderer)
 {
 	renderer->Init(GetWindowHandle());
-	Window::renderer = renderer;
+	this->renderer = renderer;
 }
