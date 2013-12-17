@@ -16,32 +16,13 @@ int Game::Main()
 
 	Window* window = new Window(NULL, kernel->GetWindowManager());
 	// Window registration test
-	Renderer* renderer = new DXRenderer();
-	window->SetRenderer(renderer);
-	
-
 	if(kernel->GetWindowManager()->RegisterWindow(window))
 	{
-		LogManager::Instance()->Log("Window created");
-		
-		while (1==1)
-		{
-			window->GetRenderer()->Render();
-		}
-
-		if(kernel->GetWindowManager()->RegisterWindow(window))
-		{
-			LogManager::Instance()->Log(LogLevel::WARNING, "Registered same window twice!");
-		}
-		else
-		{
-			LogManager::Instance()->Log(LogLevel::WARNING, "Window is already registered!");
-			Window* window2 = new Window(NULL, kernel->GetWindowManager());
-			if(kernel->GetWindowManager()->RegisterWindow(window2))
-			{
-				LogManager::Instance()->Log(LogLevel::INFO, "Registered new window successfully!");
-			}
-		}
+		LogManager::Instance()->Log("Window registered");
+		LogManager::Instance()->Log("Adding Renderer (DX9)");
+		Renderer* renderer = new DXRenderer(window);
+		window->SetRenderer(renderer);
+		window->GetRenderer()->Init();
 	}
 	else
 	{
@@ -49,7 +30,7 @@ int Game::Main()
 	}
 
 	//kernel->GetResourceManager()->LoadTexture(L"");
-	kernel->GetResourceManager()->LoadHeightmap(L"heightmap.bmp");
+	//kernel->GetResourceManager()->LoadHeightmap(L"heightmap.bmp");
 	//kernel->GetResourceManager()->LoadModel(L"");
 
 	kernel->Start();

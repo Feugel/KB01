@@ -11,18 +11,6 @@ LogMessage::LogMessage(std::string message)
 	this->message = message;
 }
 
-LogMessage::LogMessage(unsigned int message)
-{
-	SYSTEMTIME sysTime;
-	GetSystemTime(&sysTime);
-	char buffer[40];
-	sprintf(buffer, "%02d/%02d/%04d %02d:%02d:%02d.%04d", sysTime.wDay,sysTime.wMonth, sysTime.wYear, sysTime.wHour, sysTime.wMinute, sysTime.wSecond, sysTime.wMilliseconds);
-	this->moment = buffer;
-	this->level = LogLevel::INFO;
-	this->message = std::to_string(message);
-}
-
-
 LogMessage::LogMessage(LogLevel level, std::string message)
 {
 	SYSTEMTIME sysTime;
@@ -32,15 +20,4 @@ LogMessage::LogMessage(LogLevel level, std::string message)
 	this->moment = buffer;
 	this->level = level;
 	this->message = message;
-}
-
-LogMessage::LogMessage(LogLevel level, unsigned int message)
-{
-	SYSTEMTIME sysTime;
-	GetSystemTime(&sysTime);
-	char buffer[40];
-	sprintf(buffer, "%02d/%02d/%04d %02d:%02d:%02d.%04d", sysTime.wDay,sysTime.wMonth, sysTime.wYear, sysTime.wHour, sysTime.wMinute, sysTime.wSecond, sysTime.wMilliseconds);
-	this->moment = buffer;
-	this->level = level;
-	this->message = std::to_string(message);
 }

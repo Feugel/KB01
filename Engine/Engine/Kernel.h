@@ -16,6 +16,7 @@ public:
 	void Start(void);
 	void Stop(void);
 	void Update(void);
+	void Render(void);
 	WindowManager* GetWindowManager(void);
 	ResourceManager* GetResourceManager(void);
 	SceneManager* GetSceneManager(void);

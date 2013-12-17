@@ -10,12 +10,8 @@ struct LogMessage
 {
 	//Constructor providing a message, uses the INFO LogLevel as message severity
 	LogMessage(std::string message);
-	//Constructor for logging a message composed from an unsigned int
-	LogMessage(unsigned int message);
 	//Constructor for logging a message with a given severity
 	LogMessage(LogLevel level, std::string message);
-	//Constructor for logging a message with a given severity
-	LogMessage(LogLevel level, unsigned int message);
 	//Message Severity
 	LogLevel level;
 	//Message

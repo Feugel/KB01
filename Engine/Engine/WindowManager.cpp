@@ -1,7 +1,9 @@
 #include "WindowManager.h"
+#include "Kernel.h"
 
-WindowManager::WindowManager()
+WindowManager::WindowManager(Kernel* kernel)
 {
+	this->kernel = kernel;
 	windows.clear(); // make sure we get clean memory
 }
 
@@ -79,7 +81,18 @@ std::vector<Window*> WindowManager::GetWindows()
 
 void WindowManager::RenderAll()
 {
-	
+	for(int i = windows.size(); i > 0; --i)
+	{
+		windows[i-1]->GetRenderer()->RenderStart();
+		windows[i-1]->GetRenderer()->Render();
+		windows[i-1]->GetRenderer()->RenderEnd();
+		windows[i-1]->GetRenderer()->Present();
+	}
+}
+
+Kernel* WindowManager::GetKernel()
+{
+	return kernel;
 }
 
 LRESULT CALLBACK WindowManager::WindowProcedure(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)

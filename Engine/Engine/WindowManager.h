@@ -5,11 +5,13 @@
 #include <vector>	 // std::vector
 #include <algorithm> // find()
 
+class Kernel;
+
 class WindowManager
 {
 public:
 	//Default constructor.
-	WindowManager(void);
+	WindowManager(Kernel* kernel);
 	//Destructor.
 	//Calls Cleanup and then destroys all local variables.
 	virtual ~WindowManager(void);
@@ -26,6 +28,8 @@ public:
 	std::vector<Window*> GetWindows();
 	//Render on all windows
 	void RenderAll(void);
+	//Get the kernel
+	Kernel* GetKernel();
 	//Window Procedure used by all Windows.
 	//On quit it releases the window.
 	static LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
@@ -36,6 +40,8 @@ private:
 	void PopWindow(Window* window);
 	//Local Vector to keep track of all instatiated windows.
 	std::vector<Window*> windows;
+	//Kernel reference
+	Kernel* kernel;
 };
 
 #endif

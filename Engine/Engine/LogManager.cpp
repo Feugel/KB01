@@ -38,19 +38,21 @@ void LogManager::Log(T message)
 	messageStream.clear();
 	
 }
-
-template void LogManager::Log(std::string message);
+template void LogManager::Log(LogLevel level, std::string message);
 template void LogManager::Log(const char* message);
 template void LogManager::Log(LPCWSTR message);
 template void LogManager::Log(int message);
 template void LogManager::Log(unsigned int message);
+template void LogManager::Log(long message);
+template void LogManager::Log(unsigned long message);
+template void LogManager::Log(double message);
 
 template<typename LogLevel, typename T>
 void LogManager::Log(LogLevel level, T message)
 {
 	messageStream << message;
 	//std::cout << messageStream.str() << std::endl;
-	logMessage = new LogMessage(messageStream.str());
+	logMessage = new LogMessage(level, messageStream.str());
 	AppendToLog(logMessage);
 	delete logMessage;
 	messageStream.str(std::string());

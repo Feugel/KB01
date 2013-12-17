@@ -24,6 +24,7 @@ Window::~Window(void)
 
 void Window::Cleanup()
 {
+	//TODO: clean up the mess
 }
 
 HWND Window::GetWindowHandle()
@@ -31,10 +32,40 @@ HWND Window::GetWindowHandle()
 	return hWnd;
 }
 
+void Window::Initialise() // Should be moved to Manager to ensure one time run; we dont need to register multiple window classes
+{
+	LogManager::Instance()->Log("Initializing Window");
+	/* The Window structure */
+	Wnd.hInstance = hInst;
+	Wnd.lpszClassName = L"Window";
+	Wnd.lpfnWndProc = WindowManager::WindowProcedure;      /* This function is called by windows */
+	Wnd.style = CS_GLOBALCLASS;                 /* Make it a global class */
+	Wnd.cbSize = sizeof (WNDCLASSEX);		// reserve space for window class
+
+	/* Use default icon and mouse-pointer */
+	Wnd.hIcon = LoadIcon (NULL, IDI_APPLICATION);
+	Wnd.hIconSm = LoadIcon (NULL, IDI_APPLICATION);	// set window icon
+	Wnd.hCursor = LoadCursor (NULL, IDC_ARROW);
+	Wnd.lpszMenuName = NULL;                 /* No menu */
+	Wnd.cbClsExtra = 0;                      /* No extra bytes after the window class */
+	Wnd.cbWndExtra = 0;                      /* structure or the window instance */
+	// Set the background (will crash otherwise)
+	Wnd.hbrBackground = (HBRUSH)COLOR_BACKGROUND;
+
+	if(RegisterClassEx(&Wnd))
+	{
+		LogManager::Instance()->Log("Class registered successfully");
+	} else {
+		LogManager::Instance()->Log(LogLevel::WARNING, "Class NOT REGISTERED");
+		LogManager::Instance()->Log(::GetLastError());
+	}
+}
+
+
 void Window::Create(int width, int height, wchar_t* title)
 {
 	LogManager::Instance()->Log("Creating Window Handle");
-	hWnd = CreateWindowExW(0,	//Default Window ExStyle
+	hWnd = CreateWindowEx(0,	//Default Window ExStyle
 		Wnd.lpszClassName,		//Class Name
 		title,					//Title
 		WS_OVERLAPPEDWINDOW,	//Window Style
@@ -46,6 +77,7 @@ void Window::Create(int width, int height, wchar_t* title)
 		0,						//No menu
 		Wnd.hInstance,			//hInstance
 		0);						//lpParams
+
 	if(hWnd)
 	{
 		LogManager::Instance()->Log("Handle created");
@@ -53,31 +85,8 @@ void Window::Create(int width, int height, wchar_t* title)
 	else
 	{
 		LogManager::Instance()->Log(LogLevel::WARNING, "Creation of Window Handle failed!");
+		throw(::GetLastError());
 	}
-}
-
-void Window::Initialise()
-{
-	LogManager::Instance()->Log("Creating Window");
-	/* The Window structure */
-	Wnd.hInstance = hInst;
-	Wnd.lpszClassName = L"Window";
-	Wnd.lpfnWndProc = WindowManager::WindowProcedure;      /* This function is called by windows */
-	Wnd.style = CS_DBLCLKS;                 /* Catch double-clicks */
-	Wnd.cbSize = sizeof (WNDCLASSEX);		// reserve space for window class
-
-	/* Use default icon and mouse-pointer */
-	Wnd.hIcon = LoadIcon (NULL, IDI_APPLICATION);
-	Wnd.hIconSm = LoadIcon (NULL, IDI_APPLICATION);	// set window icon
-	Wnd.hCursor = LoadCursor (NULL, IDC_ARROW);
-	Wnd.lpszMenuName = NULL;                 /* No menu */
-	Wnd.cbClsExtra = 0;                      /* No extra bytes after the window class */
-	Wnd.cbWndExtra = 0;                      /* structure or the window instance */
-	/* Use Windows's default color as the background of the window */
-	Wnd.hbrBackground = (HBRUSH) COLOR_BACKGROUND;
-
-	
-	RegisterClassEx(&Wnd);
 }
 
 void Window::DisplayWindow(bool fullscreen)
@@ -108,6 +117,10 @@ Renderer* Window::GetRenderer(void)
 
 void Window::SetRenderer(Renderer* renderer)
 {
-	renderer->Init(GetWindowHandle());
 	this->renderer = renderer;
+}
+
+WindowManager* Window::GetManager()
+{
+	return this->manager;
 }
