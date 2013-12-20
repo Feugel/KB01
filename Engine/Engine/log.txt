@@ -16,3 +16,31 @@
 16/12/2013 13:21:43.0327 INFO    Handle created
 16/12/2013 13:21:43.0342 INFO    Making screen visible
 16/12/2013 13:21:43.0358 INFO    Window created
+20/12/2013 15:44:40.0151 INFO    Starting up
+20/12/2013 15:44:40.0161 INFO    Creating Kernel
+20/12/2013 15:44:40.0161 INFO    Initializing Kernel
+20/12/2013 15:44:40.0161 INFO    Kernel Initialized
+20/12/2013 15:44:40.0161 INFO    Initializing Window
+20/12/2013 15:44:40.0161 INFO    Class registered successfully
+20/12/2013 15:44:40.0161 INFO    Creating Window Handle
+20/12/2013 15:44:40.0295 INFO    Handle created
+20/12/2013 15:44:40.0295 INFO    Making screen visible
+20/12/2013 15:44:40.0349 INFO    Window registered
+20/12/2013 15:44:40.0349 INFO    Adding Renderer (DX9)
+20/12/2013 15:44:40.0473 INFO    Starting Kernel functions
+20/12/2013 15:44:40.0473 INFO    Starting Game Loop
+20/12/2013 15:44:44.0021 INFO    Caught message: WM_LBUTTONDOWN
+20/12/2013 15:44:44.0031 INFO    Caught message: WM_LBUTTONUP
+20/12/2013 15:45:08.0573 INFO    Starting up
+20/12/2013 15:45:08.0573 INFO    Creating Kernel
+20/12/2013 15:45:08.0573 INFO    Initializing Kernel
+20/12/2013 15:45:08.0573 INFO    Kernel Initialized
+20/12/2013 15:45:08.0573 INFO    Initializing Window
+20/12/2013 15:45:08.0573 INFO    Class registered successfully
+20/12/2013 15:45:08.0573 INFO    Creating Window Handle
+20/12/2013 15:45:08.0633 INFO    Handle created
+20/12/2013 15:45:08.0633 INFO    Making screen visible
+20/12/2013 15:45:08.0668 INFO    Window registered
+20/12/2013 15:45:08.0668 INFO    Adding Renderer (DX9)
+20/12/2013 15:45:08.0837 INFO    Starting Kernel functions
+20/12/2013 15:45:08.0837 INFO    Starting Game Loop

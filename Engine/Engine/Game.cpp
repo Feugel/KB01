@@ -20,9 +20,9 @@ int Game::Main()
 	{
 		LogManager::Instance()->Log("Window registered");
 		LogManager::Instance()->Log("Adding Renderer (DX9)");
-		Renderer* renderer = new DXRenderer(window);
+		Renderer* renderer = new DXRenderer();
 		window->SetRenderer(renderer);
-		window->GetRenderer()->Init();
+		window->GetRenderer()->Init(window->GetWindowHandle());
 	}
 	else
 	{

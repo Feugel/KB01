@@ -12,7 +12,11 @@ public:
 	DXRenderer();
 	virtual ~DXRenderer(void);
 	void Init(HWND hwnd);
+	void RenderStart();
 	void Render();
+	void RenderEnd();
+	void Present();
+
 	
 private:
 	HRESULT InitD3D( HWND hWnd );

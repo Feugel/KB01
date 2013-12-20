@@ -227,35 +227,23 @@ VOID DXRenderer::SetupMatrices()
     g_pd3dDevice->SetTransform( D3DTS_PROJECTION, &matProj );
 }
 
-
-
-//-----------------------------------------------------------------------------
-// Name: Render()
-// Desc: Draws the scene
-//-----------------------------------------------------------------------------
+VOID DXRenderer::RenderStart()
+{
+	g_pd3dDevice->Clear( 0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB( 0, 0, 0 ), 1.0f, 0 );
+	g_pd3dDevice->BeginScene();
+}
 VOID DXRenderer::Render()
 {
-    // Clear the backbuffer to a black color
-    g_pd3dDevice->Clear( 0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB( 0, 0, 0 ), 1.0f, 0 );
-	  
-
-    // Begin the scene
-    if( SUCCEEDED( g_pd3dDevice->BeginScene() ) )
-    {
-        // Setup the world, view, and projection matrices
-        SetupMatrices();
-
-        // Render the vertex buffer contents
-        g_pd3dDevice->SetStreamSource( 0, g_pVB, 0, sizeof( CUSTOMVERTEX ) );
-        g_pd3dDevice->SetFVF( D3DFVF_CUSTOMVERTEX );
-		g_pd3dDevice->DrawPrimitive( D3DPT_TRIANGLELIST, 0, 12);
-
-        // End the scene
-        g_pd3dDevice->EndScene();
-    }
-
-    // Present the backbuffer contents to the display
-    g_pd3dDevice->Present( NULL, NULL, NULL, NULL );
+	 SetupMatrices();
+    g_pd3dDevice->SetStreamSource( 0, g_pVB, 0, sizeof( CUSTOMVERTEX ) );
+    g_pd3dDevice->SetFVF( D3DFVF_CUSTOMVERTEX );
+	g_pd3dDevice->DrawPrimitive( D3DPT_TRIANGLELIST, 0, 12);
 }
-
-
+VOID DXRenderer::RenderEnd()
+{
+	g_pd3dDevice->EndScene();
+}
+VOID DXRenderer::Present()
+{
+	 g_pd3dDevice->Present( NULL, NULL, NULL, NULL );
+}
