@@ -18,28 +18,22 @@ struct CUSTOMVERTEX
 #define D3DFVF_CUSTOMVERTEX (D3DFVF_XYZ|D3DFVF_DIFFUSE)
 
 
-
-
-//-----------------------------------------------------------------------------
-// Name: InitD3D()
-// Desc: Initializes Direct3D
-//-----------------------------------------------------------------------------
-
 DXRenderer::DXRenderer()
-{
-	
+{	
 }
 
 DXRenderer::~DXRenderer(void)
 {
+	Cleanup();
 }
 
+// initializing directx and adding the window to renderer
 void DXRenderer::Init(HWND hWnd)
 {
 	// Initialize Direct3D
     if( SUCCEEDED( InitD3D( hWnd ) ) )
     {
-        // Create the scene geometry
+        // Temp for creating a cube (repace by model's and heightmaps
         if( SUCCEEDED( InitGeometry() ) )
         {
 
@@ -47,16 +41,18 @@ void DXRenderer::Init(HWND hWnd)
      }
 }
 
-
+// actual initializing of directx called by init
 HRESULT DXRenderer::InitD3D( HWND hWnd )
 {
     // Create the D3D object.
     if( NULL == ( g_pD3D = Direct3DCreate9( D3D_SDK_VERSION ) ) )
         return E_FAIL;
 
-    // Set up the structure used to create the D3DDevice
+    //setting up parameters and zeroing memmory
     D3DPRESENT_PARAMETERS d3dpp;
     ZeroMemory( &d3dpp, sizeof( d3dpp ) );
+
+	//setting the actual parameters
     d3dpp.Windowed = TRUE;
     d3dpp.SwapEffect = D3DSWAPEFFECT_DISCARD;
     d3dpp.BackBufferFormat = D3DFMT_UNKNOWN;
@@ -64,29 +60,19 @@ HRESULT DXRenderer::InitD3D( HWND hWnd )
 	d3dpp.BackBufferWidth = 600;
 
     // Create the D3DDevice
-    if( FAILED( g_pD3D->CreateDevice( D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, hWnd,
-                                      D3DCREATE_HARDWARE_VERTEXPROCESSING,
-                                      &d3dpp, &g_pd3dDevice ) ) )
+    if( FAILED( g_pD3D->CreateDevice( D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, hWnd, D3DCREATE_HARDWARE_VERTEXPROCESSING,&d3dpp, &g_pd3dDevice ) ) )
     {
         return E_FAIL;
     }
 
-    // Turn off culling, so we see the front and back of the triangle
+	//setting the renderstates of the d3d device
 	g_pd3dDevice->SetRenderState( D3DRS_CULLMODE, D3DCULL_NONE);
-
-    // Turn off D3D lighting, since we are providing our own vertex colors
     g_pd3dDevice->SetRenderState( D3DRS_LIGHTING, FALSE );
 
     return S_OK;
 }
 
-
-
-
-//-----------------------------------------------------------------------------
-// Name: InitGeometry()
-// Desc: Creates the scene geometry
-//-----------------------------------------------------------------------------
+// temp methode to create a cube as model
 HRESULT DXRenderer::InitGeometry()
 {
    
@@ -169,10 +155,7 @@ HRESULT DXRenderer::InitGeometry()
 
 
 
-//-----------------------------------------------------------------------------
-// Name: Cleanup()
-// Desc: Releases all previously initialized objects
-//-----------------------------------------------------------------------------
+//cleanup called by destructor
 VOID DXRenderer::Cleanup()
 {
     if( g_pVB != NULL )
@@ -186,11 +169,7 @@ VOID DXRenderer::Cleanup()
 }
 
 
-
-//-----------------------------------------------------------------------------
-// Name: SetupMatrices()
-// Desc: Sets up the world, view, and projection transform matrices.
-//-----------------------------------------------------------------------------
+//Sets up the world, view, and projection transform matrices. (still the default from tutorial and has to be replaced)
 VOID DXRenderer::SetupMatrices()
 {
     // For our world matrix, we will just rotate the object about the y-axis.
@@ -227,11 +206,15 @@ VOID DXRenderer::SetupMatrices()
     g_pd3dDevice->SetTransform( D3DTS_PROJECTION, &matProj );
 }
 
+
+//called before render. Clears the backbuffer and calls beginscene
 VOID DXRenderer::RenderStart()
 {
 	g_pd3dDevice->Clear( 0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB( 0, 0, 0 ), 1.0f, 0 );
 	g_pd3dDevice->BeginScene();
 }
+
+//does the actual rendering. todo render models and heightmap
 VOID DXRenderer::Render()
 {
 	 SetupMatrices();
@@ -239,10 +222,14 @@ VOID DXRenderer::Render()
     g_pd3dDevice->SetFVF( D3DFVF_CUSTOMVERTEX );
 	g_pd3dDevice->DrawPrimitive( D3DPT_TRIANGLELIST, 0, 12);
 }
+
+//called after render. calls endscene
 VOID DXRenderer::RenderEnd()
 {
 	g_pd3dDevice->EndScene();
 }
+
+//presents the backbuffer to the window
 VOID DXRenderer::Present()
 {
 	 g_pd3dDevice->Present( NULL, NULL, NULL, NULL );

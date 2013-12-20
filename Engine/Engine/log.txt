@@ -1,46 +1,49 @@
-11/12/2013 16:17:55.0512 INFO    Starting up
-11/12/2013 16:17:55.0512 INFO    Creating Kernel
-11/12/2013 16:17:55.0512 INFO    Initializing Kernel
-11/12/2013 16:17:55.0512 INFO    Kernel Initialized
-11/12/2013 16:17:55.0512 INFO    Creating Window
-11/12/2013 16:17:55.0512 INFO    Creating Window Handle
-11/12/2013 16:17:55.0522 INFO    Handle created
-11/12/2013 16:17:55.0718 INFO    Making screen visible
-11/12/2013 16:17:55.0909 INFO    Window created
-16/12/2013 13:21:43.0327 INFO    Starting up
-16/12/2013 13:21:43.0327 INFO    Creating Kernel
-16/12/2013 13:21:43.0327 INFO    Initializing Kernel
-16/12/2013 13:21:43.0327 INFO    Kernel Initialized
-16/12/2013 13:21:43.0327 INFO    Creating Window
-16/12/2013 13:21:43.0327 INFO    Creating Window Handle
-16/12/2013 13:21:43.0327 INFO    Handle created
-16/12/2013 13:21:43.0342 INFO    Making screen visible
-16/12/2013 13:21:43.0358 INFO    Window created
-20/12/2013 15:44:40.0151 INFO    Starting up
-20/12/2013 15:44:40.0161 INFO    Creating Kernel
-20/12/2013 15:44:40.0161 INFO    Initializing Kernel
-20/12/2013 15:44:40.0161 INFO    Kernel Initialized
-20/12/2013 15:44:40.0161 INFO    Initializing Window
-20/12/2013 15:44:40.0161 INFO    Class registered successfully
-20/12/2013 15:44:40.0161 INFO    Creating Window Handle
-20/12/2013 15:44:40.0295 INFO    Handle created
-20/12/2013 15:44:40.0295 INFO    Making screen visible
-20/12/2013 15:44:40.0349 INFO    Window registered
-20/12/2013 15:44:40.0349 INFO    Adding Renderer (DX9)
-20/12/2013 15:44:40.0473 INFO    Starting Kernel functions
-20/12/2013 15:44:40.0473 INFO    Starting Game Loop
-20/12/2013 15:44:44.0021 INFO    Caught message: WM_LBUTTONDOWN
-20/12/2013 15:44:44.0031 INFO    Caught message: WM_LBUTTONUP
-20/12/2013 15:45:08.0573 INFO    Starting up
-20/12/2013 15:45:08.0573 INFO    Creating Kernel
-20/12/2013 15:45:08.0573 INFO    Initializing Kernel
-20/12/2013 15:45:08.0573 INFO    Kernel Initialized
-20/12/2013 15:45:08.0573 INFO    Initializing Window
-20/12/2013 15:45:08.0573 INFO    Class registered successfully
-20/12/2013 15:45:08.0573 INFO    Creating Window Handle
-20/12/2013 15:45:08.0633 INFO    Handle created
-20/12/2013 15:45:08.0633 INFO    Making screen visible
-20/12/2013 15:45:08.0668 INFO    Window registered
-20/12/2013 15:45:08.0668 INFO    Adding Renderer (DX9)
-20/12/2013 15:45:08.0837 INFO    Starting Kernel functions
-20/12/2013 15:45:08.0837 INFO    Starting Game Loop
+20/12/2013 16:21:05.0486 INFO    Starting up
+20/12/2013 16:21:05.0487 INFO    Creating Kernel
+20/12/2013 16:21:05.0487 INFO    Initializing Kernel
+20/12/2013 16:21:05.0487 INFO    Kernel Initialized
+20/12/2013 16:21:05.0487 INFO    Initializing Window
+20/12/2013 16:21:05.0487 INFO    Class registered successfully
+20/12/2013 16:21:05.0487 INFO    Creating Window Handle
+20/12/2013 16:21:05.0507 INFO    Handle created
+20/12/2013 16:21:05.0507 INFO    Making screen visible
+20/12/2013 16:21:05.0547 INFO    Window registered
+20/12/2013 16:21:05.0548 INFO    Adding Renderer (DX9)
+20/12/2013 16:21:05.0684 INFO    Starting Kernel functions
+20/12/2013 16:21:05.0684 INFO    Starting Game Loop
+20/12/2013 16:21:30.0529 INFO    Caught message: WM_KEYDOWN
+20/12/2013 16:21:30.0669 INFO    Caught message: WM_KEYUP
+20/12/2013 16:21:30.0739 INFO    Caught message: WM_KEYDOWN
+20/12/2013 16:21:30.0809 INFO    Caught message: WM_KEYUP
+20/12/2013 16:21:30.0909 INFO    Caught message: WM_KEYDOWN
+20/12/2013 16:21:30.0979 INFO    Caught message: WM_KEYUP
+20/12/2013 16:21:31.0009 INFO    Caught message: WM_KEYDOWN
+20/12/2013 16:21:31.0109 INFO    Caught message: WM_KEYUP
+20/12/2013 16:21:31.0229 INFO    Caught message: WM_KEYDOWN
+20/12/2013 16:21:31.0309 INFO    Caught message: WM_KEYUP
+20/12/2013 16:21:31.0359 INFO    Caught message: WM_KEYDOWN
+20/12/2013 16:21:31.0429 INFO    Caught message: WM_KEYUP
+20/12/2013 16:21:50.0243 INFO    Caught message: WM_KEYDOWN
+20/12/2013 16:21:50.0293 INFO    Caught message: WM_KEYUP
+20/12/2013 16:21:50.0593 INFO    Caught message: WM_KEYDOWN
+20/12/2013 16:21:50.0643 INFO    Caught message: WM_KEYUP
+20/12/2013 16:21:50.0913 INFO    Caught message: WM_KEYDOWN
+20/12/2013 16:21:50.0963 INFO    Caught message: WM_KEYUP
+20/12/2013 16:21:51.0313 INFO    Caught message: WM_KEYDOWN
+20/12/2013 16:21:51.0343 INFO    Caught message: WM_KEYUP
+20/12/2013 16:21:51.0663 INFO    Caught message: WM_KEYDOWN
+20/12/2013 16:21:51.0763 INFO    Caught message: WM_KEYUP
+20/12/2013 16:21:52.0043 INFO    Caught message: WM_KEYDOWN
+20/12/2013 16:21:52.0143 INFO    Caught message: WM_KEYUP
+20/12/2013 16:21:52.0363 INFO    Caught message: WM_KEYDOWN
+20/12/2013 16:21:52.0463 INFO    Caught message: WM_KEYUP
+20/12/2013 16:21:52.0813 INFO    Caught message: WM_KEYDOWN
+20/12/2013 16:21:53.0013 INFO    Caught message: WM_KEYUP
+20/12/2013 16:21:53.0343 INFO    Caught message: WM_KEYDOWN
+20/12/2013 16:21:53.0443 INFO    Caught message: WM_KEYUP
+20/12/2013 16:21:53.0693 INFO    Caught message: WM_KEYDOWN
+20/12/2013 16:21:53.0793 INFO    Caught message: WM_KEYUP
+20/12/2013 16:21:53.0943 INFO    Caught message: WM_KEYDOWN
+20/12/2013 16:21:54.0063 INFO    Caught message: WM_KEYUP
+20/12/2013 16:21:54.0193 INFO    Caught message: WM_KEYDOWN
+20/12/2013 16:21:54.0263 INFO    Caught message: WM_KEYUP
