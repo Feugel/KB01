@@ -26,12 +26,13 @@ int Game::Main()
 		Renderer* renderer = new DXRenderer();
 		window->SetRenderer(renderer);
 		window->GetRenderer()->Init(window->GetWindowHandle());
+		renderer->InitHeightMap(kernel->GetResourceManager()->LoadHeightmap(L"heightmap.bmp"));
 	}
 	else
 	{
 		LogManager::Instance()->Log(LogLevel::WARNING, "Could not create Window!");
 	}
-
+	
 	//kernel->GetResourceManager()->GetTexture(L"");
 	kernel->GetResourceManager()->GetHeightmap(L"heightmap.bmp");
 	//kernel->GetResourceManager()->GetModel(L"");

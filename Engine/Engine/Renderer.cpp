@@ -6,6 +6,9 @@ Renderer::Renderer(void)
 Renderer::~Renderer(void)
 {
 }
+HRESULT Renderer::InitHeightMap(ResourceHeightmap* heightmap){
+	return NULL;
+}
 void Renderer::RenderStart()
 {
 }

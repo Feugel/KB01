@@ -1,4 +1,7 @@
 #include "DXRenderer.h"
+#include "ResourceHeightmap.h"
+#include <vector>
+#include "Vertex.h"
 
 //-----------------------------------------------------------------------------
 // Global variables
@@ -6,6 +9,7 @@
 LPDIRECT3D9             g_pD3D = NULL; // Used to create the D3DDevice
 LPDIRECT3DDEVICE9       g_pd3dDevice = NULL; // Our rendering device
 LPDIRECT3DVERTEXBUFFER9 g_pVB = NULL; // Buffer to hold vertices
+LPDIRECT3DVERTEXBUFFER9 g_hVB = NULL; // Buffer to hold Heightmapvertices
 
 // A structure for our custom vertex type
 struct CUSTOMVERTEX
@@ -36,7 +40,7 @@ void DXRenderer::Init(HWND hWnd)
         // Temp for creating a cube (repace by model's and heightmaps
         if( SUCCEEDED( InitGeometry() ) )
         {
-
+	
         }
      }
 }
@@ -153,6 +157,73 @@ HRESULT DXRenderer::InitGeometry()
 }
 
 
+HRESULT DXRenderer::InitHeightMap(ResourceHeightmap* heightmap)
+{
+		//width and height of the heightmap
+		int width = 256;
+		int height = 256;
+		//amount of vertices in the buffer
+		int amount = ((width * height -2) * 2 ) + width * 2; 
+		CUSTOMVERTEX* g_Vertices = new CUSTOMVERTEX[amount];
+
+		//curent position in the array
+		int count = 0;
+
+		for(int z = 0; z < 1; z++) {
+			//if even move the right right
+			if ( z % 2 == 0)
+			{
+				for( int x = 1; x <= width; x ++)
+				{
+
+					CUSTOMVERTEX tmp = {  x - 1,	-1 , z, 0xff0000ff };
+					g_Vertices[count] = tmp;
+					count ++;
+					CUSTOMVERTEX tmp2 = {  x - 1,	-1,	z + 1, 0xff0000ff };
+					g_Vertices[count] = tmp;
+					count ++;
+				}
+			}
+			//if odd move to the left
+			else
+			{
+				for( int x = width; x > 0; x --)
+				{
+					CUSTOMVERTEX tmp = {  x - 1,	-1 , z, 0xff0000ff };
+					g_Vertices[count] = tmp;
+					count ++;
+					CUSTOMVERTEX tmp2 = {  x - 1,	-1,	z + 1, 0xff0000ff };
+					g_Vertices[count] = tmp;
+					count ++;
+				}
+			}
+		
+		
+
+
+
+		// Create the vertex buffer.
+		if( FAILED( g_pd3dDevice->CreateVertexBuffer( amount * sizeof( CUSTOMVERTEX ),
+														0, D3DFVF_CUSTOMVERTEX,
+														D3DPOOL_DEFAULT, &g_hVB, NULL ) ) )
+		{
+			return E_FAIL;
+		}
+
+		// Fill the vertex buffer.
+		VOID* pVertices;
+		if( FAILED( g_hVB->Lock( 0, sizeof( &g_Vertices ), ( void** )&pVertices, 0 ) ) )
+			return E_FAIL;
+		memcpy( pVertices, &g_Vertices, sizeof( &g_Vertices ) );
+		g_hVB->Unlock();
+
+		return S_OK;
+		}
+	
+}
+
+
+
 
 
 //cleanup called by destructor
@@ -217,10 +288,10 @@ VOID DXRenderer::RenderStart()
 //does the actual rendering. todo render models and heightmap
 VOID DXRenderer::Render()
 {
-	 SetupMatrices();
-    g_pd3dDevice->SetStreamSource( 0, g_pVB, 0, sizeof( CUSTOMVERTEX ) );
+	SetupMatrices();
+	g_pd3dDevice->SetStreamSource( 0, g_hVB, 0, sizeof( CUSTOMVERTEX ) );
     g_pd3dDevice->SetFVF( D3DFVF_CUSTOMVERTEX );
-	g_pd3dDevice->DrawPrimitive( D3DPT_TRIANGLELIST, 0, 12);
+	g_pd3dDevice->DrawPrimitive( D3DPT_TRIANGLESTRIP, 0, 12);
 }
 
 //called after render. calls endscene

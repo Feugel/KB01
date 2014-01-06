@@ -4,6 +4,7 @@
 #include <d3dx9.h>
 #include <d3d9.h>
 #include <strsafe.h>
+#include "ResourceHeightmap.h"
 
 
 class DXRenderer : public Renderer 
@@ -21,6 +22,7 @@ public:
 private:
 	HRESULT InitD3D( HWND hWnd );
 	HRESULT InitGeometry();
+	HRESULT InitHeightMap(ResourceHeightmap* heightmap);
 	void Cleanup();
 	void SetupMatrices();
 
