@@ -1,4 +1,5 @@
 #include "WindowManager.h"
+#include "Window.h"
 #include "Kernel.h"
 
 WindowManager::WindowManager(Kernel* kernel)
@@ -79,7 +80,7 @@ std::vector<Window*> WindowManager::GetWindows()
 	return windows;
 }
 
-void WindowManager::RenderAll()
+void WindowManager::Render()
 {
 	for(int i = windows.size(); i > 0; --i)
 	{

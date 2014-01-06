@@ -1,6 +1,8 @@
 #include "Game.h"
 #include "Renderer.h"
 #include "DXRenderer.h"
+#include "WindowManager.h"
+#include "Window.h"
 
 int main()
 {

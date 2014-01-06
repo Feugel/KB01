@@ -1,13 +1,14 @@
 #ifndef WINDOWMANAGER_H
 #define WINDOWMANAGER_H
-
-#include "Window.h"
+#include <windows.h>
 #include <vector>	 // std::vector
 #include <algorithm> // find()
+#include "Renderable.h"
 
-class Kernel;
+class Kernel; // Forward Declaration to access the Kernel from the Manager
+class Window; // Forward Declaration to access the Manager from the Window
 
-class WindowManager
+class WindowManager : public Renderable
 {
 public:
 	//Default constructor.
@@ -27,7 +28,7 @@ public:
 	//Returns the vector containing the windows.
 	std::vector<Window*> GetWindows();
 	//Render on all windows
-	void RenderAll(void);
+	void Render(void);
 	//Get the kernel
 	Kernel* GetKernel();
 	//Window Procedure used by all Windows.

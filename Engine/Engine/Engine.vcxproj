@@ -47,6 +47,7 @@
     <ClInclude Include="LogManager.h" />
     <ClInclude Include="LogMessage.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Renderable.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="ResourceDXHeightmapLoader.h" />
     <ClInclude Include="ResourceDXModelLoader.h" />
@@ -63,6 +64,7 @@
     <ClInclude Include="SkyBox.h" />
     <ClInclude Include="Terrain.h" />
     <ClInclude Include="Timer.h" />
+    <ClInclude Include="Updatable.h" />
     <ClInclude Include="Vertex.h" />
     <ClInclude Include="Window.h" />
     <ClInclude Include="WindowManager.h" />

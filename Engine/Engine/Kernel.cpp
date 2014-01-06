@@ -1,4 +1,7 @@
 #include "Kernel.h"
+#include "ResourceManager.h"
+#include "WindowManager.h"
+#include "SceneManager.h"
 
 Kernel::Kernel()
 {
@@ -55,6 +58,8 @@ void Kernel::Start()
 	isFinished = false;
 	MSG msg;
 	LogManager::Instance()->Log("Starting Game Loop");
+	Timer* timer = new Timer();
+	timer->Start();
 	do
 	{
 		// Windows message loop; catches ALL MESSAGES right now.
@@ -62,7 +67,7 @@ void Kernel::Start()
 		{
 			switch(msg.message)
 			{
-				case 161:				this->GetWindowManager()->ReleaseWindow(msg.hwnd); break;// for some reason WM_CLOSE does not work here
+				case 161:				this->GetWindowManager()->ReleaseWindow(msg.hwnd); if(this->GetWindowManager()->GetWindows().empty()) this->Stop(); break;// for some reason WM_CLOSE does not work here
 				case WM_KEYDOWN:		LogManager::Instance()->Log(LogLevel::INFO, "Caught message: WM_KEYDOWN"); break;	// handle input on this?
 				case WM_KEYUP:			LogManager::Instance()->Log(LogLevel::INFO, "Caught message: WM_KEYUP"); break;		// handle input on this?
 				case WM_SIZE:			LogManager::Instance()->Log(LogLevel::INFO, "Caught message: WM_SIZE"); break;
@@ -83,7 +88,7 @@ void Kernel::Start()
 		}
 		//LogManager::Instance()->Log(GetWindowManager()->GetWindows().size());
 		//LogManager::Instance()->Log("Running Kernel::Update");
-		this->Update(); // make calls to all manager's 'Update' functions
+		this->Update(timer); // make calls to all manager's 'Update' functions
 		//LogManager::Instance()->Log("Kernel::Update done");
 		//LogManager::Instance()->Log("Running Kernel::Render");
 		this->Render(); // make calls to necessary manager's 'Render' functions
@@ -91,6 +96,9 @@ void Kernel::Start()
 		//LogManager::Instance()->Log("Kernel::Render done");
 	}
 	while(WM_QUIT != msg.message && !this->isFinished);
+	timer->Stop();
+	// clean up
+	this->Cleanup();
 }
 
 void Kernel::Stop()
@@ -99,12 +107,12 @@ void Kernel::Stop()
 	isFinished = true;
 }
 
-void Kernel::Update()
+void Kernel::Update(Timer* timer)
 {
 
 }
 
 void Kernel::Render()
 {
-	winMan->RenderAll();
+	winMan->Render();
 }
