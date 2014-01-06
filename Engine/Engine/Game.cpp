@@ -26,6 +26,7 @@ int Game::Main()
 		Renderer* renderer = new DXRenderer();
 		window->SetRenderer(renderer);
 		window->GetRenderer()->Init(window->GetWindowHandle());
+		renderer->InitHeightMap(kernel->GetResourceManager()->LoadHeightmap(L"heightmap.bmp"));
 	}
 	else
 	{
@@ -33,8 +34,9 @@ int Game::Main()
 	}
 
 	//kernel->GetResourceManager()->LoadTexture(L"");
-	kernel->GetResourceManager()->LoadHeightmap(L"heightmap.bmp");
+	
 	//kernel->GetResourceManager()->LoadModel(L"");
+
 
 	kernel->Start();
 	return 0;
