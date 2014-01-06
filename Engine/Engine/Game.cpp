@@ -32,9 +32,9 @@ int Game::Main()
 		LogManager::Instance()->Log(LogLevel::WARNING, "Could not create Window!");
 	}
 
-	//kernel->GetResourceManager()->LoadTexture(L"");
-	kernel->GetResourceManager()->LoadHeightmap(L"heightmap.bmp");
-	//kernel->GetResourceManager()->LoadModel(L"");
+	//kernel->GetResourceManager()->GetTexture(L"");
+	kernel->GetResourceManager()->GetHeightmap(L"heightmap.bmp");
+	//kernel->GetResourceManager()->GetModel(L"");
 
 	kernel->Start();
 	return 0;

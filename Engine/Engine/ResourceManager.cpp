@@ -28,15 +28,29 @@ void ResourceManager::Cleanup()
 	{
 		(*heightmapLoader).Cleanup();
 	}
+	textures.clear();
+	//models.clear();
+}
+
+ResourceTexture* ResourceManager::GetTexture(LPCWSTR fileName)
+{
+	auto iterator = std::find_if(textures.begin(), textures.end(), [&fileName](ResourceTexture* texture) { return std::wcscmp(texture->GetFilename(), fileName) == 0; });
+	if(iterator != textures.end())
+		return *iterator;
+
+	ResourceTexture* texture = LoadTexture(fileName);
+	textures.push_back(texture);
+	return texture;
 }
 
 ResourceTexture* ResourceManager::LoadTexture(LPCWSTR fileName)
 {
-	//if does not exist in list, load from file
-	//otherwise, return the one in the list
-
-	//for now, always load new
 	return textureLoader->LoadFile(fileName);
+}
+
+ResourceHeightmap* ResourceManager::GetHeightmap(LPCWSTR fileName)
+{
+	return LoadHeightmap(fileName);
 }
 
 ResourceHeightmap* ResourceManager::LoadHeightmap(LPCWSTR fileName)

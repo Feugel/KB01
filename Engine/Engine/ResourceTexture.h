@@ -10,8 +10,11 @@ public:
 	void Cleanup();
 	LPDIRECT3DTEXTURE9 GetTexture(void);
 	void SetTexture(LPDIRECT3DTEXTURE9 texture);
+	LPCWSTR GetFilename();
+	void SetFilename(LPCWSTR fileName);
 private:
 	LPDIRECT3DTEXTURE9 texture;
+	LPCWSTR fileName;
 };
 
 #endif

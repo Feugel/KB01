@@ -26,3 +26,13 @@ void ResourceTexture::SetTexture(LPDIRECT3DTEXTURE9 texture)
 {
 	this->texture = texture;
 }
+
+LPCWSTR ResourceTexture::GetFilename()
+{
+	return fileName;
+}
+
+void ResourceTexture::SetFilename(LPCWSTR fileName)
+{
+	this->fileName = fileName;
+}
