@@ -60,8 +60,8 @@ HRESULT DXRenderer::InitD3D( HWND hWnd )
     d3dpp.Windowed = TRUE;
     d3dpp.SwapEffect = D3DSWAPEFFECT_DISCARD;
     d3dpp.BackBufferFormat = D3DFMT_UNKNOWN;
-	d3dpp.BackBufferHeight = 1920;
-	d3dpp.BackBufferWidth = 1080;
+	d3dpp.BackBufferHeight = 1280;
+	d3dpp.BackBufferWidth = 720;
 
     // Create the D3DDevice
     if( FAILED( g_pD3D->CreateDevice( D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, hWnd, D3DCREATE_HARDWARE_VERTEXPROCESSING,&d3dpp, &g_pd3dDevice ) ) )
@@ -179,14 +179,14 @@ HRESULT DXRenderer::InitHeightMap(ResourceHeightmap* heightmap)
 			{
 				for( int x = 1; x <= width; x ++)
 				{
-					g_Vertices[count].x = x - 1.0f;
+					g_Vertices[count].x = x - 125.0f;
 					g_Vertices[count].y = heightmapdata[x + z* 255]->y;
-					g_Vertices[count].z = z; + 0.0f;
+					g_Vertices[count].z = z - 125.0f;
 					g_Vertices[count].color = 0xffffffff;
 					count ++;
-					g_Vertices[count].x = x - 1.0f;
+					g_Vertices[count].x = x - 125.0f;
 					g_Vertices[count].y = heightmapdata[x + (z + 1)* 255]->y;
-					g_Vertices[count].z = z + 1.0f;
+					g_Vertices[count].z = z - 124.0f;
 					g_Vertices[count].color = 0xffffffff;
 					count ++;
 				}
@@ -196,14 +196,14 @@ HRESULT DXRenderer::InitHeightMap(ResourceHeightmap* heightmap)
 			{
 				for( int x = width; x > 0; x --)
 				{
-					g_Vertices[count].x = x - 1.0f;
+					g_Vertices[count].x = x - 125.0f;
 					g_Vertices[count].y = heightmapdata[x + z* 255]->y;
-					g_Vertices[count].z = z + 0.0f;
+					g_Vertices[count].z = z - 125.0f;
 					g_Vertices[count].color = 0xffffffff;
 					count ++;
-					g_Vertices[count].x = x - 1.0f;
+					g_Vertices[count].x = x - 125.0f;
 					g_Vertices[count].y = heightmapdata[x + (z + 1)* 255]->y;
-					g_Vertices[count].z = z + 1.0f;
+					g_Vertices[count].z = z - 124.0f;
 					g_Vertices[count].color = 0xffffffff;
 					count ++;
 				}
@@ -254,8 +254,13 @@ VOID DXRenderer::SetupMatrices()
     // For our world matrix, we will just rotate the object about the y-axis.
     D3DXMATRIXA16 matWorld;
 
-    D3DXVECTOR3 vEyePt( -10.0f, 250.0f, -10.0f );
-    D3DXVECTOR3 vLookatPt( 125.0f, 125.0f, 125.0f );
+	UINT iTime = timeGetTime() % 100000;
+    FLOAT fAngle = iTime * ( 2.0f * D3DX_PI ) / 100000.0f;
+    D3DXMatrixRotationY( &matWorld, fAngle );
+    g_pd3dDevice->SetTransform( D3DTS_WORLD, &matWorld );
+
+    D3DXVECTOR3 vEyePt( -255.0f, 350.0f, -255.0f );
+    D3DXVECTOR3 vLookatPt( 0.0f, 125.0f, 0.0f );
     D3DXVECTOR3 vUpVec( 0.0f, 1.0f, 0.0f );
     D3DXMATRIXA16 matView;
     D3DXMatrixLookAtLH( &matView, &vEyePt, &vLookatPt, &vUpVec );
@@ -291,7 +296,7 @@ VOID DXRenderer::Render()
 	int width = 256;
 	int height = 256;
 	//amount of vertices in the buffer
-	int amount = (((width * height -2) * 2 ) + width * 2) - 2;
+	int amount = (width * 2 -2) * (height - 1);
 	g_pd3dDevice->DrawPrimitive( D3DPT_TRIANGLESTRIP, 0, amount);
 }
 
