@@ -1,13 +1,20 @@
 #ifndef ENTITY_H
 #define ENTITY_H
 
+#ifndef UPDATABLE_H
+#include "Updatable.h"
+#endif
+#ifndef TIMER_H
+#include "Timer.h"
+#endif
 
-class Entity
+class Entity : public Updatable
 {
 public:
 	Entity(void);
 	virtual ~Entity(void);
-	void Cleanup();
+	virtual void Cleanup() = 0;
+	virtual void Update(Timer* timer) = 0;
 };
 
 #endif

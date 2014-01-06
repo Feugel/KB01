@@ -1,9 +1,13 @@
 #ifndef WINDOWMANAGER_H
 #define WINDOWMANAGER_H
+
 #include <windows.h>
 #include <vector>	 // std::vector
 #include <algorithm> // find()
+
+#ifndef RENDERABLE_H
 #include "Renderable.h"
+#endif
 
 class Kernel; // Forward Declaration to access the Kernel from the Manager
 class Window; // Forward Declaration to access the Manager from the Window

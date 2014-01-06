@@ -3,6 +3,7 @@
 #include "DXRenderer.h"
 #include "WindowManager.h"
 #include "Window.h"
+#include "ResourceManager.h"
 
 int main()
 {
@@ -32,7 +33,7 @@ int Game::Main()
 	}
 
 	//kernel->GetResourceManager()->LoadTexture(L"");
-	//kernel->GetResourceManager()->LoadHeightmap(L"heightmap.bmp");
+	kernel->GetResourceManager()->LoadHeightmap(L"heightmap.bmp");
 	//kernel->GetResourceManager()->LoadModel(L"");
 
 	kernel->Start();

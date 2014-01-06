@@ -68,6 +68,8 @@ ResourceHeightmap* ResourceDXHeightmapLoader::LoadFile(LPCWSTR fileName)
 		for (int x = 0; x < numVerticesWide; x++)
 		{
 			int index = z * numVerticesWide + x;
+			Vertex* vertex = new Vertex();
+			vertices[index] = vertex;
 			vertices[index]->x = x * cellWidth;
 			vertices[index]->y = (float)bitmapImage[k];
 			vertices[index]->z = z * cellHeight;

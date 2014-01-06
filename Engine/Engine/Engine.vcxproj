@@ -31,6 +31,7 @@
     <ClCompile Include="ResourceTexture.cpp" />
     <ClCompile Include="ResourceTextureLoader.cpp" />
     <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="SkyBox.cpp" />
     <ClCompile Include="Terrain.cpp" />
     <ClCompile Include="Timer.cpp" />

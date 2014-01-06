@@ -1,9 +1,15 @@
 #ifndef KERNEL_H
 #define KERNEL_H
 
+#ifndef LOGMANAGER_H
 #include "LogManager.h"
+#endif
+#ifndef UPDATABLE_H
 #include "Updatable.h"
+#endif
+#ifndef RENDERABLE_H
 #include "Renderable.h"
+#endif
 //#include "InputManager.h"
 
 class WindowManager;
