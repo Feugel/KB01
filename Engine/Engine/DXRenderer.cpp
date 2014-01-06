@@ -169,18 +169,20 @@ HRESULT DXRenderer::InitHeightMap(ResourceHeightmap* heightmap)
 		//curent position in the array
 		int count = 0;
 
-		for(int z = 0; z < 1; z++) {
+		for(int z = 0; z < height; z++) {
 			//if even move the right right
 			if ( z % 2 == 0)
 			{
 				for( int x = 1; x <= width; x ++)
 				{
-
-					CUSTOMVERTEX tmp = {  x - 1,	-1 , z, 0xff0000ff };
-					g_Vertices[count] = tmp;
+					g_Vertices[count].x = x - 1.0f;
+					g_Vertices[count].y = -1.0f;
+					g_Vertices[count].z = z;
+					g_Vertices[count].color = 0xff0000ff;
 					count ++;
-					CUSTOMVERTEX tmp2 = {  x - 1,	-1,	z + 1, 0xff0000ff };
-					g_Vertices[count] = tmp;
+					g_Vertices[count].x = x - 1.0f;
+					g_Vertices[count].y = -1.0f;
+					g_Vertices[count].z = z + 1.0f;
 					count ++;
 				}
 			}
@@ -189,19 +191,19 @@ HRESULT DXRenderer::InitHeightMap(ResourceHeightmap* heightmap)
 			{
 				for( int x = width; x > 0; x --)
 				{
-					CUSTOMVERTEX tmp = {  x - 1,	-1 , z, 0xff0000ff };
-					g_Vertices[count] = tmp;
+					g_Vertices[count].x = x - 1.0f;
+					g_Vertices[count].y = -1.0f;
+					g_Vertices[count].z = z;
+					g_Vertices[count].color = 0xff0000ff;
 					count ++;
-					CUSTOMVERTEX tmp2 = {  x - 1,	-1,	z + 1, 0xff0000ff };
-					g_Vertices[count] = tmp;
+					g_Vertices[count].x = x - 1.0f;
+					g_Vertices[count].y = -1.0f;
+					g_Vertices[count].z = z + 1.0f;
 					count ++;
 				}
 			}
 		
-		
-
-
-
+		}
 		// Create the vertex buffer.
 		if( FAILED( g_pd3dDevice->CreateVertexBuffer( amount * sizeof( CUSTOMVERTEX ),
 														0, D3DFVF_CUSTOMVERTEX,
@@ -212,13 +214,13 @@ HRESULT DXRenderer::InitHeightMap(ResourceHeightmap* heightmap)
 
 		// Fill the vertex buffer.
 		VOID* pVertices;
-		if( FAILED( g_hVB->Lock( 0, sizeof( &g_Vertices ), ( void** )&pVertices, 0 ) ) )
+		if( FAILED( g_hVB->Lock( 0, sizeof( (*g_Vertices) ), ( void** )&pVertices, 0 ) ) )
 			return E_FAIL;
-		memcpy( pVertices, &g_Vertices, sizeof( &g_Vertices ) );
+		memcpy( pVertices, g_Vertices , sizeof( (*g_Vertices) ) );
 		g_hVB->Unlock();
 
 		return S_OK;
-		}
+		
 	
 }
 
@@ -291,7 +293,7 @@ VOID DXRenderer::Render()
 	SetupMatrices();
 	g_pd3dDevice->SetStreamSource( 0, g_hVB, 0, sizeof( CUSTOMVERTEX ) );
     g_pd3dDevice->SetFVF( D3DFVF_CUSTOMVERTEX );
-	g_pd3dDevice->DrawPrimitive( D3DPT_TRIANGLESTRIP, 0, 12);
+	g_pd3dDevice->DrawPrimitive( D3DPT_TRIANGLESTRIP, 0, 10000);
 }
 
 //called after render. calls endscene

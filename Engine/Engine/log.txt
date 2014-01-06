@@ -413,3 +413,197 @@
 06/01/2014 17:10:05.0814 INFO    Stopping Kernel
 06/01/2014 17:10:05.0830 INFO    Cleaning up Kernel
 06/01/2014 17:10:05.0830 INFO    Kernel cleaned
+06/01/2014 17:43:45.0786 INFO    Starting up
+06/01/2014 17:43:45.0801 INFO    Creating Kernel
+06/01/2014 17:43:45.0801 INFO    Initializing Kernel
+06/01/2014 17:43:45.0801 INFO    Kernel Initialized
+06/01/2014 17:43:45.0801 INFO    Initializing Window
+06/01/2014 17:43:45.0801 INFO    Class registered successfully
+06/01/2014 17:43:45.0801 INFO    Creating Window Handle
+06/01/2014 17:43:45.0817 INFO    Handle created
+06/01/2014 17:43:45.0817 INFO    Making screen visible
+06/01/2014 17:43:45.0926 INFO    Window registered
+06/01/2014 17:43:45.0926 INFO    Adding Renderer (DX9)
+06/01/2014 17:43:46.0612 INFO    Starting Kernel functions
+06/01/2014 17:43:46.0612 INFO    Starting Game Loop
+06/01/2014 17:46:20.0077 INFO    Starting up
+06/01/2014 17:46:20.0077 INFO    Creating Kernel
+06/01/2014 17:46:20.0077 INFO    Initializing Kernel
+06/01/2014 17:46:20.0077 INFO    Kernel Initialized
+06/01/2014 17:46:20.0077 INFO    Initializing Window
+06/01/2014 17:46:20.0077 INFO    Class registered successfully
+06/01/2014 17:46:20.0077 INFO    Creating Window Handle
+06/01/2014 17:46:20.0077 INFO    Handle created
+06/01/2014 17:46:20.0077 INFO    Making screen visible
+06/01/2014 17:46:20.0155 INFO    Window registered
+06/01/2014 17:46:20.0170 INFO    Adding Renderer (DX9)
+06/01/2014 17:47:22.0439 INFO    Starting Kernel functions
+06/01/2014 17:47:22.0439 INFO    Starting Game Loop
+06/01/2014 17:47:26.0037 INFO    Stopping Kernel
+06/01/2014 17:47:26.0068 INFO    Cleaning up Kernel
+06/01/2014 17:47:26.0068 INFO    Kernel cleaned
+06/01/2014 17:54:03.0572 INFO    Starting up
+06/01/2014 17:54:03.0572 INFO    Creating Kernel
+06/01/2014 17:54:03.0572 INFO    Initializing Kernel
+06/01/2014 17:54:03.0572 INFO    Kernel Initialized
+06/01/2014 17:54:03.0572 INFO    Initializing Window
+06/01/2014 17:54:03.0572 INFO    Class registered successfully
+06/01/2014 17:54:03.0572 INFO    Creating Window Handle
+06/01/2014 17:54:03.0681 INFO    Handle created
+06/01/2014 17:54:03.0681 INFO    Making screen visible
+06/01/2014 17:54:03.0791 INFO    Window registered
+06/01/2014 17:54:03.0791 INFO    Adding Renderer (DX9)
+06/01/2014 17:54:43.0910 INFO    Starting Kernel functions
+06/01/2014 17:54:43.0911 INFO    Starting Game Loop
+06/01/2014 17:54:46.0333 INFO    Stopping Kernel
+06/01/2014 17:54:46.0816 INFO    Cleaning up Kernel
+06/01/2014 17:54:46.0816 INFO    Kernel cleaned
+06/01/2014 18:02:40.0591 INFO    Starting up
+06/01/2014 18:02:40.0591 INFO    Creating Kernel
+06/01/2014 18:02:40.0591 INFO    Initializing Kernel
+06/01/2014 18:02:40.0591 INFO    Kernel Initialized
+06/01/2014 18:02:40.0591 INFO    Initializing Window
+06/01/2014 18:02:40.0591 INFO    Class registered successfully
+06/01/2014 18:02:40.0591 INFO    Creating Window Handle
+06/01/2014 18:02:40.0669 INFO    Handle created
+06/01/2014 18:02:40.0669 INFO    Making screen visible
+06/01/2014 18:02:40.0716 INFO    Window registered
+06/01/2014 18:02:40.0716 INFO    Adding Renderer (DX9)
+06/01/2014 18:02:41.0667 INFO    Starting Kernel functions
+06/01/2014 18:02:41.0667 INFO    Starting Game Loop
+06/01/2014 18:02:44.0881 INFO    Stopping Kernel
+06/01/2014 18:02:44.0896 INFO    Cleaning up Kernel
+06/01/2014 18:02:44.0896 INFO    Kernel cleaned
+06/01/2014 18:03:44.0600 INFO    Starting up
+06/01/2014 18:03:44.0600 INFO    Creating Kernel
+06/01/2014 18:03:44.0600 INFO    Initializing Kernel
+06/01/2014 18:03:44.0600 INFO    Kernel Initialized
+06/01/2014 18:03:44.0600 INFO    Initializing Window
+06/01/2014 18:03:44.0600 INFO    Class registered successfully
+06/01/2014 18:03:44.0600 INFO    Creating Window Handle
+06/01/2014 18:03:44.0615 INFO    Handle created
+06/01/2014 18:03:44.0615 INFO    Making screen visible
+06/01/2014 18:03:44.0662 INFO    Window registered
+06/01/2014 18:03:44.0662 INFO    Adding Renderer (DX9)
+06/01/2014 18:03:45.0099 INFO    Starting Kernel functions
+06/01/2014 18:03:45.0099 INFO    Starting Game Loop
+06/01/2014 18:03:46.0425 INFO    Caught message: WM_LBUTTONDOWN
+06/01/2014 18:03:46.0456 INFO    Caught message: WM_LBUTTONUP
+06/01/2014 18:03:47.0782 INFO    Stopping Kernel
+06/01/2014 18:03:47.0798 INFO    Cleaning up Kernel
+06/01/2014 18:03:47.0798 INFO    Kernel cleaned
+06/01/2014 18:03:54.0053 INFO    Starting up
+06/01/2014 18:03:54.0053 INFO    Creating Kernel
+06/01/2014 18:03:54.0053 INFO    Initializing Kernel
+06/01/2014 18:03:54.0053 INFO    Kernel Initialized
+06/01/2014 18:03:54.0053 INFO    Initializing Window
+06/01/2014 18:03:54.0053 INFO    Class registered successfully
+06/01/2014 18:03:54.0053 INFO    Creating Window Handle
+06/01/2014 18:03:54.0131 INFO    Handle created
+06/01/2014 18:03:54.0131 INFO    Making screen visible
+06/01/2014 18:03:54.0178 INFO    Window registered
+06/01/2014 18:03:54.0178 INFO    Adding Renderer (DX9)
+06/01/2014 18:07:33.0414 INFO    Starting up
+06/01/2014 18:07:33.0414 INFO    Creating Kernel
+06/01/2014 18:07:33.0414 INFO    Initializing Kernel
+06/01/2014 18:07:33.0414 INFO    Kernel Initialized
+06/01/2014 18:07:33.0414 INFO    Initializing Window
+06/01/2014 18:07:33.0414 INFO    Class registered successfully
+06/01/2014 18:07:33.0414 INFO    Creating Window Handle
+06/01/2014 18:07:33.0476 INFO    Handle created
+06/01/2014 18:07:33.0476 INFO    Making screen visible
+06/01/2014 18:07:33.0601 INFO    Window registered
+06/01/2014 18:07:33.0601 INFO    Adding Renderer (DX9)
+06/01/2014 18:08:24.0211 INFO    Starting Kernel functions
+06/01/2014 18:08:24.0211 INFO    Starting Game Loop
+06/01/2014 18:08:31.0735 INFO    Starting up
+06/01/2014 18:08:31.0736 INFO    Creating Kernel
+06/01/2014 18:08:31.0737 INFO    Initializing Kernel
+06/01/2014 18:08:31.0737 INFO    Kernel Initialized
+06/01/2014 18:08:31.0737 INFO    Initializing Window
+06/01/2014 18:08:31.0738 INFO    Class registered successfully
+06/01/2014 18:08:31.0738 INFO    Creating Window Handle
+06/01/2014 18:08:31.0780 INFO    Handle created
+06/01/2014 18:08:31.0780 INFO    Making screen visible
+06/01/2014 18:08:31.0824 INFO    Window registered
+06/01/2014 18:08:31.0824 INFO    Adding Renderer (DX9)
+06/01/2014 18:08:32.0404 INFO    Starting Kernel functions
+06/01/2014 18:08:32.0404 INFO    Starting Game Loop
+06/01/2014 18:08:36.0398 INFO    Caught message: WM_KEYDOWN
+06/01/2014 18:08:36.0413 INFO    Caught message: WM_KEYUP
+06/01/2014 18:08:36.0444 INFO    Caught message: WM_KEYDOWN
+06/01/2014 18:08:36.0460 INFO    Caught message: WM_KEYUP
+06/01/2014 18:08:50.0143 INFO    Starting up
+06/01/2014 18:08:50.0143 INFO    Creating Kernel
+06/01/2014 18:08:50.0143 INFO    Initializing Kernel
+06/01/2014 18:08:50.0143 INFO    Kernel Initialized
+06/01/2014 18:08:50.0143 INFO    Initializing Window
+06/01/2014 18:08:50.0143 INFO    Class registered successfully
+06/01/2014 18:08:50.0143 INFO    Creating Window Handle
+06/01/2014 18:08:50.0143 INFO    Handle created
+06/01/2014 18:08:50.0143 INFO    Making screen visible
+06/01/2014 18:08:50.0252 INFO    Window registered
+06/01/2014 18:08:50.0252 INFO    Adding Renderer (DX9)
+06/01/2014 18:08:50.0845 INFO    Starting Kernel functions
+06/01/2014 18:08:50.0845 INFO    Starting Game Loop
+06/01/2014 18:08:53.0294 INFO    Stopping Kernel
+06/01/2014 18:08:53.0294 INFO    Cleaning up Kernel
+06/01/2014 18:08:53.0294 INFO    Kernel cleaned
+06/01/2014 18:09:19.0911 INFO    Starting up
+06/01/2014 18:09:19.0911 INFO    Creating Kernel
+06/01/2014 18:09:19.0911 INFO    Initializing Kernel
+06/01/2014 18:09:19.0911 INFO    Kernel Initialized
+06/01/2014 18:09:19.0911 INFO    Initializing Window
+06/01/2014 18:09:19.0911 INFO    Class registered successfully
+06/01/2014 18:09:19.0911 INFO    Creating Window Handle
+06/01/2014 18:09:19.0926 INFO    Handle created
+06/01/2014 18:09:19.0926 INFO    Making screen visible
+06/01/2014 18:09:19.0958 INFO    Window registered
+06/01/2014 18:09:19.0958 INFO    Adding Renderer (DX9)
+06/01/2014 18:10:19.0389 INFO    Starting Kernel functions
+06/01/2014 18:10:19.0389 INFO    Starting Game Loop
+06/01/2014 18:10:21.0821 INFO    Caught message: WM_LBUTTONDOWN
+06/01/2014 18:10:21.0836 INFO    Caught message: WM_LBUTTONUP
+06/01/2014 18:10:22.0476 INFO    Caught message: WM_RBUTTONDOWN
+06/01/2014 18:10:22.0507 INFO    Caught message: WM_RBUTTONUP
+06/01/2014 18:10:23.0974 INFO    Stopping Kernel
+06/01/2014 18:10:24.0785 INFO    Cleaning up Kernel
+06/01/2014 18:10:24.0785 INFO    Kernel cleaned
+06/01/2014 18:10:32.0905 INFO    Starting up
+06/01/2014 18:10:32.0905 INFO    Creating Kernel
+06/01/2014 18:10:32.0905 INFO    Initializing Kernel
+06/01/2014 18:10:32.0905 INFO    Kernel Initialized
+06/01/2014 18:10:32.0905 INFO    Initializing Window
+06/01/2014 18:10:32.0905 INFO    Class registered successfully
+06/01/2014 18:10:32.0905 INFO    Creating Window Handle
+06/01/2014 18:10:33.0171 INFO    Handle created
+06/01/2014 18:10:33.0171 INFO    Making screen visible
+06/01/2014 18:10:33.0311 INFO    Window registered
+06/01/2014 18:10:33.0311 INFO    Adding Renderer (DX9)
+06/01/2014 18:10:33.0935 INFO    Starting Kernel functions
+06/01/2014 18:10:33.0935 INFO    Starting Game Loop
+06/01/2014 18:10:35.0058 INFO    Stopping Kernel
+06/01/2014 18:10:35.0339 INFO    Cleaning up Kernel
+06/01/2014 18:10:35.0339 INFO    Kernel cleaned
+06/01/2014 18:10:57.0742 INFO    Starting up
+06/01/2014 18:10:57.0882 INFO    Creating Kernel
+06/01/2014 18:10:57.0882 INFO    Initializing Kernel
+06/01/2014 18:10:57.0882 INFO    Kernel Initialized
+06/01/2014 18:10:57.0882 INFO    Initializing Window
+06/01/2014 18:10:57.0882 INFO    Class registered successfully
+06/01/2014 18:10:57.0882 INFO    Creating Window Handle
+06/01/2014 18:10:57.0976 INFO    Handle created
+06/01/2014 18:10:57.0976 INFO    Making screen visible
+06/01/2014 18:10:58.0412 INFO    Window registered
+06/01/2014 18:10:58.0412 INFO    Adding Renderer (DX9)
+06/01/2014 18:13:54.0381 INFO    Starting up
+06/01/2014 18:13:54.0381 INFO    Creating Kernel
+06/01/2014 18:13:54.0381 INFO    Initializing Kernel
+06/01/2014 18:13:54.0381 INFO    Kernel Initialized
+06/01/2014 18:13:54.0381 INFO    Initializing Window
+06/01/2014 18:13:54.0381 INFO    Class registered successfully
+06/01/2014 18:13:54.0381 INFO    Creating Window Handle
+06/01/2014 18:13:54.0381 INFO    Handle created
+06/01/2014 18:13:54.0381 INFO    Making screen visible
+06/01/2014 18:13:54.0443 INFO    Window registered
+06/01/2014 18:13:54.0443 INFO    Adding Renderer (DX9)
