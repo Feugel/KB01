@@ -55,6 +55,12 @@
     <Filter Include="Source Files\Renderer">
       <UniqueIdentifier>{4d5d77c4-4d6f-4185-bcac-2545511843a5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Input">
+      <UniqueIdentifier>{986b14f1-7b32-49a0-8e0e-66b7a97a6934}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Input">
+      <UniqueIdentifier>{ba43fe5a-8420-4eae-819e-e013e67f8457}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EntityModel.cpp">
@@ -226,6 +232,9 @@
     </ClInclude>
     <ClInclude Include="Renderable.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputKeyboard.h">
+      <Filter>Header Files\Input</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
