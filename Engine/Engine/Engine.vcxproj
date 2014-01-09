@@ -15,6 +15,7 @@
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="EntityCamera.cpp" />
     <ClCompile Include="EntityModel.cpp" />
+    <ClCompile Include="InputKeyboard.cpp" />
     <ClCompile Include="Kernel.cpp" />
     <ClCompile Include="LogManager.cpp" />
     <ClCompile Include="LogMessage.cpp" />
@@ -121,8 +122,9 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>d3dx9.lib;dinput8.lib;d3d9.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <AdditionalDependencies>d3dx9.lib;dinput8.lib;dxguid.lib;d3d9.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
       <AdditionalLibraryDirectories>$(DXSDK_DIR)\Lib\x86;$(DXSDK_DIR)\Lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
