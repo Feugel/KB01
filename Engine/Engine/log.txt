@@ -1625,3 +1625,23 @@
 09/01/2014 14:01:27.0432 INFO    Stopping Kernel
 09/01/2014 14:01:27.0520 INFO    Cleaning up Kernel
 09/01/2014 14:01:27.0520 INFO    Kernel cleaned
+09/01/2014 14:25:42.0429 INFO    Starting up
+09/01/2014 14:25:42.0429 INFO    Creating Kernel
+09/01/2014 14:25:42.0429 INFO    Initializing Kernel
+09/01/2014 14:25:42.0429 INFO    Kernel Initialized
+09/01/2014 14:25:42.0429 INFO    Initializing Window
+09/01/2014 14:25:42.0430 INFO    Class registered successfully
+09/01/2014 14:25:42.0430 INFO    Creating Window Handle
+09/01/2014 14:25:42.0436 INFO    Handle created
+09/01/2014 14:25:42.0436 INFO    Making screen visible
+09/01/2014 14:25:42.0470 INFO    Window registered
+09/01/2014 14:25:42.0470 INFO    Adding Renderer (DX9)
+09/01/2014 14:25:42.0704 INFO    Starting Kernel functions
+09/01/2014 14:25:42.0704 INFO    Starting Game Loop
+09/01/2014 14:25:43.0692 INFO    Caught message: WM_LBUTTONDOWN
+09/01/2014 14:25:43.0759 INFO    Caught message: WM_LBUTTONUP
+09/01/2014 14:25:44.0606 INFO    Caught message: WM_LBUTTONDOWN
+09/01/2014 14:25:44.0723 INFO    Caught message: WM_LBUTTONUP
+09/01/2014 14:25:45.0155 INFO    Stopping Kernel
+09/01/2014 14:25:45.0251 INFO    Cleaning up Kernel
+09/01/2014 14:25:45.0251 INFO    Kernel cleaned
