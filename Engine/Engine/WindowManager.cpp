@@ -21,6 +21,7 @@ void WindowManager::Cleanup()
 	}
 }
 
+
 bool WindowManager::RegisterWindow(Window* window)
 {
 	if(std::find(windows.begin(), windows.end(), window) == windows.end())
@@ -46,22 +47,11 @@ bool WindowManager::ReleaseWindow(Window* window)
 	{
 		return false;
 	}
-	return true;
 }
 
 bool WindowManager::ReleaseWindow(HWND hwnd)
 {
-	auto iterator = std::find_if(windows.begin(), windows.end(), [&hwnd](Window* window){ return window->GetWindowHandle() == hwnd; });
-	if(iterator != windows.end())
-	{
-		PopWindow(*iterator);
-		return true;
-	}
-	else
-	{
-		return false;
-	}
-	return true;
+	return ReleaseWindow(GetWindowByHandle(hwnd));
 }
 
 void WindowManager::PushWindow(Window* wnd)
@@ -96,12 +86,49 @@ Kernel* WindowManager::GetKernel()
 	return kernel;
 }
 
-LRESULT CALLBACK WindowManager::WindowProcedure(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
+Window* WindowManager::GetWindowByHandle(HWND hwnd)
+{
+	auto iterator = std::find_if(windows.begin(), windows.end(), [&hwnd](Window* window){ return window->GetWindowHandle() == hwnd; });
+	if(iterator != windows.end())
+	{
+		return *iterator;
+	}
+}
+
+LRESULT CALLBACK WindowManager::WindowProcedure(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
+{
+    WindowManager *view;
+
+    if (message == WM_NCCREATE)
+    {
+        CREATESTRUCT *cs = (CREATESTRUCT*) lParam; 
+        view = (WindowManager*) cs->lpCreateParams;
+
+        SetLastError(0);
+        if (SetWindowLongPtr(hwnd, GWL_USERDATA, (LONG_PTR) view) == 0)
+        {
+            if (GetLastError() != 0)
+                return FALSE;
+        }
+    }
+    else
+    {
+        view = (WindowManager*) GetWindowLongPtr(hwnd, GWL_USERDATA);
+    }
+
+    if (view)
+        return view->WindowProc(hwnd, message, wParam, lParam);
+
+    return DefWindowProc(hwnd, message, wParam, lParam);
+}
+
+LRESULT CALLBACK WindowManager::WindowProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
 	switch(msg)
 	{
 		case WM_CLOSE:
 			{
+				this->ReleaseWindow(hwnd);
 				DestroyWindow(hwnd);
 			} break;
 	}

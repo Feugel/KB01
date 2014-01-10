@@ -4,24 +4,38 @@
 #ifndef UPDATABLE_H
 #include "Updatable.h"
 #endif
+#ifndef RENDERABLE_H
+#include "Renderable.h"
+#endif
+
 #ifndef TIMER_H
 #include "Timer.h"
 #endif
-#ifndef ENTITY_H
-#include "Entity.h"
+#ifndef SCENE_H
+#include "Scene.h"
 #endif
 
 #include <vector>
+#include <algorithm>
 
-class SceneManager : public Updatable
+class SceneManager : public Updatable, public Renderable
 {
 public:
+	//Create a SceneManager
 	SceneManager(void);
+	//Destroy this SceneManager
 	virtual ~SceneManager(void);
+	//Clean up the mess
 	void Cleanup();
+	//Update active scenes (implements Updatable)
 	void Update(Timer* timer);
+	//Loops through the loaded scenes and returns only the active ones.
+	std::vector<Scene*> GetActiveScenes();
+	//Render active scenes (implements Renderable)
+	void Render();
 private:
-	std::vector<Entity> entities;
+	//Keep track of the loaded scenes
+	std::vector<Scene*> scenes;
 };
 
 #endif

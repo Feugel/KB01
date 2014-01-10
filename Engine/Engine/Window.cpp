@@ -38,9 +38,9 @@ void Window::Initialise() // Should be moved to Manager to ensure one time run; 
 	/* The Window structure */
 	Wnd.hInstance = hInst;
 	Wnd.lpszClassName = L"Window";
-	Wnd.lpfnWndProc = WindowManager::WindowProcedure;      /* This function is called by windows */
-	Wnd.style = CS_GLOBALCLASS;                 /* Make it a global class */
-	Wnd.cbSize = sizeof (WNDCLASSEX);		// reserve space for window class
+	Wnd.lpfnWndProc = WindowManager::WindowProcedure;	/* This function is called by windows */
+	Wnd.style = CS_GLOBALCLASS;							/* Make it a global class */
+	Wnd.cbSize = sizeof (WNDCLASSEX);					// reserve space for window class
 
 	/* Use default icon and mouse-pointer */
 	Wnd.hIcon = LoadIcon (NULL, IDI_APPLICATION);
@@ -76,7 +76,7 @@ void Window::Create(int width, int height, wchar_t* title)
 		HWND_DESKTOP,			//Window Parent
 		0,						//No menu
 		Wnd.hInstance,			//hInstance
-		0);						//lpParams
+		this->manager);			//lpParams
 
 	if(hWnd)
 	{

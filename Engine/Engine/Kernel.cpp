@@ -11,6 +11,9 @@ Kernel::Kernel()
 Kernel::~Kernel()
 {
 	Cleanup();
+	delete winMan;
+	delete resMan;
+	delete sceneMan;
 }
 
 void Kernel::Initialise()
@@ -18,10 +21,12 @@ void Kernel::Initialise()
 	LogManager::Instance()->Log("Initializing Kernel");
 	ZeroMemory(&winMan, sizeof(*winMan));
 	ZeroMemory(&resMan, sizeof(*resMan));
-	//ZeroMemory(&sceneMan, sizeof(*sceneMan));
+	ZeroMemory(&sceneMan, sizeof(*sceneMan));
+	//ZeroMemory(&inputMan, sizeof(*inputMan));
 	winMan = new WindowManager(this);
 	resMan = new ResourceManager();
-	/*sceneMan = new SceneManager();*/
+	sceneMan = new SceneManager();
+	//inputMan = new InputManager();
 	LogManager::Instance()->Log("Kernel Initialized");
 }
 
@@ -29,11 +34,9 @@ void Kernel::Cleanup()
 {
 	LogManager::Instance()->Log("Cleaning up Kernel");
 	winMan->Cleanup();
-	delete winMan;
 	resMan->Cleanup();
-	delete resMan;
-	/*sceneMan->Cleanup();
-	delete sceneMan;*/
+	sceneMan->Cleanup();
+	//inputMan->Cleanup();
 	LogManager::Instance()->Log("Kernel cleaned");
 }
 
@@ -52,6 +55,11 @@ SceneManager* Kernel::GetSceneManager()
 	return sceneMan;
 }
 
+InputManager* Kernel::GetInputManager()
+{
+	return inputMan;
+}
+
 void Kernel::Start()
 {
 	LogManager::Instance()->Log("Starting Kernel functions");
@@ -65,9 +73,9 @@ void Kernel::Start()
 		// Windows message loop; catches ALL MESSAGES right now.
 		if(PeekMessage(&msg, NULL, NULL, NULL, PM_REMOVE) > 0)
 		{
+			// WM_CLOSE is handled in the WindowProcedure; it is NOT sent like a 'regular' message.
 			switch(msg.message)
 			{
-				case 161:				this->GetWindowManager()->ReleaseWindow(msg.hwnd); if(this->GetWindowManager()->GetWindows().empty()) this->Stop(); break;// for some reason WM_CLOSE does not work here
 				case WM_KEYDOWN:		LogManager::Instance()->Log(LogLevel::INFO, "Caught message: WM_KEYDOWN"); break;	// handle input on this?
 				case WM_KEYUP:			LogManager::Instance()->Log(LogLevel::INFO, "Caught message: WM_KEYUP"); break;		// handle input on this?
 				case WM_SIZE:			LogManager::Instance()->Log(LogLevel::INFO, "Caught message: WM_SIZE"); break;
@@ -86,14 +94,14 @@ void Kernel::Start()
 			/* Send message to WindowProcedure */
 			DispatchMessage(&msg);
 		}
-		//LogManager::Instance()->Log(GetWindowManager()->GetWindows().size());
 		//LogManager::Instance()->Log("Running Kernel::Update");
 		this->Update(timer); // make calls to all manager's 'Update' functions
 		//LogManager::Instance()->Log("Kernel::Update done");
+		
 		//LogManager::Instance()->Log("Running Kernel::Render");
 		this->Render(); // make calls to necessary manager's 'Render' functions
-		
 		//LogManager::Instance()->Log("Kernel::Render done");
+
 	}
 	while(WM_QUIT != msg.message && !this->isFinished);
 	timer->Stop();
@@ -109,7 +117,8 @@ void Kernel::Stop()
 
 void Kernel::Update(Timer* timer)
 {
-
+	sceneMan->Update(timer);
+	
 }
 
 void Kernel::Render()

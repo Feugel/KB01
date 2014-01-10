@@ -19,3 +19,18 @@ void EntityModel::Update(Timer* timer)
 {
 
 }
+
+void EntityModel::Render()
+{
+
+}
+
+bool EntityModel::CanUpdate()
+{
+	return true;
+}
+
+bool EntityModel::CanRender()
+{
+	return true;
+}

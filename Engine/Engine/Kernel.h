@@ -30,11 +30,13 @@ public:
 	WindowManager* GetWindowManager(void);
 	ResourceManager* GetResourceManager(void);
 	SceneManager* GetSceneManager(void);
+	InputManager* GetInputManager(void);
 	void Cleanup(void);
 private:
 	ResourceManager* resMan;
 	WindowManager* winMan;
 	SceneManager* sceneMan;
+	InputManager* inputMan;
 	bool isFinished;
 };
 #endif

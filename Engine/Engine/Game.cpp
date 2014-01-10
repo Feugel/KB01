@@ -26,7 +26,7 @@ int Game::Main()
 		Renderer* renderer = new DXRenderer();
 		window->SetRenderer(renderer);
 		window->GetRenderer()->Init(window->GetWindowHandle());
-		renderer->InitHeightMap(kernel->GetResourceManager()->LoadHeightmap(L"heightmap.bmp"));
+		renderer->InitHeightMap(kernel->GetResourceManager()->GetHeightmap(L"heightmap.bmp"));
 	}
 	else
 	{

@@ -9,6 +9,7 @@
 #include "Renderable.h"
 #endif
 
+
 class Kernel; // Forward Declaration to access the Kernel from the Manager
 class Window; // Forward Declaration to access the Manager from the Window
 
@@ -35,14 +36,17 @@ public:
 	void Render(void);
 	//Get the kernel
 	Kernel* GetKernel();
-	//Window Procedure used by all Windows.
-	//On quit it releases the window.
+	//Window Procedure used by all Windows. Uses WindowProc if this manager can be decoded from lParam.
 	static LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
+	//The actual Window Procedure. Keeps the vector up to date.
+	LRESULT CALLBACK WindowProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
 private:
 	//Adds a window to the vector if it does not yet exist.
 	void PushWindow(Window* wnd);
 	//Removes a window from the vector
 	void PopWindow(Window* window);
+	//Get a window by its handle
+	Window* GetWindowByHandle(HWND hwnd);
 	//Local Vector to keep track of all instatiated windows.
 	std::vector<Window*> windows;
 	//Kernel reference

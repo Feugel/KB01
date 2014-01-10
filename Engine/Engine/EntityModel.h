@@ -13,6 +13,9 @@ public:
 	virtual ~EntityModel(void);
 	void Cleanup();
 	void Update(Timer* timer);
+	void Render();
+	bool CanUpdate();
+	bool CanRender();
 };
 
 #endif

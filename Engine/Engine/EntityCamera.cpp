@@ -19,3 +19,18 @@ void EntityCamera::Update(Timer* timer)
 {
 
 }
+
+void EntityCamera::Render()
+{
+
+}
+
+bool EntityCamera::CanUpdate()
+{
+	return true;
+}
+
+bool EntityCamera::CanRender()
+{
+	return true;
+}

@@ -13,6 +13,9 @@
 #ifndef RESOURCEHEIGHTMAP
 #include "ResourceHeightmap.h"
 #endif
+#ifndef MANAGER_H
+#include "Manager.h"
+#endif
 
 #include "ResourceTextureLoader.h"
 #include "ResourceHeightmapLoader.h"
@@ -23,6 +26,7 @@ public:
 	ResourceManager(void);
 	virtual ~ResourceManager(void);
 	void Cleanup(void);
+	void Initialize();
 	ResourceTexture* GetTexture(LPCWSTR fileName);
 	ResourceModel* GetModel(LPCWSTR fileName);
 	ResourceHeightmap* GetHeightmap(LPCWSTR fileName);
