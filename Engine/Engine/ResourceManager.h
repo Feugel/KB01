@@ -13,9 +13,6 @@
 #ifndef RESOURCEHEIGHTMAP
 #include "ResourceHeightmap.h"
 #endif
-#ifndef MANAGER_H
-#include "Manager.h"
-#endif
 
 #include "ResourceTextureLoader.h"
 #include "ResourceHeightmapLoader.h"
