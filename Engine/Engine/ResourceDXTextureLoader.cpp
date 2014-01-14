@@ -12,12 +12,14 @@ ResourceDXTextureLoader::ResourceDXTextureLoader(LPDIRECT3DDEVICE9 d3dDevice)
 
 ResourceDXTextureLoader::~ResourceDXTextureLoader(void)
 {
-
+	Cleanup();
 }
 
 void ResourceDXTextureLoader::Cleanup()
 {
-
+	// Do NOT release as we might need it elsewhere!
+	if(this->d3dDevice)
+		this->d3dDevice = NULL;
 }
 
 ResourceTexture* ResourceDXTextureLoader::LoadFile(LPCWSTR fileName)
@@ -33,7 +35,7 @@ ResourceTexture* ResourceDXTextureLoader::LoadFile(LPCWSTR fileName)
 	this->d3dDevice->SetTextureStageState(0,D3DTSS_COLORARG2,D3DTA_DIFFUSE);
 
 	ResourceTexture* tex = new ResourceTexture();
-	(*tex).SetTexture(texture);
+	tex->SetTexture(texture);
 	
 	return tex;
 }

@@ -5,6 +5,10 @@
 #include "Entity.h"
 #endif
 
+#ifndef RESOURCEMODEL_H
+#include "ResourceModel.h"
+#endif
+
 class EntityModel :
 	public Entity
 {
@@ -14,8 +18,10 @@ public:
 	void Cleanup();
 	void Update(Timer* timer);
 	void Render();
-	bool CanUpdate();
-	bool CanRender();
+	bool CanUpdate;
+	bool CanRender;
+private:
+	ResourceModel* model;
 };
 
 #endif

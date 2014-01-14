@@ -1,4 +1,6 @@
 #include "SceneManager.h"
+#include "Kernel.h"
+#include "ResourceManager.h"
 
 SceneManager::SceneManager()
 {
@@ -32,6 +34,12 @@ void SceneManager::Render()
 		if(scenes[i]->isActive)
 			scenes[i]->Render();
 	}
+}
+
+Scene* SceneManager::LoadScene(LPCWSTR fileName)
+{
+	//return this->kernel->GetResourceManager()->GetScene(fileName);
+	return new Scene();
 }
 
 std::vector<Scene*> SceneManager::GetActiveScenes()

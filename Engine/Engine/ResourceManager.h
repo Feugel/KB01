@@ -4,6 +4,9 @@
 #include <vector>
 #include <algorithm>
 
+#ifndef SCENE_H
+#include "Scene.h"
+#endif
 #ifndef RESOURCETEXTURE_H
 #include "ResourceTexture.h"
 #endif
@@ -16,6 +19,7 @@
 
 #include "ResourceTextureLoader.h"
 #include "ResourceHeightmapLoader.h"
+#include "ResourceModelLoader.h"
 
 class ResourceManager
 {
@@ -33,7 +37,7 @@ private:
 	ResourceHeightmap* LoadHeightmap(LPCWSTR fileName);
 	ResourceTextureLoader* textureLoader;
 	ResourceHeightmapLoader* heightmapLoader;
-	//ResourceModelLoader* modelLoader;
+	ResourceModelLoader* modelLoader;
 	std::vector<ResourceTexture*> textures;
 };
 

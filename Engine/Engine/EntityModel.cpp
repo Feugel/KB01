@@ -3,6 +3,8 @@
 
 EntityModel::EntityModel(void)
 {
+	this->CanUpdate = false;
+	this->CanRender = false;
 }
 
 
@@ -23,14 +25,4 @@ void EntityModel::Update(Timer* timer)
 void EntityModel::Render()
 {
 
-}
-
-bool EntityModel::CanUpdate()
-{
-	return true;
-}
-
-bool EntityModel::CanRender()
-{
-	return true;
 }

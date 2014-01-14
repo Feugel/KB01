@@ -140,7 +140,7 @@
     </ClCompile>
     <ClCompile Include="Entity.cpp">
       <Filter>Source Files\Scene</Filter>
-	</ClCompile>
+    </ClCompile>
     <ClCompile Include="InputKeyboard.cpp">
       <Filter>Source Files\Input</Filter>
     </ClCompile>

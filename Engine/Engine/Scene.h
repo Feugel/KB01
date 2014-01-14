@@ -26,24 +26,26 @@
 class Scene : public Updatable, public Renderable
 {
 public:
+	// constructor
 	Scene(void);
+	//destructor; calls Cleanup()
 	virtual ~Scene(void);
 	//Clears the Entities list and cleans up the Terrain.
 	void Cleanup();
 	//Update the Scene's active Entities
-	void Update(Timer* timer);
+	virtual void Update(Timer* timer);
 	//Render the renderable Entities
-	void Render();
+	virtual void Render();
+	//Get all Entities in this Scene
+	virtual std::vector<Entity*> GetEntities();
 	//Add an Entity to the Scene
-	void AddEntity(Entity* entity);
-	//Get this Scene's Entities
-	std::vector<Entity*> GetEntities();
+	virtual void AddEntity(Entity* entity);
 	//Remove an entity from the Scene
-	void RemoveEntity(Entity* entity);
+	virtual void RemoveEntity(Entity* entity);
 	//Get the Terrain
-	Terrain* GetTerrain();
+	virtual Terrain* GetTerrain();
 	//Set the Terrain
-	void SetTerrain(Terrain* terrain);
+	virtual void SetTerrain(Terrain* terrain);
 	//Get the Scene's status (Active/Inactive)
 	bool isActive;
 private:

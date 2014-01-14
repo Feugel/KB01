@@ -93,6 +93,7 @@ Window* WindowManager::GetWindowByHandle(HWND hwnd)
 	{
 		return *iterator;
 	}
+	return NULL;
 }
 
 LRESULT CALLBACK WindowManager::WindowProcedure(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)

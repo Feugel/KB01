@@ -22,11 +22,11 @@ void ResourceManager::Cleanup()
 {
 	if(NULL != textureLoader)
 	{
-		(*textureLoader).Cleanup();
+		textureLoader->Cleanup();
 	}
 	if(NULL != heightmapLoader)
 	{
-		(*heightmapLoader).Cleanup();
+		heightmapLoader->Cleanup();
 	}
 	textures.clear();
 	//models.clear();
@@ -48,6 +48,16 @@ ResourceTexture* ResourceManager::LoadTexture(LPCWSTR fileName)
 	return textureLoader->LoadFile(fileName);
 }
 
+ResourceModel* ResourceManager::GetModel(LPCWSTR fileName)
+{
+	return LoadModel(fileName);
+}
+
+ResourceModel* ResourceManager::LoadModel(LPCWSTR fileName)
+{
+	return NULL;
+}
+
 ResourceHeightmap* ResourceManager::GetHeightmap(LPCWSTR fileName)
 {
 	return LoadHeightmap(fileName);
@@ -57,3 +67,4 @@ ResourceHeightmap* ResourceManager::LoadHeightmap(LPCWSTR fileName)
 {
 	return heightmapLoader->LoadFile(fileName);
 }
+

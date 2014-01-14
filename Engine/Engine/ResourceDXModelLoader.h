@@ -1,7 +1,12 @@
 #ifndef RESOURCEDXMODELLOADER_H
 #define RESOURCEDXMODELLOADER_H
 
+#ifndef LOGMANAGER_H
+#include "LogManager.h"
+#endif
 #include "ResourceModelLoader.h"
+
+#include <ostream>
 
 class ResourceDXModelLoader :
 	public ResourceModelLoader

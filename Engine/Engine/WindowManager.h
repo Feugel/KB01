@@ -3,12 +3,16 @@
 
 #include <windows.h>
 #include <vector>	 // std::vector
+#include <map>		 // std::map
 #include <algorithm> // find()
 
 #ifndef RENDERABLE_H
 #include "Renderable.h"
 #endif
 
+#ifndef SCENE_H
+#include "Scene.h"
+#endif
 
 class Kernel; // Forward Declaration to access the Kernel from the Manager
 class Window; // Forward Declaration to access the Manager from the Window
@@ -51,6 +55,8 @@ private:
 	std::vector<Window*> windows;
 	//Kernel reference
 	Kernel* kernel;
+	// Keep track of Scenes in Windows
+	std::map<Window*, Scene*> sceneMap;
 };
 
 #endif

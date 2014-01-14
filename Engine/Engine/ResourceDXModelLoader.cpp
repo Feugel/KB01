@@ -22,7 +22,58 @@ void ResourceDXModelLoader::Cleanup(void)
 
 ResourceModel* ResourceDXModelLoader::LoadFile(LPCWSTR fileName)
 {
-	return new ResourceModel();
+	LPD3DXBUFFER pD3DXMtrlBuffer;
+	LPD3DXMESH mesh;
+	D3DMATERIAL9* materials;
+	LPDIRECT3DTEXTURE9* textures;
+	DWORD numMaterials = 0L;
+	if( FAILED( D3DXLoadMeshFromX( fileName, D3DXMESH_SYSTEMMEM,
+									this->d3dDevice, NULL,
+									&pD3DXMtrlBuffer, NULL, &numMaterials,
+									&mesh)))
+    {
+		std::ostringstream message;
+		message << "Could not find model for filename " << fileName;
+		LogManager::Instance()->Log(LogLevel::WARNING, message.str());
+	}
+
+	D3DXMATERIAL* d3dxMaterials = ( D3DXMATERIAL* )pD3DXMtrlBuffer->GetBufferPointer();
+    materials = new D3DMATERIAL9[numMaterials];
+	textures = new LPDIRECT3DTEXTURE9[numMaterials];
+
+	for( DWORD i = 0; i < numMaterials; i++ )
+    {
+        // Copy the material
+        materials[i] = d3dxMaterials[i].MatD3D;
+
+        // Set the ambient color for the material (D3DX does not do this)
+		materials[i].Ambient = materials[i].Diffuse;
+
+        textures[i] = NULL;
+        if( d3dxMaterials[i].pTextureFilename != NULL &&
+            lstrlenA( d3dxMaterials[i].pTextureFilename ) > 0 )
+        {
+            // Create the texture
+            if( FAILED( D3DXCreateTextureFromFileA( d3dDevice,
+                                                    d3dxMaterials[i].pTextureFilename,
+                                                    &textures[i] ) ) )
+            {
+				std::ostringstream message;
+				message << "Could not find texture map for filename " << fileName;
+				LogManager::Instance()->Log(LogLevel::WARNING, message.str());
+            }
+        }
+    }
+
+    // Done with the material buffer
+    pD3DXMtrlBuffer->Release();
+
+	ResourceModel* model = new ResourceModel();
+	model->SetMaterials(materials);
+	model->SetTextures(textures);
+	model->SetMesh(mesh);
+
+	return model;
 }
 
 void ResourceDXModelLoader::SetD3DDevice(LPDIRECT3DDEVICE9 d3dDevice)
