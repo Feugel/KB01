@@ -27,6 +27,7 @@ bool WindowManager::RegisterWindow(Window* window)
 	if(std::find(windows.begin(), windows.end(), window) == windows.end())
 	{
 		PushWindow(window);
+		sceneMap[window] = NULL;
 		window->DisplayWindow(false);
 		return true;
 	}
@@ -41,6 +42,8 @@ bool WindowManager::ReleaseWindow(Window* window)
 	if(std::find(windows.begin(), windows.end(), window) != windows.end())
 	{
 		PopWindow(window);
+		sceneMap[window]->Cleanup();
+		sceneMap.erase(window);
 		return true;
 	}
 	else

@@ -31,14 +31,17 @@ public:
 	ResourceTexture* GetTexture(LPCWSTR fileName);
 	ResourceModel* GetModel(LPCWSTR fileName);
 	ResourceHeightmap* GetHeightmap(LPCWSTR fileName);
+	Scene* GetScene(LPCWSTR fileName);
 private:
 	ResourceTexture* LoadTexture(LPCWSTR fileName);
 	ResourceModel* LoadModel(LPCWSTR fileName);
 	ResourceHeightmap* LoadHeightmap(LPCWSTR fileName);
+	Scene* LoadScene(LPCWSTR fileName);
 	ResourceTextureLoader* textureLoader;
 	ResourceHeightmapLoader* heightmapLoader;
 	ResourceModelLoader* modelLoader;
 	std::vector<ResourceTexture*> textures;
+	std::vector<ResourceModel*> models;
 };
 
 #endif
