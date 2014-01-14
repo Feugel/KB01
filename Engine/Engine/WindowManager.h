@@ -34,6 +34,12 @@ public:
 	bool ReleaseWindow(Window* window);
 	//Remove a window by it's handle
 	bool ReleaseWindow(HWND hwnd);
+	//Registers a scene to a window
+	void RegisterScene(Window* window, Scene* scene);
+	//Get the scene registered with this Window or NULL if not found
+	Scene* GetSceneByWindow(Window* window);
+	//Get the scene registered with this Window or NULL if not found
+	Scene* GetSceneByWindow(HWND window);
 	//Returns the vector containing the windows.
 	std::vector<Window*> GetWindows();
 	//Render on all windows

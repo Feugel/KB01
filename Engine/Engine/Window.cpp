@@ -13,6 +13,7 @@ Window::Window(HINSTANCE hInstance, WindowManager* manager, int width, int heigh
 {
 	this->hInst = hInstance;
 	this->manager = manager;
+	this->name = title;
 	this->Initialise();
 	this->Create(width, height, title);
 }
@@ -123,4 +124,14 @@ void Window::SetRenderer(Renderer* renderer)
 WindowManager* Window::GetManager()
 {
 	return this->manager;
+}
+
+wchar_t* Window::GetName()
+{
+	return name;
+}
+
+void Window::SetName(wchar_t* name)
+{
+	this-> name = name;
 }

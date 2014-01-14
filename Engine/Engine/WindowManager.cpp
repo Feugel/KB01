@@ -38,7 +38,7 @@ bool WindowManager::RegisterWindow(Window* window)
 
 bool WindowManager::ReleaseWindow(Window* window)
 {
-	if(std::find(windows.begin(), windows.end(), window) == windows.end())
+	if(std::find(windows.begin(), windows.end(), window) != windows.end())
 	{
 		PopWindow(window);
 		return true;
@@ -52,6 +52,37 @@ bool WindowManager::ReleaseWindow(Window* window)
 bool WindowManager::ReleaseWindow(HWND hwnd)
 {
 	return ReleaseWindow(GetWindowByHandle(hwnd));
+}
+
+void WindowManager::RegisterScene(Window* window, Scene* scene)
+{
+	auto iterator = sceneMap.find(window);
+	if(sceneMap.find(window) != sceneMap.end())
+	{
+		iterator->second = scene;
+	}
+	else
+	{
+		sceneMap[window] = scene;
+	}
+}
+
+Scene* WindowManager::GetSceneByWindow(Window* window)
+{
+	auto iterator = sceneMap.find(window);
+	if(sceneMap.find(window) != sceneMap.end())
+	{
+		return iterator->second;
+	}
+	else
+	{
+		return NULL;
+	}
+}
+
+Scene* WindowManager::GetSceneByWindow(HWND window)
+{
+	return GetSceneByWindow(GetWindowByHandle(window));
 }
 
 void WindowManager::PushWindow(Window* wnd)
@@ -131,6 +162,8 @@ LRESULT CALLBACK WindowManager::WindowProc(HWND hwnd, UINT msg, WPARAM wParam, L
 			{
 				this->ReleaseWindow(hwnd);
 				DestroyWindow(hwnd);
+				if(this->GetWindows().size() == 0)
+					kernel->Stop();
 			} break;
 	}
 

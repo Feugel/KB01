@@ -30,11 +30,17 @@ public:
 	void SetRenderer(Renderer* renderer);
 	//Get the manager
 	WindowManager* GetManager();
+	//Get the name
+	wchar_t* GetName();
+	//Set the name
+	void SetName(wchar_t* name);
 private:
 	//Creates the window and registers the window class
 	virtual void Create(int width, int height, wchar_t* title);
 	//Initialises the Window class
 	virtual void Initialise(void);
+	//Window name; also used as title
+	wchar_t* name;
 	//Renderer
 	Renderer* renderer;
 	//Window Handle

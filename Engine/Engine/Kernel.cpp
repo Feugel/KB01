@@ -104,9 +104,12 @@ void Kernel::Start()
 
 	}
 	while(WM_QUIT != msg.message && !this->isFinished);
+	LogManager::Instance()->Log(LogLevel::INFO, "Kernel stopping.");
 	timer->Stop();
 	// clean up
+	LogManager::Instance()->Log(LogLevel::INFO, "Calling Cleanup");
 	this->Cleanup();
+	LogManager::Instance()->Log(LogLevel::INFO, "Cleanup done. Bye-bye!");
 }
 
 void Kernel::Stop()
