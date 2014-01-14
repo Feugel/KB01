@@ -1,7 +1,14 @@
 #include "DXRenderer.h"
-#include "ResourceHeightmap.h"
 #include <vector>
 #include "Vertex.h"
+#include "LogManager.h"
+#include "Window.h"
+#include "WindowManager.h"
+#include "Scene.h"
+
+//Terain inports
+#include "Terrain.h"
+#include "ResourceHeightmap.h"
 
 //-----------------------------------------------------------------------------
 // Global variables
@@ -32,22 +39,23 @@ DXRenderer::~DXRenderer(void)
 }
 
 // initializing directx and adding the window to renderer
-void DXRenderer::Init(HWND hWnd)
+void DXRenderer::Init(Window* window)
 {
 	// Initialize Direct3D
-    if( SUCCEEDED( InitD3D( hWnd ) ) )
+    if( SUCCEEDED( InitD3D(window) ) )
     {
-        // Temp for creating a cube (repace by model's and heightmaps
-        if( SUCCEEDED( InitGeometry() ) )
-        {
-	
-        }
-     }
+		// Initialize Heightmap
+		if ( SUCCEEDED( InitHeightMap(window) ) ){
+
+		}
+    }
 }
 
 // actual initializing of directx called by init
-HRESULT DXRenderer::InitD3D( HWND hWnd )
+HRESULT DXRenderer::InitD3D(Window* window)
 {
+	HWND hWnd = window->GetWindowHandle();
+
     // Create the D3D object.
     if( NULL == ( g_pD3D = Direct3DCreate9( D3D_SDK_VERSION ) ) )
         return E_FAIL;
@@ -60,8 +68,8 @@ HRESULT DXRenderer::InitD3D( HWND hWnd )
     d3dpp.Windowed = TRUE;
     d3dpp.SwapEffect = D3DSWAPEFFECT_DISCARD;
     d3dpp.BackBufferFormat = D3DFMT_UNKNOWN;
-	d3dpp.BackBufferHeight = 1280;
-	d3dpp.BackBufferWidth = 720;
+	d3dpp.BackBufferHeight = 1920;
+	d3dpp.BackBufferWidth = 1080;
 
     // Create the D3DDevice
     if( FAILED( g_pD3D->CreateDevice( D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, hWnd, D3DCREATE_HARDWARE_VERTEXPROCESSING,&d3dpp, &g_pd3dDevice ) ) )
@@ -77,89 +85,15 @@ HRESULT DXRenderer::InitD3D( HWND hWnd )
     return S_OK;
 }
 
-// temp methode to create a cube as model
-HRESULT DXRenderer::InitGeometry()
+HRESULT DXRenderer::InitHeightMap(Window* window)
 {
-   
-    CUSTOMVERTEX g_Vertices[] =
-    {
-		//side 1 (front)
-        {  -1.0f,	1.0f,	-1.0f, 0xff0000ff }, 
-        {  -1.0f,	-1.0f,	-1.0f, 0xff0000ff }, 
-		{  1.0f,	1.0f,	-1.0f, 0xff0000ff }, 
-		
-		{  1.0f,	1.0f,	-1.0f, 0xff0000ff }, 
-        {  -1.0f,	-1.0f,	-1.0f, 0xff0000ff }, 
-        {  1.0f,	-1.0f,	-1.0f, 0xff0000ff }, 
 
-		//side 2 (back)
-        {  -1.0f,	1.0f,	1.0f, 0xffff0000 }, 
-        {  1.0f,	1.0f,	1.0f, 0xffff0000 }, 
-        {  -1.0f,	-1.0f,	1.0f, 0xffff0000 }, 
+	Scene* scene = window->GetManager()->GetSceneByWindow(window);
+	if (scene != NULL)
+	{
+		Terrain* terrain = scene->GetTerrain();
 
-        {  1.0f,	1.0f,	1.0f, 0xffff0000 }, 
-        {  1.0f,	-1.0f,	1.0f, 0xffff0000 }, 
-		{  -1.0f,	-1.0f,	1.0f, 0xffff0000 }, 
-
-		//side 3 (left)
-		{  -1.0f,	1.0f,	-1.0f, 0xff00ff00 }, 
-		{  -1.0f,	1.0f,	1.0f,  0xff00ff00 }, 
-		{  -1.0f,	-1.0f,	-1.0f, 0xff00ff00 }, 
-
-		{  -1.0f,	-1.0f,	-1.0f, 0xff00ff00 }, 
-		{  -1.0f,	1.0f,	1.0f,  0xff00ff00 }, 
-		{  -1.0f,	-1.0f,	1.0f,  0xff00ff00 }, 
-		
-		//side 4 (right)
-		{  1.0f,	1.0f,	-1.0f, 0xffffff00 }, 
-		{  1.0f,	-1.0f,	-1.0f, 0xffffff00 }, 
-		{  1.0f,	1.0f,	1.0f,  0xffffff00 }, 
-
-		{  1.0f,	-1.0f,	-1.0f, 0xffffff00 }, 
-		{  1.0f,	-1.0f,	1.0f,  0xffffff00 }, 
-		{  1.0f,	1.0f,	1.0f,  0xffffff00 }, 
-
-		//side 5 (top)
-		{  -1.0f,	1.0f,	-1.0f, 0xff00ffff }, 
-		{  1.0f,	1.0f,	-1.0f, 0xff00ffff }, 
-		{  1.0f,	1.0f,	1.0f,  0xff00ffff }, 
-
-		{  -1.0f,	1.0f,	-1.0f, 0xff00ffff }, 
-		{  1.0f,	1.0f,	1.0f,  0xff00ffff }, 
-		{  -1.0f,	1.0f,	1.0f,  0xff00ffff }, 
-
-		//side 5 (bottom)
-		{  -1.0f,	-1.0f,	-1.0f, 0xff00ffff },
-		{  1.0f,	-1.0f,	1.0f,  0xff00ffff },
-		{  1.0f,	-1.0f,	-1.0f, 0xff00ffff },
-
-		{  1.0f,	-1.0f,	1.0f,  0xff00ffff },
-		{  -1.0f,	-1.0f,	-1.0f, 0xff00ffff },
-		{  -1.0f,	-1.0f,	1.0f,  0xff00ffff },
-
-    };
-
-    // Create the vertex buffer.
-    if( FAILED( g_pd3dDevice->CreateVertexBuffer( 36 * sizeof( CUSTOMVERTEX ),
-                                                  0, D3DFVF_CUSTOMVERTEX,
-                                                  D3DPOOL_DEFAULT, &g_pVB, NULL ) ) )
-    {
-        return E_FAIL;
-    }
-
-    // Fill the vertex buffer.
-    VOID* pVertices;
-    if( FAILED( g_pVB->Lock( 0, sizeof( g_Vertices ), ( void** )&pVertices, 0 ) ) )
-        return E_FAIL;
-    memcpy( pVertices, g_Vertices, sizeof( g_Vertices ) );
-    g_pVB->Unlock();
-
-    return S_OK;
-}
-
-
-HRESULT DXRenderer::InitHeightMap(ResourceHeightmap* heightmap)
-{
+		LogManager::Instance()->Log(LogLevel::INFO, "Starting InitHeightMap");
 		//width and height of the heightmap
 		int width = 256;
 		int height = 256;
@@ -167,8 +101,7 @@ HRESULT DXRenderer::InitHeightMap(ResourceHeightmap* heightmap)
 		int amount = ((width * height -2) * 2 ) + width * 2; 
 		CUSTOMVERTEX* g_Vertices = new CUSTOMVERTEX[amount];
 		
-		std::vector<Vertex*> heightmapdata = heightmap->GetHeightmapData();
-
+		std::vector<Vertex*> heightmapdata = terrain->GetHeightmap()->GetHeightmapData();
 
 		//curent position in the array
 		int count = 0;
@@ -226,20 +159,26 @@ HRESULT DXRenderer::InitHeightMap(ResourceHeightmap* heightmap)
 		g_hVB->Unlock();
 
 		return S_OK;
-		
-	
+		LogManager::Instance()->Log(LogLevel::INFO, "Finished InitHeightMap");
+	} else
+	{
+		return E_FAIL;
+	}
+
 }
-
-
-
-
 
 //cleanup called by destructor
 VOID DXRenderer::Cleanup()
 {
+	//clear vertex buffer
     if( g_pVB != NULL )
         g_pVB->Release();
 
+	//clear heigtmap vertex buffer
+	if( g_hVB != NULL )
+        g_hVB->Release();
+
+	//release device
     if( g_pd3dDevice != NULL )
         g_pd3dDevice->Release();
 
@@ -281,33 +220,43 @@ VOID DXRenderer::SetupMatrices()
 //called before render. Clears the backbuffer and calls beginscene
 VOID DXRenderer::RenderStart()
 {
+	LogManager::Instance()->Log(LogLevel::INFO, "Starting Render");
 	g_pd3dDevice->Clear( 0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB( 0, 0, 0 ), 1.0f, 0 );
 	g_pd3dDevice->BeginScene();
 }
 
-//does the actual rendering. todo render models and heightmap
+//TODO render models and skybox and position camera
+//Renders the heightmap
 VOID DXRenderer::Render()
 {
+	LogManager::Instance()->Log(LogLevel::INFO, "Rendering");
 	SetupMatrices();
+
+	LogManager::Instance()->Log(LogLevel::INFO, "Rendering Heightmap");
+	//setting streamsource to the heightmap
 	g_pd3dDevice->SetStreamSource( 0, g_hVB, 0, sizeof( CUSTOMVERTEX ) );
     g_pd3dDevice->SetFVF( D3DFVF_CUSTOMVERTEX );
 
 	//heigt and width of heightmap
 	int width = 256;
 	int height = 256;
-	//amount of vertices in the buffer
+	//amount of triangels in the heightmap
 	int amount = (width * 2 -2) * (height - 1);
 	g_pd3dDevice->DrawPrimitive( D3DPT_TRIANGLESTRIP, 0, amount);
+
+	LogManager::Instance()->Log(LogLevel::INFO, "Done Rendering");
 }
 
 //called after render. calls endscene
 VOID DXRenderer::RenderEnd()
 {
+	LogManager::Instance()->Log(LogLevel::INFO, "Ending Render");
 	g_pd3dDevice->EndScene();
 }
 
 //presents the backbuffer to the window
 VOID DXRenderer::Present()
 {
-	 g_pd3dDevice->Present( NULL, NULL, NULL, NULL );
+	LogManager::Instance()->Log(LogLevel::INFO, "Present Render");
+	g_pd3dDevice->Present( NULL, NULL, NULL, NULL );
 }

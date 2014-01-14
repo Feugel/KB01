@@ -1,10 +1,11 @@
-#include "Renderer.h"
 #include <Windows.h>
 #include <mmsystem.h>
 #include <d3dx9.h>
 #include <d3d9.h>
 #include <strsafe.h>
-#include "ResourceHeightmap.h"
+#include "Renderer.h"
+#include "Window.h"
+
 
 
 class DXRenderer : public Renderer 
@@ -12,7 +13,7 @@ class DXRenderer : public Renderer
 public:
 	DXRenderer();
 	virtual ~DXRenderer(void);
-	void Init(HWND hwnd);
+	void Init(Window* window);
 	void RenderStart();
 	void Render();
 	void RenderEnd();
@@ -20,9 +21,9 @@ public:
 
 	
 private:
-	HRESULT InitD3D( HWND hWnd );
+	HRESULT InitD3D(Window* window);
 	HRESULT InitGeometry();
-	HRESULT InitHeightMap(ResourceHeightmap* heightmap);
+	HRESULT InitHeightMap(Window* window);
 	void Cleanup();
 	void SetupMatrices();
 

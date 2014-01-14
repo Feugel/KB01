@@ -111,10 +111,7 @@ void Window::DisplayWindow(bool fullscreen)
 	}
 }
 
-Renderer* Window::GetRenderer(void)
-{
-	return renderer;
-}
+
 
 void Window::SetRenderer(Renderer* renderer)
 {
@@ -134,4 +131,9 @@ wchar_t* Window::GetName()
 void Window::SetName(wchar_t* name)
 {
 	this-> name = name;
+}
+
+Renderer* Window::GetRenderer()
+{
+	return renderer;
 }

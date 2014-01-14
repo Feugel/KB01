@@ -2,8 +2,12 @@
 #include "Renderer.h"
 #include "DXRenderer.h"
 #include "WindowManager.h"
-#include "Window.h"
 #include "ResourceManager.h"
+
+//TMP for loading a heightmap
+#include "Terrain.h"
+#include "ResourceHeightmap.h"
+#include "Scene.h"
 
 int main()
 {
@@ -25,8 +29,9 @@ int Game::Main()
 		LogManager::Instance()->Log("Adding Renderer (DX9)");
 		Renderer* renderer = new DXRenderer();
 		window->SetRenderer(renderer);
-		window->GetRenderer()->Init(window->GetWindowHandle());
-		renderer->InitHeightMap(kernel->GetResourceManager()->GetHeightmap(L"heightmap.bmp"));
+		initheightmap(kernel, window);
+
+		window->GetRenderer()->Init(window);
 	}
 	else
 	{
@@ -34,9 +39,18 @@ int Game::Main()
 	}
 	
 	//kernel->GetResourceManager()->GetTexture(L"");
-	kernel->GetResourceManager()->GetHeightmap(L"heightmap.bmp");
+	
 	//kernel->GetResourceManager()->GetModel(L"");
 
 	kernel->Start();
 	return 0;
+}
+
+void Game::initheightmap(Kernel* kernal, Window* window ){
+	
+	Scene* scene = new Scene();
+	Terrain* ter = new Terrain();
+	ter->SetHeightmap( kernel->GetResourceManager()->GetHeightmap(L"heightmap.bmp") );
+	scene->SetTerrain(ter);
+	window->GetManager()->RegisterScene(window, scene);
 }

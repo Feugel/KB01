@@ -6,9 +6,6 @@ Renderer::Renderer(void)
 Renderer::~Renderer(void)
 {
 }
-HRESULT Renderer::InitHeightMap(ResourceHeightmap* heightmap){
-	return NULL;
-}
 void Renderer::RenderStart()
 {
 }
@@ -21,6 +18,6 @@ void Renderer::RenderEnd()
 void Renderer::Present()
 {
 }
-void Renderer::Init(HWND hwnd)
+void Renderer::Init(Window* window)
 {
 }

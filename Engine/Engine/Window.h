@@ -1,11 +1,13 @@
 #ifndef WINDOW_H
 #define WINDOW_H
 
-#include "LogManager.h"
 #include <Windows.h>
 #include "Renderer.h"
+#include "LogManager.h"
 
 class WindowManager; // make sure we can reference the manager from here; maybe change this to a friend class?
+
+class Renderer;
 
 class Window
 {
@@ -24,10 +26,10 @@ public:
 	virtual HWND GetWindowHandle();
 	//Makes the window visible on screen.
 	virtual void DisplayWindow(bool fullscreen);
-	//Get the Renderer
-	Renderer* GetRenderer(void);
 	//Set the renderer
-	void SetRenderer(Renderer* renderer);
+	void SetRenderer(Renderer* renderer);	
+	//Get the Renderer
+	Renderer* GetRenderer();
 	//Get the manager
 	WindowManager* GetManager();
 	//Get the name
