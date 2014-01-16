@@ -144,6 +144,9 @@
     <ClCompile Include="InputKeyboard.cpp">
       <Filter>Source Files\Input</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\KB01 OLD\Engine\Engine\InputMouse.cpp">
+      <Filter>Source Files\Input</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Entity.h">
@@ -237,6 +240,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="InputKeyboard.h">
+      <Filter>Header Files\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\KB01 OLD\Engine\Engine\InputMouse.h">
       <Filter>Header Files\Input</Filter>
     </ClInclude>
   </ItemGroup>
