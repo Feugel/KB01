@@ -16,6 +16,7 @@
     <ClCompile Include="EntityCamera.cpp" />
     <ClCompile Include="EntityModel.cpp" />
     <ClCompile Include="InputKeyboard.cpp" />
+    <ClCompile Include="InputMouse.cpp" />
     <ClCompile Include="Kernel.cpp" />
     <ClCompile Include="LogManager.cpp" />
     <ClCompile Include="LogMessage.cpp" />
@@ -45,6 +46,7 @@
     <ClInclude Include="EntityCamera.h" />
     <ClInclude Include="EntityModel.h" />
     <ClInclude Include="InputKeyboard.h" />
+    <ClInclude Include="InputMouse.h" />
     <ClInclude Include="Kernel.h" />
     <ClInclude Include="LogLevel.h" />
     <ClInclude Include="LogManager.h" />
