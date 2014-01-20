@@ -5,6 +5,8 @@
 //{
 //	const int MOUSEBUFFER = 8;
 //
+//	
+//
 //	dipdw.diph.dwSize			= sizeof(DIPROPDWORD);
 //	dipdw.diph.dwHeaderSize		= sizeof(DIPROPHEADER);
 //	dipdw.diph.dwObj			= 0;
@@ -17,20 +19,13 @@
 //	ResetMouseStruct();
 //}
 //
-///**
-// * Function:	Mouse::~Mouse()
-// * Description:	destructor of the mouse
-// */
+//
 //InputMouse::~InputMouse()
 //{
 //
 //}
 //
-///**
-// * Function:	Mouse::InitMouse()
-// * Description:	initialisation of the mouse, setting up the mouse and creation a new mouse-object 
-// *				(including aquiring)
-// */
+//
 //bool InputMouse::InitMouse()
 //{
 //	//DirectInput8Create should be done only once in manager
@@ -43,38 +38,35 @@
 //	result = dInput->CreateDevice( GUID_SysMouse, &dDevice, NULL );
 //	if( FAILED( result ) )
 //	{
-//		SaveReleaseDevice() 
+//		SaveReleaseDevice(); 
 //		return false;
 //	}
 //
 //	result = dDevice->SetDataFormat( &c_dfDIMouse );
 //	if( FAILED( result ) )
 //	{
-//		SaveReleaseDevice() 
+//		SaveReleaseDevice(); 
 //		return false;
 //	}
 //
 //	result = dDevice->SetCooperativeLevel( hwnd, DISCL_EXCLUSIVE | DISCL_FOREGROUND );
 //	if( FAILED( result ) )
 //	{
-//		SaveReleaseDevice() 
+//		SaveReleaseDevice(); 
 //		return false;
 //	}
 //
 //	result = dDevice->SetProperty( DIPROP_BUFFERSIZE, &dipdw.diph );
 //	if( FAILED( result ) )
 //	{
-//		SaveReleaseDevice() 
+//		SaveReleaseDevice(); 
 //		return false;
 //	}
 //	
 //	return true;
 //}
 //
-///**
-// * Function:	Mouse::GetMouseInput()
-// * Description:	Method to see if the mousebuffer can be red or that a aquire is needed
-// */
+//
 //MouseStruct InputMouse::GetMouseInput()
 //{
 //	if(!SUCCEEDED( dDevice->Poll())
@@ -88,11 +80,7 @@
 //}
 //
 //
-///**
-// * Function:	Mouse::DoAcquire()
-// * Description:	function that aquires the mouse object, just to be sure it does
-// *				it five times
-// */
+//
 //bool InputMouse::DoAcquire()
 //{
 //	int times = 5;	// Number of times to try acquire
@@ -104,10 +92,7 @@
 //	return false;
 //}
 //
-///**
-// * Function:	Mouse::SetTheMouseBuffer()
-// * Description:	Setting the buffer for the mouse and getting the device-data
-// */
+//
 //void InputMouse::SetTheMouseBuffer()
 //{
 //	DIDEVICEOBJECTDATA od;
@@ -233,10 +218,7 @@
 //}
 //
 //
-///**
-// * Function:	Mouse::SaveReleaseDevice() 
-// * Description:	Cleaning up the mess left if a mouse device is lost
-// */
+//
 //void Mouse::SaveReleaseDevice() 
 //{ 
 //	if( dInput )

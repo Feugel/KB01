@@ -8,15 +8,26 @@
 //{
 //public:
 //	InputMouse(HWND);
-//	virtual ~InputMouse(void);
-//	void Cleanup();
-//
-//private:
 //	bool InitMouse();
-//	MouseStruct GetMouseInput();
 //	bool DoAcquire();
 //	void SetTheMouseBuffer();
-//	void ResetMouseStruct()
+//	void ResetMouseStruct();
+//	void SaveReleaseDevice();
+//	MouseStruct GetMouseInput();
+//	virtual ~InputMouse(void);
+//	void Cleanup();
+//	MouseStruct struct MouseStruct
+//	{
+//		int mouse_x;
+//		int mouse_y;
+//	};
+//
+//private:
+//	DIPROPDWORD dipdw;
+//	HWND hwnd;
+//	
+//	LPDIRECTINPUT8 dInput;
+//	LPDIRECTINPUTDEVICE8 dDevice;
 //}
 //
 //#endif
