@@ -51,3 +51,13 @@ void ResourceModel::SetMesh(LPD3DXMESH mesh)
 {
 	this->mesh = mesh;
 }
+
+std::string ResourceModel::GetFilename()
+{
+	return fileName;
+}
+
+void ResourceModel::SetFilename(std::string fileName)
+{
+	this->fileName = fileName;
+}

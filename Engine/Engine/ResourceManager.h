@@ -1,7 +1,8 @@
 #ifndef RESOURCEMANAGER_H
 #define RESOURCEMANAGER_H
 
-#include <vector>
+#include <map>
+#include <string>
 #include <algorithm>
 
 #ifndef SCENE_H
@@ -28,20 +29,21 @@ public:
 	virtual ~ResourceManager(void);
 	void Cleanup(void);
 	void Initialize();
-	ResourceTexture* GetTexture(LPCWSTR fileName);
-	ResourceModel* GetModel(LPCWSTR fileName);
-	ResourceHeightmap* GetHeightmap(LPCWSTR fileName);
-	Scene* GetScene(LPCWSTR fileName);
+	ResourceTexture* GetTexture(std::string fileName);
+	ResourceModel* GetModel(std::string fileName);
+	ResourceHeightmap* GetHeightmap(std::string fileName);
+	Scene* GetScene(std::string fileName);
 private:
-	ResourceTexture* LoadTexture(LPCWSTR fileName);
-	ResourceModel* LoadModel(LPCWSTR fileName);
-	ResourceHeightmap* LoadHeightmap(LPCWSTR fileName);
-	Scene* LoadScene(LPCWSTR fileName);
+	ResourceTexture* LoadTexture(std::string fileName);
+	ResourceModel* LoadModel(std::string fileName);
+	ResourceHeightmap* LoadHeightmap(std::string fileName);
+	Scene* LoadScene(std::string fileName);
+	std::wstring s2ws(const std::string& s);
 	ResourceTextureLoader* textureLoader;
 	ResourceHeightmapLoader* heightmapLoader;
 	ResourceModelLoader* modelLoader;
-	std::vector<ResourceTexture*> textures;
-	std::vector<ResourceModel*> models;
+	std::map<std::string, ResourceTexture*> textures;
+	std::map<std::string, ResourceModel*> models;
 };
 
 #endif

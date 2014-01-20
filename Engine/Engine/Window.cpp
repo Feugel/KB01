@@ -1,15 +1,17 @@
 #include "Window.h"
 #include "WindowManager.h"
+#include "Renderer.h"
+#include "LogManager.h"
 
 Window::Window(HINSTANCE hInstance, WindowManager* manager)
 {
 	this->hInst = hInstance;
 	this->manager = manager;
 	this->Initialise();
-	this->Create(CW_USEDEFAULT, CW_USEDEFAULT, L"Engine");
+	this->Create(CW_USEDEFAULT, CW_USEDEFAULT, "Engine");
 }
 
-Window::Window(HINSTANCE hInstance, WindowManager* manager, int width, int height, wchar_t* title)
+Window::Window(HINSTANCE hInstance, WindowManager* manager, int width, int height, std::string title)
 {
 	this->hInst = hInstance;
 	this->manager = manager;
@@ -63,12 +65,12 @@ void Window::Initialise() // Should be moved to Manager to ensure one time run; 
 }
 
 
-void Window::Create(int width, int height, wchar_t* title)
+void Window::Create(int width, int height, std::string title)
 {
 	LogManager::Instance()->Log("Creating Window Handle");
 	hWnd = CreateWindowEx(0,	//Default Window ExStyle
 		Wnd.lpszClassName,		//Class Name
-		title,					//Title
+		s2ws(title).c_str(),	//Title
 		WS_OVERLAPPEDWINDOW,	//Window Style
 		CW_USEDEFAULT,			//Window X
 		CW_USEDEFAULT,			//Window Y
@@ -123,17 +125,37 @@ WindowManager* Window::GetManager()
 	return this->manager;
 }
 
-wchar_t* Window::GetName()
+std::string Window::GetName()
 {
 	return name;
 }
 
-void Window::SetName(wchar_t* name)
+void Window::SetName(std::string name)
 {
-	this-> name = name;
+	this->name = name;
 }
 
 Renderer* Window::GetRenderer()
 {
 	return renderer;
+}
+
+void Window::Render()
+{
+	renderer->RenderStart();
+	renderer->Render();
+	renderer->RenderEnd();
+	renderer->Present();
+}
+
+std::wstring Window::s2ws(const std::string& s)
+{
+    int len;
+    int slength = (int)s.length() + 1;
+    len = MultiByteToWideChar(CP_ACP, 0, s.c_str(), slength, 0, 0); 
+    wchar_t* buf = new wchar_t[len];
+    MultiByteToWideChar(CP_ACP, 0, s.c_str(), slength, buf, len);
+    std::wstring r(buf);
+    delete[] buf;
+    return r;
 }

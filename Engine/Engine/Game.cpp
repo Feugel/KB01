@@ -37,10 +37,6 @@ int Game::Main()
 	{
 		LogManager::Instance()->Log(LogLevel::WARNING, "Could not create Window!");
 	}
-	
-	//kernel->GetResourceManager()->GetTexture(L"");
-	
-	//kernel->GetResourceManager()->GetModel(L"");
 
 	kernel->Start();
 	return 0;
@@ -50,7 +46,7 @@ void Game::initheightmap(Kernel* kernal, Window* window ){
 	
 	Scene* scene = new Scene();
 	Terrain* ter = new Terrain();
-	ter->SetHeightmap( kernel->GetResourceManager()->GetHeightmap(L"heightmap.bmp") );
+	ter->SetHeightmap( kernel->GetResourceManager()->GetHeightmap("heightmap.bmp") );
 	scene->SetTerrain(ter);
 	window->GetManager()->RegisterScene(window, scene);
 }

@@ -111,19 +111,10 @@
     <ClCompile Include="ResourceManager.cpp">
       <Filter>Source Files\Resource</Filter>
     </ClCompile>
-    <ClCompile Include="ResourceTextureLoader.cpp">
-      <Filter>Source Files\ResourceLoader</Filter>
-    </ClCompile>
     <ClCompile Include="ResourceDXTextureLoader.cpp">
       <Filter>Source Files\ResourceLoader</Filter>
     </ClCompile>
-    <ClCompile Include="ResourceModelLoader.cpp">
-      <Filter>Source Files\ResourceLoader</Filter>
-    </ClCompile>
     <ClCompile Include="ResourceDXModelLoader.cpp">
-      <Filter>Source Files\ResourceLoader</Filter>
-    </ClCompile>
-    <ClCompile Include="ResourceHeightmapLoader.cpp">
       <Filter>Source Files\ResourceLoader</Filter>
     </ClCompile>
     <ClCompile Include="DXRenderer.cpp">
@@ -146,6 +137,15 @@
     </ClCompile>
     <ClCompile Include="InputMouse.cpp">
       <Filter>Source Files\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceHeightmapLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceModelLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceTextureLoader.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

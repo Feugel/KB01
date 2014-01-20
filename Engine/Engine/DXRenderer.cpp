@@ -101,7 +101,7 @@ HRESULT DXRenderer::InitHeightMap(Window* window)
 		int amount = ((width * height -2) * 2 ) + width * 2; 
 		CUSTOMVERTEX* g_Vertices = new CUSTOMVERTEX[amount];
 		
-		std::vector<Vertex*> heightmapdata = terrain->GetHeightmap()->GetHeightmapData();
+		Vertex* heightmapdata = terrain->GetHeightmap()->GetHeightmapData();
 
 		//curent position in the array
 		int count = 0;
@@ -113,12 +113,12 @@ HRESULT DXRenderer::InitHeightMap(Window* window)
 				for( int x = 1; x <= width; x ++)
 				{
 					g_Vertices[count].x = x - 125.0f;
-					g_Vertices[count].y = heightmapdata[(x-1) + z * 256]->y;
+					g_Vertices[count].y = heightmapdata[(x-1) + z * 256].y;
 					g_Vertices[count].z = z - 125.0f;
 					g_Vertices[count].color = 0xffffffff;
 					count ++;
 					g_Vertices[count].x = x - 125.0f;
-					g_Vertices[count].y = heightmapdata[(x -1) + (z + 1)* 256]->y;
+					g_Vertices[count].y = heightmapdata[(x -1) + (z + 1)* 256].y;
 					g_Vertices[count].z = z - 124.0f;
 					g_Vertices[count].color = 0xffffffff;
 					count ++;
@@ -130,12 +130,12 @@ HRESULT DXRenderer::InitHeightMap(Window* window)
 				for( int x = width; x > 0; x --)
 				{
 					g_Vertices[count].x = x - 125.0f;
-					g_Vertices[count].y = heightmapdata[(x - 1) + z* 256]->y;
+					g_Vertices[count].y = heightmapdata[(x - 1) + z* 256].y;
 					g_Vertices[count].z = z - 125.0f;
 					g_Vertices[count].color = 0xffffffff;
 					count ++;
 					g_Vertices[count].x = x - 125.0f;
-					g_Vertices[count].y = heightmapdata[(x - 1) + (z + 1)* 256]->y;
+					g_Vertices[count].y = heightmapdata[(x - 1) + (z + 1)* 256].y;
 					g_Vertices[count].z = z - 124.0f;
 					g_Vertices[count].color = 0xffffffff;
 					count ++;

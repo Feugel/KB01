@@ -2,6 +2,7 @@
 #define RESOURCEMODELLOADER_H
 
 #include "ResourceModel.h"
+#include <string>
 
 class ResourceModelLoader
 {

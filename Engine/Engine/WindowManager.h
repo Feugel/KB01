@@ -2,7 +2,6 @@
 #define WINDOWMANAGER_H
 
 #include <windows.h>
-#include <vector>	 // std::vector
 #include <map>		 // std::map
 #include <algorithm> // find()
 
@@ -10,12 +9,9 @@
 #include "Renderable.h"
 #endif
 
-#ifndef SCENE_H
-#include "Scene.h"
-#endif
-
-class Kernel; // Forward Declaration to access the Kernel from the Manager
-class Window; // Forward Declaration to access the Manager from the Window
+class Scene;
+class Kernel; // Forward Declaration to access the Kernel from the Manager; -> make manager singleton so only kernel has to really know them
+class Window; // Forward Declaration to access the Manager from the Window; -> make manager singleton so only kernel has to really know them (workaround for circular reference; Object Pool is better)
 
 class WindowManager : public Renderable
 {
@@ -41,7 +37,7 @@ public:
 	//Get the scene registered with this Window or NULL if not found
 	Scene* GetSceneByWindow(HWND window);
 	//Returns the vector containing the windows.
-	std::vector<Window*> GetWindows();
+	std::map<HWND, Window*> GetWindows();
 	//Render on all windows
 	void Render(void);
 	//Get the kernel
@@ -58,7 +54,7 @@ private:
 	//Get a window by its handle
 	Window* GetWindowByHandle(HWND hwnd);
 	//Local Vector to keep track of all instatiated windows.
-	std::vector<Window*> windows;
+	std::map<HWND, Window*> windows;
 	//Kernel reference
 	Kernel* kernel;
 	// Keep track of Scenes in Windows

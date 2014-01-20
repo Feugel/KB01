@@ -2,10 +2,12 @@
 
 ResourceDXModelLoader::ResourceDXModelLoader(void)
 {
+	ZeroMemory(&d3dDevice, sizeof(*d3dDevice));
 }
 
 ResourceDXModelLoader::ResourceDXModelLoader(LPDIRECT3DDEVICE9 d3dDevice)
 {
+	ZeroMemory(&d3dDevice, sizeof(*d3dDevice));
 	this->d3dDevice = d3dDevice;
 }
 
@@ -17,7 +19,8 @@ ResourceDXModelLoader::~ResourceDXModelLoader(void)
 
 void ResourceDXModelLoader::Cleanup(void)
 {
-	d3dDevice->Release();
+	if(d3dDevice)
+		d3dDevice->Release();
 }
 
 ResourceModel* ResourceDXModelLoader::LoadFile(LPCWSTR fileName)

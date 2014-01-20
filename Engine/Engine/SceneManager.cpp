@@ -1,6 +1,7 @@
 #include "SceneManager.h"
 #include "Kernel.h"
 #include "ResourceManager.h"
+#include "Scene.h"
 
 SceneManager::SceneManager()
 {
@@ -20,31 +21,24 @@ void SceneManager::Cleanup(void)
 
 void SceneManager::Update(Timer* timer)
 {
-	for(int i = scenes.size(); i > 0; --i)
+	std::for_each(scenes.begin(), scenes.end(), [timer](std::pair<std::string, Scene*> item)
 	{
-		if(scenes[i]->isActive)
-			scenes[i]->Update(timer);
-	}
+		if(item.second->isActive)
+			item.second->Update(timer);
+	});
 }
 
 void SceneManager::Render()
 {
-	for(int i = scenes.size(); i > 0; --i)
+	std::for_each(scenes.begin(), scenes.end(), [] (std::pair<std::string, Scene*> item)
 	{
-		if(scenes[i]->isActive)
-			scenes[i]->Render();
-	}
+		if(item.second->isActive)
+			item.second->Render();
+	});
 }
 
-Scene* SceneManager::LoadScene(LPCWSTR fileName)
+Scene* SceneManager::LoadScene(std::string fileName)
 {
 	//return this->kernel->GetResourceManager()->GetScene(fileName);
 	return new Scene();
-}
-
-std::vector<Scene*> SceneManager::GetActiveScenes()
-{
-	std::vector<Scene*> active;
-	std::for_each(scenes.begin(), scenes.end(), [&active](Scene* scene) { if(scene->isActive) active.push_back(scene); } );
-	return active;
 }

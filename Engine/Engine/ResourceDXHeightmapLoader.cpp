@@ -61,20 +61,18 @@ ResourceHeightmap* ResourceDXHeightmapLoader::LoadFile(LPCWSTR fileName)
 	int cellHeight = 1;
 
 	// Create the terrain vertices.
-	std::vector<Vertex*> vertices (numberVertices);
+	Vertex* vertices = new Vertex[numberVertices];
 	int k = 0;
 	for (int z = 0; z < numVerticesHigh; z++)
 	{
 		for (int x = 0; x < numVerticesWide; x++)
 		{
 			int index = z * numVerticesWide + x;
-			Vertex* vertex = new Vertex();
-			vertices[index] = vertex;
-			vertices[index]->x = x * cellWidth;
-			vertices[index]->y = (float)bitmapImage[k];
-			vertices[index]->z = z * cellHeight;
-			vertices[index]->tu = vertices[index]->x / (numCellsWide * cellWidth);
-			vertices[index]->tv = vertices[index]->z / (numCellsHigh * cellHeight);
+			vertices[index].x = x * cellWidth;
+			vertices[index].y = (float)bitmapImage[k];
+			vertices[index].z = z * cellHeight;
+			vertices[index].tu = vertices[index].x / (numCellsWide * cellWidth);
+			vertices[index].tv = vertices[index].z / (numCellsHigh * cellHeight);
 
 			k += 3;
 		}
@@ -82,6 +80,8 @@ ResourceHeightmap* ResourceDXHeightmapLoader::LoadFile(LPCWSTR fileName)
 
 	ResourceHeightmap* heightMap = new ResourceHeightmap();
 	heightMap->SetHeightmapData(vertices);
+	heightMap->width = width;
+	heightMap->height = height;
 
 	return heightMap;
 }

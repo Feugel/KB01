@@ -1,11 +1,11 @@
 #include "WindowManager.h"
 #include "Window.h"
 #include "Kernel.h"
+#include "Scene.h"
 
 WindowManager::WindowManager(Kernel* kernel)
 {
 	this->kernel = kernel;
-	windows.clear(); // make sure we get clean memory
 }
 
 WindowManager::~WindowManager()
@@ -15,16 +15,13 @@ WindowManager::~WindowManager()
 
 void WindowManager::Cleanup()
 {
-	while(windows.size() != 0)
-	{
-		windows.pop_back();
-	}
+	windows.clear();
 }
-
 
 bool WindowManager::RegisterWindow(Window* window)
 {
-	if(std::find(windows.begin(), windows.end(), window) == windows.end())
+	auto iterator = windows.find(window->GetWindowHandle());
+	if(iterator == windows.end())
 	{
 		PushWindow(window);
 		sceneMap[window] = NULL;
@@ -39,11 +36,10 @@ bool WindowManager::RegisterWindow(Window* window)
 
 bool WindowManager::ReleaseWindow(Window* window)
 {
-	if(std::find(windows.begin(), windows.end(), window) != windows.end())
+	if(windows.count(window->GetWindowHandle()) == 1)
 	{
-		PopWindow(window);
-		sceneMap[window]->Cleanup();
 		sceneMap.erase(window);
+		PopWindow(window);
 		return true;
 	}
 	else
@@ -90,29 +86,25 @@ Scene* WindowManager::GetSceneByWindow(HWND window)
 
 void WindowManager::PushWindow(Window* wnd)
 {
-	windows.push_back(wnd);
+	windows[wnd->GetWindowHandle()] = wnd;
 }
 
 void WindowManager::PopWindow(Window* window)
 {
-	auto item = std::find(windows.begin(), windows.end(), window);
-	windows.erase(item, item+1);
+	windows.erase(window->GetWindowHandle());
 }
 
-std::vector<Window*> WindowManager::GetWindows()
+std::map<HWND, Window*> WindowManager::GetWindows()
 {
 	return windows;
 }
 
 void WindowManager::Render()
 {
-	for(int i = windows.size(); i > 0; --i)
+	std::for_each(windows.begin(), windows.end(), [](std::pair<HWND, Window*> item)
 	{
-		windows[i-1]->GetRenderer()->RenderStart();
-		windows[i-1]->GetRenderer()->Render();
-		windows[i-1]->GetRenderer()->RenderEnd();
-		windows[i-1]->GetRenderer()->Present();
-	}
+		item.second->Render();
+	});
 }
 
 Kernel* WindowManager::GetKernel()
@@ -122,12 +114,10 @@ Kernel* WindowManager::GetKernel()
 
 Window* WindowManager::GetWindowByHandle(HWND hwnd)
 {
-	auto iterator = std::find_if(windows.begin(), windows.end(), [&hwnd](Window* window){ return window->GetWindowHandle() == hwnd; });
-	if(iterator != windows.end())
-	{
-		return *iterator;
-	}
-	return NULL;
+	if(windows.count(hwnd) == 1)
+		return windows[hwnd];
+	else
+		return NULL;
 }
 
 LRESULT CALLBACK WindowManager::WindowProcedure(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)

@@ -8,13 +8,23 @@
 class ResourceHeightmap
 {
 public:
+	//Constructor
 	ResourceHeightmap(void);
+	//Destructor
 	virtual ~ResourceHeightmap(void);
+	//Clean up the mess created by this Resource
 	void Cleanup();
-	std::vector<Vertex*> GetHeightmapData(); // return data type: vector of struct { float x, float y, float z, float tu, float tv };
-	void SetHeightmapData(std::vector<Vertex*> vertices);
+	//Returns a Vertex* (dynamically sized array) with the heightmap data.
+	Vertex* GetHeightmapData();
+	//Set the heightmap data
+	void SetHeightmapData(Vertex* vertices);
+	//Map width
+	int width;
+	//Map height
+	int height;
 private:
-	std::vector<Vertex*> vertices;
+	//The collection of vertices
+	Vertex* vertices;
 };
 
 #endif

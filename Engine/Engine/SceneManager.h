@@ -11,18 +11,12 @@
 #ifndef TIMER_H
 #include "Timer.h"
 #endif
-#ifndef WINDOW_H
-#include "Window.h"
-#endif
-#ifndef SCENE_H
-#include "Scene.h"
-#endif
 
-#include <vector>
 #include <map>
 #include <algorithm>
 
 class Kernel;
+class Scene;
 
 class SceneManager : public Updatable, public Renderable
 {
@@ -34,16 +28,14 @@ public:
 	//Clean up the mess
 	void Cleanup();
 	//Load a Scene
-	Scene* LoadScene(LPCWSTR fileName);
-	//Loops through the loaded scenes and returns only the active ones.
-	std::vector<Scene*> GetActiveScenes();
+	Scene* LoadScene(std::string fileName);
 	//Update active scenes (implements Updatable)
 	void Update(Timer* timer);
 	//Render active scenes (implements Renderable)
 	void Render();
 private:
 	//Keep track of the loaded scenes
-	std::vector<Scene*> scenes;
+	std::map<std::string, Scene*> scenes;
 	//Kernel
 	Kernel* kernel;
 };

@@ -18,6 +18,5 @@ void ResourceModelLoader::Cleanup()
 
 ResourceModel* ResourceModelLoader::LoadFile(LPCWSTR fileName)
 {
-	
 	return NULL;
 }

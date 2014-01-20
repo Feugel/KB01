@@ -17,7 +17,10 @@ public:
 	void SetMesh(LPD3DXMESH mesh);
 	LPDIRECT3DTEXTURE9* GetTextures();
 	void SetTextures(LPDIRECT3DTEXTURE9* textures);
+	std::string GetFilename();
+	void SetFilename(std::string fileName);
 private:
+	std::string fileName;
 	LPD3DXMESH mesh;
 	D3DMATERIAL9* materials;
 	LPDIRECT3DTEXTURE9* textures;

@@ -1,9 +1,8 @@
 #include "ResourceTexture.h"
-
+#include <string>
 
 ResourceTexture::ResourceTexture(void)
 {
-	ZeroMemory(texture, sizeof(texture));
 }
 
 
@@ -27,12 +26,12 @@ void ResourceTexture::SetTexture(LPDIRECT3DTEXTURE9 texture)
 	this->texture = texture;
 }
 
-LPCWSTR ResourceTexture::GetFilename()
+std::string ResourceTexture::GetFilename()
 {
 	return fileName;
 }
 
-void ResourceTexture::SetFilename(LPCWSTR fileName)
+void ResourceTexture::SetFilename(std::string fileName)
 {
 	this->fileName = fileName;
 }

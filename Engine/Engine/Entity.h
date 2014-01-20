@@ -1,6 +1,8 @@
 #ifndef ENTITY_H
 #define ENTITY_H
 
+#include <string>
+
 #ifndef UPDATABLE_H
 #include "Updatable.h"
 #endif
@@ -16,6 +18,7 @@ class Entity : public Updatable
 public:
 	Entity(void);
 	virtual ~Entity(void);
+	virtual std::string GetName() = 0;
 	virtual void Cleanup() = 0;
 	virtual void Update(Timer* timer) = 0;
 	virtual void Render() = 0;

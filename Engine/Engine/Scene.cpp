@@ -1,5 +1,7 @@
 #include "Scene.h"
-
+#include "LogManager.h"
+#include "Entity.h"
+#include "Terrain.h"
 
 Scene::Scene(void)
 {
@@ -20,43 +22,37 @@ void Scene::Cleanup()
 
 void Scene::Render()
 {
-	for(int i = entities.size(); i > 0; --i)
-	{
-		terrain->Render();
-		if(entities[i]->CanRender())
-			entities[i]->Render();
-	}
+	terrain->Render();
+	std::for_each(entities.begin(), entities.end(), [](std::pair<std::string, Entity*> item){ if(item.second->CanRender()) item.second->Render(); } );
 }
 
 void Scene::Update(Timer* timer)
 {
-	for(int i = entities.size(); i > 0; --i)
-	{
-		if(entities[i]->CanUpdate())
-			entities[i]->Update(timer);
-	}
+	std::for_each(entities.begin(), entities.end(), [timer](std::pair<std::string, Entity*> item){ if(item.second->CanUpdate()) item.second->Update(timer); } );
 }
 
 void Scene::AddEntity(Entity* entity)
 {
-	auto iterator = std::find_if(entities.begin(), entities.end(), [&entity](Entity* ent) { return true; });
+	auto iterator = entities.find(entity->GetName());
 	if(iterator != entities.end())
 	{
 		LogManager::Instance()->Log(LogLevel::INFO, "This entity has already been added to the current scene!");
 	}
 	else
-		entities.push_back(entity);
+	{
+		entities.erase(entity->GetName()); // map might add a key when using Find.
+		entities.insert(std::make_pair(entity->GetName(), entity));
+	}
 }
 
-std::vector<Entity*> Scene::GetEntities()
+std::map<std::string, Entity*> Scene::GetEntities()
 {
 	return entities;
 }
 
 void Scene::RemoveEntity(Entity* entity)
 {
-	auto item = std::find(entities.begin(), entities.end(), entity);
-	entities.erase(item, item+1);
+	entities.erase(entity->GetName());
 }
 
 Terrain* Scene::GetTerrain()
