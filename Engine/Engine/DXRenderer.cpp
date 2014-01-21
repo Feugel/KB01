@@ -41,20 +41,21 @@ DXRenderer::~DXRenderer(void)
 // initializing directx and adding the window to renderer
 void DXRenderer::Init(Window* window)
 {
+	wind = window;
 	// Initialize Direct3D
-    if( SUCCEEDED( InitD3D(window) ) )
+    if( SUCCEEDED( InitD3D() ) )
     {
 		// Initialize Heightmap
-		if ( SUCCEEDED( InitHeightMap(window) ) ){
+		if ( SUCCEEDED( InitHeightMap() ) ){
 
 		}
     }
 }
 
 // actual initializing of directx called by init
-HRESULT DXRenderer::InitD3D(Window* window)
+HRESULT DXRenderer::InitD3D()
 {
-	HWND hWnd = window->GetWindowHandle();
+	HWND hWnd = wind->GetWindowHandle();
 
     // Create the D3D object.
     if( NULL == ( g_pD3D = Direct3DCreate9( D3D_SDK_VERSION ) ) )
@@ -85,10 +86,10 @@ HRESULT DXRenderer::InitD3D(Window* window)
     return S_OK;
 }
 
-HRESULT DXRenderer::InitHeightMap(Window* window)
+HRESULT DXRenderer::InitHeightMap()
 {
 
-	Scene* scene = window->GetManager()->GetSceneByWindow(window);
+	Scene* scene = wind->GetManager()->GetSceneByWindow(wind);
 	if (scene != NULL)
 	{
 		Terrain* terrain = scene->GetTerrain();
@@ -143,20 +144,28 @@ HRESULT DXRenderer::InitHeightMap(Window* window)
 			}
 		
 		}
+
+		LPDIRECT3DVERTEXBUFFER9 tmp = NULL;
+
 		// Create the vertex buffer.
 		if( FAILED( g_pd3dDevice->CreateVertexBuffer( amount * sizeof( CUSTOMVERTEX ),
 														0, D3DFVF_CUSTOMVERTEX,
-														D3DPOOL_DEFAULT, &g_hVB, NULL ) ) )
+														D3DPOOL_DEFAULT, &tmp, NULL ) ) )
 		{
 			return E_FAIL;
 		}
 
 		// Fill the vertex buffer.
+
+		
+
 		VOID* pVertices;
-		if( FAILED( g_hVB->Lock( 0, amount * sizeof( CUSTOMVERTEX ), ( void** )&pVertices, 0 ) ) )
+		if( FAILED( tmp->Lock( 0, amount * sizeof( CUSTOMVERTEX ), ( void** )&pVertices, 0 ) ) )
 			return E_FAIL;
 		memcpy( pVertices, g_Vertices , amount * sizeof( CUSTOMVERTEX ));
-		g_hVB->Unlock();
+		tmp->Unlock();
+
+		wind->GetManager()->GetSceneByWindow(wind->GetWindowHandle())->GetTerrain()->GetHeightmap()->SetHeightmapBuffer(tmp);
 
 		return S_OK;
 		LogManager::Instance()->Log(LogLevel::INFO, "Finished InitHeightMap");
@@ -234,7 +243,9 @@ VOID DXRenderer::Render()
 
 	LogManager::Instance()->Log(LogLevel::INFO, "Rendering Heightmap");
 	//setting streamsource to the heightmap
-	g_pd3dDevice->SetStreamSource( 0, g_hVB, 0, sizeof( CUSTOMVERTEX ) );
+	LPDIRECT3DVERTEXBUFFER9 heightmap = wind->GetManager()->GetSceneByWindow(wind->GetWindowHandle())->GetTerrain()->GetHeightmap()->GetHeightmapBuffer();
+
+	g_pd3dDevice->SetStreamSource( 0, heightmap, 0, sizeof( CUSTOMVERTEX ) );
     g_pd3dDevice->SetFVF( D3DFVF_CUSTOMVERTEX );
 
 	//heigt and width of heightmap

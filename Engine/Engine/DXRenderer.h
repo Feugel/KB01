@@ -21,12 +21,12 @@ public:
 
 	
 private:
-	HRESULT InitD3D(Window* window);
+	HRESULT InitD3D();
 	HRESULT InitGeometry();
-	HRESULT InitHeightMap(Window* window);
+	HRESULT InitHeightMap();
 	void Cleanup();
 	void SetupMatrices();
-
+	Window* wind;
 
 };
 

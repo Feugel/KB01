@@ -7,6 +7,7 @@
 //TMP for loading a heightmap
 #include "Terrain.h"
 #include "ResourceHeightmap.h"
+#include "ResourceTexture.h"
 #include "Scene.h"
 
 int main()
@@ -49,6 +50,8 @@ void Game::initheightmap(Kernel* kernal, Window* window ){
 	Terrain* ter = new Terrain();
 	ResourceHeightmap* heightmap = kernel->GetResourceManager()->GetHeightmap("heightmap.bmp");
 	ter->SetHeightmap(heightmap);
+//	ResourceTexture* texture = kernal->GetResourceManager()->GetTexture("heightmap.bmp");
+//	ter->SetTexture(texture);
 	scene->SetTerrain(ter);
 	window->GetManager()->RegisterScene(window, scene);
 }

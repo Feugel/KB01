@@ -25,3 +25,13 @@ void ResourceHeightmap::SetHeightmapData(Vertex* vertices)
 {
 	this->vertices = vertices;
 }
+
+LPDIRECT3DVERTEXBUFFER9 ResourceHeightmap::GetHeightmapBuffer()
+{
+	return heightmapbuffer;
+}
+
+void ResourceHeightmap::SetHeightmapBuffer(LPDIRECT3DVERTEXBUFFER9 buffer)
+{
+	heightmapbuffer = buffer;
+}

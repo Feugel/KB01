@@ -1,0 +1,610 @@
+21/01/2014 12:18:40.0970 INFO    Starting up
+21/01/2014 12:18:40.0970 INFO    Creating Kernel
+21/01/2014 12:18:40.0970 INFO    Initializing Kernel
+21/01/2014 12:18:40.0970 INFO    Kernel Initialized
+21/01/2014 12:18:40.0970 INFO    Initializing Window
+21/01/2014 12:18:40.0970 INFO    Class registered successfully
+21/01/2014 12:18:40.0970 INFO    Creating Window Handle
+21/01/2014 12:18:41.0064 INFO    Handle created
+21/01/2014 12:18:41.0064 INFO    Making screen visible
+21/01/2014 12:18:41.0126 INFO    Window registered
+21/01/2014 12:18:41.0126 INFO    Adding Renderer (DX9)
+21/01/2014 12:19:19.0465 INFO    Starting up
+21/01/2014 12:19:19.0465 INFO    Creating Kernel
+21/01/2014 12:19:19.0465 INFO    Initializing Kernel
+21/01/2014 12:19:19.0465 INFO    Kernel Initialized
+21/01/2014 12:19:19.0465 INFO    Initializing Window
+21/01/2014 12:19:19.0465 INFO    Class registered successfully
+21/01/2014 12:19:19.0465 INFO    Creating Window Handle
+21/01/2014 12:19:19.0481 INFO    Handle created
+21/01/2014 12:19:19.0481 INFO    Making screen visible
+21/01/2014 12:19:19.0528 INFO    Window registered
+21/01/2014 12:19:19.0528 INFO    Adding Renderer (DX9)
+21/01/2014 12:19:19.0731 INFO    Starting InitHeightMap
+21/01/2014 12:19:19.0777 INFO    Starting Kernel functions
+21/01/2014 12:19:19.0777 INFO    Starting Game Loop
+21/01/2014 12:19:19.0777 INFO    Starting Render
+21/01/2014 12:19:19.0777 INFO    Rendering
+21/01/2014 12:19:19.0824 INFO    Rendering Heightmap
+21/01/2014 12:21:19.0824 INFO    Starting up
+21/01/2014 12:21:19.0824 INFO    Creating Kernel
+21/01/2014 12:21:19.0824 INFO    Initializing Kernel
+21/01/2014 12:21:19.0824 INFO    Kernel Initialized
+21/01/2014 12:21:19.0824 INFO    Initializing Window
+21/01/2014 12:21:19.0824 INFO    Class registered successfully
+21/01/2014 12:21:19.0824 INFO    Creating Window Handle
+21/01/2014 12:21:19.0871 INFO    Handle created
+21/01/2014 12:21:19.0871 INFO    Making screen visible
+21/01/2014 12:21:19.0949 INFO    Window registered
+21/01/2014 12:21:19.0949 INFO    Adding Renderer (DX9)
+21/01/2014 12:21:20.0167 INFO    Starting InitHeightMap
+21/01/2014 12:21:20.0183 INFO    Starting Kernel functions
+21/01/2014 12:21:20.0199 INFO    Starting Game Loop
+21/01/2014 12:21:20.0199 INFO    Starting Render
+21/01/2014 12:21:20.0199 INFO    Rendering
+21/01/2014 12:21:20.0199 INFO    Rendering Heightmap
+21/01/2014 12:23:16.0326 INFO    Starting up
+21/01/2014 12:23:16.0326 INFO    Creating Kernel
+21/01/2014 12:23:16.0327 INFO    Initializing Kernel
+21/01/2014 12:23:16.0328 INFO    Kernel Initialized
+21/01/2014 12:23:16.0328 INFO    Initializing Window
+21/01/2014 12:23:16.0328 INFO    Class registered successfully
+21/01/2014 12:23:16.0328 INFO    Creating Window Handle
+21/01/2014 12:23:16.0338 INFO    Handle created
+21/01/2014 12:23:16.0339 INFO    Making screen visible
+21/01/2014 12:23:16.0370 INFO    Window registered
+21/01/2014 12:23:16.0370 INFO    Adding Renderer (DX9)
+21/01/2014 12:23:16.0575 INFO    Starting InitHeightMap
+21/01/2014 12:23:16.0588 INFO    Starting Kernel functions
+21/01/2014 12:23:16.0593 INFO    Starting Game Loop
+21/01/2014 12:23:16.0602 INFO    Starting Render
+21/01/2014 12:23:16.0603 INFO    Rendering
+21/01/2014 12:23:16.0607 INFO    Rendering Heightmap
+21/01/2014 12:23:16.0609 INFO    Done Rendering
+21/01/2014 12:23:16.0611 INFO    Ending Render
+21/01/2014 12:23:16.0612 INFO    Present Render
+21/01/2014 12:23:16.0627 INFO    Starting Render
+21/01/2014 12:23:16.0630 INFO    Rendering
+21/01/2014 12:23:16.0632 INFO    Rendering Heightmap
+21/01/2014 12:23:16.0633 INFO    Done Rendering
+21/01/2014 12:23:16.0634 INFO    Ending Render
+21/01/2014 12:23:16.0636 INFO    Present Render
+21/01/2014 12:23:16.0665 INFO    Starting Render
+21/01/2014 12:23:16.0669 INFO    Rendering
+21/01/2014 12:23:16.0671 INFO    Rendering Heightmap
+21/01/2014 12:23:16.0672 INFO    Done Rendering
+21/01/2014 12:23:16.0673 INFO    Ending Render
+21/01/2014 12:23:16.0674 INFO    Present Render
+21/01/2014 12:23:16.0682 INFO    Starting Render
+21/01/2014 12:23:16.0685 INFO    Rendering
+21/01/2014 12:23:16.0688 INFO    Rendering Heightmap
+21/01/2014 12:23:16.0690 INFO    Done Rendering
+21/01/2014 12:23:16.0693 INFO    Ending Render
+21/01/2014 12:23:16.0696 INFO    Present Render
+21/01/2014 12:23:16.0830 INFO    Starting Render
+21/01/2014 12:23:16.0833 INFO    Rendering
+21/01/2014 12:23:16.0837 INFO    Rendering Heightmap
+21/01/2014 12:23:16.0839 INFO    Done Rendering
+21/01/2014 12:23:16.0840 INFO    Ending Render
+21/01/2014 12:23:16.0841 INFO    Present Render
+21/01/2014 12:23:16.0889 INFO    Starting Render
+21/01/2014 12:23:16.0893 INFO    Rendering
+21/01/2014 12:23:16.0895 INFO    Rendering Heightmap
+21/01/2014 12:23:16.0897 INFO    Done Rendering
+21/01/2014 12:23:16.0899 INFO    Ending Render
+21/01/2014 12:23:16.0900 INFO    Present Render
+21/01/2014 12:23:16.0957 INFO    Starting Render
+21/01/2014 12:23:16.0958 INFO    Rendering
+21/01/2014 12:23:16.0961 INFO    Rendering Heightmap
+21/01/2014 12:23:16.0963 INFO    Done Rendering
+21/01/2014 12:23:16.0965 INFO    Ending Render
+21/01/2014 12:23:16.0966 INFO    Present Render
+21/01/2014 12:23:17.0036 INFO    Starting Render
+21/01/2014 12:23:17.0038 INFO    Rendering
+21/01/2014 12:23:17.0039 INFO    Rendering Heightmap
+21/01/2014 12:23:17.0041 INFO    Done Rendering
+21/01/2014 12:23:17.0045 INFO    Ending Render
+21/01/2014 12:23:17.0047 INFO    Present Render
+21/01/2014 12:23:17.0107 INFO    Starting Render
+21/01/2014 12:23:17.0110 INFO    Rendering
+21/01/2014 12:23:17.0113 INFO    Rendering Heightmap
+21/01/2014 12:23:17.0116 INFO    Done Rendering
+21/01/2014 12:23:17.0118 INFO    Ending Render
+21/01/2014 12:23:17.0123 INFO    Present Render
+21/01/2014 12:23:17.0192 INFO    Starting Render
+21/01/2014 12:23:17.0195 INFO    Rendering
+21/01/2014 12:23:17.0197 INFO    Rendering Heightmap
+21/01/2014 12:23:17.0200 INFO    Done Rendering
+21/01/2014 12:23:17.0202 INFO    Ending Render
+21/01/2014 12:23:17.0203 INFO    Present Render
+21/01/2014 12:23:17.0228 INFO    Starting Render
+21/01/2014 12:23:17.0229 INFO    Rendering
+21/01/2014 12:23:17.0232 INFO    Rendering Heightmap
+21/01/2014 12:23:17.0235 INFO    Done Rendering
+21/01/2014 12:23:17.0237 INFO    Ending Render
+21/01/2014 12:23:17.0238 INFO    Present Render
+21/01/2014 12:23:17.0299 INFO    Starting Render
+21/01/2014 12:23:17.0301 INFO    Rendering
+21/01/2014 12:23:17.0302 INFO    Rendering Heightmap
+21/01/2014 12:23:17.0304 INFO    Done Rendering
+21/01/2014 12:23:17.0305 INFO    Ending Render
+21/01/2014 12:23:17.0307 INFO    Present Render
+21/01/2014 12:23:17.0367 INFO    Starting Render
+21/01/2014 12:23:17.0369 INFO    Rendering
+21/01/2014 12:23:17.0372 INFO    Rendering Heightmap
+21/01/2014 12:23:17.0374 INFO    Done Rendering
+21/01/2014 12:23:17.0376 INFO    Ending Render
+21/01/2014 12:23:17.0378 INFO    Present Render
+21/01/2014 12:23:17.0437 INFO    Starting Render
+21/01/2014 12:23:17.0439 INFO    Rendering
+21/01/2014 12:23:17.0441 INFO    Rendering Heightmap
+21/01/2014 12:23:17.0442 INFO    Done Rendering
+21/01/2014 12:23:17.0444 INFO    Ending Render
+21/01/2014 12:23:17.0445 INFO    Present Render
+21/01/2014 12:23:17.0504 INFO    Starting Render
+21/01/2014 12:23:17.0506 INFO    Rendering
+21/01/2014 12:23:17.0507 INFO    Rendering Heightmap
+21/01/2014 12:23:17.0509 INFO    Done Rendering
+21/01/2014 12:23:17.0510 INFO    Ending Render
+21/01/2014 12:23:17.0512 INFO    Present Render
+21/01/2014 12:23:17.0568 INFO    Starting Render
+21/01/2014 12:23:17.0571 INFO    Rendering
+21/01/2014 12:23:17.0573 INFO    Rendering Heightmap
+21/01/2014 12:23:17.0575 INFO    Done Rendering
+21/01/2014 12:23:17.0577 INFO    Ending Render
+21/01/2014 12:23:17.0578 INFO    Present Render
+21/01/2014 12:23:17.0635 INFO    Starting Render
+21/01/2014 12:23:17.0638 INFO    Rendering
+21/01/2014 12:23:17.0641 INFO    Rendering Heightmap
+21/01/2014 12:23:17.0645 INFO    Done Rendering
+21/01/2014 12:23:17.0647 INFO    Ending Render
+21/01/2014 12:23:17.0648 INFO    Present Render
+21/01/2014 12:23:17.0715 INFO    Starting Render
+21/01/2014 12:23:17.0716 INFO    Rendering
+21/01/2014 12:23:17.0718 INFO    Rendering Heightmap
+21/01/2014 12:23:17.0720 INFO    Done Rendering
+21/01/2014 12:23:17.0721 INFO    Ending Render
+21/01/2014 12:23:17.0723 INFO    Present Render
+21/01/2014 12:23:17.0785 INFO    Starting Render
+21/01/2014 12:23:17.0787 INFO    Rendering
+21/01/2014 12:23:17.0791 INFO    Rendering Heightmap
+21/01/2014 12:23:17.0792 INFO    Done Rendering
+21/01/2014 12:23:17.0794 INFO    Ending Render
+21/01/2014 12:23:17.0796 INFO    Present Render
+21/01/2014 12:23:17.0840 INFO    Starting Render
+21/01/2014 12:23:17.0842 INFO    Rendering
+21/01/2014 12:23:17.0843 INFO    Rendering Heightmap
+21/01/2014 12:23:17.0845 INFO    Done Rendering
+21/01/2014 12:23:17.0846 INFO    Ending Render
+21/01/2014 12:23:17.0848 INFO    Present Render
+21/01/2014 12:23:17.0898 INFO    Starting Render
+21/01/2014 12:23:17.0898 INFO    Rendering
+21/01/2014 12:23:17.0903 INFO    Rendering Heightmap
+21/01/2014 12:23:17.0905 INFO    Done Rendering
+21/01/2014 12:23:17.0906 INFO    Ending Render
+21/01/2014 12:23:17.0908 INFO    Present Render
+21/01/2014 12:23:17.0955 INFO    Starting Render
+21/01/2014 12:23:17.0957 INFO    Rendering
+21/01/2014 12:23:17.0959 INFO    Rendering Heightmap
+21/01/2014 12:23:17.0960 INFO    Done Rendering
+21/01/2014 12:23:17.0961 INFO    Ending Render
+21/01/2014 12:23:17.0963 INFO    Present Render
+21/01/2014 12:23:18.0021 INFO    Starting Render
+21/01/2014 12:23:18.0022 INFO    Rendering
+21/01/2014 12:23:18.0024 INFO    Rendering Heightmap
+21/01/2014 12:23:18.0025 INFO    Done Rendering
+21/01/2014 12:23:18.0026 INFO    Ending Render
+21/01/2014 12:23:18.0028 INFO    Present Render
+21/01/2014 12:23:18.0084 INFO    Starting Render
+21/01/2014 12:23:18.0086 INFO    Rendering
+21/01/2014 12:23:18.0087 INFO    Rendering Heightmap
+21/01/2014 12:23:18.0088 INFO    Done Rendering
+21/01/2014 12:23:18.0090 INFO    Ending Render
+21/01/2014 12:23:18.0091 INFO    Present Render
+21/01/2014 12:23:18.0144 INFO    Starting Render
+21/01/2014 12:23:18.0145 INFO    Rendering
+21/01/2014 12:23:18.0147 INFO    Rendering Heightmap
+21/01/2014 12:23:18.0149 INFO    Done Rendering
+21/01/2014 12:23:18.0150 INFO    Ending Render
+21/01/2014 12:23:18.0151 INFO    Present Render
+21/01/2014 12:23:18.0197 INFO    Starting Render
+21/01/2014 12:23:18.0200 INFO    Rendering
+21/01/2014 12:23:18.0201 INFO    Rendering Heightmap
+21/01/2014 12:23:18.0203 INFO    Done Rendering
+21/01/2014 12:23:18.0206 INFO    Ending Render
+21/01/2014 12:23:18.0208 INFO    Present Render
+21/01/2014 12:23:18.0252 INFO    Starting Render
+21/01/2014 12:23:18.0253 INFO    Rendering
+21/01/2014 12:23:18.0255 INFO    Rendering Heightmap
+21/01/2014 12:23:18.0256 INFO    Done Rendering
+21/01/2014 12:23:18.0258 INFO    Ending Render
+21/01/2014 12:23:18.0259 INFO    Present Render
+21/01/2014 12:23:18.0305 INFO    Starting Render
+21/01/2014 12:23:18.0307 INFO    Rendering
+21/01/2014 12:23:18.0309 INFO    Rendering Heightmap
+21/01/2014 12:23:18.0310 INFO    Done Rendering
+21/01/2014 12:23:18.0312 INFO    Ending Render
+21/01/2014 12:23:18.0313 INFO    Present Render
+21/01/2014 12:23:18.0358 INFO    Starting Render
+21/01/2014 12:23:18.0359 INFO    Rendering
+21/01/2014 12:23:18.0360 INFO    Rendering Heightmap
+21/01/2014 12:23:18.0362 INFO    Done Rendering
+21/01/2014 12:23:18.0364 INFO    Ending Render
+21/01/2014 12:23:18.0364 INFO    Present Render
+21/01/2014 12:23:18.0411 INFO    Starting Render
+21/01/2014 12:23:18.0413 INFO    Rendering
+21/01/2014 12:23:18.0414 INFO    Rendering Heightmap
+21/01/2014 12:23:18.0416 INFO    Done Rendering
+21/01/2014 12:23:18.0417 INFO    Ending Render
+21/01/2014 12:23:18.0419 INFO    Present Render
+21/01/2014 12:23:18.0474 INFO    Starting Render
+21/01/2014 12:23:18.0475 INFO    Rendering
+21/01/2014 12:23:18.0478 INFO    Rendering Heightmap
+21/01/2014 12:23:18.0480 INFO    Done Rendering
+21/01/2014 12:23:18.0481 INFO    Ending Render
+21/01/2014 12:23:18.0482 INFO    Present Render
+21/01/2014 12:23:18.0540 INFO    Starting Render
+21/01/2014 12:23:18.0542 INFO    Rendering
+21/01/2014 12:23:18.0543 INFO    Rendering Heightmap
+21/01/2014 12:23:18.0544 INFO    Done Rendering
+21/01/2014 12:23:18.0547 INFO    Ending Render
+21/01/2014 12:23:18.0549 INFO    Present Render
+21/01/2014 12:23:18.0601 INFO    Starting Render
+21/01/2014 12:23:18.0603 INFO    Rendering
+21/01/2014 12:23:18.0604 INFO    Rendering Heightmap
+21/01/2014 12:23:18.0606 INFO    Done Rendering
+21/01/2014 12:23:18.0607 INFO    Ending Render
+21/01/2014 12:23:18.0608 INFO    Present Render
+21/01/2014 12:23:18.0659 INFO    Starting Render
+21/01/2014 12:23:18.0662 INFO    Rendering
+21/01/2014 12:23:18.0664 INFO    Rendering Heightmap
+21/01/2014 12:23:18.0666 INFO    Done Rendering
+21/01/2014 12:23:18.0668 INFO    Ending Render
+21/01/2014 12:23:18.0669 INFO    Present Render
+21/01/2014 12:23:18.0715 INFO    Starting Render
+21/01/2014 12:23:18.0716 INFO    Rendering
+21/01/2014 12:23:18.0721 INFO    Rendering Heightmap
+21/01/2014 12:23:18.0723 INFO    Done Rendering
+21/01/2014 12:23:18.0725 INFO    Ending Render
+21/01/2014 12:23:18.0726 INFO    Present Render
+21/01/2014 12:23:18.0770 INFO    Starting Render
+21/01/2014 12:23:18.0772 INFO    Rendering
+21/01/2014 12:23:18.0774 INFO    Rendering Heightmap
+21/01/2014 12:23:18.0777 INFO    Done Rendering
+21/01/2014 12:23:18.0779 INFO    Ending Render
+21/01/2014 12:23:18.0781 INFO    Present Render
+21/01/2014 12:23:18.0825 INFO    Starting Render
+21/01/2014 12:23:18.0827 INFO    Rendering
+21/01/2014 12:23:18.0829 INFO    Rendering Heightmap
+21/01/2014 12:23:18.0830 INFO    Done Rendering
+21/01/2014 12:23:18.0832 INFO    Ending Render
+21/01/2014 12:23:18.0833 INFO    Present Render
+21/01/2014 12:23:18.0880 INFO    Starting Render
+21/01/2014 12:23:18.0881 INFO    Rendering
+21/01/2014 12:23:18.0883 INFO    Rendering Heightmap
+21/01/2014 12:23:18.0884 INFO    Done Rendering
+21/01/2014 12:23:18.0886 INFO    Ending Render
+21/01/2014 12:23:18.0887 INFO    Present Render
+21/01/2014 12:23:18.0937 INFO    Starting Render
+21/01/2014 12:23:18.0939 INFO    Rendering
+21/01/2014 12:23:18.0941 INFO    Rendering Heightmap
+21/01/2014 12:23:18.0943 INFO    Done Rendering
+21/01/2014 12:23:18.0945 INFO    Ending Render
+21/01/2014 12:23:18.0947 INFO    Present Render
+21/01/2014 12:23:18.0991 INFO    Starting Render
+21/01/2014 12:23:18.0993 INFO    Rendering
+21/01/2014 12:23:18.0994 INFO    Rendering Heightmap
+21/01/2014 12:23:18.0996 INFO    Done Rendering
+21/01/2014 12:23:18.0998 INFO    Ending Render
+21/01/2014 12:23:18.0999 INFO    Present Render
+21/01/2014 12:23:19.0048 INFO    Starting Render
+21/01/2014 12:23:19.0049 INFO    Rendering
+21/01/2014 12:23:19.0051 INFO    Rendering Heightmap
+21/01/2014 12:23:19.0052 INFO    Done Rendering
+21/01/2014 12:23:19.0053 INFO    Ending Render
+21/01/2014 12:23:19.0055 INFO    Present Render
+21/01/2014 12:23:19.0104 INFO    Starting Render
+21/01/2014 12:23:19.0105 INFO    Rendering
+21/01/2014 12:23:19.0107 INFO    Rendering Heightmap
+21/01/2014 12:23:19.0108 INFO    Done Rendering
+21/01/2014 12:23:19.0109 INFO    Ending Render
+21/01/2014 12:23:19.0110 INFO    Present Render
+21/01/2014 12:23:19.0166 INFO    Starting Render
+21/01/2014 12:23:19.0168 INFO    Rendering
+21/01/2014 12:23:19.0169 INFO    Rendering Heightmap
+21/01/2014 12:23:19.0171 INFO    Done Rendering
+21/01/2014 12:23:19.0172 INFO    Ending Render
+21/01/2014 12:23:19.0173 INFO    Present Render
+21/01/2014 12:23:19.0236 INFO    Starting Render
+21/01/2014 12:23:19.0239 INFO    Rendering
+21/01/2014 12:23:19.0240 INFO    Rendering Heightmap
+21/01/2014 12:23:19.0242 INFO    Done Rendering
+21/01/2014 12:23:19.0244 INFO    Ending Render
+21/01/2014 12:23:19.0245 INFO    Present Render
+21/01/2014 12:23:19.0299 INFO    Starting Render
+21/01/2014 12:23:19.0300 INFO    Rendering
+21/01/2014 12:23:19.0302 INFO    Rendering Heightmap
+21/01/2014 12:23:19.0303 INFO    Done Rendering
+21/01/2014 12:23:19.0305 INFO    Ending Render
+21/01/2014 12:23:19.0306 INFO    Present Render
+21/01/2014 12:23:19.0353 INFO    Starting Render
+21/01/2014 12:23:19.0355 INFO    Rendering
+21/01/2014 12:23:19.0356 INFO    Rendering Heightmap
+21/01/2014 12:23:19.0358 INFO    Done Rendering
+21/01/2014 12:23:19.0359 INFO    Ending Render
+21/01/2014 12:23:19.0360 INFO    Present Render
+21/01/2014 12:23:19.0407 INFO    Starting Render
+21/01/2014 12:23:19.0408 INFO    Rendering
+21/01/2014 12:23:19.0410 INFO    Rendering Heightmap
+21/01/2014 12:23:19.0411 INFO    Done Rendering
+21/01/2014 12:23:19.0413 INFO    Ending Render
+21/01/2014 12:23:19.0414 INFO    Present Render
+21/01/2014 12:23:19.0464 INFO    Starting Render
+21/01/2014 12:23:19.0465 INFO    Rendering
+21/01/2014 12:23:19.0467 INFO    Rendering Heightmap
+21/01/2014 12:23:19.0468 INFO    Done Rendering
+21/01/2014 12:23:19.0470 INFO    Ending Render
+21/01/2014 12:23:19.0471 INFO    Present Render
+21/01/2014 12:23:19.0517 INFO    Starting Render
+21/01/2014 12:23:19.0519 INFO    Rendering
+21/01/2014 12:23:19.0520 INFO    Rendering Heightmap
+21/01/2014 12:23:19.0522 INFO    Done Rendering
+21/01/2014 12:23:19.0523 INFO    Ending Render
+21/01/2014 12:23:19.0524 INFO    Present Render
+21/01/2014 12:23:19.0574 INFO    Starting Render
+21/01/2014 12:23:19.0576 INFO    Rendering
+21/01/2014 12:23:19.0578 INFO    Rendering Heightmap
+21/01/2014 12:23:19.0579 INFO    Done Rendering
+21/01/2014 12:23:19.0581 INFO    Ending Render
+21/01/2014 12:23:19.0583 INFO    Present Render
+21/01/2014 12:23:19.0627 INFO    Starting Render
+21/01/2014 12:23:19.0629 INFO    Rendering
+21/01/2014 12:23:19.0630 INFO    Rendering Heightmap
+21/01/2014 12:23:19.0632 INFO    Done Rendering
+21/01/2014 12:23:19.0633 INFO    Ending Render
+21/01/2014 12:23:19.0635 INFO    Present Render
+21/01/2014 12:23:19.0681 INFO    Starting Render
+21/01/2014 12:23:19.0682 INFO    Rendering
+21/01/2014 12:23:19.0684 INFO    Rendering Heightmap
+21/01/2014 12:23:19.0685 INFO    Done Rendering
+21/01/2014 12:23:19.0686 INFO    Ending Render
+21/01/2014 12:23:19.0688 INFO    Present Render
+21/01/2014 12:23:19.0734 INFO    Starting Render
+21/01/2014 12:23:19.0736 INFO    Rendering
+21/01/2014 12:23:19.0738 INFO    Rendering Heightmap
+21/01/2014 12:23:19.0739 INFO    Done Rendering
+21/01/2014 12:23:19.0741 INFO    Ending Render
+21/01/2014 12:23:19.0743 INFO    Present Render
+21/01/2014 12:23:19.0787 INFO    Starting Render
+21/01/2014 12:23:19.0789 INFO    Rendering
+21/01/2014 12:23:19.0791 INFO    Rendering Heightmap
+21/01/2014 12:23:19.0792 INFO    Done Rendering
+21/01/2014 12:23:19.0793 INFO    Ending Render
+21/01/2014 12:23:19.0795 INFO    Present Render
+21/01/2014 12:23:19.0841 INFO    Starting Render
+21/01/2014 12:23:19.0843 INFO    Rendering
+21/01/2014 12:23:19.0844 INFO    Rendering Heightmap
+21/01/2014 12:23:19.0846 INFO    Done Rendering
+21/01/2014 12:23:19.0848 INFO    Ending Render
+21/01/2014 12:23:19.0849 INFO    Present Render
+21/01/2014 12:23:19.0894 INFO    Starting Render
+21/01/2014 12:23:19.0896 INFO    Rendering
+21/01/2014 12:23:19.0897 INFO    Rendering Heightmap
+21/01/2014 12:23:19.0899 INFO    Done Rendering
+21/01/2014 12:23:19.0900 INFO    Ending Render
+21/01/2014 12:23:19.0901 INFO    Present Render
+21/01/2014 12:23:19.0948 INFO    Starting Render
+21/01/2014 12:23:19.0949 INFO    Rendering
+21/01/2014 12:23:19.0951 INFO    Rendering Heightmap
+21/01/2014 12:23:19.0952 INFO    Done Rendering
+21/01/2014 12:23:19.0954 INFO    Ending Render
+21/01/2014 12:23:19.0955 INFO    Present Render
+21/01/2014 12:23:20.0005 INFO    Starting Render
+21/01/2014 12:23:20.0007 INFO    Rendering
+21/01/2014 12:23:20.0008 INFO    Rendering Heightmap
+21/01/2014 12:23:20.0010 INFO    Done Rendering
+21/01/2014 12:23:20.0012 INFO    Ending Render
+21/01/2014 12:23:20.0013 INFO    Present Render
+21/01/2014 12:23:20.0061 INFO    Starting Render
+21/01/2014 12:23:20.0063 INFO    Rendering
+21/01/2014 12:23:20.0064 INFO    Rendering Heightmap
+21/01/2014 12:23:20.0066 INFO    Done Rendering
+21/01/2014 12:23:20.0067 INFO    Ending Render
+21/01/2014 12:23:20.0069 INFO    Present Render
+21/01/2014 12:23:20.0114 INFO    Starting Render
+21/01/2014 12:23:20.0116 INFO    Rendering
+21/01/2014 12:23:20.0118 INFO    Rendering Heightmap
+21/01/2014 12:23:20.0120 INFO    Done Rendering
+21/01/2014 12:23:20.0122 INFO    Ending Render
+21/01/2014 12:23:20.0123 INFO    Present Render
+21/01/2014 12:23:20.0168 INFO    Starting Render
+21/01/2014 12:23:20.0169 INFO    Rendering
+21/01/2014 12:23:20.0171 INFO    Rendering Heightmap
+21/01/2014 12:23:20.0172 INFO    Done Rendering
+21/01/2014 12:23:20.0174 INFO    Ending Render
+21/01/2014 12:23:20.0175 INFO    Present Render
+21/01/2014 12:23:20.0221 INFO    Starting Render
+21/01/2014 12:23:20.0223 INFO    Rendering
+21/01/2014 12:23:20.0224 INFO    Rendering Heightmap
+21/01/2014 12:23:20.0226 INFO    Done Rendering
+21/01/2014 12:23:20.0227 INFO    Ending Render
+21/01/2014 12:23:20.0229 INFO    Present Render
+21/01/2014 12:23:20.0275 INFO    Starting Render
+21/01/2014 12:23:20.0275 INFO    Rendering
+21/01/2014 12:23:20.0278 INFO    Rendering Heightmap
+21/01/2014 12:23:20.0280 INFO    Done Rendering
+21/01/2014 12:23:20.0281 INFO    Ending Render
+21/01/2014 12:23:20.0283 INFO    Present Render
+21/01/2014 12:23:20.0328 INFO    Starting Render
+21/01/2014 12:23:20.0330 INFO    Rendering
+21/01/2014 12:23:20.0332 INFO    Rendering Heightmap
+21/01/2014 12:23:20.0334 INFO    Done Rendering
+21/01/2014 12:23:20.0335 INFO    Ending Render
+21/01/2014 12:23:20.0337 INFO    Present Render
+21/01/2014 12:23:20.0382 INFO    Starting Render
+21/01/2014 12:23:20.0383 INFO    Rendering
+21/01/2014 12:23:20.0384 INFO    Rendering Heightmap
+21/01/2014 12:23:20.0386 INFO    Done Rendering
+21/01/2014 12:23:20.0387 INFO    Ending Render
+21/01/2014 12:23:20.0388 INFO    Present Render
+21/01/2014 12:23:20.0439 INFO    Starting Render
+21/01/2014 12:23:20.0440 INFO    Rendering
+21/01/2014 12:23:20.0442 INFO    Rendering Heightmap
+21/01/2014 12:23:20.0443 INFO    Done Rendering
+21/01/2014 12:23:20.0444 INFO    Ending Render
+21/01/2014 12:23:20.0446 INFO    Present Render
+21/01/2014 12:23:20.0492 INFO    Starting Render
+21/01/2014 12:23:20.0494 INFO    Rendering
+21/01/2014 12:23:20.0496 INFO    Rendering Heightmap
+21/01/2014 12:23:20.0497 INFO    Done Rendering
+21/01/2014 12:23:20.0499 INFO    Ending Render
+21/01/2014 12:23:20.0501 INFO    Present Render
+21/01/2014 12:23:20.0549 INFO    Starting Render
+21/01/2014 12:23:20.0550 INFO    Rendering
+21/01/2014 12:23:20.0552 INFO    Rendering Heightmap
+21/01/2014 12:23:20.0553 INFO    Done Rendering
+21/01/2014 12:23:20.0555 INFO    Ending Render
+21/01/2014 12:23:20.0556 INFO    Present Render
+21/01/2014 12:23:20.0602 INFO    Starting Render
+21/01/2014 12:23:20.0603 INFO    Rendering
+21/01/2014 12:23:20.0605 INFO    Rendering Heightmap
+21/01/2014 12:23:20.0607 INFO    Done Rendering
+21/01/2014 12:23:20.0608 INFO    Ending Render
+21/01/2014 12:23:20.0609 INFO    Present Render
+21/01/2014 12:23:20.0656 INFO    Starting Render
+21/01/2014 12:23:20.0657 INFO    Rendering
+21/01/2014 12:23:20.0659 INFO    Rendering Heightmap
+21/01/2014 12:23:20.0660 INFO    Done Rendering
+21/01/2014 12:23:20.0662 INFO    Ending Render
+21/01/2014 12:23:20.0663 INFO    Present Render
+21/01/2014 12:23:20.0709 INFO    Starting Render
+21/01/2014 12:23:20.0710 INFO    Rendering
+21/01/2014 12:23:20.0712 INFO    Rendering Heightmap
+21/01/2014 12:23:20.0715 INFO    Done Rendering
+21/01/2014 12:23:20.0716 INFO    Ending Render
+21/01/2014 12:23:20.0718 INFO    Present Render
+21/01/2014 12:23:20.0767 INFO    Starting Render
+21/01/2014 12:23:20.0769 INFO    Rendering
+21/01/2014 12:23:20.0771 INFO    Rendering Heightmap
+21/01/2014 12:23:20.0772 INFO    Done Rendering
+21/01/2014 12:23:20.0774 INFO    Ending Render
+21/01/2014 12:23:20.0776 INFO    Present Render
+21/01/2014 12:23:20.0823 INFO    Starting Render
+21/01/2014 12:23:20.0825 INFO    Rendering
+21/01/2014 12:23:20.0826 INFO    Rendering Heightmap
+21/01/2014 12:23:20.0828 INFO    Done Rendering
+21/01/2014 12:23:20.0828 INFO    Ending Render
+21/01/2014 12:23:20.0831 INFO    Present Render
+21/01/2014 12:23:20.0878 INFO    Starting Render
+21/01/2014 12:23:20.0879 INFO    Rendering
+21/01/2014 12:23:20.0881 INFO    Rendering Heightmap
+21/01/2014 12:23:20.0883 INFO    Done Rendering
+21/01/2014 12:23:20.0884 INFO    Ending Render
+21/01/2014 12:23:20.0887 INFO    Present Render
+21/01/2014 12:23:20.0932 INFO    Starting Render
+21/01/2014 12:23:20.0933 INFO    Rendering
+21/01/2014 12:23:20.0936 INFO    Rendering Heightmap
+21/01/2014 12:23:20.0938 INFO    Done Rendering
+21/01/2014 12:23:20.0940 INFO    Ending Render
+21/01/2014 12:23:20.0942 INFO    Present Render
+21/01/2014 12:23:20.0992 INFO    Starting Render
+21/01/2014 12:23:20.0993 INFO    Rendering
+21/01/2014 12:23:20.0995 INFO    Rendering Heightmap
+21/01/2014 12:23:20.0997 INFO    Done Rendering
+21/01/2014 12:23:20.0998 INFO    Ending Render
+21/01/2014 12:23:21.0000 INFO    Present Render
+21/01/2014 12:23:21.0049 INFO    Starting Render
+21/01/2014 12:23:21.0050 INFO    Rendering
+21/01/2014 12:23:21.0052 INFO    Rendering Heightmap
+21/01/2014 12:23:21.0054 INFO    Done Rendering
+21/01/2014 12:23:21.0056 INFO    Ending Render
+21/01/2014 12:23:21.0059 INFO    Present Render
+21/01/2014 12:23:21.0103 INFO    Starting Render
+21/01/2014 12:23:21.0107 INFO    Rendering
+21/01/2014 12:23:21.0109 INFO    Rendering Heightmap
+21/01/2014 12:23:21.0111 INFO    Done Rendering
+21/01/2014 12:23:21.0112 INFO    Ending Render
+21/01/2014 12:23:21.0114 INFO    Present Render
+21/01/2014 12:23:21.0159 INFO    Starting Render
+21/01/2014 12:23:21.0161 INFO    Rendering
+21/01/2014 12:23:21.0163 INFO    Rendering Heightmap
+21/01/2014 12:23:21.0164 INFO    Done Rendering
+21/01/2014 12:23:21.0166 INFO    Ending Render
+21/01/2014 12:23:21.0168 INFO    Present Render
+21/01/2014 12:23:21.0214 INFO    Starting Render
+21/01/2014 12:23:21.0215 INFO    Rendering
+21/01/2014 12:23:21.0217 INFO    Rendering Heightmap
+21/01/2014 12:23:21.0218 INFO    Done Rendering
+21/01/2014 12:23:21.0220 INFO    Ending Render
+21/01/2014 12:23:21.0221 INFO    Present Render
+21/01/2014 12:23:21.0267 INFO    Starting Render
+21/01/2014 12:23:21.0269 INFO    Rendering
+21/01/2014 12:23:21.0271 INFO    Rendering Heightmap
+21/01/2014 12:23:21.0272 INFO    Done Rendering
+21/01/2014 12:23:21.0274 INFO    Ending Render
+21/01/2014 12:23:21.0276 INFO    Present Render
+21/01/2014 12:23:21.0322 INFO    Starting Render
+21/01/2014 12:23:21.0324 INFO    Rendering
+21/01/2014 12:23:21.0325 INFO    Rendering Heightmap
+21/01/2014 12:23:21.0327 INFO    Done Rendering
+21/01/2014 12:23:21.0328 INFO    Ending Render
+21/01/2014 12:23:21.0330 INFO    Present Render
+21/01/2014 12:23:21.0377 INFO    Starting Render
+21/01/2014 12:23:21.0379 INFO    Rendering
+21/01/2014 12:23:21.0381 INFO    Rendering Heightmap
+21/01/2014 12:23:21.0382 INFO    Done Rendering
+21/01/2014 12:23:21.0384 INFO    Ending Render
+21/01/2014 12:23:21.0386 INFO    Present Render
+21/01/2014 12:23:21.0432 INFO    Starting Render
+21/01/2014 12:23:21.0434 INFO    Rendering
+21/01/2014 12:23:21.0436 INFO    Rendering Heightmap
+21/01/2014 12:23:21.0437 INFO    Done Rendering
+21/01/2014 12:23:21.0439 INFO    Ending Render
+21/01/2014 12:23:21.0442 INFO    Present Render
+21/01/2014 12:23:21.0499 INFO    Starting Render
+21/01/2014 12:23:21.0501 INFO    Rendering
+21/01/2014 12:23:21.0502 INFO    Rendering Heightmap
+21/01/2014 12:23:21.0504 INFO    Done Rendering
+21/01/2014 12:23:21.0505 INFO    Ending Render
+21/01/2014 12:23:21.0507 INFO    Present Render
+21/01/2014 12:23:21.0553 INFO    Starting Render
+21/01/2014 12:23:21.0554 INFO    Rendering
+21/01/2014 12:23:21.0556 INFO    Rendering Heightmap
+21/01/2014 12:23:21.0558 INFO    Done Rendering
+21/01/2014 12:23:21.0560 INFO    Ending Render
+21/01/2014 12:23:21.0561 INFO    Present Render
+21/01/2014 12:23:21.0611 INFO    Starting Render
+21/01/2014 12:23:21.0613 INFO    Rendering
+21/01/2014 12:23:21.0615 INFO    Rendering Heightmap
+21/01/2014 12:23:21.0616 INFO    Done Rendering
+21/01/2014 12:23:21.0618 INFO    Ending Render
+21/01/2014 12:23:21.0619 INFO    Present Render
+21/01/2014 12:23:21.0666 INFO    Starting Render
+21/01/2014 12:23:21.0668 INFO    Rendering
+21/01/2014 12:23:21.0670 INFO    Rendering Heightmap
+21/01/2014 12:23:21.0672 INFO    Done Rendering
+21/01/2014 12:23:21.0674 INFO    Ending Render
+21/01/2014 12:23:21.0675 INFO    Present Render
+21/01/2014 12:23:21.0724 INFO    Starting Render
+21/01/2014 12:23:21.0725 INFO    Rendering
+21/01/2014 12:23:21.0727 INFO    Rendering Heightmap
+21/01/2014 12:23:21.0729 INFO    Done Rendering
+21/01/2014 12:23:21.0731 INFO    Ending Render
+21/01/2014 12:23:21.0732 INFO    Present Render
+21/01/2014 12:23:21.0849 INFO    Stopping Kernel
+21/01/2014 12:23:21.0850 INFO    Kernel stopping.
+21/01/2014 12:23:21.0850 INFO    Calling Cleanup
+21/01/2014 12:23:21.0850 INFO    Cleaning up Kernel
+21/01/2014 12:23:21.0850 INFO    Kernel cleaned
+21/01/2014 12:23:21.0850 INFO    Cleanup done. Bye-bye!
+21/01/2014 12:24:35.0207 INFO    Starting up
+21/01/2014 12:24:35.0207 INFO    Creating Kernel
+21/01/2014 12:24:35.0207 INFO    Initializing Kernel
+21/01/2014 12:24:35.0207 INFO    Kernel Initialized
+21/01/2014 12:24:35.0207 INFO    Initializing Window
+21/01/2014 12:24:35.0207 INFO    Class registered successfully
+21/01/2014 12:24:35.0207 INFO    Creating Window Handle
+21/01/2014 12:24:35.0269 INFO    Handle created
+21/01/2014 12:24:35.0269 INFO    Making screen visible
+21/01/2014 12:24:35.0394 INFO    Window registered
+21/01/2014 12:24:35.0394 INFO    Adding Renderer (DX9)
