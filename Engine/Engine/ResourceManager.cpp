@@ -78,7 +78,7 @@ ResourceHeightmap* ResourceManager::GetHeightmap(std::string fileName)
 
 ResourceHeightmap* ResourceManager::LoadHeightmap(std::string fileName)
 {
-	return heightmapLoader->LoadFile(s2ws(fileName).c_str());
+	return heightmapLoader->LoadFile(fileName);
 }
 
 std::wstring ResourceManager::s2ws(const std::string& s)

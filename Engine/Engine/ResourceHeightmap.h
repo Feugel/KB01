@@ -22,6 +22,10 @@ public:
 	int width;
 	//Map height
 	int height;
+	//Number of triangles
+	int numTriangles;
+	//Number of vertices
+	int numVertices;
 private:
 	//The collection of vertices
 	Vertex* vertices;

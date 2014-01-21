@@ -28,8 +28,9 @@ int Game::Main()
 		LogManager::Instance()->Log("Window registered");
 		LogManager::Instance()->Log("Adding Renderer (DX9)");
 		Renderer* renderer = new DXRenderer();
-		window->SetRenderer(renderer);
 		initheightmap(kernel, window);
+		window->SetRenderer(renderer);
+		
 
 		window->GetRenderer()->Init(window);
 	}
@@ -46,7 +47,8 @@ void Game::initheightmap(Kernel* kernal, Window* window ){
 	
 	Scene* scene = new Scene();
 	Terrain* ter = new Terrain();
-	ter->SetHeightmap( kernel->GetResourceManager()->GetHeightmap("heightmap.bmp") );
+	ResourceHeightmap* heightmap = kernel->GetResourceManager()->GetHeightmap("heightmap.bmp");
+	ter->SetHeightmap(heightmap);
 	scene->SetTerrain(ter);
 	window->GetManager()->RegisterScene(window, scene);
 }

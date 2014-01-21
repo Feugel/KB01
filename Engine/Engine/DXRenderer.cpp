@@ -95,10 +95,10 @@ HRESULT DXRenderer::InitHeightMap(Window* window)
 
 		LogManager::Instance()->Log(LogLevel::INFO, "Starting InitHeightMap");
 		//width and height of the heightmap
-		int width = 256;
-		int height = 256;
+		int width = terrain->GetHeightmap()->width;
+		int height = terrain->GetHeightmap()->height;
 		//amount of vertices in the buffer
-		int amount = ((width * height -2) * 2 ) + width * 2; 
+		int amount = terrain->GetHeightmap()->numVertices * 2; /*((width * height -2) * 2 ) + width * 2; */
 		CUSTOMVERTEX* g_Vertices = new CUSTOMVERTEX[amount];
 		
 		Vertex* heightmapdata = terrain->GetHeightmap()->GetHeightmapData();

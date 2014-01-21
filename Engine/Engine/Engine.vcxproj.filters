@@ -139,13 +139,13 @@
       <Filter>Source Files\Input</Filter>
     </ClCompile>
     <ClCompile Include="ResourceHeightmapLoader.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\ResourceLoader</Filter>
     </ClCompile>
     <ClCompile Include="ResourceModelLoader.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\ResourceLoader</Filter>
     </ClCompile>
     <ClCompile Include="ResourceTextureLoader.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\ResourceLoader</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

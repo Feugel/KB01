@@ -4,6 +4,7 @@
 #include "LogManager.h"
 #include "ResourceHeightmapLoader.h"
 #include <fstream>
+#include <string>
 #include "Vertex.h"
 
 typedef unsigned char BYTE;
@@ -15,7 +16,8 @@ public:
 	ResourceDXHeightmapLoader(void);
 	virtual ~ResourceDXHeightmapLoader(void);
 	void Cleanup();
-	ResourceHeightmap* LoadFile(LPCWSTR fileName);
+	/*ResourceHeightmap* LoadFile(LPCWSTR fileName);*/
+	ResourceHeightmap* LoadFile(std::string fileName);
 };
 
 #endif
