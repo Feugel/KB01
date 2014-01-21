@@ -17,16 +17,16 @@ int main()
 
 int Game::Main()
 {
-	LogManager::Instance()->Log("Starting up");
-	LogManager::Instance()->Log("Creating Kernel");
+	LogManager::Instance()->Log("%s", "Starting up");
+	LogManager::Instance()->Log("%s", "Creating Kernel");
 	kernel = new Kernel();
 
 	Window* window = new Window(NULL, kernel->GetWindowManager());
 	// Window registration test
 	if(kernel->GetWindowManager()->RegisterWindow(window))
 	{
-		LogManager::Instance()->Log("Window registered");
-		LogManager::Instance()->Log("Adding Renderer (DX9)");
+		LogManager::Instance()->Log("%s", "Window registered");
+		LogManager::Instance()->Log("%s", "Adding Renderer (DX9)");
 		Renderer* renderer = new DXRenderer();
 		initheightmap(kernel, window);
 		window->SetRenderer(renderer);
@@ -36,7 +36,7 @@ int Game::Main()
 	}
 	else
 	{
-		LogManager::Instance()->Log(LogLevel::WARNING, "Could not create Window!");
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Could not create Window!");
 	}
 
 	kernel->Start();

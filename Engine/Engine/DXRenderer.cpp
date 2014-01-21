@@ -93,7 +93,7 @@ HRESULT DXRenderer::InitHeightMap(Window* window)
 	{
 		Terrain* terrain = scene->GetTerrain();
 
-		LogManager::Instance()->Log(LogLevel::INFO, "Starting InitHeightMap");
+		LogManager::Instance()->Log(LogLevel::INFO, "%s", "Starting InitHeightMap");
 		//width and height of the heightmap
 		int width = terrain->GetHeightmap()->width;
 		int height = terrain->GetHeightmap()->height;
@@ -159,7 +159,7 @@ HRESULT DXRenderer::InitHeightMap(Window* window)
 		g_hVB->Unlock();
 
 		return S_OK;
-		LogManager::Instance()->Log(LogLevel::INFO, "Finished InitHeightMap");
+		LogManager::Instance()->Log(LogLevel::INFO, "%s", "Finished InitHeightMap");
 	} else
 	{
 		return E_FAIL;
@@ -220,7 +220,7 @@ VOID DXRenderer::SetupMatrices()
 //called before render. Clears the backbuffer and calls beginscene
 VOID DXRenderer::RenderStart()
 {
-	LogManager::Instance()->Log(LogLevel::INFO, "Starting Render");
+	LogManager::Instance()->Log(LogLevel::INFO, "%s", "Starting Render");
 	g_pd3dDevice->Clear( 0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB( 0, 0, 0 ), 1.0f, 0 );
 	g_pd3dDevice->BeginScene();
 }
@@ -229,10 +229,10 @@ VOID DXRenderer::RenderStart()
 //Renders the heightmap
 VOID DXRenderer::Render()
 {
-	LogManager::Instance()->Log(LogLevel::INFO, "Rendering");
+	LogManager::Instance()->Log(LogLevel::INFO, "%s", "Rendering");
 	SetupMatrices();
 
-	LogManager::Instance()->Log(LogLevel::INFO, "Rendering Heightmap");
+	LogManager::Instance()->Log(LogLevel::INFO, "%s", "Rendering Heightmap");
 	//setting streamsource to the heightmap
 	g_pd3dDevice->SetStreamSource( 0, g_hVB, 0, sizeof( CUSTOMVERTEX ) );
     g_pd3dDevice->SetFVF( D3DFVF_CUSTOMVERTEX );
@@ -244,19 +244,19 @@ VOID DXRenderer::Render()
 	int amount = (width * 2 -2) * (height - 1);
 	g_pd3dDevice->DrawPrimitive( D3DPT_TRIANGLESTRIP, 0, amount);
 
-	LogManager::Instance()->Log(LogLevel::INFO, "Done Rendering");
+	LogManager::Instance()->Log(LogLevel::INFO, "%s", "Done Rendering");
 }
 
 //called after render. calls endscene
 VOID DXRenderer::RenderEnd()
 {
-	LogManager::Instance()->Log(LogLevel::INFO, "Ending Render");
+	LogManager::Instance()->Log(LogLevel::INFO, "%s", "Ending Render");
 	g_pd3dDevice->EndScene();
 }
 
 //presents the backbuffer to the window
 VOID DXRenderer::Present()
 {
-	LogManager::Instance()->Log(LogLevel::INFO, "Present Render");
+	LogManager::Instance()->Log(LogLevel::INFO, "%s", "Present Render");
 	g_pd3dDevice->Present( NULL, NULL, NULL, NULL );
 }

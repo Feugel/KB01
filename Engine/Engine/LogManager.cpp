@@ -5,12 +5,12 @@ LogManager* LogManager::logManager = NULL;
 
 LogManager::LogManager()
 {
-	this->logFile = std::ofstream("log.txt", std::fstream::app);
+	this->logFile = fopen("log.txt", "a+");
 }
 
 LogManager::LogManager(std::string fileName)
 {
-	this->logFile = std::ofstream(fileName, std::fstream::app);
+	this->logFile = fopen(fileName.c_str(), "a+");
 }
 
 LogManager::~LogManager()
@@ -20,49 +20,29 @@ LogManager::~LogManager()
 
 void LogManager::Cleanup()
 {
-	if(NULL != logMessage)
-		delete logMessage;
 	if(NULL != logManager)
 		delete logManager;
 }
 
-template<typename T>
-void LogManager::Log(T message)
+void LogManager::Log(std::string format, ...)
 {
-	messageStream << message;
-	//std::cout << messageStream.str() << std::endl;
-	logMessage = new LogMessage(messageStream.str());
-	AppendToLog(logMessage);
-	delete logMessage;
-	messageStream.str(std::string());
-	messageStream.clear();
-	
-}
-template void LogManager::Log(LogLevel level, std::string message);
-template void LogManager::Log(const char* message);
-template void LogManager::Log(LPCWSTR message);
-template void LogManager::Log(int message);
-template void LogManager::Log(unsigned int message);
-template void LogManager::Log(long message);
-template void LogManager::Log(unsigned long message);
-template void LogManager::Log(double message);
-
-template<typename LogLevel, typename T>
-void LogManager::Log(LogLevel level, T message)
-{
-	messageStream << message;
-	//std::cout << messageStream.str() << std::endl;
-	logMessage = new LogMessage(level, messageStream.str());
-	AppendToLog(logMessage);
-	delete logMessage;
-	messageStream.str(std::string());
-	messageStream.clear();
+	va_list arguments;
+	va_start(arguments, format);
+	fprintf(logFile, "%s %s ", GetTime().c_str(), LogLevelNames[LogLevel::INFO]);
+	vfprintf(logFile, format.c_str(), arguments);
+	fprintf(logFile, "%s", "\n");
+	va_end(arguments);
 }
 
-template void LogManager::Log(LogLevel level, std::string message);
-template void LogManager::Log(LogLevel level, const char* message);
-template void LogManager::Log(LogLevel level, int message);
-template void LogManager::Log(LogLevel level, unsigned int message);
+void LogManager::Log(LogLevel level, std::string format, ...)
+{
+	va_list arguments;
+	va_start(arguments, format);
+	fprintf(logFile, "%s %s ", GetTime().c_str(), LogLevelNames[level]);
+	vfprintf(logFile, format.c_str(), arguments);
+	fprintf(logFile, "%s", "\n");
+	va_end(arguments);
+}
 
 LogManager* LogManager::Instance()
 {
@@ -78,7 +58,12 @@ LogManager* LogManager::Instance(std::string fileName)
 	return logManager;
 }
 
-void LogManager::AppendToLog(LogMessage* message)
+std::string LogManager::GetTime()
 {
-	logFile << message->moment << " " << LogLevelNames[message->level] << " " << message->message << std::endl;
+	SYSTEMTIME sysTime;
+	GetSystemTime(&sysTime);
+	char buffer[40];
+	sprintf(buffer, "%02d/%02d/%04d %02d:%02d:%02d.%04d", sysTime.wDay,sysTime.wMonth, sysTime.wYear, sysTime.wHour, sysTime.wMinute, sysTime.wSecond, sysTime.wMilliseconds);
+	std::string time = buffer;
+	return time;
 }

@@ -19,7 +19,6 @@
     <ClCompile Include="InputMouse.cpp" />
     <ClCompile Include="Kernel.cpp" />
     <ClCompile Include="LogManager.cpp" />
-    <ClCompile Include="LogMessage.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="ResourceDXHeightmapLoader.cpp" />
@@ -50,7 +49,6 @@
     <ClInclude Include="Kernel.h" />
     <ClInclude Include="LogLevel.h" />
     <ClInclude Include="LogManager.h" />
-    <ClInclude Include="LogMessage.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Renderable.h" />
     <ClInclude Include="Renderer.h" />

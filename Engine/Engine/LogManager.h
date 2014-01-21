@@ -3,7 +3,9 @@
 
 #include <string>
 #include <fstream>
-#include "LogMessage.h"
+#include "LogLevel.h"
+#include "time.h"
+#include <windows.h>
 
 //LogManager class provides basic logging capabilities.
 //It does not keep the log in memory, it writes it directly to file.
@@ -19,17 +21,10 @@ public:
 	//If no instance exists, create a new one with the given filename as log file.
 	static LogManager* Instance(std::string fileName);
 	//Log a message to file with the default INFO LogLevel
-	//Template allows multiple types for the parameter (char, int) to automatically fill in.
-	//Using stringstream ensures we get the actual value and not the character defined by that ASCII or UNICODE value.
-	//Might be nice to overhaul for variadic templates (VC12(VS2013) functionality), which allows 'unlimited' parameters
-	template<typename T>
-	void Log(T message);
+	//the ... allows us to capture any amount of any type of parameters. The format parameter defines which types it should capture.
+	void Log(std::string format, ...);
 	//Log a message with a log level
-	//Template allows multiple types for the parameter (char, int, etc.) to automatically fill in.
-	//Using stringstream ensures we get the actual value and not the character defined by that ASCII or UNICODE value.
-	//Might be nice to overhaul for variadic templates (VC12(VS2013) functionality), which allows 'unlimited' parameters
-	template<typename LogLevel, typename T>
-	void Log(LogLevel level, T message);
+	void Log(LogLevel level, std::string format, ...);
 	////Clean up all resources
 	void Cleanup();
 private:
@@ -37,14 +32,10 @@ private:
 	LogManager();
 	//Constructor using the specified file name as log file.
 	LogManager(std::string fileName);
-	//Write a string directly to the log file.
-	void AppendToLog(LogMessage* message);
-	std::stringstream messageStream;
+	//Get the current time with ~16ms precision. High performance timers are not yet available.
+	std::string GetTime();
 	static LogManager* logManager;
-	LogMessage* logMessage;
-	std::ofstream logFile;
+	FILE* logFile;
 };
-
-
 
 #endif
