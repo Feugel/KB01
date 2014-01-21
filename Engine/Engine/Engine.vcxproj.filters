@@ -90,9 +90,6 @@
     <ClCompile Include="LogManager.cpp">
       <Filter>Source Files\Logger</Filter>
     </ClCompile>
-    <ClCompile Include="LogMessage.cpp">
-      <Filter>Source Files\Logger</Filter>
-    </ClCompile>
     <ClCompile Include="Window.cpp">
       <Filter>Source Files\Window</Filter>
     </ClCompile>
@@ -171,9 +168,6 @@
       <Filter>Header Files\Logger</Filter>
     </ClInclude>
     <ClInclude Include="LogManager.h">
-      <Filter>Header Files\Logger</Filter>
-    </ClInclude>
-    <ClInclude Include="LogMessage.h">
       <Filter>Header Files\Logger</Filter>
     </ClInclude>
     <ClInclude Include="ResourceHeightmap.h">

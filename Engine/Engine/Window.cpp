@@ -37,7 +37,7 @@ HWND Window::GetWindowHandle()
 
 void Window::Initialise() // Should be moved to Manager to ensure one time run; we dont need to register multiple window classes
 {
-	LogManager::Instance()->Log("Initializing Window");
+	LogManager::Instance()->Log("%s", "Initializing Window");
 	/* The Window structure */
 	Wnd.hInstance = hInst;
 	Wnd.lpszClassName = L"Window";
@@ -57,17 +57,17 @@ void Window::Initialise() // Should be moved to Manager to ensure one time run; 
 
 	if(RegisterClassEx(&Wnd))
 	{
-		LogManager::Instance()->Log("Class registered successfully");
+		LogManager::Instance()->Log("%s", "Class registered successfully");
 	} else {
-		LogManager::Instance()->Log(LogLevel::WARNING, "Class NOT REGISTERED");
-		LogManager::Instance()->Log(::GetLastError());
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Class NOT REGISTERED");
+		LogManager::Instance()->Log("%lu", ::GetLastError());
 	}
 }
 
 
 void Window::Create(int width, int height, std::string title)
 {
-	LogManager::Instance()->Log("Creating Window Handle");
+	LogManager::Instance()->Log("%s", "Creating Window Handle");
 	hWnd = CreateWindowEx(0,	//Default Window ExStyle
 		Wnd.lpszClassName,		//Class Name
 		s2ws(title).c_str(),	//Title
@@ -83,11 +83,11 @@ void Window::Create(int width, int height, std::string title)
 
 	if(hWnd)
 	{
-		LogManager::Instance()->Log("Handle created");
+		LogManager::Instance()->Log("%s", "Handle created");
 	}
 	else
 	{
-		LogManager::Instance()->Log(LogLevel::WARNING, "Creation of Window Handle failed!");
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Creation of Window Handle failed!");
 		throw(::GetLastError());
 	}
 }
@@ -96,7 +96,7 @@ void Window::DisplayWindow(bool fullscreen)
 {
 	if(hWnd)
 	{
-		LogManager::Instance()->Log("Making screen visible");
+		LogManager::Instance()->Log("%s", "Making screen visible");
 		/* Make the window visible on the screen */
 		if(!fullscreen)
 		{
@@ -109,7 +109,7 @@ void Window::DisplayWindow(bool fullscreen)
 	}
 	else
 	{
-		LogManager::Instance()->Log(LogLevel::WARNING, "Window Handle not initialized when calling DisplayWindow!");
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Window Handle not initialized when calling DisplayWindow!");
 	}
 }
 

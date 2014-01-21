@@ -32,14 +32,14 @@ void ResourceDXHeightmapLoader::Cleanup()
 //	bitmapFile.read((char*)&bitmapFileHeader, sizeof(BITMAPFILEHEADER));
 //	if(bitmapFileHeader.bfType != 0x4d42)
 //	{
-//		LogManager::Instance()->Log(LogLevel::WARNING, "Specified file is not a Bitmap!");
+//		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Specified file is not a Bitmap!");
 //	}
 //
 //	// Read in the bitmap info header.
 //	bitmapFile.read((char*)&bitmapInfoHeader, sizeof(BITMAPINFOHEADER));
 //	if(40 != bitmapInfoHeader.biSize)
 //	{
-//		LogManager::Instance()->Log(LogLevel::WARNING, "Specified file's INFO header is larger than 40 bytes!");
+//		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Specified file's INFO header is larger than 40 bytes!");
 //	}
 //
 //	int width = bitmapInfoHeader.biWidth;
@@ -104,21 +104,21 @@ ResourceHeightmap* ResourceDXHeightmapLoader::LoadFile(std::string fileName)
 	error = fopen_s(&filePtr, fileName.c_str(), "rb");
 	if(error != 0)
 	{
-		LogManager::Instance()->Log(LogLevel::WARNING, "Could not open heightmap file!");
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Could not open heightmap file!");
 	}
 
 	// Read in the file header.
 	count = fread(&bitmapFileHeader, sizeof(BITMAPFILEHEADER), 1, filePtr);
 	if(count != 1)
 	{
-		return false;
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Could not read BITMAPFILEHEADER!");
 	}
 
 	// Read in the bitmap info header.
 	count = fread(&bitmapInfoHeader, sizeof(BITMAPINFOHEADER), 1, filePtr);
 	if(count != 1)
 	{
-		return false;
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Could not read BITMAPINFOHEADER!");
 	}
 
 	// Save the dimensions of the terrain.
@@ -144,11 +144,11 @@ ResourceHeightmap* ResourceDXHeightmapLoader::LoadFile(std::string fileName)
 	{
 		int eof = feof(filePtr);
 		int err = ferror(filePtr);
-		LogManager::Instance()->Log("Byte count does not match image size. Heightmap will be rendered incorrectly.");
+		LogManager::Instance()->Log("%s", "Byte count does not match image size. Heightmap will be rendered incorrectly.");
 		if(eof > 0)
-			LogManager::Instance()->Log("End of File reached before buffer could be filled entirely.");
+			LogManager::Instance()->Log("%s", "End of File reached before buffer could be filled entirely.");
 		else if (err > 0)
-			LogManager::Instance()->Log("An error occurred while reading the file.");
+			LogManager::Instance()->Log("%s", "An error occurred while reading the file.");
 		//return false;
 	}
 

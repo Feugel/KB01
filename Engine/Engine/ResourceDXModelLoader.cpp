@@ -35,9 +35,7 @@ ResourceModel* ResourceDXModelLoader::LoadFile(LPCWSTR fileName)
 									&pD3DXMtrlBuffer, NULL, &numMaterials,
 									&mesh)))
     {
-		std::ostringstream message;
-		message << "Could not find model for filename " << fileName;
-		LogManager::Instance()->Log(LogLevel::WARNING, message.str());
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s %s", "Could not find texture map for filename ", fileName);
 	}
 
 	D3DXMATERIAL* d3dxMaterials = ( D3DXMATERIAL* )pD3DXMtrlBuffer->GetBufferPointer();
@@ -61,9 +59,7 @@ ResourceModel* ResourceDXModelLoader::LoadFile(LPCWSTR fileName)
                                                     d3dxMaterials[i].pTextureFilename,
                                                     &textures[i] ) ) )
             {
-				std::ostringstream message;
-				message << "Could not find texture map for filename " << fileName;
-				LogManager::Instance()->Log(LogLevel::WARNING, message.str());
+				LogManager::Instance()->Log(LogLevel::WARNING, "%s %s", "Could not find texture map for filename ", fileName);
             }
         }
     }
