@@ -1,6 +1,8 @@
 #include "InputMouse.h"
 #include "dinput.h"
 
+#include "LogManager.h"
+
 InputMouse::InputMouse( HWND argHwnd )
 {
 	const int MOUSEBUFFER = 8;
@@ -31,34 +33,39 @@ bool InputMouse::InitMouse()
 	HRESULT result = DirectInput8Create( GetModuleHandle(NULL), DIRECTINPUT_VERSION, IID_IDirectInput8, (VOID**)&dInput, NULL );
 	if( FAILED( result ) )
 	{
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Unable to create mouse DirectInput8");
 		return false;
 	} 
 
 	result = dInput->CreateDevice( GUID_SysMouse, &dDevice, NULL );
 	if( FAILED( result ) )
 	{
-		SaveReleaseDevice(); 
+		SaveReleaseDevice();
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Unable to create mouse DirectInput device.");
 		return false;
 	}
 
 	result = dDevice->SetDataFormat( &c_dfDIMouse );
 	if( FAILED( result ) )
 	{
-		SaveReleaseDevice(); 
+		SaveReleaseDevice();
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Unable to set mouse DataFormat.");
 		return false;
 	}
 
 	result = dDevice->SetCooperativeLevel( hwnd, DISCL_NONEXCLUSIVE | DISCL_FOREGROUND );
 	if( FAILED( result ) )
 	{
-		SaveReleaseDevice(); 
+		SaveReleaseDevice();
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Unable to set mouse CooperativeLevel");
 		return false;
 	}
 
 	result = dDevice->SetProperty( DIPROP_BUFFERSIZE, &dipdw.diph );
 	if( FAILED( result ) )
 	{
-		SaveReleaseDevice(); 
+		SaveReleaseDevice();
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Unable to set mouse Property");
 		return false;
 	}
 	
@@ -88,6 +95,7 @@ bool InputMouse::DoAcquire()
 		if( SUCCEEDED( dDevice->Acquire() ) )
 			return true;
 	}
+	LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Unable to acquire mouse.");
 	return false;
 }
 

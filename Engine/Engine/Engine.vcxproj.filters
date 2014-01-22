@@ -144,6 +144,9 @@
     <ClCompile Include="ResourceTextureLoader.cpp">
       <Filter>Source Files\ResourceLoader</Filter>
     </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Source Files\Input</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Entity.h">
@@ -241,6 +244,9 @@
     </ClInclude>
     <ClInclude Include="Matrix.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>Header Files\Input</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

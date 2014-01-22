@@ -2,6 +2,8 @@
 #define INPUTKEYBOARD_H
 
 #include "windows.h"
+
+#define DIRECTINPUT_VERSION 0x0800
 #include <dinput.h>
 
 
@@ -16,7 +18,6 @@ public:
 	void SaveReleaseDevice();
 	bool DoAcquire();
 	bool ProcessKBInput(byte);
-	//Move();
 	
 
 private:

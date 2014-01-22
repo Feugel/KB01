@@ -1,6 +1,8 @@
 #include "InputKeyboard.h"
 #include "dinput.h"
 
+#include "LogManager.h"
+
 //#include <allegro.h>
 
 #define KEYDOWN(name, key) (name[key] & 0x80) 
@@ -44,27 +46,31 @@ bool InputKeyboard::InitKeyboard()
 	HRESULT hr = DirectInput8Create( GetModuleHandle(NULL), DIRECTINPUT_VERSION, IID_IDirectInput8, (void**)&dInput, NULL ); 
 	if FAILED( hr ) 
 	{
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Unable to create keyboard DirectInput8");
 		return false; 
 	}
 
 	hr = dInput->CreateDevice( GUID_SysKeyboard, &dDevice, NULL );
 	if FAILED( hr ) 
 	{ 
-		SaveReleaseDevice(); 
+		SaveReleaseDevice();
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Unable to create keyboard DirectInput device.");
 		return false; 
 	}
 
 	hr = dDevice->SetDataFormat( &c_dfDIKeyboard ); 
 	if FAILED( hr ) 
 	{ 
-		SaveReleaseDevice(); 
+		SaveReleaseDevice();
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Unable to set keyboard DataFormat.");
 		return false; 
 	} 
 
 	hr = dDevice->SetCooperativeLevel( hwnd, DISCL_NONEXCLUSIVE | DISCL_FOREGROUND );
 	if FAILED( hr )
 	{ 
-		SaveReleaseDevice(); 
+		SaveReleaseDevice();
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Unable to set keyboard CooperativeLevel");
 		return false; 
 	} 
 
@@ -148,5 +154,6 @@ bool InputKeyboard::DoAcquire()
 			return true;
 		}
 	}
+	LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Unable to acquire keyboard.");
 	return false;
 }
