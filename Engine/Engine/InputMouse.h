@@ -31,11 +31,12 @@ public:
 	MouseStruct GetMouseInput();
 	virtual ~InputMouse();
 	void Cleanup();
+	bool ProcessMouse();
 
 private:
 	DIPROPDWORD dipdw;
 	HWND hwnd;
-	char __bufferedMouse[16];
+	char MouseBuffer[16];
 	
 	MouseStruct bufferedMouse;
 

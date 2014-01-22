@@ -4,7 +4,6 @@
 InputMouse::InputMouse( HWND argHwnd )
 {
 	const int MOUSEBUFFER = 8;
-
 	
 
 	dipdw.diph.dwSize			= sizeof(DIPROPDWORD);
@@ -19,20 +18,13 @@ InputMouse::InputMouse( HWND argHwnd )
 	ResetMouseStruct();
 }
 
-/**
- * Function:	Mouse::~Mouse()
- * Description:	destructor of the mouse
- */
+
 InputMouse::~InputMouse()
 {
 
 }
 
-/**
- * Function:	Mouse::InitMouse()
- * Description:	initialisation of the mouse, setting up the mouse and creation a new mouse-object 
- *				(including aquiring)
- */
+
 bool InputMouse::InitMouse()
 {
 	//DirectInput8Create should be done only once in manager
@@ -56,7 +48,7 @@ bool InputMouse::InitMouse()
 		return false;
 	}
 
-	result = dDevice->SetCooperativeLevel( hwnd, DISCL_EXCLUSIVE | DISCL_FOREGROUND );
+	result = dDevice->SetCooperativeLevel( hwnd, DISCL_NONEXCLUSIVE | DISCL_FOREGROUND );
 	if( FAILED( result ) )
 	{
 		SaveReleaseDevice(); 
@@ -73,10 +65,7 @@ bool InputMouse::InitMouse()
 	return true;
 }
 
-/**
- * Function:	Mouse::GetMouseInput()
- * Description:	Method to see if the mousebuffer can be read or that a aquire is needed
- */
+
 MouseStruct InputMouse::GetMouseInput()
 {
 	if(!SUCCEEDED( dDevice->Poll()))
@@ -90,11 +79,7 @@ MouseStruct InputMouse::GetMouseInput()
 }
 
 
-/**
- * Function:	Mouse::DoAcquire()
- * Description:	function that aquires the mouse object, just to be sure it does
- *				it five times
- */
+
 bool InputMouse::DoAcquire()
 {
 	int times = 5;	// Number of times to try acquire
@@ -106,10 +91,7 @@ bool InputMouse::DoAcquire()
 	return false;
 }
 
-/**
- * Function:	Mouse::SetTheMouseBuffer()
- * Description:	Setting the buffer for the mouse and getting the device-data
- */
+
 void InputMouse::SetTheMouseBuffer()
 {
 	DIDEVICEOBJECTDATA od;
@@ -234,11 +216,16 @@ void InputMouse::SetTheMouseBuffer()
 	}
 }
 
+//bool InputMouse::ProcessMouse()
+//{
+//	if(!SUCCEEDED( dDevice->Poll()))
+//		DoAcquire();
+//	dDevice->GetDeviceState( sizeof(MouseBuffer), (LPVOID)&MouseBuffer);
+//
+//	int pressed = LMKEYDOWN( MouseBuffer, arg);
+//
+//}
 
-/**
- * Function:	Mouse::SaveReleaseDevice() 
- * Description:	Cleaning up the mess left if a mouse device is lost
- */
 void InputMouse::SaveReleaseDevice() 
 { 
 	if( dInput )
