@@ -51,9 +51,9 @@ void Game::initheightmap(Kernel* kernal, Window* window ){
 	
 	Scene* scene = new Scene();
 	Terrain* ter = new Terrain();
-	ResourceHeightmap* heightmap = kernel->GetResourceManager()->GetHeightmap("heightmap3.bmp", window->GetRenderer()->GetDevice());
+	ResourceHeightmap* heightmap = kernel->GetResourceManager()->GetHeightmap("heightmap.bmp", window->GetRenderer()->GetDevice());
 	ter->SetHeightmap(heightmap);
-	ter->SetTexture(ResourceManager::Instance()->GetTexture("heightmap3.png", window->GetRenderer()->GetDevice()));
+	ter->SetTexture(ResourceManager::Instance()->GetTexture("heightmap.png", window->GetRenderer()->GetDevice()));
 	scene->SetTerrain(ter);
 	window->GetManager()->RegisterScene(window, scene);
 }
