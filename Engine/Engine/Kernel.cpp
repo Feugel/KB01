@@ -2,6 +2,7 @@
 #include "ResourceManager.h"
 #include "WindowManager.h"
 #include "SceneManager.h"
+#include "LogManager.h"
 
 Kernel::Kernel()
 {
@@ -19,13 +20,10 @@ Kernel::~Kernel()
 void Kernel::Initialise()
 {
 	LogManager::Instance()->Log("%s", "Initializing Kernel");
-	ZeroMemory(&winMan, sizeof(*winMan));
-	ZeroMemory(&resMan, sizeof(*resMan));
-	ZeroMemory(&sceneMan, sizeof(*sceneMan));
-	//ZeroMemory(&inputMan, sizeof(*inputMan));
-	winMan = new WindowManager(this);
-	resMan = new ResourceManager();
-	sceneMan = new SceneManager();
+	winMan = WindowManager::Instance();
+	winMan->SetKernel(this);
+	resMan = ResourceManager::Instance();
+	sceneMan = SceneManager::Instance();
 	//inputMan = new InputManager();
 	LogManager::Instance()->Log("%s", "Kernel Initialized");
 }

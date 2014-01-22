@@ -1,12 +1,12 @@
 #ifndef RENDERABLE_H
 #define RENDERABLE_H
 
-#include "Timer.h"
+#include "Renderer.h"
 
 class Renderable
 {
 public:
-	virtual void Render(void) = 0;
+	virtual void Render(Renderer* renderer) = 0;
 };
 
 #endif

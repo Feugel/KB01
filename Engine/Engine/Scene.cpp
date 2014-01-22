@@ -8,7 +8,6 @@ Scene::Scene(void)
 	isActive = false;
 }
 
-
 Scene::~Scene(void)
 {
 	Cleanup();
@@ -20,10 +19,15 @@ void Scene::Cleanup()
 	terrain->Cleanup();
 }
 
-void Scene::Render()
+void Scene::Initialize(Renderer* renderer)
 {
-	terrain->Render();
-	std::for_each(entities.begin(), entities.end(), [](std::pair<std::string, Entity*> item){ if(item.second->CanRender()) item.second->Render(); } );
+
+}
+
+void Scene::Render(Renderer* renderer)
+{
+	terrain->Render(renderer);
+	std::for_each(entities.begin(), entities.end(), [&renderer](std::pair<std::string, Entity*> item){ if(item.second->CanRender()) item.second->Render(renderer); } );
 }
 
 void Scene::Update(Timer* timer)

@@ -21,10 +21,11 @@ public:
 	virtual ~Scene(void);
 	//Clears the Entities list and cleans up the Terrain.
 	void Cleanup();
+	virtual void Initialize(Renderer* renderer);
 	//Update the Scene's active Entities
 	virtual void Update(Timer* timer);
 	//Render the renderable Entities
-	virtual void Render();
+	virtual void Render(Renderer* renderer);
 	//Get all Entities in this Scene
 	virtual std::map<std::string, Entity*> GetEntities();
 	//Add an Entity to the Scene

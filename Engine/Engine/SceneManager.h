@@ -21,19 +21,23 @@ class Scene;
 class SceneManager : public Updatable, public Renderable
 {
 public:
-	//Create a SceneManager
-	SceneManager(void);
 	//Destroy this SceneManager
 	virtual ~SceneManager(void);
+	//Return the instance of the SceneManager
+	static SceneManager* Instance();
 	//Clean up the mess
 	void Cleanup();
 	//Load a Scene
-	Scene* LoadScene(std::string fileName);
+	Scene* LoadScene(std::string fileName, Renderer* renderer);
 	//Update active scenes (implements Updatable)
 	void Update(Timer* timer);
 	//Render active scenes (implements Renderable)
-	void Render();
+	void Render(Renderer* renderer);
 private:
+	//Create a SceneManager
+	SceneManager(void);
+	//The instance
+	static SceneManager* instance;
 	//Keep track of the loaded scenes
 	std::map<std::string, Scene*> scenes;
 	//Kernel

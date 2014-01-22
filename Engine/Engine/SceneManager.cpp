@@ -3,6 +3,8 @@
 #include "ResourceManager.h"
 #include "Scene.h"
 
+SceneManager* SceneManager::instance = NULL;
+
 SceneManager::SceneManager()
 {
 
@@ -11,7 +13,13 @@ SceneManager::SceneManager()
 SceneManager::~SceneManager()
 {
 	Cleanup();
-	//Delete objects
+}
+
+SceneManager* SceneManager::Instance()
+{
+	if(!instance)
+		instance = new SceneManager();
+	return instance;
 }
 
 void SceneManager::Cleanup(void)
@@ -28,17 +36,16 @@ void SceneManager::Update(Timer* timer)
 	});
 }
 
-void SceneManager::Render()
+void SceneManager::Render(Renderer* renderer)
 {
-	std::for_each(scenes.begin(), scenes.end(), [] (std::pair<std::string, Scene*> item)
+	std::for_each(scenes.begin(), scenes.end(), [&renderer] (std::pair<std::string, Scene*> item)
 	{
 		if(item.second->isActive)
-			item.second->Render();
+			item.second->Render(renderer);
 	});
 }
 
-Scene* SceneManager::LoadScene(std::string fileName)
+Scene* SceneManager::LoadScene(std::string fileName, Renderer* renderer)
 {
-	//return this->kernel->GetResourceManager()->GetScene(fileName);
-	return new Scene();
+	return ResourceManager::Instance()->GetScene(fileName);
 }

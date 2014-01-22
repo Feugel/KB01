@@ -3,9 +3,10 @@
 #include "Kernel.h"
 #include "Scene.h"
 
-WindowManager::WindowManager(Kernel* kernel)
+WindowManager* WindowManager::instance = NULL;
+
+WindowManager::WindowManager()
 {
-	this->kernel = kernel;
 }
 
 WindowManager::~WindowManager()
@@ -16,6 +17,13 @@ WindowManager::~WindowManager()
 void WindowManager::Cleanup()
 {
 	windows.clear();
+}
+
+WindowManager* WindowManager::Instance()
+{
+	if(!instance)
+		instance = new WindowManager();
+	return instance;
 }
 
 bool WindowManager::RegisterWindow(Window* window)
@@ -110,6 +118,11 @@ void WindowManager::Render()
 Kernel* WindowManager::GetKernel()
 {
 	return kernel;
+}
+
+void WindowManager::SetKernel(Kernel* kernel)
+{
+	this->kernel = kernel;
 }
 
 Window* WindowManager::GetWindowByHandle(HWND hwnd)

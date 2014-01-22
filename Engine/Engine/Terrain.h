@@ -18,7 +18,8 @@ public:
 	Terrain(void);
 	virtual ~Terrain(void);
 	void Cleanup();
-	void Render();
+	void Initialize(Renderer* renderer);
+	void Render(Renderer* renderer);
 	ResourceHeightmap* GetHeightmap();
 	void SetHeightmap(ResourceHeightmap* heightmap);
 	ResourceTexture* GetTexture();

@@ -15,12 +15,17 @@ void EntityCamera::Cleanup()
 
 }
 
+void EntityCamera::Initialize(Renderer* renderer)
+{
+
+}
+
 void EntityCamera::Update(Timer* timer)
 {
 
 }
 
-void EntityCamera::Render()
+void EntityCamera::Render(Renderer* renderer)
 {
 
 }

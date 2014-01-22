@@ -16,12 +16,18 @@ public:
 	EntityModel(void);
 	virtual ~EntityModel(void);
 	void Cleanup();
+	void Initialize(Renderer* renderer);
 	void Update(Timer* timer);
-	void Render();
+	void Render(Renderer* renderer);
+	void GetPosition(); // return matrix with x, y, z
+	void SetPosition();
+	void GetRotation(); // return float with degrees / radians
+	void SetRotation();
 	bool CanUpdate;
 	bool CanRender;
 private:
 	ResourceModel* model;
+	//add the position/rotation attributes
 };
 
 #endif

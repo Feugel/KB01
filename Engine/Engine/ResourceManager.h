@@ -25,8 +25,8 @@
 class ResourceManager
 {
 public:
-	ResourceManager(void);
 	virtual ~ResourceManager(void);
+	static ResourceManager* Instance();
 	void Cleanup(void);
 	void Initialize();
 	ResourceTexture* GetTexture(std::string fileName);
@@ -34,11 +34,13 @@ public:
 	ResourceHeightmap* GetHeightmap(std::string fileName);
 	Scene* GetScene(std::string fileName);
 private:
+	ResourceManager(void);
 	ResourceTexture* LoadTexture(std::string fileName);
 	ResourceModel* LoadModel(std::string fileName);
 	ResourceHeightmap* LoadHeightmap(std::string fileName);
 	Scene* LoadScene(std::string fileName);
 	std::wstring s2ws(const std::string& s);
+	static ResourceManager* instance;
 	ResourceTextureLoader* textureLoader;
 	ResourceHeightmapLoader* heightmapLoader;
 	ResourceModelLoader* modelLoader;

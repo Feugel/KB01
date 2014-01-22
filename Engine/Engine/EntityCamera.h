@@ -12,8 +12,9 @@ public:
 	EntityCamera(void);
 	virtual ~EntityCamera(void);
 	void Cleanup();
+	void Initialize(Renderer* renderer);
 	void Update(Timer* timer);
-	void Render();
+	void Render(Renderer* renderer);
 	bool CanUpdate();
 	bool CanRender();
 };

@@ -15,7 +15,7 @@ void Terrain::Cleanup()
 
 }
 
-void Terrain::Render()
+void Terrain::Render(Renderer* renderer)
 {
 
 }

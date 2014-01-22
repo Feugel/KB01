@@ -3,6 +3,8 @@
 #include "ResourceDXHeightmapLoader.h"
 #include "ResourceDXModelLoader.h"
 
+ResourceManager* ResourceManager::instance = NULL;
+
 ResourceManager::ResourceManager()
 {
 	//move this to a Set method or specific Initialise function (InitDX, InitOGL etc)
@@ -17,6 +19,13 @@ ResourceManager::~ResourceManager()
 	delete textureLoader;
 	delete heightmapLoader;
 	delete modelLoader;
+}
+
+ResourceManager* ResourceManager::Instance()
+{
+	if(!instance)
+		instance = new ResourceManager();
+	return instance;
 }
 
 void ResourceManager::Cleanup()
@@ -79,6 +88,11 @@ ResourceHeightmap* ResourceManager::GetHeightmap(std::string fileName)
 ResourceHeightmap* ResourceManager::LoadHeightmap(std::string fileName)
 {
 	return heightmapLoader->LoadFile(fileName);
+}
+
+Scene* ResourceManager::GetScene(std::string fileName)
+{
+	return new Scene();
 }
 
 std::wstring ResourceManager::s2ws(const std::string& s)

@@ -12,6 +12,11 @@ EntityModel::~EntityModel(void)
 {
 }
 
+void EntityModel::Initialize(Renderer* renderer)
+{
+
+}
+
 void EntityModel::Cleanup()
 {
 
@@ -22,7 +27,7 @@ void EntityModel::Update(Timer* timer)
 
 }
 
-void EntityModel::Render()
+void EntityModel::Render(Renderer* renderer)
 {
 
 }
