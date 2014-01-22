@@ -23,11 +23,14 @@ public:
 	void SetPosition();
 	void GetRotation(); // return float with degrees / radians
 	void SetRotation();
+	ResourceModel* GetModel();
+	void SetModel(ResourceModel* model);
 	bool CanUpdate;
 	bool CanRender;
 private:
 	ResourceModel* model;
 	//add the position/rotation attributes
+	float x, y, z, rotation_x, rotation_y, scale;
 };
 
 #endif

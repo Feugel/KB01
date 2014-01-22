@@ -29,13 +29,13 @@ public:
 	static ResourceManager* Instance();
 	void Cleanup(void);
 	void Initialize();
-	ResourceTexture* GetTexture(std::string fileName);
+	ResourceTexture* GetTexture(std::string fileName, VOID* device);
 	ResourceModel* GetModel(std::string fileName);
 	ResourceHeightmap* GetHeightmap(std::string fileName);
 	Scene* GetScene(std::string fileName);
 private:
 	ResourceManager(void);
-	ResourceTexture* LoadTexture(std::string fileName);
+	ResourceTexture* LoadTexture(std::string fileName, VOID* device);
 	ResourceModel* LoadModel(std::string fileName);
 	ResourceHeightmap* LoadHeightmap(std::string fileName);
 	Scene* LoadScene(std::string fileName);

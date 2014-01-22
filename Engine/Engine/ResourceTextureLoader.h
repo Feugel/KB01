@@ -9,7 +9,7 @@ public:
 	ResourceTextureLoader(void);
 	virtual ~ResourceTextureLoader(void);
 	virtual void Cleanup() = 0;
-	virtual ResourceTexture* LoadFile(LPCWSTR fileName) = 0;
+	virtual ResourceTexture* LoadFile(LPCWSTR fileName, VOID* device) = 0;
 };
 
 #endif

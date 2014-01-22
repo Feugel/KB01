@@ -12,7 +12,7 @@ public:
 	ResourceDXTextureLoader(LPDIRECT3DDEVICE9 d3dDevice);
 	virtual ~ResourceDXTextureLoader(void);
 	void Cleanup(void);
-	ResourceTexture* LoadFile(LPCWSTR fileName);
+	ResourceTexture* LoadFile(LPCWSTR fileName, VOID* device);
 	void SetDirect3DDevice(LPDIRECT3DDEVICE9 d3dDevice);
 private:
 	LPDIRECT3DDEVICE9 d3dDevice;

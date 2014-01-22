@@ -1,9 +1,6 @@
 #ifndef RENDERER_H
 #define RENDERER_H
 
-//#include <Windows.h>
-#include "Window.h"
-
 class Window;
 
 class Renderer
@@ -11,11 +8,12 @@ class Renderer
 public:
 	Renderer(void);
 	virtual ~Renderer(void);
-	virtual void RenderStart();
-	virtual void Render();
-	virtual void RenderEnd();
-	virtual void Present();
-	virtual void Init(Window* window);
+	virtual void* GetDevice() = 0;
+	virtual void RenderStart() = 0;
+	virtual void Render() = 0;
+	virtual void RenderEnd() = 0;
+	virtual void Present() = 0;
+	virtual void Init(Window* window) = 0;
 };
 
 #endif //RENDERER_H

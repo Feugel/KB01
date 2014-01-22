@@ -249,8 +249,8 @@ VOID DXRenderer::Render()
     g_pd3dDevice->SetFVF( D3DFVF_CUSTOMVERTEX );
 
 	//heigt and width of heightmap
-	int width = 256;
-	int height = 256;
+	int width = wind->GetManager()->GetSceneByWindow(wind->GetWindowHandle())->GetTerrain()->GetHeightmap()->width;
+	int height = wind->GetManager()->GetSceneByWindow(wind->GetWindowHandle())->GetTerrain()->GetHeightmap()->height;
 	//amount of triangels in the heightmap
 	int amount = (width * 2 -2) * (height - 1);
 	g_pd3dDevice->DrawPrimitive( D3DPT_TRIANGLESTRIP, 0, amount);
@@ -270,4 +270,9 @@ VOID DXRenderer::Present()
 {
 	LogManager::Instance()->Log(LogLevel::INFO, "%s", "Present Render");
 	g_pd3dDevice->Present( NULL, NULL, NULL, NULL );
+}
+
+VOID* DXRenderer::GetDevice()
+{
+	return g_pd3dDevice;
 }

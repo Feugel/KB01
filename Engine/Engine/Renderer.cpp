@@ -1,4 +1,5 @@
 #include "Renderer.h"
+#include "Window.h"
 
 Renderer::Renderer(void)
 {

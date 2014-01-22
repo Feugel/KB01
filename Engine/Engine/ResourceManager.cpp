@@ -46,21 +46,21 @@ void ResourceManager::Cleanup()
 	models.clear();
 }
 
-ResourceTexture* ResourceManager::GetTexture(std::string fileName)
+ResourceTexture* ResourceManager::GetTexture(std::string fileName, VOID* device)
 {
 	auto iterator = textures.find(fileName);
 	if(iterator != textures.end())
 		return iterator->second;
 
-	ResourceTexture* texture = LoadTexture(fileName);
+	ResourceTexture* texture = LoadTexture(fileName, device);
 	texture->SetFilename(fileName);
 	textures.insert(std::make_pair(texture->GetFilename(), texture));
 	return texture;
 }
 
-ResourceTexture* ResourceManager::LoadTexture(std::string fileName)
+ResourceTexture* ResourceManager::LoadTexture(std::string fileName, VOID* device)
 {
-	return textureLoader->LoadFile(s2ws(fileName).c_str());
+	return textureLoader->LoadFile(s2ws(fileName).c_str(), device);
 }
 
 ResourceModel* ResourceManager::GetModel(std::string fileName)

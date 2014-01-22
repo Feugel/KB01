@@ -22,9 +22,11 @@ void ResourceDXTextureLoader::Cleanup()
 		this->d3dDevice = NULL;
 }
 
-ResourceTexture* ResourceDXTextureLoader::LoadFile(LPCWSTR fileName)
+ResourceTexture* ResourceDXTextureLoader::LoadFile(LPCWSTR fileName, VOID* device)
 {
 	LPDIRECT3DTEXTURE9 texture;
+
+	this->d3dDevice = (LPDIRECT3DDEVICE9)device;
 
 	D3DXCreateTextureFromFile(this->d3dDevice, fileName, &texture);
 	

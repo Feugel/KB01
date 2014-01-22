@@ -18,7 +18,7 @@ public:
 	void Render();
 	void RenderEnd();
 	void Present();
-
+	void* GetDevice();
 	
 private:
 	HRESULT InitD3D();
