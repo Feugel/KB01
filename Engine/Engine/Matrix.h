@@ -7,8 +7,8 @@ public:
 	float x;
 	float y;
 	float z;
-	float rotation_x;
-	float rotation_y;
+	float rotation_h;
+	float rotation_v;
 	float scale;
 };
 

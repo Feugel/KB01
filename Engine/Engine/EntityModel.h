@@ -1,13 +1,10 @@
 #ifndef ENTITYMODEL_H
 #define ENTITYMODEL_H
 
-#ifndef ENTITY_H
 #include "Entity.h"
-#endif
+#include "Matrix.h"
 
-#ifndef RESOURCEMODEL_H
-#include "ResourceModel.h"
-#endif
+class ResourceModel;
 
 class EntityModel :
 	public Entity
@@ -19,10 +16,12 @@ public:
 	void Initialize(Renderer* renderer);
 	void Update(Timer* timer);
 	void Render(Renderer* renderer);
-	void GetPosition(); // return matrix with x, y, z
-	void SetPosition();
-	void GetRotation(); // return float with degrees / radians
-	void SetRotation();
+	Matrix GetPosition();
+	void SetPosition(Matrix position);
+	float GetHRotation();
+	void SetHRotation(float rotation);
+	float GetVRotation();
+	void SetVRotation(float rotation);
 	ResourceModel* GetModel();
 	void SetModel(ResourceModel* model);
 	bool CanUpdate;
@@ -30,7 +29,7 @@ public:
 private:
 	ResourceModel* model;
 	//add the position/rotation attributes
-	float x, y, z, rotation_x, rotation_y, scale;
+	Matrix position;
 };
 
 #endif

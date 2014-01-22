@@ -50,6 +50,7 @@
     <ClInclude Include="LogLevel.h" />
     <ClInclude Include="LogManager.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Matrix.h" />
     <ClInclude Include="Renderable.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="ResourceDXHeightmapLoader.h" />

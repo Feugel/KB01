@@ -2,6 +2,14 @@
 #include <iomanip>
 #include <sstream>
 
+struct CUSTOMVERTEX
+{
+	FLOAT x, y, z;      // The untransformed, 3D position for the vertex
+	DWORD color;        // The vertex color
+};
+#define D3DFVF_CUSTOMVERTEX (D3DFVF_XYZ|D3DFVF_DIFFUSE)
+
+
 ResourceDXHeightmapLoader::ResourceDXHeightmapLoader(void)
 {
 }
@@ -17,7 +25,7 @@ void ResourceDXHeightmapLoader::Cleanup()
 
 }
 
-ResourceHeightmap* ResourceDXHeightmapLoader::LoadFile(std::string fileName)
+ResourceHeightmap* ResourceDXHeightmapLoader::LoadFile(std::string fileName, VOID* device)
 {
 	FILE* filePtr;
 	int error;
@@ -75,7 +83,7 @@ ResourceHeightmap* ResourceDXHeightmapLoader::LoadFile(std::string fileName)
 		int err = ferror(filePtr);
 		LogManager::Instance()->Log("%s", "Byte count does not match image size. Heightmap will be rendered incorrectly.");
 		if(eof > 0)
-			LogManager::Instance()->Log("%s", "End of File reached before buffer could be filled entirely.");
+			LogManager::Instance()->Log("%s %d %s %d", "End of File reached before buffer could be filled entirely. Expected", imageSize, "pixels, found", count);
 		else if (err > 0)
 			LogManager::Instance()->Log("%s", "An error occurred while reading the file.");
 	}
@@ -95,7 +103,7 @@ ResourceHeightmap* ResourceDXHeightmapLoader::LoadFile(std::string fileName)
 	}
 
 	// Initialize the position in the image data buffer.
-	k=0;
+	k = 0;
 
 	// Read the image data into the height map.
 	for(j = 0; j < m_terrainHeight; j++)
@@ -106,24 +114,81 @@ ResourceHeightmap* ResourceDXHeightmapLoader::LoadFile(std::string fileName)
 			
 			index = (m_terrainHeight * j) + i;
 
-			m_heightMap[index].x = (float)i;
-			m_heightMap[index].y = (float)height;
-			m_heightMap[index].z = (float)j;
+			m_heightMap[index].x  = (float) i;
+			m_heightMap[index].y  = (float) height;
+			m_heightMap[index].z  = (float) j;
+			m_heightMap[index].tu = (float) i;
+			m_heightMap[index].tv = (float) j;
 
 			k+=3;
 		}
 	}
-	// Release the bitmap image data.
-	delete [] bitmapImage;
-	bitmapImage = 0;
-
-
 	ResourceHeightmap* heightMap = new ResourceHeightmap();
 	heightMap->SetHeightmapData(m_heightMap);
 	heightMap->width = m_terrainWidth;
 	heightMap->height = m_terrainHeight;
 	heightMap->numTriangles = ((m_terrainHeight - 1) * (m_terrainWidth - 1));
 	heightMap->numVertices = ((m_terrainWidth * m_terrainHeight -2) * 2 ) + m_terrainWidth * 2 /*m_terrainWidth * m_terrainHeight*/;
+
+	CUSTOMVERTEX* g_Vertices = new CUSTOMVERTEX[heightMap->numVertices];
+	count = 0;
+
+	for(int z = 0; z < heightMap->height - 1; z++) {
+		//if even move the right
+		if ( z % 2 == 0)
+		{
+			for( int x = 1; x <= heightMap->width; x ++)
+			{
+				g_Vertices[count].x = x - (heightMap->width / 2);
+				g_Vertices[count].y = m_heightMap[(x-1) + z * 256].y;
+				g_Vertices[count].z = z - (heightMap->height / 2);
+				g_Vertices[count].color = 0xffffffff;
+				count ++;
+				g_Vertices[count].x = x - (heightMap->width / 2);
+				g_Vertices[count].y = m_heightMap[(x -1) + (z + 1) * 256].y;
+				g_Vertices[count].z = z - ((heightMap->height / 2) - 1);
+				g_Vertices[count].color = 0xffffffff;
+				count ++;
+			}
+		}
+		//if odd move to the left
+		else
+		{
+			for( int x = heightMap->width; x > 0; x --)
+			{
+				g_Vertices[count].x = x - (heightMap->width / 2);
+				g_Vertices[count].y = m_heightMap[(x - 1) + z * 256].y;
+				g_Vertices[count].z = z - (heightMap->height / 2);
+				g_Vertices[count].color = 0xffffffff;
+				count ++;
+				g_Vertices[count].x = x - (heightMap->width / 2);
+				g_Vertices[count].y = m_heightMap[(x - 1) + (z + 1) * 256].y;
+				g_Vertices[count].z = z - ((heightMap->height / 2) - 1);
+				g_Vertices[count].color = 0xffffffff;
+				count ++;
+			}
+		}
+	}
+	LPDIRECT3DVERTEXBUFFER9 tmp = NULL;
+	// Create the vertex buffer.
+	if( FAILED( ((LPDIRECT3DDEVICE9)device)->CreateVertexBuffer( heightMap->numVertices * sizeof( CUSTOMVERTEX ),
+		0, D3DFVF_CUSTOMVERTEX,
+		D3DPOOL_DEFAULT, &tmp, NULL ) ) )
+	{
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Could not create VertexBuffer!");
+	}
+	// Fill the vertex buffer.
+	VOID* pVertices;
+	if( FAILED( tmp->Lock( 0, heightMap->numVertices * sizeof( CUSTOMVERTEX ), ( void** )&pVertices, 0 ) ) )
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Could not aquire memory lock!");
+	memcpy( pVertices, g_Vertices , heightMap->numVertices * sizeof( CUSTOMVERTEX ));
+	tmp->Unlock();
+
+	// Release the bitmap image data.
+	delete [] bitmapImage;
+	bitmapImage = 0;
+
+	heightMap->SetHeightmapBuffer(tmp);
 
 	return heightMap;
 }

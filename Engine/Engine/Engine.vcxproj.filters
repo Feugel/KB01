@@ -239,5 +239,8 @@
     <ClInclude Include="InputMouse.h">
       <Filter>Header Files\Input</Filter>
     </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

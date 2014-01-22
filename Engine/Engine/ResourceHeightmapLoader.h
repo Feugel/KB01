@@ -11,7 +11,7 @@ public:
 	virtual ~ResourceHeightmapLoader(void);
 	virtual void Cleanup() = 0;
 	/*virtual ResourceHeightmap* LoadFile(LPCWSTR fileName) = 0;*/
-	virtual ResourceHeightmap* LoadFile(std::string fileName) = 0;
+	virtual ResourceHeightmap* LoadFile(std::string fileName, VOID* device) = 0;
 };
 
 #endif

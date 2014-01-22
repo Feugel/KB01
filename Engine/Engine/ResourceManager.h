@@ -30,14 +30,14 @@ public:
 	void Cleanup(void);
 	void Initialize();
 	ResourceTexture* GetTexture(std::string fileName, VOID* device);
-	ResourceModel* GetModel(std::string fileName);
-	ResourceHeightmap* GetHeightmap(std::string fileName);
+	ResourceModel* GetModel(std::string fileName, VOID* device);
+	ResourceHeightmap* GetHeightmap(std::string fileName, VOID* device);
 	Scene* GetScene(std::string fileName);
 private:
 	ResourceManager(void);
 	ResourceTexture* LoadTexture(std::string fileName, VOID* device);
-	ResourceModel* LoadModel(std::string fileName);
-	ResourceHeightmap* LoadHeightmap(std::string fileName);
+	ResourceModel* LoadModel(std::string fileName, VOID* device);
+	ResourceHeightmap* LoadHeightmap(std::string fileName, VOID* device);
 	Scene* LoadScene(std::string fileName);
 	std::wstring s2ws(const std::string& s);
 	static ResourceManager* instance;

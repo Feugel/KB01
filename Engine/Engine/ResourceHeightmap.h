@@ -14,6 +14,8 @@ public:
 	virtual ~ResourceHeightmap(void);
 	//Clean up the mess created by this Resource
 	void Cleanup();
+	//Initialize the buffer
+	void InitBuffer();
 	//Returns a Vertex* (dynamically sized array) with the heightmap data.
 	Vertex* GetHeightmapData();
 	//Set the heightmap data

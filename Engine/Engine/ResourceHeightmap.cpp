@@ -1,8 +1,9 @@
 #include "ResourceHeightmap.h"
-
+#include "LogManager.h"
 
 ResourceHeightmap::ResourceHeightmap(void)
 {
+	ZeroMemory(&heightmapbuffer, sizeof(LPDIRECT3DVERTEXBUFFER9));
 }
 
 
@@ -14,6 +15,7 @@ ResourceHeightmap::~ResourceHeightmap(void)
 
 void ResourceHeightmap::Cleanup()
 {
+
 }
 
 Vertex* ResourceHeightmap::GetHeightmapData()

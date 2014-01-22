@@ -23,7 +23,6 @@ public:
 private:
 	HRESULT InitD3D();
 	HRESULT InitGeometry();
-	HRESULT InitHeightMap();
 	void Cleanup();
 	void SetupMatrices();
 	Window* wind;

@@ -45,10 +45,6 @@ void DXRenderer::Init(Window* window)
 	// Initialize Direct3D
     if( SUCCEEDED( InitD3D() ) )
     {
-		// Initialize Heightmap
-		if ( SUCCEEDED( InitHeightMap() ) ){
-
-		}
     }
 }
 
@@ -80,100 +76,10 @@ HRESULT DXRenderer::InitD3D()
 
 	//setting the renderstates of the d3d device
 	g_pd3dDevice->SetRenderState( D3DRS_CULLMODE, D3DCULL_NONE);
-	g_pd3dDevice->SetRenderState( D3DRS_FILLMODE, D3DFILL_WIREFRAME);
+	g_pd3dDevice->SetRenderState( D3DRS_FILLMODE, D3DFILL_SOLID);
     g_pd3dDevice->SetRenderState( D3DRS_LIGHTING, FALSE );
 
     return S_OK;
-}
-
-HRESULT DXRenderer::InitHeightMap()
-{
-
-	Scene* scene = wind->GetManager()->GetSceneByWindow(wind);
-	if (scene != NULL)
-	{
-		Terrain* terrain = scene->GetTerrain();
-
-		LogManager::Instance()->Log(LogLevel::INFO, "%s", "Starting InitHeightMap");
-		//width and height of the heightmap
-		int width = terrain->GetHeightmap()->width;
-		int height = terrain->GetHeightmap()->height;
-		//amount of vertices in the buffer
-		int amount = terrain->GetHeightmap()->numVertices * 2; /*((width * height -2) * 2 ) + width * 2; */
-		CUSTOMVERTEX* g_Vertices = new CUSTOMVERTEX[amount];
-		
-		Vertex* heightmapdata = terrain->GetHeightmap()->GetHeightmapData();
-
-		//curent position in the array
-		int count = 0;
-
-		for(int z = 0; z < height - 1; z++) {
-			//if even move the right right
-			if ( z % 2 == 0)
-			{
-				for( int x = 1; x <= width; x ++)
-				{
-					g_Vertices[count].x = x - 125.0f;
-					g_Vertices[count].y = heightmapdata[(x-1) + z * 256].y;
-					g_Vertices[count].z = z - 125.0f;
-					g_Vertices[count].color = 0xffffffff;
-					count ++;
-					g_Vertices[count].x = x - 125.0f;
-					g_Vertices[count].y = heightmapdata[(x -1) + (z + 1)* 256].y;
-					g_Vertices[count].z = z - 124.0f;
-					g_Vertices[count].color = 0xffffffff;
-					count ++;
-				}
-			}
-			//if odd move to the left
-			else
-			{
-				for( int x = width; x > 0; x --)
-				{
-					g_Vertices[count].x = x - 125.0f;
-					g_Vertices[count].y = heightmapdata[(x - 1) + z* 256].y;
-					g_Vertices[count].z = z - 125.0f;
-					g_Vertices[count].color = 0xffffffff;
-					count ++;
-					g_Vertices[count].x = x - 125.0f;
-					g_Vertices[count].y = heightmapdata[(x - 1) + (z + 1)* 256].y;
-					g_Vertices[count].z = z - 124.0f;
-					g_Vertices[count].color = 0xffffffff;
-					count ++;
-				}
-			}
-		
-		}
-
-		LPDIRECT3DVERTEXBUFFER9 tmp = NULL;
-
-		// Create the vertex buffer.
-		if( FAILED( g_pd3dDevice->CreateVertexBuffer( amount * sizeof( CUSTOMVERTEX ),
-														0, D3DFVF_CUSTOMVERTEX,
-														D3DPOOL_DEFAULT, &tmp, NULL ) ) )
-		{
-			return E_FAIL;
-		}
-
-		// Fill the vertex buffer.
-
-		
-
-		VOID* pVertices;
-		if( FAILED( tmp->Lock( 0, amount * sizeof( CUSTOMVERTEX ), ( void** )&pVertices, 0 ) ) )
-			return E_FAIL;
-		memcpy( pVertices, g_Vertices , amount * sizeof( CUSTOMVERTEX ));
-		tmp->Unlock();
-
-		wind->GetManager()->GetSceneByWindow(wind->GetWindowHandle())->GetTerrain()->GetHeightmap()->SetHeightmapBuffer(tmp);
-
-		return S_OK;
-		LogManager::Instance()->Log(LogLevel::INFO, "%s", "Finished InitHeightMap");
-	} else
-	{
-		return E_FAIL;
-	}
-
 }
 
 //cleanup called by destructor
