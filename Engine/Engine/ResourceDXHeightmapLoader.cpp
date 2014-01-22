@@ -6,8 +6,9 @@ struct CUSTOMVERTEX
 {
 	FLOAT x, y, z;      // The untransformed, 3D position for the vertex
 	DWORD color;        // The vertex color
+	FLOAT tu, tv;
 };
-#define D3DFVF_CUSTOMVERTEX (D3DFVF_XYZ|D3DFVF_DIFFUSE)
+#define D3DFVF_CUSTOMVERTEX (D3DFVF_XYZ|D3DFVF_DIFFUSE|D3DFVF_TEX1)
 
 
 ResourceDXHeightmapLoader::ResourceDXHeightmapLoader(void)
@@ -117,8 +118,8 @@ ResourceHeightmap* ResourceDXHeightmapLoader::LoadFile(std::string fileName, VOI
 			m_heightMap[index].x  = (float) i;
 			m_heightMap[index].y  = (float) height;
 			m_heightMap[index].z  = (float) j;
-			m_heightMap[index].tu = (float) i;
-			m_heightMap[index].tv = (float) j;
+			m_heightMap[index].tu = (float) i / m_terrainWidth;
+			m_heightMap[index].tv = (float) j / m_terrainHeight;
 
 			k+=3;
 		}
@@ -143,11 +144,15 @@ ResourceHeightmap* ResourceDXHeightmapLoader::LoadFile(std::string fileName, VOI
 				g_Vertices[count].y = m_heightMap[(x-1) + z * 256].y;
 				g_Vertices[count].z = z - (heightMap->height / 2);
 				g_Vertices[count].color = 0xffffffff;
+				g_Vertices[count].tu = g_Vertices[count].x / heightMap->width;
+				g_Vertices[count].tv = g_Vertices[count].z / heightMap->height;
 				count ++;
 				g_Vertices[count].x = x - (heightMap->width / 2);
 				g_Vertices[count].y = m_heightMap[(x -1) + (z + 1) * 256].y;
 				g_Vertices[count].z = z - ((heightMap->height / 2) - 1);
 				g_Vertices[count].color = 0xffffffff;
+				g_Vertices[count].tu = g_Vertices[count].x / heightMap->width;
+				g_Vertices[count].tv = g_Vertices[count].z / heightMap->height;
 				count ++;
 			}
 		}
@@ -160,11 +165,15 @@ ResourceHeightmap* ResourceDXHeightmapLoader::LoadFile(std::string fileName, VOI
 				g_Vertices[count].y = m_heightMap[(x - 1) + z * 256].y;
 				g_Vertices[count].z = z - (heightMap->height / 2);
 				g_Vertices[count].color = 0xffffffff;
+				g_Vertices[count].tu = g_Vertices[count].x / heightMap->width;
+				g_Vertices[count].tv = g_Vertices[count].z / heightMap->height;
 				count ++;
 				g_Vertices[count].x = x - (heightMap->width / 2);
 				g_Vertices[count].y = m_heightMap[(x - 1) + (z + 1) * 256].y;
 				g_Vertices[count].z = z - ((heightMap->height / 2) - 1);
 				g_Vertices[count].color = 0xffffffff;
+				g_Vertices[count].tu = g_Vertices[count].x / heightMap->width;
+				g_Vertices[count].tv = g_Vertices[count].z / heightMap->height;
 				count ++;
 			}
 		}

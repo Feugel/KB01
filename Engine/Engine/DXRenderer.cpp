@@ -21,12 +21,11 @@ LPDIRECT3DVERTEXBUFFER9 g_hVB = NULL; // Buffer to hold Heightmapvertices
 // A structure for our custom vertex type
 struct CUSTOMVERTEX
 {
-    FLOAT x, y, z;      // The untransformed, 3D position for the vertex
-    DWORD color;        // The vertex color
+	FLOAT x, y, z;      // The untransformed, 3D position for the vertex
+	DWORD color;        // The vertex color
+	FLOAT tu, tv;
 };
-
-// Our custom FVF, which describes our custom vertex structure
-#define D3DFVF_CUSTOMVERTEX (D3DFVF_XYZ|D3DFVF_DIFFUSE)
+#define D3DFVF_CUSTOMVERTEX (D3DFVF_XYZ|D3DFVF_DIFFUSE|D3DFVF_TEX1)
 
 
 DXRenderer::DXRenderer()
@@ -67,6 +66,8 @@ HRESULT DXRenderer::InitD3D()
     d3dpp.BackBufferFormat = D3DFMT_UNKNOWN;
 	d3dpp.BackBufferHeight = 1920;
 	d3dpp.BackBufferWidth = 1080;
+	d3dpp.EnableAutoDepthStencil = TRUE;
+    d3dpp.AutoDepthStencilFormat = D3DFMT_D16;
 
     // Create the D3DDevice
     if( FAILED( g_pD3D->CreateDevice( D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, hWnd, D3DCREATE_HARDWARE_VERTEXPROCESSING,&d3dpp, &g_pd3dDevice ) ) )
@@ -75,6 +76,7 @@ HRESULT DXRenderer::InitD3D()
     }
 
 	//setting the renderstates of the d3d device
+	g_pd3dDevice->SetRenderState( D3DRS_ZENABLE, TRUE);
 	g_pd3dDevice->SetRenderState( D3DRS_CULLMODE, D3DCULL_NONE);
 	g_pd3dDevice->SetRenderState( D3DRS_FILLMODE, D3DFILL_SOLID);
     g_pd3dDevice->SetRenderState( D3DRS_LIGHTING, FALSE );
@@ -136,7 +138,7 @@ VOID DXRenderer::SetupMatrices()
 VOID DXRenderer::RenderStart()
 {
 	LogManager::Instance()->Log(LogLevel::INFO, "%s", "Starting Render");
-	g_pd3dDevice->Clear( 0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB( 0, 0, 0 ), 1.0f, 0 );
+	g_pd3dDevice->Clear( 0, NULL, D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER, D3DCOLOR_XRGB( 0, 0, 255 ), 1.0f, 0 );
 	g_pd3dDevice->BeginScene();
 }
 
