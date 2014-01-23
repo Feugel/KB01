@@ -42,21 +42,21 @@ ResourceHeightmap* ResourceDXHeightmapLoader::LoadFile(std::string fileName, VOI
 	error = fopen_s(&filePtr, fileName.c_str(), "rb");
 	if(error != 0)
 	{
-		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Could not open heightmap file!");
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "Could not open heightmap file!");
 	}
 
 	// Read in the file header.
 	count = fread(&bitmapFileHeader, sizeof(BITMAPFILEHEADER), 1, filePtr);
 	if(count != 1)
 	{
-		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Could not read BITMAPFILEHEADER!");
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "Could not read BITMAPFILEHEADER!");
 	}
 
 	// Read in the bitmap info header.
 	count = fread(&bitmapInfoHeader, sizeof(BITMAPINFOHEADER), 1, filePtr);
 	if(count != 1)
 	{
-		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Could not read BITMAPINFOHEADER!");
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "Could not read BITMAPINFOHEADER!");
 	}
 
 	// Save the dimensions of the terrain.
@@ -70,7 +70,7 @@ ResourceHeightmap* ResourceDXHeightmapLoader::LoadFile(std::string fileName, VOI
 	bitmapImage = new unsigned char[imageSize];
 	if(!bitmapImage)
 	{
-		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Could not allocate memory for the image contents!");
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "Could not allocate memory for the image contents!");
 	}
 
 	// Move to the beginning of the bitmap data.
@@ -82,25 +82,25 @@ ResourceHeightmap* ResourceDXHeightmapLoader::LoadFile(std::string fileName, VOI
 	{
 		int eof = feof(filePtr);
 		int err = ferror(filePtr);
-		LogManager::Instance()->Log("%s", "Byte count does not match image size. Heightmap will be rendered incorrectly.");
+		LogManager::Instance()->Log("%s - %s", __FUNCTION__, "Byte count does not match image size. Heightmap will be rendered incorrectly.");
 		if(eof > 0)
 			LogManager::Instance()->Log("%s %d %s %d", "End of File reached before buffer could be filled entirely. Expected", imageSize, "pixels, found", count);
 		else if (err > 0)
-			LogManager::Instance()->Log("%s", "An error occurred while reading the file.");
+			LogManager::Instance()->Log("%s - %s", __FUNCTION__, "An error occurred while reading the file.");
 	}
 
 	// Close the file.
 	error = fclose(filePtr);
 	if(error != 0)
 	{
-		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "An error occurred while closing the file!");
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "An error occurred while closing the file!");
 	}
 
 	// Create the structure to hold the height map data.
 	Vertex* m_heightMap = new Vertex[m_terrainWidth * m_terrainHeight];
 	if(!m_heightMap)
 	{
-		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Could not allocate memory for the heightmap data!");;
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "Could not allocate memory for the heightmap data!");;
 	}
 
 	// Initialize the position in the image data buffer.
@@ -184,12 +184,12 @@ ResourceHeightmap* ResourceDXHeightmapLoader::LoadFile(std::string fileName, VOI
 		0, D3DFVF_CUSTOMVERTEX,
 		D3DPOOL_DEFAULT, &tmp, NULL ) ) )
 	{
-		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Could not create VertexBuffer!");
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "Could not create VertexBuffer!");
 	}
 	// Fill the vertex buffer.
 	VOID* pVertices;
 	if( FAILED( tmp->Lock( 0, heightMap->numVertices * sizeof( CUSTOMVERTEX ), ( void** )&pVertices, 0 ) ) )
-		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Could not aquire memory lock!");
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "Could not aquire memory lock!");
 	memcpy( pVertices, g_Vertices , heightMap->numVertices * sizeof( CUSTOMVERTEX ));
 	tmp->Unlock();
 

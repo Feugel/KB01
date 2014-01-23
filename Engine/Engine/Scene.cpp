@@ -40,7 +40,7 @@ void Scene::AddEntity(Entity* entity)
 	auto iterator = entities.find(entity->GetName());
 	if(iterator != entities.end())
 	{
-		LogManager::Instance()->Log(LogLevel::INFO, "%s", "This entity has already been added to the current scene!");
+		LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "This entity has already been added to the current scene!");
 	}
 	else
 	{

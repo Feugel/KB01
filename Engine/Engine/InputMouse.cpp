@@ -33,7 +33,7 @@ bool InputMouse::InitMouse()
 	HRESULT result = DirectInput8Create( GetModuleHandle(NULL), DIRECTINPUT_VERSION, IID_IDirectInput8, (VOID**)&dInput, NULL );
 	if( FAILED( result ) )
 	{
-		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Unable to create mouse DirectInput8");
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "Unable to create mouse DirectInput8");
 		return false;
 	} 
 
@@ -41,7 +41,7 @@ bool InputMouse::InitMouse()
 	if( FAILED( result ) )
 	{
 		SaveReleaseDevice();
-		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Unable to create mouse DirectInput device.");
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "Unable to create mouse DirectInput device.");
 		return false;
 	}
 
@@ -49,7 +49,7 @@ bool InputMouse::InitMouse()
 	if( FAILED( result ) )
 	{
 		SaveReleaseDevice();
-		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Unable to set mouse DataFormat.");
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "Unable to set mouse DataFormat.");
 		return false;
 	}
 
@@ -57,7 +57,7 @@ bool InputMouse::InitMouse()
 	if( FAILED( result ) )
 	{
 		SaveReleaseDevice();
-		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Unable to set mouse CooperativeLevel");
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "Unable to set mouse CooperativeLevel");
 		return false;
 	}
 
@@ -65,7 +65,7 @@ bool InputMouse::InitMouse()
 	if( FAILED( result ) )
 	{
 		SaveReleaseDevice();
-		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Unable to set mouse Property");
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "Unable to set mouse Property");
 		return false;
 	}
 	
@@ -95,7 +95,7 @@ bool InputMouse::DoAcquire()
 		if( SUCCEEDED( dDevice->Acquire() ) )
 			return true;
 	}
-	LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Unable to acquire mouse.");
+	LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "Unable to acquire mouse.");
 	return false;
 }
 

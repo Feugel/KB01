@@ -23,16 +23,16 @@ int main()
 
 int Game::Main()
 {
-	LogManager::Instance()->Log("%s", "Starting up");
-	LogManager::Instance()->Log("%s", "Creating Kernel");
+	LogManager::Instance()->Log("%s - %s", __FUNCTION__, "Starting up");
+	LogManager::Instance()->Log("%s - %s", __FUNCTION__, "Creating Kernel");
 	kernel = new Kernel();
 
 	Window* window = new Window(NULL, kernel->GetWindowManager());
 	// Window registration test
 	if(kernel->GetWindowManager()->RegisterWindow(window))
 	{
-		LogManager::Instance()->Log("%s", "Window registered");
-		LogManager::Instance()->Log("%s", "Adding Renderer (DX9)");
+		LogManager::Instance()->Log("%s - %s", __FUNCTION__, "Window registered");
+		LogManager::Instance()->Log("%s - %s", __FUNCTION__, "Adding Renderer (DX9)");
 		Renderer* renderer = new DXRenderer();
 		window->SetRenderer(renderer);
 		window->GetRenderer()->Init(window);
@@ -40,20 +40,20 @@ int Game::Main()
 	}
 	else
 	{
-		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Could not create Window!");
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "Could not create Window!");
 	}
 
 	kernel->Start();
 	return 0;
 }
 
-void Game::initheightmap(Kernel* kernal, Window* window ){
+void Game::initheightmap(Kernel* kernel, Window* window ){
 	
 	Scene* scene = new Scene();
 	Terrain* ter = new Terrain();
 	ResourceHeightmap* heightmap = kernel->GetResourceManager()->GetHeightmap("heightmap.bmp", window->GetRenderer()->GetDevice());
 	ter->SetHeightmap(heightmap);
-	ter->SetTexture(ResourceManager::Instance()->GetTexture("heightmap.png", window->GetRenderer()->GetDevice()));
+	ter->SetTexture(ResourceManager::Instance()->GetTexture("heightmap-texture.png", window->GetRenderer()->GetDevice()));
 	scene->SetTerrain(ter);
 	window->GetManager()->RegisterScene(window, scene);
 }

@@ -32,18 +32,19 @@ public:
 	Scene* GetSceneByWindow(Window* window);
 	//Get the scene registered with this Window or NULL if not found
 	Scene* GetSceneByWindow(HWND window);
-	//Returns the vector containing the windows.
-	std::map<HWND, Window*> GetWindows();
-	//Render on all windows
-	void Render();
-	//Get the kernel
-	Kernel* GetKernel();
-	//Set the kernel
-	void SetKernel(Kernel* kernel);
+			//Returns the vector containing the windows.
+			std::map<HWND, Window*> GetWindows();
+			//Render on all windows
+			void Render();
+			//Get the kernel
+			Kernel* GetKernel();
+			//Set the kernel
+			void SetKernel(Kernel* kernel);
 	//Window Procedure used by all Windows. Uses WindowProc if this manager can be decoded from lParam.
 	static LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
 	//The actual Window Procedure. Keeps the vector up to date.
 	LRESULT CALLBACK WindowProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
+
 private:
 	//Default constructor.
 	WindowManager();

@@ -46,7 +46,7 @@ bool InputKeyboard::InitKeyboard()
 	HRESULT hr = DirectInput8Create( GetModuleHandle(NULL), DIRECTINPUT_VERSION, IID_IDirectInput8, (void**)&dInput, NULL ); 
 	if FAILED( hr ) 
 	{
-		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Unable to create keyboard DirectInput8");
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "Unable to create keyboard DirectInput8");
 		return false; 
 	}
 
@@ -54,7 +54,7 @@ bool InputKeyboard::InitKeyboard()
 	if FAILED( hr ) 
 	{ 
 		SaveReleaseDevice();
-		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Unable to create keyboard DirectInput device.");
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "Unable to create keyboard DirectInput device.");
 		return false; 
 	}
 
@@ -62,7 +62,7 @@ bool InputKeyboard::InitKeyboard()
 	if FAILED( hr ) 
 	{ 
 		SaveReleaseDevice();
-		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Unable to set keyboard DataFormat.");
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "Unable to set keyboard DataFormat.");
 		return false; 
 	} 
 
@@ -70,7 +70,7 @@ bool InputKeyboard::InitKeyboard()
 	if FAILED( hr )
 	{ 
 		SaveReleaseDevice();
-		LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Unable to set keyboard CooperativeLevel");
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "Unable to set keyboard CooperativeLevel");
 		return false; 
 	} 
 
@@ -154,6 +154,6 @@ bool InputKeyboard::DoAcquire()
 			return true;
 		}
 	}
-	LogManager::Instance()->Log(LogLevel::WARNING, "%s", "Unable to acquire keyboard.");
+	LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "Unable to acquire keyboard.");
 	return false;
 }

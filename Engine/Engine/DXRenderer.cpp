@@ -137,7 +137,7 @@ VOID DXRenderer::SetupMatrices()
 //called before render. Clears the backbuffer and calls beginscene
 VOID DXRenderer::RenderStart()
 {
-	LogManager::Instance()->Log(LogLevel::INFO, "%s", "Starting Render");
+	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Starting Render");
 	g_pd3dDevice->Clear( 0, NULL, D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER, D3DCOLOR_XRGB( 0, 0, 255 ), 1.0f, 0 );
 	g_pd3dDevice->BeginScene();
 }
@@ -146,10 +146,10 @@ VOID DXRenderer::RenderStart()
 //Renders the heightmap
 VOID DXRenderer::Render()
 {
-	LogManager::Instance()->Log(LogLevel::INFO, "%s", "Rendering");
+	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Rendering");
 	SetupMatrices();
 
-	LogManager::Instance()->Log(LogLevel::INFO, "%s", "Rendering Heightmap");
+	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Rendering Heightmap");
 	//setting streamsource to the heightmap
 	LPDIRECT3DVERTEXBUFFER9 heightmap = wind->GetManager()->GetSceneByWindow(wind->GetWindowHandle())->GetTerrain()->GetHeightmap()->GetHeightmapBuffer();
 
@@ -163,20 +163,20 @@ VOID DXRenderer::Render()
 	int amount = (width * 2 -2) * (height - 1);
 	g_pd3dDevice->DrawPrimitive( D3DPT_TRIANGLESTRIP, 0, amount);
 
-	LogManager::Instance()->Log(LogLevel::INFO, "%s", "Done Rendering");
+	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Done Rendering");
 }
 
 //called after render. calls endscene
 VOID DXRenderer::RenderEnd()
 {
-	LogManager::Instance()->Log(LogLevel::INFO, "%s", "Ending Render");
+	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Ending Render");
 	g_pd3dDevice->EndScene();
 }
 
 //presents the backbuffer to the window
 VOID DXRenderer::Present()
 {
-	LogManager::Instance()->Log(LogLevel::INFO, "%s", "Present Render");
+	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Present Render");
 	g_pd3dDevice->Present( NULL, NULL, NULL, NULL );
 }
 
