@@ -4,6 +4,7 @@
 #define DIRECTINPUT_VERSION 0x0800
 #include <dinput.h>
 
+//Provides mousedata in a struct
 struct MouseStruct
 {
 	int positionX;
@@ -19,7 +20,7 @@ struct MouseStruct
 	bool button7;
 };
 
-
+//Provides mouse input
 class InputMouse
 {
 public:

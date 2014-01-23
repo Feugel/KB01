@@ -224,16 +224,6 @@ void InputMouse::SetTheMouseBuffer()
 	}
 }
 
-//bool InputMouse::ProcessMouse()
-//{
-//	if(!SUCCEEDED( dDevice->Poll()))
-//		DoAcquire();
-//	dDevice->GetDeviceState( sizeof(MouseBuffer), (LPVOID)&MouseBuffer);
-//
-//	int pressed = LMKEYDOWN( MouseBuffer, arg);
-//
-//}
-
 void InputMouse::SaveReleaseDevice() 
 { 
 	if( dInput )
