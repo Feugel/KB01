@@ -32,7 +32,7 @@ public:
 
 	void Initialize();
 
-	struct Update();
+	void Update();
 
 	//Get the instance
 	static InputManager* Instance();

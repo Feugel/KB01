@@ -3,21 +3,24 @@
 //#include "InputKeyboard.h"
 //#include "InputMouse.h"
 //
+////Creates the keyboard and mouse so they can get initialized and updated later
+//InputKeyboard* keyboard = new InputKeyboard(GetConsoleWindow());
+//InputMouse* mouse = new InputMouse(GetConsoleWindow());
 //
+////Constructor for InputManager
 //InputManager::InputManager()
 //{
 //}
 //
+////Destructor for InputManager
 //InputManager::~InputManager()
 //{
 //	Cleanup();
 //}
 //
+////
 //void InputManager::Initialize()
 //{
-//	InputKeyboard* keyboard = new InputKeyboard(GetConsoleWindow());
-//	InputMouse* mouse = new InputMouse(GetConsoleWindow());
-//
 //	bool keyboardinit = keyboard ->InitKeyboard();
 //	bool mouseinit = mouse ->InitMouse();
 //
@@ -28,7 +31,9 @@
 //	mouse->DoAcquire();
 //}
 //
+//
 //InputStruct InputManager::Update()
 //{
+//	
 //	MouseStruct ms = mouse->GetMouseInput();
 //}
