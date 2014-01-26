@@ -10,6 +10,11 @@
 #include "Terrain.h"
 #include "ResourceHeightmap.h"
 
+//Model inports
+#include "EntityModel.h"
+#include "ResourceModel.h"
+
+
 //-----------------------------------------------------------------------------
 // Global variables
 //-----------------------------------------------------------------------------
@@ -147,7 +152,12 @@ VOID DXRenderer::RenderStart()
 VOID DXRenderer::Render()
 {
 	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Rendering");
-	SetupMatrices();
+	
+	
+	//temp scaling test
+	D3DXMATRIX world;
+	D3DXMatrixIdentity(&world);
+	g_pd3dDevice->SetTransform(D3DTS_WORLD, &world);
 
 	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Rendering Heightmap");
 	//setting streamsource to the heightmap
@@ -155,15 +165,37 @@ VOID DXRenderer::Render()
 
 	g_pd3dDevice->SetStreamSource( 0, heightmap, 0, sizeof( CUSTOMVERTEX ) );
     g_pd3dDevice->SetFVF( D3DFVF_CUSTOMVERTEX );
-
+	g_pd3dDevice->SetTexture(0, wind->GetManager()->GetSceneByWindow(wind->GetWindowHandle())->GetTerrain()->GetTexture()->GetTexture());
 	//heigt and width of heightmap
 	int width = wind->GetManager()->GetSceneByWindow(wind->GetWindowHandle())->GetTerrain()->GetHeightmap()->width;
 	int height = wind->GetManager()->GetSceneByWindow(wind->GetWindowHandle())->GetTerrain()->GetHeightmap()->height;
 	//amount of triangels in the heightmap
 	int amount = (width * 2 -2) * (height - 1);
 	g_pd3dDevice->DrawPrimitive( D3DPT_TRIANGLESTRIP, 0, amount);
+	
 
+
+	//tmp scaling test
+	D3DXMatrixScaling(&world, 100,100,100);
+	
+	g_pd3dDevice->SetTransform(D3DTS_WORLD, &world);
+
+	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Rendering Models");
+	int models = wind->GetManager()->GetSceneByWindow(wind->GetWindowHandle())->GetModels().size();
+
+	for (int i = models; i > 0; --i)
+	{	
+		g_pd3dDevice->SetMaterial(&wind->GetManager()->GetSceneByWindow(wind->GetWindowHandle())->GetModels()[i-1]->GetModel()->GetMaterials()[0]);
+		g_pd3dDevice->SetTexture(0, wind->GetManager()->GetSceneByWindow(wind->GetWindowHandle())->GetModels()[i-1]->GetModel()->GetTextures()[0]);
+		wind->GetManager()->GetSceneByWindow(wind->GetWindowHandle())->GetModels()[i-1]->GetModel()->GetMesh()->DrawSubset(0);
+	}
+
+	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s %d %s", __FUNCTION__, "Done Rendering:", models, " Models");
+
+	SetupMatrices();
 	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Done Rendering");
+
+
 }
 
 //called after render. calls endscene

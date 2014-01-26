@@ -9,11 +9,13 @@
 #include "InputKeyboard.h"
 #include <iostream>
 
-//TMP for loading a heightmap
+//TMP for loading a game
 #include "Terrain.h"
 #include "ResourceHeightmap.h"
 #include "ResourceTexture.h"
 #include "Scene.h"
+#include "ResourceModel.h"
+#include "EntityModel.h"
 
 int main()
 {
@@ -36,7 +38,7 @@ int Game::Main()
 		Renderer* renderer = new DXRenderer();
 		window->SetRenderer(renderer);
 		window->GetRenderer()->Init(window);
-		initheightmap(kernel, window);
+		initgame(kernel, window);
 	}
 	else
 	{
@@ -47,7 +49,7 @@ int Game::Main()
 	return 0;
 }
 
-void Game::initheightmap(Kernel* kernel, Window* window ){
+void Game::initgame(Kernel* kernel, Window* window ){
 	
 	Scene* scene = new Scene();
 	Terrain* ter = new Terrain();
@@ -55,5 +57,12 @@ void Game::initheightmap(Kernel* kernel, Window* window ){
 	ter->SetHeightmap(heightmap);
 	ter->SetTexture(ResourceManager::Instance()->GetTexture("heightmap-texture.png", window->GetRenderer()->GetDevice()));
 	scene->SetTerrain(ter);
+	
+	ResourceModel* rmodel = kernel->GetResourceManager()->GetModel("tiger.x", window->GetRenderer()->GetDevice());
+
+	EntityModel* model = new EntityModel();
+	model->SetModel(rmodel);
+	scene->AddModel(model);
+
 	window->GetManager()->RegisterScene(window, scene);
 }

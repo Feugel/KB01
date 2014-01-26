@@ -4,6 +4,7 @@
 #include <string>
 #include <map>
 #include <algorithm>
+#include <vector>
 
 #include "Updatable.h"
 #include "Renderable.h"
@@ -11,6 +12,7 @@
 class LogManager;
 class Entity;
 class Terrain;
+class EntityModel;
 
 class Scene : public Updatable, public Renderable
 {
@@ -36,6 +38,11 @@ public:
 	virtual Terrain* GetTerrain();
 	//Set the Terrain
 	virtual void SetTerrain(Terrain* terrain);
+	//Add A model to the scene
+	void AddModel(EntityModel* models);
+	//Get ModelArray
+	std::vector <EntityModel*> GetModels();
+
 	//Get the Scene's status (Active/Inactive)
 	bool isActive;
 private:
@@ -43,6 +50,7 @@ private:
 	std::map<std::string, Entity*> entities;
 	//The Terrain
 	Terrain* terrain;
+	std::vector <EntityModel*> Models;
 	
 };
 

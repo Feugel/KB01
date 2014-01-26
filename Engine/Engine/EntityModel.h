@@ -6,8 +6,7 @@
 
 class ResourceModel;
 
-class EntityModel :
-	public Entity
+class EntityModel : public Entity
 {
 public:
 	EntityModel(void);
@@ -24,8 +23,10 @@ public:
 	void SetVRotation(float rotation);
 	ResourceModel* GetModel();
 	void SetModel(ResourceModel* model);
-	bool CanUpdate;
-	bool CanRender;
+	bool CanUpdate();
+	bool CanRender();
+	std::string GetName();
+	
 private:
 	ResourceModel* model;
 	//add the position/rotation attributes

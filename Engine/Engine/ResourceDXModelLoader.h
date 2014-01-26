@@ -13,13 +13,10 @@ class ResourceDXModelLoader :
 {
 public:
 	ResourceDXModelLoader(void);
-	ResourceDXModelLoader(LPDIRECT3DDEVICE9 d3dDevice);
 	virtual ~ResourceDXModelLoader(void);
 	void Cleanup();
-	ResourceModel* LoadFile(LPCWSTR fileName);
-	void SetD3DDevice(LPDIRECT3DDEVICE9 d3dDevice);
+	ResourceModel* LoadFile(LPCWSTR fileName, VOID* device);
 private:
-	LPDIRECT3DDEVICE9 d3dDevice;
 };
 
 #endif

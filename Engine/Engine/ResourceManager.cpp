@@ -77,7 +77,7 @@ ResourceModel* ResourceManager::GetModel(std::string fileName, VOID* device)
 
 ResourceModel* ResourceManager::LoadModel(std::string fileName, VOID* device)
 {
-	return modelLoader->LoadFile(s2ws(fileName).c_str());
+	return modelLoader->LoadFile(s2ws(fileName).c_str(), device);
 }
 
 ResourceHeightmap* ResourceManager::GetHeightmap(std::string fileName, VOID* device)

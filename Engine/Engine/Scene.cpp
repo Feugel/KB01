@@ -68,3 +68,13 @@ void Scene::SetTerrain(Terrain* terrain)
 {
 	this->terrain = terrain;
 }
+
+void Scene::AddModel(EntityModel* models)
+{
+	Models.push_back(models);
+}
+
+std::vector <EntityModel*> Scene::GetModels()
+{
+	return Models;
+}

@@ -2,28 +2,20 @@
 
 ResourceDXModelLoader::ResourceDXModelLoader(void)
 {
-	ZeroMemory(&d3dDevice, sizeof(*d3dDevice));
-}
-
-ResourceDXModelLoader::ResourceDXModelLoader(LPDIRECT3DDEVICE9 d3dDevice)
-{
-	ZeroMemory(&d3dDevice, sizeof(*d3dDevice));
-	this->d3dDevice = d3dDevice;
 }
 
 ResourceDXModelLoader::~ResourceDXModelLoader(void)
 {
 	Cleanup();
-	delete d3dDevice;
+
 }
 
 void ResourceDXModelLoader::Cleanup(void)
 {
-	if(d3dDevice)
-		d3dDevice->Release();
+
 }
 
-ResourceModel* ResourceDXModelLoader::LoadFile(LPCWSTR fileName)
+ResourceModel* ResourceDXModelLoader::LoadFile(LPCWSTR fileName, VOID* device)
 {
 	LPD3DXBUFFER pD3DXMtrlBuffer;
 	LPD3DXMESH mesh;
@@ -31,13 +23,12 @@ ResourceModel* ResourceDXModelLoader::LoadFile(LPCWSTR fileName)
 	LPDIRECT3DTEXTURE9* textures;
 	DWORD numMaterials = 0L;
 	if( FAILED( D3DXLoadMeshFromX( fileName, D3DXMESH_SYSTEMMEM,
-									this->d3dDevice, NULL,
+									(LPDIRECT3DDEVICE9)device, NULL,
 									&pD3DXMtrlBuffer, NULL, &numMaterials,
 									&mesh)))
     {
 		LogManager::Instance()->Log(LogLevel::WARNING, "%s %s", "Could not find texture map for filename ", fileName);
 	}
-
 	D3DXMATERIAL* d3dxMaterials = ( D3DXMATERIAL* )pD3DXMtrlBuffer->GetBufferPointer();
     materials = new D3DMATERIAL9[numMaterials];
 	textures = new LPDIRECT3DTEXTURE9[numMaterials];
@@ -55,7 +46,7 @@ ResourceModel* ResourceDXModelLoader::LoadFile(LPCWSTR fileName)
             lstrlenA( d3dxMaterials[i].pTextureFilename ) > 0 )
         {
             // Create the texture
-            if( FAILED( D3DXCreateTextureFromFileA( d3dDevice,
+            if( FAILED( D3DXCreateTextureFromFileA( (LPDIRECT3DDEVICE9)device,
                                                     d3dxMaterials[i].pTextureFilename,
                                                     &textures[i] ) ) )
             {
@@ -73,9 +64,4 @@ ResourceModel* ResourceDXModelLoader::LoadFile(LPCWSTR fileName)
 	model->SetMesh(mesh);
 
 	return model;
-}
-
-void ResourceDXModelLoader::SetD3DDevice(LPDIRECT3DDEVICE9 d3dDevice)
-{
-	this->d3dDevice = d3dDevice;
 }

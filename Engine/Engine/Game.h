@@ -9,7 +9,7 @@ class Game
 {
 public:
 	int Main();
-	void initheightmap(Kernel* kernal, Window* window);
+	void initgame(Kernel* kernal, Window* window);
 private:
 	LogManager* logger;
 	Kernel* kernel;

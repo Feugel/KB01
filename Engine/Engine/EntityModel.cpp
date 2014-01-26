@@ -3,8 +3,7 @@
 
 EntityModel::EntityModel(void)
 {
-	this->CanUpdate = false;
-	this->CanRender = false;
+	
 }
 
 
@@ -70,4 +69,19 @@ ResourceModel* EntityModel::GetModel()
 void EntityModel::SetModel(ResourceModel* model)
 {
 	this->model = model;
+}
+
+std::string EntityModel::GetName()
+{
+	return NULL;
+}
+
+bool EntityModel::CanUpdate()
+{
+	return false;
+}
+
+bool EntityModel::CanRender()
+{
+	return true;
 }
