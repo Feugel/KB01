@@ -5,8 +5,12 @@
 #include "Entity.h"
 #endif
 
+#include "InputObserver.h"
+#include "InputMouse.h"
+#include "InputManager.h"
+
 class EntityCamera :
-	public Entity
+	public InputObserver, Entity
 {
 public:
 	EntityCamera(void);
@@ -17,6 +21,8 @@ public:
 	void Render(Renderer* renderer);
 	bool CanUpdate();
 	bool CanRender();
+	//std::string GetName();
+	//void Notify(MouseStruct mouseStruct, char* keyBuffer);
 };
 
 #endif
