@@ -16,6 +16,7 @@ ResourceManager::ResourceManager()
 	textureLoader = new ResourceDXTextureLoader();
 	heightmapLoader = new ResourceDXHeightmapLoader();
 	modelLoader = new ResourceDXModelLoader();
+	sceneLoader = new ResourceDXSceneLoader();
 }
 
 ResourceManager::~ResourceManager()
@@ -24,6 +25,7 @@ ResourceManager::~ResourceManager()
 	delete textureLoader;
 	delete heightmapLoader;
 	delete modelLoader;
+	delete sceneLoader;
 }
 
 ResourceManager* ResourceManager::Instance()
@@ -97,7 +99,12 @@ ResourceHeightmap* ResourceManager::LoadHeightmap(std::string fileName, VOID* de
 
 Scene* ResourceManager::GetScene(std::string fileName)
 {
-	return new Scene();
+	return LoadScene(fileName);
+}
+
+Scene* ResourceManager::LoadScene(std::string fileName)
+{
+	return sceneLoader->LoadFile(fileName);
 }
 
 std::wstring ResourceManager::s2ws(const std::string& s)

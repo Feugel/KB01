@@ -57,6 +57,7 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="Matrix.h" />
     <ClInclude Include="rapidxml.hpp" />
+    <ClInclude Include="rapidxml_utils.hpp" />
     <ClInclude Include="Renderable.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="ResourceDXHeightmapLoader.h" />

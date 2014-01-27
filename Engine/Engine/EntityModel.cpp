@@ -1,9 +1,11 @@
 #include "EntityModel.h"
 #include "ResourceModel.h"
+#include "ResourceTexture.h"
+#include "ResourceManager.h"
 
-EntityModel::EntityModel(void)
+EntityModel::EntityModel(std::string name)
 {
-	
+	this->name = name;
 }
 
 
@@ -13,7 +15,7 @@ EntityModel::~EntityModel(void)
 
 void EntityModel::Initialize(Renderer* renderer)
 {
-
+	this->model = ResourceManager::Instance()->GetModel(this->modelFileName, renderer->GetDevice());
 }
 
 void EntityModel::Cleanup()
@@ -71,9 +73,29 @@ void EntityModel::SetModel(ResourceModel* model)
 	this->model = model;
 }
 
+void EntityModel::SetModel(std::string fileName)
+{
+	this->modelFileName = fileName;
+}
+
+ResourceTexture* EntityModel::GetTexture()
+{
+	return texture;
+}
+
+void EntityModel::SetTexture(ResourceTexture* texture)
+{
+	this->texture = texture;
+}
+
+void EntityModel::SetTexture(std::string fileName)
+{
+	this->textureFileName = fileName;
+}
+
 std::string EntityModel::GetName()
 {
-	return NULL;
+	return name;
 }
 
 bool EntityModel::CanUpdate()

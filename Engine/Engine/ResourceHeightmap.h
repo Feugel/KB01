@@ -32,6 +32,8 @@ public:
 	int numTriangles;
 	//Number of vertices
 	int numVertices;
+	//The filename for deferred loading
+	std::string fileName;
 private:
 	//The collection of vertices
 	Vertex* vertices;

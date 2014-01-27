@@ -21,6 +21,7 @@
 #include "ResourceTextureLoader.h"
 #include "ResourceHeightmapLoader.h"
 #include "ResourceModelLoader.h"
+#include "ResourceSceneLoader.h"
 
 class ResourceManager
 {
@@ -44,6 +45,7 @@ private:
 	ResourceTextureLoader* textureLoader;
 	ResourceHeightmapLoader* heightmapLoader;
 	ResourceModelLoader* modelLoader;
+	ResourceSceneLoader* sceneLoader;
 	std::map<std::string, ResourceTexture*> textures;
 	std::map<std::string, ResourceModel*> models;
 };

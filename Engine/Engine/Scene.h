@@ -42,7 +42,10 @@ public:
 	void AddModel(EntityModel* models);
 	//Get ModelArray
 	std::vector <EntityModel*> GetModels();
-
+	//Set name
+	void SetName(std::string);
+	//Get Name
+	std::string GetName();
 	//Get the Scene's status (Active/Inactive)
 	bool isActive;
 private:
@@ -50,8 +53,10 @@ private:
 	std::map<std::string, Entity*> entities;
 	//The Terrain
 	Terrain* terrain;
+	//Models. Should be refactored to std::map<std::string, EntityModel*>
 	std::vector <EntityModel*> Models;
-	
+	//The Name identifying this Scene
+	std::string name;
 };
 
 #endif

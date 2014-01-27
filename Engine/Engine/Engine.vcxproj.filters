@@ -263,6 +263,9 @@
     <ClInclude Include="ResourceDXSceneLoader.h">
       <Filter>Header Files\ResourceLoader</Filter>
     </ClInclude>
+    <ClInclude Include="rapidxml_utils.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="level01.xml">

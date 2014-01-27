@@ -3,6 +3,7 @@
 #include "DXRenderer.h"
 #include "WindowManager.h"
 #include "ResourceManager.h"
+#include "SceneManager.h"
 
 //includes for input
 #include "InputMouse.h"
@@ -50,8 +51,8 @@ int Game::Main()
 }
 
 void Game::initgame(Kernel* kernel, Window* window ){
-	ResourceManager::Instance()->GetScene("level01.xml");
-	Scene* scene = new Scene();
+	Scene* scene = kernel->GetSceneManager()->LoadScene("level01.xml", window->GetRenderer());
+	/*Scene* scene = new Scene();
 	Terrain* ter = new Terrain();
 	ResourceHeightmap* heightmap = kernel->GetResourceManager()->GetHeightmap("heightmap.bmp", window->GetRenderer()->GetDevice());
 	ter->SetHeightmap(heightmap);
@@ -70,12 +71,12 @@ void Game::initgame(Kernel* kernel, Window* window ){
 			location.rotation_h = 0;
 			location.scale = 10;
 
-			EntityModel* model = new EntityModel();
+			EntityModel* model = new EntityModel("test01");
 			model->SetModel(rmodel);
 			model->SetPosition(location);
 			scene->AddModel(model);
 		}
-	}
+	}*/
 	
 	window->GetManager()->RegisterScene(window, scene);
 }

@@ -47,5 +47,9 @@ void SceneManager::Render(Renderer* renderer)
 
 Scene* SceneManager::LoadScene(std::string fileName, Renderer* renderer)
 {
-	return ResourceManager::Instance()->GetScene(fileName);
+	Scene* scene = ResourceManager::Instance()->GetScene(fileName);
+	scene->Initialize(renderer);
+	scenes.insert(std::make_pair(scene->GetName(), scene));
+	
+	return scene;
 }

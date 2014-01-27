@@ -21,7 +21,11 @@ void Scene::Cleanup()
 
 void Scene::Initialize(Renderer* renderer)
 {
-
+	this->terrain->Initialize(renderer);
+	std::for_each(entities.begin(), entities.end(), [renderer](std::pair<std::string, Entity*> item)
+	{
+		item.second->Initialize(renderer);
+	});
 }
 
 void Scene::Render(Renderer* renderer)
@@ -77,4 +81,14 @@ void Scene::AddModel(EntityModel* models)
 std::vector <EntityModel*> Scene::GetModels()
 {
 	return Models;
+}
+
+void Scene::SetName(std::string name)
+{
+	this->name = name;
+}
+
+std::string Scene::GetName()
+{
+	return this->name;
 }
