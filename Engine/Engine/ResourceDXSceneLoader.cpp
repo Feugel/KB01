@@ -52,7 +52,7 @@ Scene* ResourceDXSceneLoader::LoadFile(std::string fileName)
 		model->SetTexture(entityNode->first_node("Texture")->first_attribute("FileName")->value());
 		
 		scene->AddEntity(model);
-		scene->AddModel(model);
+		scene->AddModel(model); // this line should be deleted
 		entityNode = entityNode->next_sibling("Entity");
 	}
 	

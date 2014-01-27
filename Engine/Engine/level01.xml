@@ -1,12 +1,12 @@
 <Scene Name="level01">
 	<Terrain>
 		<Heightmap FileName="heightmap.bmp"/>
-		<Texture FileName="heightmap.png"/>
+		<Texture FileName="heightmap-texture.png"/>
 	</Terrain>
 	<Entities>
 		<Entity Name="EntityModel01">
 			<Model FileName="tiger.x">
-				<Model.Position X="25" Y="100" Z="25" Rotation_H="0.0" Rotation_V="0.0" Scale="75.0"/>
+				<Model.Position X="25" Y="100" Z="25" Rotation_H="0.0" Rotation_V="0.0" Scale="50.0"/>
 			</Model>
 			<Texture FileName="" />
 		</Entity>
