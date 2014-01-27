@@ -74,6 +74,7 @@ bool InputKeyboard::InitKeyboard()
 		return false; 
 	} 
 
+	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Succesfully registered keyboard input device");
 	return true; 
 }
 

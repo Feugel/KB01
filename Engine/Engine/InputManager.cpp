@@ -60,12 +60,11 @@ void InputManager::Update()
 	}	
 	else
 	{
-		LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Input acquired");
 		char* keyBuffer = keyboard->getKeyBuffer();
 		MouseStruct mouseStruct = mouse->GetMouseInput();
 		NotifyObservers(mouseStruct, keyBuffer );
 		mouse->ResetMouseStruct();
-		LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Input updated, observers notified");
+		LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Input acquired and updated, observers notified");
 	}
 	
 }
