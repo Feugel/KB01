@@ -34,7 +34,6 @@
     <ClCompile Include="ResourceTextureLoader.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
-    <ClCompile Include="SkyBox.cpp" />
     <ClCompile Include="Terrain.cpp" />
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Window.cpp" />
@@ -68,7 +67,6 @@
     <ClInclude Include="ResourceTextureLoader.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
-    <ClInclude Include="SkyBox.h" />
     <ClInclude Include="Terrain.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Updatable.h" />
