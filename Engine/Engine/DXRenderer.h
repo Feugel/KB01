@@ -26,6 +26,8 @@ private:
 	void Cleanup();
 	void SetupMatrices();
 	Window* wind;
+	LPDIRECT3D9 g_pD3D;
+	LPDIRECT3DDEVICE9 g_pd3dDevice;
 
 };
 

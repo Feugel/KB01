@@ -21,8 +21,8 @@ public:
 	void Render(Renderer* renderer);
 	bool CanUpdate();
 	bool CanRender();
-	//std::string GetName();
-	//void Notify(MouseStruct mouseStruct, char* keyBuffer);
+	std::string GetName();
+	void Notify(MouseStruct mouseStruct, char* keyBuffer);
 };
 
 #endif

@@ -2,6 +2,7 @@
 #include "ResourceManager.h"
 #include "WindowManager.h"
 #include "SceneManager.h"
+#include "InputManager.h"
 #include "LogManager.h"
 
 Kernel::Kernel()
@@ -24,7 +25,7 @@ void Kernel::Initialise()
 	winMan->SetKernel(this);
 	resMan = ResourceManager::Instance();
 	sceneMan = SceneManager::Instance();
-	//inputMan = new InputManager();
+	inputMan = InputManager::Instance();
 	LogManager::Instance()->Log("%s - %s", __FUNCTION__, "Kernel Initialized");
 }
 
@@ -34,7 +35,7 @@ void Kernel::Cleanup()
 	winMan->Cleanup();
 	resMan->Cleanup();
 	sceneMan->Cleanup();
-	//inputMan->Cleanup();
+	inputMan->Cleanup();
 	LogManager::Instance()->Log("%s - %s", __FUNCTION__, "Kernel cleaned");
 }
 
@@ -119,7 +120,7 @@ void Kernel::Stop()
 void Kernel::Update(Timer* timer)
 {
 	sceneMan->Update(timer);
-	
+	inputMan->Update();
 }
 
 void Kernel::Render()

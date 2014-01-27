@@ -11,8 +11,8 @@
 
 
 /**
- * Function:	Keyboard::Keyboard(...)
- * Description:	Keyboard constructor
+ * Function:	InputKeyboard::InputKeyboard(...)
+ * Description:	InputKeyboard constructor
  * @ param hWnd:
  *   Pointer to windowHandle, used to set the "SetCooperativeLevel" 
  */
@@ -27,8 +27,8 @@ InputKeyboard::InputKeyboard( HWND argHwnd )
 
 
 /**
- * Function:	Keyboard::~Keyboard()
- * Description:	Keyboard destructor
+ * Function:	InputKeyboard::~InputKeyboard()
+ * Description:	InputKeyboard destructor
  */
 InputKeyboard::~InputKeyboard()
 {
@@ -37,7 +37,7 @@ InputKeyboard::~InputKeyboard()
 
 
 /**
- * Function:	Keyboard::InitKeyboard()
+ * Function:	InputKeyboard::InitKeyboard()
  * Description:	initializing the keyboard (creating the device and setting the coopertive level)
  */
 bool InputKeyboard::InitKeyboard()
@@ -50,6 +50,7 @@ bool InputKeyboard::InitKeyboard()
 		return false; 
 	}
 
+	//Creates the right DirectInput device and logs this if failed
 	hr = dInput->CreateDevice( GUID_SysKeyboard, &dDevice, NULL );
 	if FAILED( hr ) 
 	{ 
@@ -58,6 +59,7 @@ bool InputKeyboard::InitKeyboard()
 		return false; 
 	}
 
+	//Sets the right DataFormat and logs this if failed
 	hr = dDevice->SetDataFormat( &c_dfDIKeyboard ); 
 	if FAILED( hr ) 
 	{ 
@@ -66,7 +68,8 @@ bool InputKeyboard::InitKeyboard()
 		return false; 
 	} 
 
-	hr = dDevice->SetCooperativeLevel( hwnd, DISCL_NONEXCLUSIVE | DISCL_FOREGROUND );
+	//Sets the right cooperativeLevel and lots this if failed
+	hr = dDevice->SetCooperativeLevel( hwnd, DISCL_NONEXCLUSIVE | DISCL_BACKGROUND );
 	if FAILED( hr )
 	{ 
 		SaveReleaseDevice();
@@ -74,11 +77,13 @@ bool InputKeyboard::InitKeyboard()
 		return false; 
 	} 
 
+	//Logs the succesfully registered keyboard
+	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Succesfully registered keyboard input device");
 	return true; 
 }
 
 /**
- * Function:	Keyboard::saveReleaseDevice() 
+ * Function:	InputKeyboard::saveReleaseDevice() 
  * Description:	Cleaning up the mess left if a keyboard is lost
  */
 void InputKeyboard::SaveReleaseDevice() 
@@ -98,7 +103,7 @@ void InputKeyboard::SaveReleaseDevice()
 
 
 /**
- * Function:	Keyboard::ProcessKBInput(...)
+ * Function:	InputKeyboard::ProcessKBInput(...)
  * Description:	Method to see if the keyboardbuffer can be red or that a aquire is needed
  * @ param argIsToggle
  *	 Boolean to see if the key that is pressed a togglebutton is
@@ -139,13 +144,14 @@ bool InputKeyboard::ProcessKBInput( byte argKeyIsPressed )
 
 }
 
+//a method to return the keyBuffer
 char* InputKeyboard::getKeyBuffer()
 { 
 	return keyBuffer;
 }
 
 /**
- * Function:	Keyboard::DoAcquire()
+ * Function:	InputKeyboard::DoAcquire()
  * Description:	Aquiring the device, multiple times to make sure it gets it
  */
 bool InputKeyboard::DoAcquire()
@@ -159,6 +165,7 @@ bool InputKeyboard::DoAcquire()
 			return true;
 		}
 	}
+	//Use LogManager method to write all the data to the log file
 	LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "Unable to acquire keyboard.");
 	return false;
 }

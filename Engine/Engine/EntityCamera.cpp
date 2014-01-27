@@ -1,4 +1,7 @@
 #include "EntityCamera.h"
+#include "LogManager.h"
+
+#define KEYDOWN(name, key) (name[key] & 0x80)
 
 EntityCamera::EntityCamera(void)
 {
@@ -23,9 +26,16 @@ void EntityCamera::Cleanup()
 	InputManager::Instance()->RemoveObserver(this);
 }
 
-void Notify(MouseStruct mouseStruct, char* keyBuffer)
+void EntityCamera::Notify(MouseStruct mouseStruct, char* keyBuffer)
 {
-	
+	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s %d", __FUNCTION__, "Input Mouse Delta X: ",mouseStruct.positionX," captured by EntityCamera");
+	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s %d", __FUNCTION__, "Input Mouse Delta Y: ",mouseStruct.positionY," captured by EntityCamera");
+	//LogManager::Instance()->Log(LogLevel::INFO, "%s - %s %d", __FUNCTION__, "Button A pressed: ", KEYDOWN( keyBuffer, DIK_A)," captured by EntityCamera");
+}
+
+std::string EntityCamera::GetName()
+{
+	return std::string("Test");
 }
 
 void EntityCamera::Initialize(Renderer* renderer)

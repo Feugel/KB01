@@ -15,12 +15,6 @@
 #include "ResourceModel.h"
 
 
-//-----------------------------------------------------------------------------
-// Global variables
-//-----------------------------------------------------------------------------
-LPDIRECT3D9             g_pD3D = NULL; // Used to create the D3DDevice
-LPDIRECT3DDEVICE9       g_pd3dDevice = NULL; // Our rendering device
-
 // A structure for our custom vertex type
 struct CUSTOMVERTEX
 {
@@ -29,7 +23,6 @@ struct CUSTOMVERTEX
 	FLOAT tu, tv;
 };
 #define D3DFVF_CUSTOMVERTEX (D3DFVF_XYZ|D3DFVF_DIFFUSE|D3DFVF_TEX1)
-
 
 DXRenderer::DXRenderer()
 {	
@@ -89,7 +82,6 @@ HRESULT DXRenderer::InitD3D()
 //cleanup called by destructor
 VOID DXRenderer::Cleanup()
 {
-	//release device
     if( g_pd3dDevice != NULL )
         g_pd3dDevice->Release();
 
@@ -98,17 +90,10 @@ VOID DXRenderer::Cleanup()
 }
 
 
-//Sets up the world, view, and projection transform matrices. (still the default from tutorial and has to be replaced)
+//Sets up view, and projection transform matrices.
 VOID DXRenderer::SetupMatrices()
 {
-    // For our world matrix, we will just rotate the object about the y-axis.
-    D3DXMATRIXA16 matWorld;
-
-	UINT iTime = timeGetTime() % 100000;
-    FLOAT fAngle = iTime * ( 2.0f * D3DX_PI ) / 100000.0f;
-    D3DXMatrixRotationY( &matWorld, fAngle );
-    g_pd3dDevice->SetTransform( D3DTS_WORLD, &matWorld );
-
+	//setup the camera
     D3DXVECTOR3 vEyePt( -255.0f, 350.0f, -255.0f );
     D3DXVECTOR3 vLookatPt( 0.0f, 125.0f, 0.0f );
     D3DXVECTOR3 vUpVec( 0.0f, 1.0f, 0.0f );
@@ -116,12 +101,7 @@ VOID DXRenderer::SetupMatrices()
     D3DXMatrixLookAtLH( &matView, &vEyePt, &vLookatPt, &vUpVec );
     g_pd3dDevice->SetTransform( D3DTS_VIEW, &matView );
 
-    // For the projection matrix, we set up a perspective transform (which
-    // transforms geometry from 3D view space to 2D viewport space, with
-    // a perspective divide making objects smaller in the distance). To build
-    // a perpsective transform, we need the field of view (1/4 pi is common),
-    // the aspect ratio, and the near and far clipping planes (which define at
-    // what distances geometry should be no longer be rendered).
+	//setting up what to render and how to render it
     D3DXMATRIXA16 matProj;
     D3DXMatrixPerspectiveFovLH( &matProj, D3DX_PI / 4, 1.0f, 1.0f, 1000.0f );
     g_pd3dDevice->SetTransform( D3DTS_PROJECTION, &matProj );
@@ -136,22 +116,24 @@ VOID DXRenderer::RenderStart()
 	g_pd3dDevice->BeginScene();
 }
 
-//TODO render models and skybox and position camera
 //Renders the heightmap
 VOID DXRenderer::Render()
 {
 	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Rendering");
 	
-	
-	//temp scaling test
-	D3DXMATRIX world;
-	D3DXMatrixIdentity(&world);
-	g_pd3dDevice->SetTransform(D3DTS_WORLD, &world);
+	SetupMatrices();
+
+	//Rotating the world around the y axis
+	D3DXMATRIX camera;
+	UINT iTime = timeGetTime() % 10000;
+    FLOAT fAngle = iTime * ( 2.0f * D3DX_PI ) / 10000.0f;
+    D3DXMatrixRotationY( &camera, fAngle );
+	g_pd3dDevice->SetTransform(D3DTS_WORLD, &camera);
 
 	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Rendering Heightmap");
+
 	//setting streamsource to the heightmap
 	LPDIRECT3DVERTEXBUFFER9 heightmap = wind->GetManager()->GetSceneByWindow(wind->GetWindowHandle())->GetTerrain()->GetHeightmap()->GetHeightmapBuffer();
-
 	g_pd3dDevice->SetStreamSource( 0, heightmap, 0, sizeof( CUSTOMVERTEX ) );
     g_pd3dDevice->SetFVF( D3DFVF_CUSTOMVERTEX );
 	g_pd3dDevice->SetTexture(0, wind->GetManager()->GetSceneByWindow(wind->GetWindowHandle())->GetTerrain()->GetTexture()->GetTexture());
@@ -162,43 +144,41 @@ VOID DXRenderer::Render()
 	int amount = (width * 2 -2) * (height - 1);
 	g_pd3dDevice->DrawPrimitive( D3DPT_TRIANGLESTRIP, 0, amount);
 	
-
-
-	//tmp scaling test
-	
-
 	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Rendering Models");
+
+	//getting the ammount of model to render
 	int models = wind->GetManager()->GetSceneByWindow(wind->GetWindowHandle())->GetModels().size();
 
 	for (int i = models; i > 0; --i)
 	{	
+		//setting up for translating the models
 		D3DXMATRIX Rotmodel;
 		D3DXMATRIX Transmodel;
 		D3DXMATRIX Scalemodel;
 
+		//getting the location of the model
 		Matrix modelloc = wind->GetManager()->GetSceneByWindow(wind->GetWindowHandle())->GetModels()[i-1]->GetPosition();
 
 		D3DXMatrixTranslation(&Transmodel, modelloc.x, modelloc.y, modelloc.z);
 		D3DXMatrixRotationY(&Rotmodel, modelloc.rotation_v);
 		D3DXMatrixScaling(&Scalemodel, modelloc.scale, modelloc.scale, modelloc.scale);
-		
+
+		//calculating the actual location of the object
 		D3DXMATRIX model;
 		D3DXMatrixMultiply(&Transmodel, &Rotmodel, &Transmodel);
 		D3DXMatrixMultiply(&model, &Scalemodel, &Transmodel);
+		D3DXMatrixMultiply(&model, &model, &camera);
 
 		g_pd3dDevice->SetTransform(D3DTS_WORLD, &model);
 
+		//rendering the mesh and textures
 		g_pd3dDevice->SetMaterial(&wind->GetManager()->GetSceneByWindow(wind->GetWindowHandle())->GetModels()[i-1]->GetModel()->GetMaterials()[0]);
 		g_pd3dDevice->SetTexture(0, wind->GetManager()->GetSceneByWindow(wind->GetWindowHandle())->GetModels()[i-1]->GetModel()->GetTextures()[0]);
 		wind->GetManager()->GetSceneByWindow(wind->GetWindowHandle())->GetModels()[i-1]->GetModel()->GetMesh()->DrawSubset(0);
 	}
 
 	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s %d %s", __FUNCTION__, "Done Rendering:", models, " Models");
-
-	SetupMatrices();
 	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Done Rendering");
-
-
 }
 
 //called after render. calls endscene
@@ -215,6 +195,7 @@ VOID DXRenderer::Present()
 	g_pd3dDevice->Present( NULL, NULL, NULL, NULL );
 }
 
+//returns the device, used in the dxloaders
 VOID* DXRenderer::GetDevice()
 {
 	return g_pd3dDevice;

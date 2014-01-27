@@ -20,13 +20,13 @@ InputMouse::InputMouse( HWND argHwnd )
 	ResetMouseStruct();
 }
 
-
+//Destructor for InputMouse
 InputMouse::~InputMouse()
 {
 
 }
 
-
+//Initializing the InputMouse (creating the device and setting the coopertive level)
 bool InputMouse::InitMouse()
 {
 	//DirectInput8Create should be done only once in manager
@@ -37,6 +37,7 @@ bool InputMouse::InitMouse()
 		return false;
 	} 
 
+	//Creates the right DirectInput device and logs this if failed
 	result = dInput->CreateDevice( GUID_SysMouse, &dDevice, NULL );
 	if( FAILED( result ) )
 	{
@@ -45,6 +46,7 @@ bool InputMouse::InitMouse()
 		return false;
 	}
 
+	//Sets the right DataFormat and logs this if failed
 	result = dDevice->SetDataFormat( &c_dfDIMouse );
 	if( FAILED( result ) )
 	{
@@ -53,7 +55,8 @@ bool InputMouse::InitMouse()
 		return false;
 	}
 
-	result = dDevice->SetCooperativeLevel( hwnd, DISCL_NONEXCLUSIVE | DISCL_FOREGROUND );
+	//Sets the right cooperativeLevel and lots this if failed
+	result = dDevice->SetCooperativeLevel( hwnd, DISCL_NONEXCLUSIVE | DISCL_BACKGROUND );
 	if( FAILED( result ) )
 	{
 		SaveReleaseDevice();
@@ -61,6 +64,7 @@ bool InputMouse::InitMouse()
 		return false;
 	}
 
+	//Sets the right mouse Property and logs this if failed
 	result = dDevice->SetProperty( DIPROP_BUFFERSIZE, &dipdw.diph );
 	if( FAILED( result ) )
 	{
@@ -69,11 +73,12 @@ bool InputMouse::InitMouse()
 		return false;
 	}
 	
-	return true;
+	//Logs the succesfully registered mouse.
 	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Succesfully registered mouse input device");
+	return true;
 }
 
-
+//Mousestruct to get the Mouse input and use DoAcquire if needed.
 MouseStruct InputMouse::GetMouseInput()
 {
 	if(!SUCCEEDED( dDevice->Poll()))
@@ -87,7 +92,7 @@ MouseStruct InputMouse::GetMouseInput()
 }
 
 
-
+//Acquiring the device, trying it multiple times to make sure it's found. 
 bool InputMouse::DoAcquire()
 {
 	int times = 5;	// Number of times to try acquire
@@ -100,7 +105,7 @@ bool InputMouse::DoAcquire()
 	return false;
 }
 
-
+//Setting the buffer for the mouse and getting the device-data
 void InputMouse::SetTheMouseBuffer()
 {
 	DIDEVICEOBJECTDATA od;
@@ -225,6 +230,7 @@ void InputMouse::SetTheMouseBuffer()
 	}
 }
 
+//Cleaning up the mess left if a mouse device is lost
 void InputMouse::SaveReleaseDevice() 
 { 
 	if( dInput )
@@ -240,6 +246,7 @@ void InputMouse::SaveReleaseDevice()
 	} 
 } 
 
+//Sets the bufferedMouse
 void InputMouse::ResetMouseStruct()
 {
 	bufferedMouse.positionX = 0;
