@@ -50,7 +50,7 @@ int Game::Main()
 }
 
 void Game::initgame(Kernel* kernel, Window* window ){
-	
+	ResourceManager::Instance()->GetScene("level01.xml");
 	Scene* scene = new Scene();
 	Terrain* ter = new Terrain();
 	ResourceHeightmap* heightmap = kernel->GetResourceManager()->GetHeightmap("heightmap.bmp", window->GetRenderer()->GetDevice());

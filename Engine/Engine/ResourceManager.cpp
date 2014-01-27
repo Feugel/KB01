@@ -1,7 +1,12 @@
 #include "ResourceManager.h"
+#include "ResourceTextureLoader.h"
 #include "ResourceDXTextureLoader.h"
+#include "ResourceHeightmapLoader.h"
 #include "ResourceDXHeightmapLoader.h"
+#include "ResourceModelLoader.h"
 #include "ResourceDXModelLoader.h"
+#include "ResourceSceneLoader.h"
+#include "ResourceDXSceneLoader.h"
 
 ResourceManager* ResourceManager::instance = NULL;
 

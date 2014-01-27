@@ -24,12 +24,14 @@
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="ResourceDXHeightmapLoader.cpp" />
     <ClCompile Include="ResourceDXModelLoader.cpp" />
+    <ClCompile Include="ResourceDXSceneLoader.cpp" />
     <ClCompile Include="ResourceDXTextureLoader.cpp" />
     <ClCompile Include="ResourceHeightmap.cpp" />
     <ClCompile Include="ResourceHeightmapLoader.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="ResourceModel.cpp" />
     <ClCompile Include="ResourceModelLoader.cpp" />
+    <ClCompile Include="ResourceSceneLoader.cpp" />
     <ClCompile Include="ResourceTexture.cpp" />
     <ClCompile Include="ResourceTextureLoader.cpp" />
     <ClCompile Include="Scene.cpp" />
@@ -53,16 +55,19 @@
     <ClInclude Include="LogManager.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Matrix.h" />
+    <ClInclude Include="rapidxml.hpp" />
     <ClInclude Include="Renderable.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="ResourceDXHeightmapLoader.h" />
     <ClInclude Include="ResourceDXModelLoader.h" />
+    <ClInclude Include="ResourceDXSceneLoader.h" />
     <ClInclude Include="ResourceDXTextureLoader.h" />
     <ClInclude Include="ResourceHeightmap.h" />
     <ClInclude Include="ResourceHeightmapLoader.h" />
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="ResourceModel.h" />
     <ClInclude Include="ResourceModelLoader.h" />
+    <ClInclude Include="ResourceSceneLoader.h" />
     <ClInclude Include="ResourceTexture.h" />
     <ClInclude Include="ResourceTextureLoader.h" />
     <ClInclude Include="Scene.h" />
@@ -74,6 +79,9 @@
     <ClInclude Include="Vertex.h" />
     <ClInclude Include="Window.h" />
     <ClInclude Include="WindowManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="level01.xml" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9062BD3B-9D91-46A8-BC63-50C92D13F0C7}</ProjectGuid>
