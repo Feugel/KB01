@@ -29,7 +29,7 @@ int Game::Main()
 	LogManager::Instance()->Log("%s - %s", __FUNCTION__, "Creating Kernel");
 	kernel = new Kernel();
 
-	Window* window = new Window(NULL, kernel->GetWindowManager());
+	Window* window = new Window(NULL, kernel->GetWindowManager(), 1024, 576, "Engine");
 	// Window registration test
 	if(kernel->GetWindowManager()->RegisterWindow(window))
 	{

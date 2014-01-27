@@ -162,19 +162,20 @@ ResourceHeightmap* ResourceDXHeightmapLoader::LoadFile(std::string fileName, VOI
 			for( int x = heightMap->width; x > 0; x --)
 			{
 				g_Vertices[count].x = x - (float)(heightMap->width / 2);
-				g_Vertices[count].y = m_heightMap[(x - 1) + z * heightMap->width].y;
-				g_Vertices[count].z = z - (float)(heightMap->height / 2);
-				g_Vertices[count].color = 0xffffffff;
-				g_Vertices[count].tu = x / (float)heightMap->width;
-				g_Vertices[count].tv =  (float)heightMap->height - (z / (float)heightMap->height);
-				count ++;
-				g_Vertices[count].x = x - (float)(heightMap->width / 2);
 				g_Vertices[count].y = m_heightMap[(x - 1) + (z + 1) * heightMap->width].y;
 				g_Vertices[count].z = z - (float)((heightMap->height / 2) - 1);
 				g_Vertices[count].color = 0xffffffff;
 				g_Vertices[count].tu = x / (float)heightMap->width;
 				g_Vertices[count].tv =  (float)heightMap->height - ((z + 1) /(float)heightMap->height);
 				count ++;
+				g_Vertices[count].x = x - (float)(heightMap->width / 2);
+				g_Vertices[count].y = m_heightMap[(x - 1) + z * heightMap->width].y;
+				g_Vertices[count].z = z - (float)(heightMap->height / 2);
+				g_Vertices[count].color = 0xffffffff;
+				g_Vertices[count].tu = x / (float)heightMap->width;
+				g_Vertices[count].tv =  (float)heightMap->height - (z / (float)heightMap->height);
+				count ++;
+				
 			}
 		}
 	}

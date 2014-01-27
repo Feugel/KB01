@@ -20,8 +20,6 @@
 //-----------------------------------------------------------------------------
 LPDIRECT3D9             g_pD3D = NULL; // Used to create the D3DDevice
 LPDIRECT3DDEVICE9       g_pd3dDevice = NULL; // Our rendering device
-LPDIRECT3DVERTEXBUFFER9 g_pVB = NULL; // Buffer to hold vertices
-LPDIRECT3DVERTEXBUFFER9 g_hVB = NULL; // Buffer to hold Heightmapvertices
 
 // A structure for our custom vertex type
 struct CUSTOMVERTEX
@@ -68,9 +66,9 @@ HRESULT DXRenderer::InitD3D()
 	//setting the actual parameters
     d3dpp.Windowed = TRUE;
     d3dpp.SwapEffect = D3DSWAPEFFECT_DISCARD;
-    d3dpp.BackBufferFormat = D3DFMT_UNKNOWN;
-	d3dpp.BackBufferHeight = 1920;
-	d3dpp.BackBufferWidth = 1080;
+	d3dpp.BackBufferFormat = D3DFMT_X8R8G8B8;
+	d3dpp.BackBufferHeight = 1024;
+	d3dpp.BackBufferWidth = 576;
 	d3dpp.EnableAutoDepthStencil = TRUE;
     d3dpp.AutoDepthStencilFormat = D3DFMT_D16;
 
@@ -82,8 +80,7 @@ HRESULT DXRenderer::InitD3D()
 
 	//setting the renderstates of the d3d device
 	g_pd3dDevice->SetRenderState( D3DRS_ZENABLE, TRUE);
-	g_pd3dDevice->SetRenderState( D3DRS_CULLMODE, D3DCULL_NONE);
-	g_pd3dDevice->SetRenderState( D3DRS_FILLMODE, D3DFILL_SOLID);
+	g_pd3dDevice->SetRenderState( D3DRS_CULLMODE, D3DCULL_CCW);
     g_pd3dDevice->SetRenderState( D3DRS_LIGHTING, FALSE );
 
     return S_OK;
@@ -92,14 +89,6 @@ HRESULT DXRenderer::InitD3D()
 //cleanup called by destructor
 VOID DXRenderer::Cleanup()
 {
-	//clear vertex buffer
-    if( g_pVB != NULL )
-        g_pVB->Release();
-
-	//clear heigtmap vertex buffer
-	if( g_hVB != NULL )
-        g_hVB->Release();
-
 	//release device
     if( g_pd3dDevice != NULL )
         g_pd3dDevice->Release();
