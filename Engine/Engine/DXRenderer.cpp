@@ -102,13 +102,7 @@ VOID DXRenderer::Cleanup()
 VOID DXRenderer::SetupMatrices()
 {
     // For our world matrix, we will just rotate the object about the y-axis.
-    D3DXMATRIXA16 matWorld;
-
-	UINT iTime = timeGetTime() % 100000;
-    FLOAT fAngle = iTime * ( 2.0f * D3DX_PI ) / 100000.0f;
-    D3DXMatrixRotationY( &matWorld, fAngle );
-    g_pd3dDevice->SetTransform( D3DTS_WORLD, &matWorld );
-
+    
     D3DXVECTOR3 vEyePt( -255.0f, 350.0f, -255.0f );
     D3DXVECTOR3 vLookatPt( 0.0f, 125.0f, 0.0f );
     D3DXVECTOR3 vUpVec( 0.0f, 1.0f, 0.0f );
@@ -142,11 +136,19 @@ VOID DXRenderer::Render()
 {
 	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Rendering");
 	
+	SetupMatrices();
+
+	//rotate world
+	D3DXMATRIX camera;
+
+	UINT iTime = timeGetTime() % 10000;
+    FLOAT fAngle = iTime * ( 2.0f * D3DX_PI ) / 10000.0f;
+    D3DXMatrixRotationY( &camera, fAngle );
+
+	
 	
 	//temp scaling test
-	D3DXMATRIX world;
-	D3DXMatrixIdentity(&world);
-	g_pd3dDevice->SetTransform(D3DTS_WORLD, &world);
+	g_pd3dDevice->SetTransform(D3DTS_WORLD, &camera);
 
 	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Rendering Heightmap");
 	//setting streamsource to the heightmap
@@ -185,6 +187,7 @@ VOID DXRenderer::Render()
 		D3DXMATRIX model;
 		D3DXMatrixMultiply(&Transmodel, &Rotmodel, &Transmodel);
 		D3DXMatrixMultiply(&model, &Scalemodel, &Transmodel);
+		D3DXMatrixMultiply(&model, &model, &camera);
 
 		g_pd3dDevice->SetTransform(D3DTS_WORLD, &model);
 
@@ -195,7 +198,6 @@ VOID DXRenderer::Render()
 
 	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s %d %s", __FUNCTION__, "Done Rendering:", models, " Models");
 
-	SetupMatrices();
 	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Done Rendering");
 
 
