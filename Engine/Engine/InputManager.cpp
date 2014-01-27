@@ -26,14 +26,14 @@
 //
 //	if (!keyboardinit || !mouseinit)
 //		LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "Unable to initialize input");
-//
-//	keyboard ->DoAcquire();
-//	mouse->DoAcquire();
 //}
 //
 //
-//InputStruct InputManager::Update()
+//void InputManager::Update()
 //{
-//	
+//	keyboard ->DoAcquire();
+//	mouse->DoAcquire();
+//
+//	keyboard->ProcessKBInput(DIK_A);
 //	MouseStruct ms = mouse->GetMouseInput();
 //}
