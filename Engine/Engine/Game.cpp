@@ -58,11 +58,24 @@ void Game::initgame(Kernel* kernel, Window* window ){
 	ter->SetTexture(ResourceManager::Instance()->GetTexture("heightmap-texture.png", window->GetRenderer()->GetDevice()));
 	scene->SetTerrain(ter);
 	
-	ResourceModel* rmodel = kernel->GetResourceManager()->GetModel("tiger.x", window->GetRenderer()->GetDevice());
+	for (int z = 20; z > 0; --z){   
+		for (int i = 20; i > 0; --i){   
+			ResourceModel* rmodel = kernel->GetResourceManager()->GetModel("tiger.x", window->GetRenderer()->GetDevice());
+	
+			Matrix location;
+			location.x = (i * 20) - 150;
+			location.z =  (z * 20) - 150;
+			location.y = 150;
+			location.rotation_v = i * 100;
+			location.rotation_h = 0;
+			location.scale = 10;
 
-	EntityModel* model = new EntityModel();
-	model->SetModel(rmodel);
-	scene->AddModel(model);
-
+			EntityModel* model = new EntityModel();
+			model->SetModel(rmodel);
+			model->SetPosition(location);
+			scene->AddModel(model);
+		}
+	}
+	
 	window->GetManager()->RegisterScene(window, scene);
 }

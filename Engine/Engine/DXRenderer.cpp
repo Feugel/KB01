@@ -165,15 +165,29 @@ VOID DXRenderer::Render()
 
 
 	//tmp scaling test
-	D3DXMatrixScaling(&world, 100,100,100);
 	
-	g_pd3dDevice->SetTransform(D3DTS_WORLD, &world);
 
 	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Rendering Models");
 	int models = wind->GetManager()->GetSceneByWindow(wind->GetWindowHandle())->GetModels().size();
 
 	for (int i = models; i > 0; --i)
 	{	
+		D3DXMATRIX Rotmodel;
+		D3DXMATRIX Transmodel;
+		D3DXMATRIX Scalemodel;
+
+		Matrix modelloc = wind->GetManager()->GetSceneByWindow(wind->GetWindowHandle())->GetModels()[i-1]->GetPosition();
+
+		D3DXMatrixTranslation(&Transmodel, modelloc.x, modelloc.y, modelloc.z);
+		D3DXMatrixRotationY(&Rotmodel, modelloc.rotation_v);
+		D3DXMatrixScaling(&Scalemodel, modelloc.scale, modelloc.scale, modelloc.scale);
+		
+		D3DXMATRIX model;
+		D3DXMatrixMultiply(&Transmodel, &Rotmodel, &Transmodel);
+		D3DXMatrixMultiply(&model, &Scalemodel, &Transmodel);
+
+		g_pd3dDevice->SetTransform(D3DTS_WORLD, &model);
+
 		g_pd3dDevice->SetMaterial(&wind->GetManager()->GetSceneByWindow(wind->GetWindowHandle())->GetModels()[i-1]->GetModel()->GetMaterials()[0]);
 		g_pd3dDevice->SetTexture(0, wind->GetManager()->GetSceneByWindow(wind->GetWindowHandle())->GetModels()[i-1]->GetModel()->GetTextures()[0]);
 		wind->GetManager()->GetSceneByWindow(wind->GetWindowHandle())->GetModels()[i-1]->GetModel()->GetMesh()->DrawSubset(0);
