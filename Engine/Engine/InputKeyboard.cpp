@@ -66,7 +66,7 @@ bool InputKeyboard::InitKeyboard()
 		return false; 
 	} 
 
-	hr = dDevice->SetCooperativeLevel( hwnd, DISCL_NONEXCLUSIVE | DISCL_FOREGROUND );
+	hr = dDevice->SetCooperativeLevel( hwnd, DISCL_NONEXCLUSIVE | DISCL_BACKGROUND );
 	if FAILED( hr )
 	{ 
 		SaveReleaseDevice();

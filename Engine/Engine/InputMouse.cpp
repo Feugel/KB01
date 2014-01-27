@@ -53,7 +53,7 @@ bool InputMouse::InitMouse()
 		return false;
 	}
 
-	result = dDevice->SetCooperativeLevel( hwnd, DISCL_NONEXCLUSIVE | DISCL_FOREGROUND );
+	result = dDevice->SetCooperativeLevel( hwnd, DISCL_NONEXCLUSIVE | DISCL_BACKGROUND );
 	if( FAILED( result ) )
 	{
 		SaveReleaseDevice();

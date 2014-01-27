@@ -22,7 +22,7 @@ public:
 	bool CanUpdate();
 	bool CanRender();
 	//std::string GetName();
-	//void Notify(MouseStruct mouseStruct, char* keyBuffer);
+	void Notify(MouseStruct mouseStruct, char* keyBuffer);
 };
 
 #endif

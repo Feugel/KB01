@@ -18,14 +18,15 @@ InputManager::InputManager()
 InputManager::~InputManager()
 {
 	Cleanup();
+	if(NULL != inputManager)
+		delete inputManager;
 }
 
 void InputManager::Cleanup()
 {
 	keyboard->SaveReleaseDevice();
 	mouse->SaveReleaseDevice();
-	if(NULL != inputManager)
-		delete inputManager;
+	
 }
 
 InputManager* InputManager::Instance()
@@ -50,23 +51,21 @@ void InputManager::Initialize()
 //Update inputs
 void InputManager::Update()
 {
-	while(m_ObserverVec.size() > 0)
+	bool keyboardacquire = keyboard->DoAcquire();
+	bool mouseacquire = mouse->DoAcquire();
+	if (!keyboardacquire || !mouseacquire)
 	{
-		bool keyboardacquire = keyboard->DoAcquire();
-		bool mouseacquire = mouse->DoAcquire();
-		if (!keyboardacquire || !mouseacquire)
-		{
-			LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "Unable to acquire input");
-			return;
-		}	
-		else
-		{
-			LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Input acquired");
-			char* keyBuffer = keyboard->getKeyBuffer();
-			MouseStruct mouseStruct = mouse->GetMouseInput();
-			NotifyObservers(mouseStruct, keyBuffer );
-			LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Input updated, observers notified");
-		}
+		LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "Unable to acquire input");
+		return;
+	}	
+	else
+	{
+		LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Input acquired");
+		char* keyBuffer = keyboard->getKeyBuffer();
+		MouseStruct mouseStruct = mouse->GetMouseInput();
+		NotifyObservers(mouseStruct, keyBuffer );
+		mouse->ResetMouseStruct();
+		LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Input updated, observers notified");
 	}
 	
 }
@@ -84,7 +83,6 @@ bool InputManager::AddObserver( InputObserver* observer )
 	{
 	m_ObserverVec.push_back(observer);
 	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "InputObserver added to vector");
-	Update();
 	return true;
 	}
 	
@@ -117,9 +115,9 @@ bool InputManager::NotifyObservers(MouseStruct mouseStruct, char* keyBuffer)
 	std::vector<InputObserver*>::iterator it;
 	std::vector<InputObserver*>::iterator begin = m_ObserverVec.begin();
 	std::vector<InputObserver*>::iterator end = m_ObserverVec.end();
-	for (begin; it < end; ++it)
+	for (it = begin; it < end; ++it)
 	{
-		((InputObserver*)*it)->Notify(mouseStruct, keyBuffer);
+		(*it)->Notify(mouseStruct, keyBuffer);
 	}
 	//Return false if there are no observers in the vector
 	return (m_ObserverVec.size() > 0);

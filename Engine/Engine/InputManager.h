@@ -35,7 +35,7 @@ public:
 
 
 private:
-	std::vector<InputObserver*> m_ObserverVec;
+	std::vector<InputObserver*>m_ObserverVec;
 	InputManager();
 	static InputManager* inputManager;
 };

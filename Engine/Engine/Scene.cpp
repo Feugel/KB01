@@ -3,8 +3,11 @@
 #include "Entity.h"
 #include "Terrain.h"
 
+#include "EntityCamera.h"
+
 Scene::Scene(void)
 {
+	EntityCamera* camera = new EntityCamera();
 	isActive = false;
 }
 
