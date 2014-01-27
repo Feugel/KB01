@@ -36,9 +36,9 @@ Matrix EntityModel::GetPosition()
 	return position;
 }
 
-void EntityModel::SetPosition(Matrix position)
+void EntityModel::SetPosition(Matrix pos)
 {
-	position = position;
+	position = pos;
 }
 
 float EntityModel::GetHRotation()

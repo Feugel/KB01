@@ -139,6 +139,11 @@ bool InputKeyboard::ProcessKBInput( byte argKeyIsPressed )
 
 }
 
+char* InputKeyboard::getKeyBuffer()
+{ 
+	return keyBuffer;
+}
+
 /**
  * Function:	Keyboard::DoAcquire()
  * Description:	Aquiring the device, multiple times to make sure it gets it

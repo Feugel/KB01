@@ -70,6 +70,7 @@ bool InputMouse::InitMouse()
 	}
 	
 	return true;
+	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Succesfully registered mouse input device");
 }
 
 

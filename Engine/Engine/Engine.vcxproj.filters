@@ -268,5 +268,8 @@
     <Xml Include="level01.xml">
       <Filter>Resource Files</Filter>
     </Xml>
+    <ClInclude Include="InputObserver.h">
+      <Filter>Header Files\Input</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
