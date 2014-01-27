@@ -18,6 +18,8 @@ public:
 	void SaveReleaseDevice();
 	bool DoAcquire();
 	bool ProcessKBInput(byte);
+
+	char* getKeyBuffer();
 	
 
 private:

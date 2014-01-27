@@ -67,8 +67,8 @@ HRESULT DXRenderer::InitD3D()
     d3dpp.Windowed = TRUE;
     d3dpp.SwapEffect = D3DSWAPEFFECT_DISCARD;
 	d3dpp.BackBufferFormat = D3DFMT_X8R8G8B8;
-	d3dpp.BackBufferHeight = 1024;
-	d3dpp.BackBufferWidth = 576;
+	d3dpp.BackBufferHeight = 1920;
+	d3dpp.BackBufferWidth = 1080;
 	d3dpp.EnableAutoDepthStencil = TRUE;
     d3dpp.AutoDepthStencilFormat = D3DFMT_D16;
 

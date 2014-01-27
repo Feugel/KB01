@@ -248,5 +248,8 @@
     <ClInclude Include="InputManager.h">
       <Filter>Header Files\Input</Filter>
     </ClInclude>
+    <ClInclude Include="InputObserver.h">
+      <Filter>Header Files\Input</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
