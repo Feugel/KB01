@@ -1,0 +1,2084 @@
+03/02/2014 15:10:56.0124 INFO    InputKeyboard::InitKeyboard - Succesfully registered keyboard input device
+03/02/2014 15:10:56.0175 INFO    Game::Main - Starting up
+03/02/2014 15:10:56.0175 INFO    Game::Main - Creating Kernel
+03/02/2014 15:10:56.0175 INFO    Kernel::Initialise - Initializing Kernel
+03/02/2014 15:10:56.0175 INFO    InputKeyboard::InitKeyboard - Succesfully registered keyboard input device
+03/02/2014 15:10:56.0193 INFO    InputMouse::InitMouse - Succesfully registered mouse input device
+03/02/2014 15:10:56.0193 INFO    InputManager::Initialize - Input initialized
+03/02/2014 15:10:56.0193 INFO    Kernel::Initialise - Kernel Initialized
+03/02/2014 15:10:56.0193 INFO    Window::Initialise - Initializing Window
+03/02/2014 15:10:56.0193 INFO    Window::Initialise - Class registered successfully
+03/02/2014 15:10:56.0194 INFO    Window::Create - Creating Window Handle
+03/02/2014 15:10:56.0194 INFO    Window::Create - Handle created
+03/02/2014 15:10:56.0194 INFO    Window::DisplayWindow - Making screen visible
+03/02/2014 15:10:56.0213 INFO    Game::Main - Window registered
+03/02/2014 15:10:56.0213 INFO    Game::Main - Adding Renderer (DX9)
+03/02/2014 15:10:56.0255 INFO    InputManager::AddObserver - InputObserver added to vector
+03/02/2014 15:10:56.0323 INFO    Kernel::Start - Starting Kernel functions
+03/02/2014 15:10:56.0323 INFO    Kernel::Start - Starting Game Loop
+03/02/2014 15:10:56.0325 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0325 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:56.0325 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0326 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0326 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0326 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0327 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0328 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0329 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0329 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0329 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0368 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0368 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:56.0368 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0368 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0368 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0368 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0368 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0368 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0368 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0368 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0368 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0411 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0411 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:56.0411 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0411 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0411 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0411 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0411 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0411 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0411 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0411 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0411 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0419 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0419 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:56.0419 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0420 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0420 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0420 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0420 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0420 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0420 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0421 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0421 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0450 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0450 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:56.0450 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0450 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0450 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0450 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0451 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0451 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0451 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0451 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0451 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0466 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0466 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:56.0466 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0466 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0466 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0466 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0466 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0467 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0467 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0467 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0467 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0480 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0480 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:56.0481 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0481 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0481 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0481 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0481 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0482 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0482 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0482 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0482 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0498 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0498 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:56.0498 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0498 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0498 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0498 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0498 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0499 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0499 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0499 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0499 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0514 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0514 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:56.0514 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0514 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0514 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0514 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0515 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0515 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0515 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0515 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0515 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0530 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0530 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:56.0530 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0530 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0530 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0530 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0530 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0531 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0531 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0531 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0531 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0546 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0547 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:56.0547 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0547 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0547 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0547 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0547 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0548 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0548 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0548 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0548 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0573 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0573 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:56.0573 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0573 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0573 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0573 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0573 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0573 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0574 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0574 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0574 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0580 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0580 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:56.0580 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0580 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0580 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0580 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0580 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0581 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0581 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0581 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0581 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0598 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0598 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:56.0598 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0598 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0598 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0599 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0599 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0599 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0599 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0599 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0599 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0615 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0615 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -1
+03/02/2014 15:10:56.0615 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0615 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0615 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0615 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0615 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0616 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0616 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0616 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0616 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0630 INFO    EntityCamera::Notify - Input Mouse Delta X:  1
+03/02/2014 15:10:56.0630 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:56.0630 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0630 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0630 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0630 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0630 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0631 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0631 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0631 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0631 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0648 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0648 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -1
+03/02/2014 15:10:56.0648 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0648 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0648 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0648 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0648 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0649 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0649 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0649 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0649 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0665 INFO    EntityCamera::Notify - Input Mouse Delta X:  8
+03/02/2014 15:10:56.0665 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:56.0665 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0665 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0665 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0665 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0665 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0666 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0666 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0666 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0666 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0681 INFO    EntityCamera::Notify - Input Mouse Delta X:  11
+03/02/2014 15:10:56.0681 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:56.0681 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0681 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0681 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0681 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0681 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0682 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0682 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0682 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0682 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0696 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0696 INFO    EntityCamera::Notify - Input Mouse Delta Y:  2
+03/02/2014 15:10:56.0696 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0696 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0696 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0696 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0697 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0697 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0697 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0697 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0697 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0714 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0714 INFO    EntityCamera::Notify - Input Mouse Delta Y:  9
+03/02/2014 15:10:56.0714 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0714 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0715 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0715 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0715 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0715 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0715 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0715 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0715 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0731 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0731 INFO    EntityCamera::Notify - Input Mouse Delta Y:  10
+03/02/2014 15:10:56.0731 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0731 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0731 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0731 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0731 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0732 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0732 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0732 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0732 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0747 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0747 INFO    EntityCamera::Notify - Input Mouse Delta Y:  8
+03/02/2014 15:10:56.0747 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0747 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0748 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0748 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0748 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0748 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0748 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0748 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0748 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0762 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0763 INFO    EntityCamera::Notify - Input Mouse Delta Y:  8
+03/02/2014 15:10:56.0763 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0763 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0763 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0763 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0763 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0764 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0764 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0764 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0764 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0779 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0779 INFO    EntityCamera::Notify - Input Mouse Delta Y:  6
+03/02/2014 15:10:56.0779 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0779 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0779 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0779 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0779 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0780 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0780 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0780 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0780 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0798 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0798 INFO    EntityCamera::Notify - Input Mouse Delta Y:  7
+03/02/2014 15:10:56.0798 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0798 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0798 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0798 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0798 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0798 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0798 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0798 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0798 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0814 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0814 INFO    EntityCamera::Notify - Input Mouse Delta Y:  9
+03/02/2014 15:10:56.0814 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0814 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0814 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0814 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0814 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0815 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0815 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0815 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0815 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0830 INFO    EntityCamera::Notify - Input Mouse Delta X:  17
+03/02/2014 15:10:56.0831 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:56.0831 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0831 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0831 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0831 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0831 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0831 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0832 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0832 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0832 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0846 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0846 INFO    EntityCamera::Notify - Input Mouse Delta Y:  9
+03/02/2014 15:10:56.0846 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0846 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0846 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0846 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0846 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0846 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0846 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0846 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0846 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0862 INFO    EntityCamera::Notify - Input Mouse Delta X:  13
+03/02/2014 15:10:56.0862 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:56.0862 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0862 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0862 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0862 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0862 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0862 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0862 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0862 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0862 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0880 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0880 INFO    EntityCamera::Notify - Input Mouse Delta Y:  9
+03/02/2014 15:10:56.0881 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0881 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0881 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0881 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0881 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0881 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0881 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0881 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0881 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0895 INFO    EntityCamera::Notify - Input Mouse Delta X:  9
+03/02/2014 15:10:56.0895 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:56.0895 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0896 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0896 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0896 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0896 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0896 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0896 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0896 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0896 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0914 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0914 INFO    EntityCamera::Notify - Input Mouse Delta Y:  8
+03/02/2014 15:10:56.0914 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0914 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0914 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0914 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0914 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0915 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0915 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0915 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0915 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0929 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0929 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:56.0929 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0929 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0929 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0929 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0929 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0930 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0930 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0930 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0930 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0947 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0947 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:56.0947 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0947 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0947 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0947 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0948 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0948 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0948 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0948 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0948 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0963 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0964 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:56.0964 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0964 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0964 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0964 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0964 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0964 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0964 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0964 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0964 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0979 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:56.0979 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:56.0979 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0979 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0979 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0979 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0979 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0980 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0980 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0980 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0980 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:56.0997 INFO    EntityCamera::Notify - Input Mouse Delta X:  1
+03/02/2014 15:10:56.0997 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:56.0997 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:56.0997 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:56.0997 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:56.0998 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:56.0998 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:56.0998 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:56.0998 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:56.0998 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:56.0998 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0012 INFO    EntityCamera::Notify - Input Mouse Delta X:  6
+03/02/2014 15:10:57.0012 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0012 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0012 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0012 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0012 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0013 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0013 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0013 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0013 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0013 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0029 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0029 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -4
+03/02/2014 15:10:57.0029 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0029 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0029 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0029 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0029 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0030 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0030 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0030 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0030 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0045 INFO    EntityCamera::Notify - Input Mouse Delta X:  16
+03/02/2014 15:10:57.0045 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0045 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0045 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0045 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0045 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0046 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0046 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0046 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0047 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0047 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0063 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0063 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -20
+03/02/2014 15:10:57.0063 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0064 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0064 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0064 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0064 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0064 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0064 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0064 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0064 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0078 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0078 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -21
+03/02/2014 15:10:57.0078 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0078 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0079 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0079 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0079 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0079 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0079 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0079 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0079 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0096 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0096 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -18
+03/02/2014 15:10:57.0096 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0096 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0096 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0096 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0096 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0097 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0097 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0097 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0097 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0113 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0113 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -15
+03/02/2014 15:10:57.0113 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0113 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0113 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0113 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0113 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0113 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0113 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0113 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0113 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0128 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0128 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -11
+03/02/2014 15:10:57.0128 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0128 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0128 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0128 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0128 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0129 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0129 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0129 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0129 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0147 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0147 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -7
+03/02/2014 15:10:57.0147 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0147 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0147 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0147 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0147 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0147 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0147 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0147 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0147 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0163 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0163 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -5
+03/02/2014 15:10:57.0163 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0163 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0163 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0163 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0163 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0164 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0164 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0164 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0164 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0179 INFO    EntityCamera::Notify - Input Mouse Delta X:  15
+03/02/2014 15:10:57.0180 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0180 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0180 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0180 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0180 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0180 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0180 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0180 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0180 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0180 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0195 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0195 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -3
+03/02/2014 15:10:57.0195 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0196 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0196 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0196 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0196 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0196 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0196 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0196 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0196 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0212 INFO    EntityCamera::Notify - Input Mouse Delta X:  12
+03/02/2014 15:10:57.0212 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0212 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0212 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0212 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0212 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0212 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0212 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0212 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0212 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0212 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0228 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0228 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -5
+03/02/2014 15:10:57.0228 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0228 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0228 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0228 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0228 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0229 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0229 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0229 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0229 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0245 INFO    EntityCamera::Notify - Input Mouse Delta X:  9
+03/02/2014 15:10:57.0245 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0245 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0245 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0245 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0245 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0245 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0245 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0245 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0245 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0246 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0262 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0262 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -2
+03/02/2014 15:10:57.0262 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0262 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0262 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0262 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0262 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0262 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0262 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0262 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0262 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0278 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0278 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0278 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0278 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0278 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0278 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0278 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0278 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0278 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0278 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0278 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0295 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0295 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0295 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0295 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0295 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0295 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0295 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0295 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0295 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0295 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0295 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0311 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0311 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0311 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0311 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0311 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0311 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0311 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0311 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0311 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0311 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0311 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0327 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0327 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0327 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0327 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0327 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0327 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0328 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0328 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0328 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0328 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0328 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0344 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0344 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -2
+03/02/2014 15:10:57.0344 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0345 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0345 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0345 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0345 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0346 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0346 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0346 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0346 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0361 INFO    EntityCamera::Notify - Input Mouse Delta X:  1
+03/02/2014 15:10:57.0361 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0361 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0361 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0361 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0361 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0362 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0362 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0362 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0362 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0362 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0378 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0378 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -2
+03/02/2014 15:10:57.0378 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0378 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0378 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0378 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0378 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0379 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0379 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0379 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0379 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0394 INFO    EntityCamera::Notify - Input Mouse Delta X:  4
+03/02/2014 15:10:57.0394 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0394 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0394 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0394 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0394 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0394 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0395 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0395 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0395 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0396 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0411 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0411 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -5
+03/02/2014 15:10:57.0411 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0411 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0411 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0411 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0411 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0412 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0412 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0412 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0412 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0427 INFO    EntityCamera::Notify - Input Mouse Delta X:  5
+03/02/2014 15:10:57.0427 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0427 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0428 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0428 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0428 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0428 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0429 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0429 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0429 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0429 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0444 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0444 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -9
+03/02/2014 15:10:57.0444 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0444 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0444 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0444 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0444 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0445 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0445 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0445 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0445 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0460 INFO    EntityCamera::Notify - Input Mouse Delta X:  3
+03/02/2014 15:10:57.0461 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0461 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0461 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0461 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0461 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0461 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0462 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0462 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0462 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0462 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0477 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0477 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -3
+03/02/2014 15:10:57.0477 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0477 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0477 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0477 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0478 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0479 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0479 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0479 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0479 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0494 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0494 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -2
+03/02/2014 15:10:57.0494 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0494 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0494 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0494 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0494 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0495 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0495 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0495 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0495 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0511 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0511 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -2
+03/02/2014 15:10:57.0511 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0511 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0511 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0511 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0512 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0512 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0512 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0512 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0512 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0527 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0527 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -2
+03/02/2014 15:10:57.0527 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0527 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0528 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0528 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0528 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0529 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0529 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0529 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0529 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0544 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0544 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -2
+03/02/2014 15:10:57.0544 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0544 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0544 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0544 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0545 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0545 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0545 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0545 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0545 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0563 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0563 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -1
+03/02/2014 15:10:57.0563 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0563 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0563 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0563 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0563 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0564 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0564 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0564 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0564 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0577 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0577 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -2
+03/02/2014 15:10:57.0577 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0577 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0577 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0577 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0578 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0578 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0578 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0578 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0578 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0594 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0594 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -2
+03/02/2014 15:10:57.0594 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0594 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0594 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0594 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0594 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0595 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0595 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0595 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0595 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0611 INFO    EntityCamera::Notify - Input Mouse Delta X:  -5
+03/02/2014 15:10:57.0611 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0611 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0611 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0611 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0611 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0611 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0612 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0612 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0612 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0612 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0627 INFO    EntityCamera::Notify - Input Mouse Delta X:  -4
+03/02/2014 15:10:57.0627 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0627 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0627 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0627 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0627 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0627 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0627 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0627 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0627 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0627 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0644 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0644 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -2
+03/02/2014 15:10:57.0644 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0644 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0644 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0644 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0644 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0645 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0645 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0645 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0645 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0662 INFO    EntityCamera::Notify - Input Mouse Delta X:  -4
+03/02/2014 15:10:57.0662 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0662 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0662 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0662 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0662 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0663 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0663 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0663 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0663 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0663 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0678 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0678 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -1
+03/02/2014 15:10:57.0678 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0678 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0679 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0679 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0679 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0679 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0679 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0679 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0679 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0695 INFO    EntityCamera::Notify - Input Mouse Delta X:  -2
+03/02/2014 15:10:57.0695 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0695 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0695 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0695 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0695 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0695 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0696 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0696 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0696 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0696 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0712 INFO    EntityCamera::Notify - Input Mouse Delta X:  -1
+03/02/2014 15:10:57.0712 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0712 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0712 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0712 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0712 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0712 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0712 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0712 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0712 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0713 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0728 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0728 INFO    EntityCamera::Notify - Input Mouse Delta Y:  -2
+03/02/2014 15:10:57.0728 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0728 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0728 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0729 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0729 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0729 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0729 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0729 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0729 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0745 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0745 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0745 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0745 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0745 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0745 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0745 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0746 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0746 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0746 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0746 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0761 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0761 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0762 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0762 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0762 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0762 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0762 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0762 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0762 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0762 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0762 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0778 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0778 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0778 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0778 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0778 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0778 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0778 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0779 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0779 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0779 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0779 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0795 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0795 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0795 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0795 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0795 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0795 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0795 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0796 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0796 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0796 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0796 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0811 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0811 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0811 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0811 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0812 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0812 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0812 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0812 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0812 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0812 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0812 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0826 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0826 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0826 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0826 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0826 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0826 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0827 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0827 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0827 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0827 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0827 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0843 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0843 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0843 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0843 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0843 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0843 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0843 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0844 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0844 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0844 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0844 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0859 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0859 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0859 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0859 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0860 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0860 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0860 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0860 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0860 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0860 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0861 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0876 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0876 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0876 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0876 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0876 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0876 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0877 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0877 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0877 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0877 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0877 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0893 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0893 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0893 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0893 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0893 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0893 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0894 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0894 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0894 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0894 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0894 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0909 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0909 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0909 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0909 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0909 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0909 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0910 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0910 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0910 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0910 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0910 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0926 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0926 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0926 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0926 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0926 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0926 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0926 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0927 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0927 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0927 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0927 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0942 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0942 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0943 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0943 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0943 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0943 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0943 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0943 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0944 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0944 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0944 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0959 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0959 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0959 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0959 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0959 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0959 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0960 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0960 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0960 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0960 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0960 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0976 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0976 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0976 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0976 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0976 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0976 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0977 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0977 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0977 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0977 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0977 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:57.0992 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:57.0992 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:57.0992 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:57.0993 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:57.0993 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:57.0993 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:57.0993 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:57.0993 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:57.0993 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:57.0994 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:57.0994 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0009 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0009 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0009 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0009 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0009 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0009 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0009 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0010 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0010 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0010 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0010 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0026 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0026 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0026 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0026 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0026 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0026 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0026 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0027 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0027 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0027 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0027 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0042 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0042 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0042 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0042 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0042 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0043 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0043 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0043 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0043 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0043 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0043 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0059 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0059 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0059 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0059 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0060 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0060 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0060 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0061 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0061 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0061 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0061 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0075 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0075 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0076 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0076 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0076 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0076 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0076 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0077 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0077 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0077 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0077 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0092 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0092 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0092 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0092 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0092 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0092 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0093 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0093 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0093 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0093 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0093 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0109 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0109 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0109 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0109 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0109 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0109 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0109 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0110 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0110 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0110 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0110 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0125 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0125 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0125 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0126 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0126 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0126 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0126 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0126 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0127 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0127 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0127 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0142 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0142 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0142 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0142 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0142 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0142 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0142 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0143 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0143 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0143 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0143 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0158 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0159 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0159 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0159 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0159 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0159 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0159 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0160 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0160 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0160 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0160 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0175 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0175 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0175 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0175 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0175 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0175 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0176 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0176 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0176 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0176 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0176 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0192 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0192 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0192 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0192 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0192 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0192 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0192 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0193 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0193 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0193 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0193 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0208 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0208 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0208 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0209 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0209 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0209 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0209 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0209 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0209 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0210 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0210 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0225 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0225 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0225 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0225 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0225 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0225 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0226 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0226 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0226 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0226 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0226 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0242 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0242 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0242 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0242 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0242 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0242 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0242 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0243 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0243 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0243 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0243 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0258 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0258 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0258 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0258 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0258 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0258 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0259 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0259 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0259 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0259 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0259 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0275 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0275 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0275 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0275 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0275 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0275 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0276 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0276 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0276 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0276 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0276 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0291 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0292 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0292 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0292 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0292 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0292 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0292 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0292 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0293 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0293 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0293 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0308 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0308 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0308 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0308 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0308 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0308 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0309 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0309 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0309 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0309 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0309 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0325 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0325 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0325 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0325 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0325 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0325 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0325 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0326 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0326 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0326 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0326 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0341 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0341 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0341 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0341 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0341 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0342 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0342 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0342 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0342 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0342 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0342 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0358 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0358 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0358 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0358 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0358 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0358 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0358 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0359 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0359 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0359 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0359 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0375 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0375 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0375 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0375 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0375 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0375 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0375 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0376 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0376 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0376 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0376 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0391 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0391 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0391 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0391 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0391 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0391 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0392 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0392 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0392 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0392 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0392 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0408 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0408 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0408 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0408 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0408 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0408 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0408 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0409 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0409 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0409 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0409 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0424 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0424 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0425 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0425 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0425 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0425 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0425 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0425 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0425 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0426 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0426 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0441 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0441 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0441 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0441 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0441 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0441 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0442 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0442 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0442 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0442 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0442 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0458 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0458 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0458 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0458 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0458 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0458 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0459 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0459 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0459 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0459 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0459 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0474 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0474 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0474 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0474 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0474 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0475 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0475 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0475 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0475 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0475 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0475 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0491 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0491 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0491 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0491 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0491 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0491 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0492 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0492 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0492 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0492 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0492 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0508 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0508 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0508 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0508 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0508 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0508 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0508 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0509 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0509 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0509 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0509 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0524 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0524 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0524 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0524 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0524 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0525 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0525 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0525 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0525 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0525 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0525 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0541 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0541 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0541 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0541 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0541 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0541 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0542 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0542 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0542 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0542 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0542 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0557 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0557 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0557 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0558 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0558 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0558 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0558 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0558 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0558 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0559 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0559 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0574 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0574 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0574 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0574 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0574 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0574 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0575 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0575 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0575 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0575 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0575 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0591 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0591 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0591 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0591 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0591 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0591 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0591 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0592 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0592 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0592 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0592 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0607 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0607 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0607 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0607 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0608 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0608 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0608 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0608 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0608 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0608 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0608 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0624 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0624 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0624 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0624 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0624 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0624 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0625 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0625 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0625 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0625 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0625 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0641 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0641 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0641 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0641 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0641 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0641 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0641 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0642 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0642 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0642 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0642 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0657 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0657 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0657 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0657 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0657 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0657 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0658 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0658 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0658 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0658 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0658 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0674 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0674 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0674 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0674 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0674 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0674 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0674 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0675 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0675 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0675 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0675 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0690 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0690 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0690 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0691 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0691 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0691 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0691 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0691 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0691 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0692 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0692 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0707 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0707 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0707 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0707 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0708 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0708 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0708 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0708 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0708 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0708 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0708 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0724 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0724 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0724 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0724 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0724 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0724 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0724 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0725 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0725 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0725 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0725 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0740 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0740 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0740 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0740 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0740 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0740 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0741 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0741 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0741 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0741 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0741 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0757 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0757 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0757 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0757 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0757 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0757 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0757 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0758 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0758 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0758 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0758 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0773 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0774 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0774 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0774 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0774 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0774 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0774 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0774 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0774 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0775 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0775 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0790 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0790 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0790 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0791 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0791 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0791 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0791 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0792 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0792 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0792 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0792 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0807 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0807 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0807 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0807 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0807 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0807 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0807 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0808 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0808 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0808 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0808 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0823 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0824 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0824 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0824 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0824 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0824 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0824 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0824 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0824 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0825 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0825 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0840 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0840 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0840 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0840 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0840 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0840 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0841 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0841 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0841 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0841 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0841 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0857 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0857 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0857 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0857 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0857 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0857 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0857 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0858 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0858 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0858 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0858 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0873 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0873 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0873 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0873 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0874 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0874 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0874 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0874 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0874 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0874 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0874 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0890 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0890 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0890 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0890 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0890 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0890 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0890 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0891 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0891 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0891 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0891 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0907 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0907 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0907 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0907 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0907 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0907 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0907 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0907 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0908 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0908 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0908 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0923 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0923 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0923 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0923 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0923 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0923 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0924 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0924 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0924 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0924 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0924 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0940 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0940 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0940 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0940 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0940 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0940 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0940 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0941 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0941 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0941 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0941 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0956 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0956 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0956 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0957 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0957 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0957 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0957 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0957 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0957 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0957 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0957 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0973 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0973 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0973 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0973 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0973 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0973 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0974 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0974 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0974 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0974 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0974 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:58.0990 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:58.0990 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:58.0990 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:58.0990 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:58.0990 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:58.0990 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:58.0990 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:58.0991 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:58.0991 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:58.0991 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:58.0991 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0006 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0006 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0006 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0006 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0006 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0006 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0007 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0007 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0007 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0007 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0008 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0023 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0023 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0023 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0023 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0023 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0023 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0023 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0024 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0024 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0024 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0024 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0040 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0040 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0040 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0040 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0040 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0040 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0040 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0040 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0041 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0041 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0041 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0056 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0056 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0056 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0056 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0056 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0056 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0057 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0057 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0057 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0057 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0057 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0073 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0073 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0073 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0073 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0073 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0073 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0073 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0074 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0074 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0074 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0074 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0089 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0089 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0089 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0089 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0089 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0090 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0090 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0090 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0090 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0090 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0090 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0106 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0106 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0106 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0106 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0106 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0106 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0107 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0107 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0107 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0107 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0107 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0123 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0123 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0123 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0123 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0123 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0123 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0123 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0124 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0124 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0124 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0124 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0139 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0139 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0139 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0139 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0139 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0140 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0140 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0140 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0140 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0140 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0140 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0156 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0156 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0156 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0156 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0156 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0156 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0156 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0157 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0157 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0157 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0157 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0172 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0172 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0173 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0173 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0173 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0173 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0173 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0173 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0173 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0174 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0174 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0189 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0189 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0189 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0189 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0189 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0189 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0190 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0190 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0190 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0190 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0190 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0206 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0206 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0206 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0206 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0206 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0206 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0206 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0207 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0207 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0207 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0207 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0225 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0226 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0226 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0226 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0226 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0226 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0226 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0227 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0227 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0227 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0227 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0241 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0241 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0241 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0242 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0242 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0242 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0242 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0242 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0242 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0242 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0242 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0258 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0258 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0258 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0258 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0258 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0258 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0258 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0259 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0259 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0259 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0259 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0274 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0275 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0275 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0275 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0275 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0275 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0275 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0276 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0276 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0276 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0276 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0291 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0291 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0291 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0291 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0291 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0291 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0291 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0292 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0292 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0292 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0292 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0307 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0307 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0308 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0308 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0308 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0308 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0308 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0308 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0308 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0308 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0308 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0322 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0322 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0323 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0323 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0323 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0323 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0323 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0323 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0323 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0323 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0324 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0341 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0341 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0341 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0341 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0341 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0341 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0341 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0341 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0341 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0341 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0342 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0358 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0358 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0358 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0358 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0359 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0359 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0359 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0359 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0359 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0359 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0359 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0372 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0372 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0372 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0372 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0372 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0372 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0373 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0373 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0373 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0373 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0373 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0389 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0389 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0389 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0389 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0389 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0389 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0389 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0389 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0390 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0390 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0390 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0406 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0406 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0406 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0406 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0407 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0407 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0407 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0407 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0407 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0407 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0407 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0422 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0422 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0422 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0422 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0422 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0422 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0422 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0422 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0422 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0422 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0422 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0438 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0438 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0438 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0438 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0438 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0438 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0439 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0439 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0439 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0439 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0439 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0455 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0455 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0455 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0455 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0455 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0455 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0456 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0456 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0456 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0456 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0456 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:10:59.0472 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:10:59.0472 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:10:59.0472 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:10:59.0472 INFO    DXRenderer::RenderStart - Starting Render
+03/02/2014 15:10:59.0472 INFO    DXRenderer::Render - Rendering
+03/02/2014 15:10:59.0472 INFO    DXRenderer::Render - Rendering Heightmap
+03/02/2014 15:10:59.0472 INFO    DXRenderer::Render - Rendering Models
+03/02/2014 15:10:59.0473 INFO    DXRenderer::Render - Done Rendering: 1  Models
+03/02/2014 15:10:59.0473 INFO    DXRenderer::Render - Done Rendering
+03/02/2014 15:10:59.0473 INFO    DXRenderer::RenderEnd - Ending Render
+03/02/2014 15:10:59.0473 INFO    DXRenderer::Present - Present Render
+03/02/2014 15:11:00.0079 INFO    Kernel::Stop - Stopping Kernel
+03/02/2014 15:11:00.0079 INFO    EntityCamera::Notify - Input Mouse Delta X:  0
+03/02/2014 15:11:00.0079 INFO    EntityCamera::Notify - Input Mouse Delta Y:  0
+03/02/2014 15:11:00.0079 INFO    InputManager::Update - Input acquired and updated, observers notified
+03/02/2014 15:11:00.0079 INFO    Kernel::Start - Kernel stopping.
+03/02/2014 15:11:00.0079 INFO    Kernel::Start - Calling Cleanup
+03/02/2014 15:11:00.0079 INFO    Kernel::Cleanup - Cleaning up Kernel
+03/02/2014 15:11:00.0080 INFO    Kernel::Cleanup - Kernel cleaned
+03/02/2014 15:11:00.0080 INFO    Kernel::Start - Cleanup done. Bye-bye!

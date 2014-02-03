@@ -26,7 +26,7 @@ void ResourceDXHeightmapLoader::Cleanup()
 
 }
 
-ResourceHeightmap* ResourceDXHeightmapLoader::LoadFile(std::string fileName, VOID* device)
+ResourceHeightmap* ResourceDXHeightmapLoader::LoadFile(std::string fileName, void* device)
 {
 	FILE* filePtr;
 	int error;
@@ -188,7 +188,7 @@ ResourceHeightmap* ResourceDXHeightmapLoader::LoadFile(std::string fileName, VOI
 		LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "Could not create VertexBuffer!");
 	}
 	// Fill the vertex buffer.
-	VOID* pVertices;
+	void* pVertices;
 	if( FAILED( tmp->Lock( 0, heightMap->numVertices * sizeof( CUSTOMVERTEX ), ( void** )&pVertices, 0 ) ) )
 		LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "Could not aquire memory lock!");
 	memcpy( pVertices, g_Vertices , heightMap->numVertices * sizeof( CUSTOMVERTEX ));

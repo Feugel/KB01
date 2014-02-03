@@ -12,7 +12,7 @@ public:
 	virtual void Cleanup() = 0;
 
 	//virtual ResourceModel* LoadFile(LPCWSTR fileName) = 0;
-	virtual ResourceModel* LoadFile(LPCWSTR fileName, VOID* device) = 0;
+	virtual ResourceModel* LoadFile(LPCWSTR fileName, void* device) = 0;
 
 };
 

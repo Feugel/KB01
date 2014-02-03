@@ -15,7 +15,7 @@ void ResourceDXModelLoader::Cleanup(void)
 
 }
 
-ResourceModel* ResourceDXModelLoader::LoadFile(LPCWSTR fileName, VOID* device)
+ResourceModel* ResourceDXModelLoader::LoadFile(LPCWSTR fileName, void* device)
 {
 	LPD3DXBUFFER pD3DXMtrlBuffer;
 	LPD3DXMESH mesh;

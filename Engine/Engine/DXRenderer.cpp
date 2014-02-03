@@ -80,7 +80,7 @@ HRESULT DXRenderer::InitD3D()
 }
 
 //cleanup called by destructor
-VOID DXRenderer::Cleanup()
+void DXRenderer::Cleanup()
 {
     if( g_pd3dDevice != NULL )
         g_pd3dDevice->Release();
@@ -91,7 +91,7 @@ VOID DXRenderer::Cleanup()
 
 
 //Sets up view, and projection transform matrices.
-VOID DXRenderer::SetupMatrices()
+void DXRenderer::SetupMatrices()
 {
 	//setup the camera
     D3DXVECTOR3 vEyePt( -255.0f, 350.0f, -255.0f );
@@ -109,7 +109,7 @@ VOID DXRenderer::SetupMatrices()
 
 
 //called before render. Clears the backbuffer and calls beginscene
-VOID DXRenderer::RenderStart()
+void DXRenderer::RenderStart()
 {
 	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Starting Render");
 	g_pd3dDevice->Clear( 0, NULL, D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER, D3DCOLOR_XRGB( 0, 0, 255 ), 1.0f, 0 );
@@ -117,7 +117,7 @@ VOID DXRenderer::RenderStart()
 }
 
 //Renders the heightmap
-VOID DXRenderer::Render()
+void DXRenderer::Render()
 {
 	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Rendering");
 	
@@ -182,21 +182,21 @@ VOID DXRenderer::Render()
 }
 
 //called after render. calls endscene
-VOID DXRenderer::RenderEnd()
+void DXRenderer::RenderEnd()
 {
 	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Ending Render");
 	g_pd3dDevice->EndScene();
 }
 
 //presents the backbuffer to the window
-VOID DXRenderer::Present()
+void DXRenderer::Present()
 {
 	LogManager::Instance()->Log(LogLevel::INFO, "%s - %s", __FUNCTION__, "Present Render");
 	g_pd3dDevice->Present( NULL, NULL, NULL, NULL );
 }
 
 //returns the device, used in the dxloaders
-VOID* DXRenderer::GetDevice()
+void* DXRenderer::GetDevice()
 {
 	return g_pd3dDevice;
 }

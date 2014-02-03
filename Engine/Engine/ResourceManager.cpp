@@ -53,7 +53,7 @@ void ResourceManager::Cleanup()
 	models.clear();
 }
 
-ResourceTexture* ResourceManager::GetTexture(std::string fileName, VOID* device)
+ResourceTexture* ResourceManager::GetTexture(std::string fileName, void* device)
 {
 	auto iterator = textures.find(fileName);
 	if(iterator != textures.end())
@@ -65,12 +65,12 @@ ResourceTexture* ResourceManager::GetTexture(std::string fileName, VOID* device)
 	return texture;
 }
 
-ResourceTexture* ResourceManager::LoadTexture(std::string fileName, VOID* device)
+ResourceTexture* ResourceManager::LoadTexture(std::string fileName, void* device)
 {
 	return textureLoader->LoadFile(s2ws(fileName).c_str(), device);
 }
 
-ResourceModel* ResourceManager::GetModel(std::string fileName, VOID* device)
+ResourceModel* ResourceManager::GetModel(std::string fileName, void* device)
 {
 	auto iterator = models.find(fileName);
 	if(iterator != models.end())
@@ -82,17 +82,17 @@ ResourceModel* ResourceManager::GetModel(std::string fileName, VOID* device)
 	return model;
 }
 
-ResourceModel* ResourceManager::LoadModel(std::string fileName, VOID* device)
+ResourceModel* ResourceManager::LoadModel(std::string fileName, void* device)
 {
 	return modelLoader->LoadFile(s2ws(fileName).c_str(), device);
 }
 
-ResourceHeightmap* ResourceManager::GetHeightmap(std::string fileName, VOID* device)
+ResourceHeightmap* ResourceManager::GetHeightmap(std::string fileName, void* device)
 {
 	return LoadHeightmap(fileName, device);
 }
 
-ResourceHeightmap* ResourceManager::LoadHeightmap(std::string fileName, VOID* device)
+ResourceHeightmap* ResourceManager::LoadHeightmap(std::string fileName, void* device)
 {
 	return heightmapLoader->LoadFile(fileName, device);
 }

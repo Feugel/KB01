@@ -15,7 +15,7 @@ public:
 	ResourceDXModelLoader(void);
 	virtual ~ResourceDXModelLoader(void);
 	void Cleanup();
-	ResourceModel* LoadFile(LPCWSTR fileName, VOID* device);
+	ResourceModel* LoadFile(LPCWSTR fileName, void* device);
 private:
 };
 

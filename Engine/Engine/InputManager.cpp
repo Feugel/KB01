@@ -22,6 +22,7 @@ InputManager::~InputManager()
 		delete inputManager;
 }
 
+//This is the cleaning up method
 void InputManager::Cleanup()
 {
 	keyboard->SaveReleaseDevice();
@@ -29,6 +30,7 @@ void InputManager::Cleanup()
 	
 }
 
+//Creates a new instance of InputManager
 InputManager* InputManager::Instance()
 {
 	if(NULL == inputManager)

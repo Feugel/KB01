@@ -30,7 +30,7 @@ InputMouse::~InputMouse()
 bool InputMouse::InitMouse()
 {
 	//DirectInput8Create should be done only once in manager
-	HRESULT result = DirectInput8Create( GetModuleHandle(NULL), DIRECTINPUT_VERSION, IID_IDirectInput8, (VOID**)&dInput, NULL );
+	HRESULT result = DirectInput8Create( GetModuleHandle(NULL), DIRECTINPUT_VERSION, IID_IDirectInput8, (void**)&dInput, NULL );
 	if( FAILED( result ) )
 	{
 		LogManager::Instance()->Log(LogLevel::WARNING, "%s - %s", __FUNCTION__, "Unable to create mouse DirectInput8");
