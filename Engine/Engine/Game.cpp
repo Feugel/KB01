@@ -18,12 +18,16 @@
 #include "ResourceModel.h"
 #include "EntityModel.h"
 
+//THE main method that creates a new Game
 int main()
 {
 	Game* game = new Game();
 	return game->Main();
 }
 
+//Main method from Game that creates a new Kernel. 
+//This also creates a new Window in which the renderer will be made shortly after.
+//All these steps will be logged and taken care of by the LogManager.
 int Game::Main()
 {
 	LogManager::Instance()->Log("%s - %s", __FUNCTION__, "Starting up");
@@ -50,33 +54,10 @@ int Game::Main()
 	return 0;
 }
 
-void Game::initgame(Kernel* kernel, Window* window ){
+//The initgame method receives a kernel and a window. 
+//A new scene gets loaded and the method LoadScene loads a .xml file and renders this in the current window.
+void Game::initgame(Kernel* kernel, Window* window )
+{
 	Scene* scene = kernel->GetSceneManager()->LoadScene("level01.xml", window->GetRenderer());
-	/*Scene* scene = new Scene();
-	Terrain* ter = new Terrain();
-	ResourceHeightmap* heightmap = kernel->GetResourceManager()->GetHeightmap("heightmap.bmp", window->GetRenderer()->GetDevice());
-	ter->SetHeightmap(heightmap);
-	ter->SetTexture(ResourceManager::Instance()->GetTexture("heightmap-texture.png", window->GetRenderer()->GetDevice()));
-	scene->SetTerrain(ter);
-	
-	for (int z = 10; z > 0; --z){   
-		for (int i = 2; i > 0; --i){   
-			ResourceModel* rmodel = kernel->GetResourceManager()->GetModel("tiger.x", window->GetRenderer()->GetDevice());
-	
-			Matrix location;
-			location.x = ((float)i * 20) - 150;
-			location.z =  ((float)z * 20) - 150;
-			location.y = 150;
-			location.rotation_v = (float)i * 100;
-			location.rotation_h = 0;
-			location.scale = 10;
-
-			EntityModel* model = new EntityModel("test01");
-			model->SetModel(rmodel);
-			model->SetPosition(location);
-			scene->AddModel(model);
-		}
-	}*/
-	
 	window->GetManager()->RegisterScene(window, scene);
 }

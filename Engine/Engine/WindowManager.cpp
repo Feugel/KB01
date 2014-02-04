@@ -5,20 +5,24 @@
 
 WindowManager* WindowManager::instance = NULL;
 
+//Constructor for WindowManager
 WindowManager::WindowManager()
 {
 }
 
+//Destructor for WindowManager
 WindowManager::~WindowManager()
 {
 	Cleanup();
 }
 
+//This is the cleanup method for WindowManager
 void WindowManager::Cleanup()
 {
 	windows.clear();
 }
 
+//This method creates a new WindowManager if there is no instance of it yet.
 WindowManager* WindowManager::Instance()
 {
 	if(!instance)
@@ -26,6 +30,7 @@ WindowManager* WindowManager::Instance()
 	return instance;
 }
 
+//This is a boolean for RegisterWindow from WindowManager. 
 bool WindowManager::RegisterWindow(Window* window)
 {
 	auto iterator = windows.find(window->GetWindowHandle());
@@ -42,6 +47,7 @@ bool WindowManager::RegisterWindow(Window* window)
 	}
 }
 
+//This is a boolean for ReleaseWindow from WindowManager.
 bool WindowManager::ReleaseWindow(Window* window)
 {
 	if(windows.count(window->GetWindowHandle()) == 1)
@@ -56,11 +62,13 @@ bool WindowManager::ReleaseWindow(Window* window)
 	}
 }
 
+//This boolean returns the hwnd when the window is released.
 bool WindowManager::ReleaseWindow(HWND hwnd)
 {
 	return ReleaseWindow(GetWindowByHandle(hwnd));
 }
 
+//
 void WindowManager::RegisterScene(Window* window, Scene* scene)
 {
 	auto iterator = sceneMap.find(window);

@@ -3,6 +3,7 @@
 #include "Renderer.h"
 #include "LogManager.h"
 
+//Constructor for Window
 Window::Window(HINSTANCE hInstance, WindowManager* manager)
 {
 	this->hInst = hInstance;
@@ -11,6 +12,7 @@ Window::Window(HINSTANCE hInstance, WindowManager* manager)
 	this->Create(CW_USEDEFAULT, CW_USEDEFAULT, "Engine");
 }
 
+//Overloaded constructor for Window
 Window::Window(HINSTANCE hInstance, WindowManager* manager, int width, int height, std::string title)
 {
 	this->hInst = hInstance;
@@ -20,6 +22,7 @@ Window::Window(HINSTANCE hInstance, WindowManager* manager, int width, int heigh
 	this->Create(width, height, title);
 }
 
+//Destructor for Window
 Window::~Window(void)
 {
 	Cleanup();
@@ -30,11 +33,13 @@ void Window::Cleanup()
 	//TODO: clean up the mess
 }
 
+//HWND Window handler for Window.
 HWND Window::GetWindowHandle()
 {
 	return hWnd;
 }
 
+//Initialise method for Window.
 void Window::Initialise() // Should be moved to Manager to ensure one time run; we dont need to register multiple window classes
 {
 	LogManager::Instance()->Log("%s - %s", __FUNCTION__, "Initializing Window");
@@ -64,7 +69,7 @@ void Window::Initialise() // Should be moved to Manager to ensure one time run; 
 	}
 }
 
-
+//This method from Window Creates a new window, given the right attributes and logs this with using the LogManager.
 void Window::Create(int width, int height, std::string title)
 {
 	LogManager::Instance()->Log("%s - %s", __FUNCTION__, "Creating Window Handle");
@@ -92,6 +97,7 @@ void Window::Create(int width, int height, std::string title)
 	}
 }
 
+//This method is to display the window with a given boolean. 
 void Window::DisplayWindow(bool fullscreen)
 {
 	if(hWnd)
@@ -114,32 +120,37 @@ void Window::DisplayWindow(bool fullscreen)
 }
 
 
-
+//This method sets the Renderer
 void Window::SetRenderer(Renderer* renderer)
 {
 	this->renderer = renderer;
 }
 
+//This method gets the Manager of the window.
 WindowManager* Window::GetManager()
 {
 	return this->manager;
 }
 
+//This method gets the Name of the window.
 std::string Window::GetName()
 {
 	return name;
 }
 
+//This method sets the name of the window.
 void Window::SetName(std::string name)
 {
 	this->name = name;
 }
 
+//This method returns the Renderer from the window
 Renderer* Window::GetRenderer()
 {
 	return renderer;
 }
 
+//This method Starts the renderer and Ends it.
 void Window::Render()
 {
 	renderer->RenderStart();
@@ -148,6 +159,7 @@ void Window::Render()
 	renderer->Present();
 }
 
+//This method converts a string into a wide-string
 std::wstring Window::s2ws(const std::string& s)
 {
     int len;
